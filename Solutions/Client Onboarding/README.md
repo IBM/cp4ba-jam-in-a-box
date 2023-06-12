@@ -6,7 +6,7 @@
 
 **Assets:** The solution has [nine hands-on labs](https://github.com/IBM/cp4ba-labs/tree/main/22.0.2) associated with it.
 
-**Jax-in-a-box-enviornment:** In order to deploy the solution in your own Jam-in-a-box environment, deploy the Client Onboarding solution as described in this [document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/DeployingClientOnboarding2202.md). The document also contains hints in case you don't have access to/can't aget an IBM TechZone environment.
+**Jax-in-a-box-enviornment:** In order to deploy the solution in your own Jam-in-a-box environment, deploy the Client Onboarding solution as described in [this document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/DeployingClientOnboarding2202.md). The document also contains hints in case you don't have access to/can't aget an IBM TechZone environment.
 
 **What's included:**
 
