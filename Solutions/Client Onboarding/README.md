@@ -2,7 +2,9 @@
 
 #### Latest Supported Cloud Pak for Business Automation Version: 22.0.2
 
-**Overview:** https://github.com/IBM/cp4ba-client-onboarding-scenario 
+## **Overview:*
+
+**Introduction and solution exports:** https://github.com/IBM/cp4ba-client-onboarding-scenario 
 
 **Assets:** The solution has [nine hands-on labs](https://github.com/IBM/cp4ba-labs/tree/main/22.0.2) associated with it.
 
@@ -15,9 +17,11 @@
 - IBM Process Mining 1.13.2
 - IBM Robotic Process Automation 23.0.2
 
-**Mapping of labs to environments**
+## Labs
 
 Most labs are accessible using the Jam-in-a-box environment. For some labs, you will need a separate environment as described below:
+
+**Mapping of labs to environments**
 
 | Lab(s)                                                       | Environment (IBM TechZone - Business Partners and IBMers only) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -26,6 +30,12 @@ Most labs are accessible using the Jam-in-a-box environment. For some labs, you 
 | [IBM Process Mining](https://github.com/IBM/cp4ba-labs/blob/main/22.0.2/Process%20Mining) | Follow the instructions provided on the respective [lab overview page](https://github.com/IBM/cp4ba-labs/tree/main/22.0.2/Process%20Mining) |
 | [IBM Robotic Process Automation](https://github.com/IBM/cp4ba-labs/blob/main/22.0.1/Robotic%20Process%20Automation) | Follow the instructions provided on the respective [lab overview page](https://github.com/IBM/cp4ba-labs/tree/main/22.0.1/Robotic%20Process%20Automation) |
 
+##### Lab Considerations
+
+- The lab instructions refer to using the URLs found on the Tech Jam event page. For Jam-in-a-Box environments, please use those URLs provided when the deployment completes and/or refer to the `client-onboarding-information` ConfigMap that is created when the deployment is successful.
+- The lab instructions mention how to receive your user credentials using a link on the Tech Jam event page. For Jam-in-a-Box environments, please use the admin user and admin password (or one of the other business users) provided when the deployment completes and/or refer to the `client-onboarding-information` ConfigMap that is created when the deployment is successful.
+- The lab instructions mostly mention to prefix your artifacts with "usrXYZ". This is important when working in a shared environment. You may choose to still follow the instructions in this point, even when this is not strictly required for the Jam-in-a-Box environment that is mostly considered a single-user environment.
+- By default the Jam-in-a-Box deployment uses an email server and an HTML-based email client that are co-deployed with CP4BA. Therefore, follow the part of the instructions in the [Client Onboarding End-to-End Demonstration](https://github.com/IBM/cp4ba-labs/tree/main/22.0.1/IBM%20Cloud%20Pak%20for%20Business%20Automation%20(End-to-End)) that refers to the local mail server/mail client.
 
 ## Support
 
