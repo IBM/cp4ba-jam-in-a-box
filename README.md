@@ -26,7 +26,7 @@ The Solutions and Assets section below lists the available demos that can be imp
 
 ### Client Onboarding
 
-**Introduction:** The [Client Onboarding](https://github.com/IBM/cp4ba-client-onboarding-scenario) scenario is an end-to-end demo for Cloud Pak for Business Automation that covers the following components: Automation Decision Services, Automation Document Processing, Workflow, Content, Robotic Process Automation, Business Automation Insights.
+The [Client Onboarding](https://github.com/IBM/cp4ba-client-onboarding-scenario) scenario is an end-to-end demo for Cloud Pak for Business Automation that covers the following components: Automation Decision Services, Automation Document Processing, Workflow, Content, Robotic Process Automation, Business Automation Insights.
 
 More information on the assets, how to reserve an environment and the labs are listed in [this document](https://github.com/IBM/cp4ba-jam-in-a-box/tree/main/Solutions/Client%20Onboarding).
 
