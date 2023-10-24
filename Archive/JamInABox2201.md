@@ -1,4 +1,8 @@
-# Jam-in-a-Box for Business Automation (for CP4BA 22.0.1)
+# - No longer supported nor working! - 
+
+# Jam-in-a-Box for Business Automation (for CP4BA 22.0.1) 
+
+
 
 ## Introduction
 
