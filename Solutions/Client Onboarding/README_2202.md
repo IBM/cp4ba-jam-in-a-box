@@ -1,17 +1,19 @@
-# Client Onboarding (DRAFT)
+# Client Onboarding
+
+A newer version for Cloud Pak for Business Automation Version 23.0.1 is available [here](README.md).
 
 ## **Overview:**
 
 **Introduction and solution exports:** https://github.com/IBM/cp4ba-client-onboarding-scenario 
 
-**Assets:** The solution has [nine hands-on labs](https://github.com/IBM/cp4ba-labs/tree/main/23.0.1) associated with it.
+**Assets:** The solution has [nine hands-on labs](https://github.com/IBM/cp4ba-labs/tree/main/22.0.2) associated with it.
 
-**Jam-in-a-Box-environment:** In order to use the solution in your own Jam-in-a-Box environment, deploy the Client Onboarding solution and labs as described in [this document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.1/DeployingClientOnboarding2301.md). The document also contains hints in case you don't have access to/can't get an IBM TechZone environment.
+**Jam-in-a-Box-environment:** In order to use the solution in your own Jam-in-a-Box environment, deploy the Client Onboarding solution and labs as described in [this document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/22.0.2/DeployingClientOnboarding2202.md). The document also contains hints in case you don't have access to/can't get an IBM TechZone environment.
 
 **What's included:**
 
 - Red Hat OpenShift (OCP 4.12) on VMWare on IBM Cloud
-- IBM Cloud Pak for Business Automation 23.0.1 IF001
+- IBM Cloud Pak for Business Automation 22.0.2 IF005
 - IBM Process Mining 1.14.1
 - IBM Robotic Process Automation 23.0.2
 
@@ -23,9 +25,9 @@ Most labs are accessible using the Jam-in-a-Box environment. For some labs, you 
 
 | Lab(s)                                                       | Environment (IBM TechZone - Business Partners and IBMers only) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [IBM Cloud Pak for Business Automation (End-to-End)](https://github.com/IBM/cp4ba-labs/blob/main/23.0.1/IBM%20Cloud%20Pak%20for%20Business%20Automation%20(End-to-End))<br/>[IBM Business Automation Application](https://github.com/IBM/cp4ba-labs/blob/main/23.0.1/Business%20Automation%20Application)<br/>[IBM Business Automation Insights](https://github.com/IBM/cp4ba-labs/blob/main/23.0.1/Business%20Automation%20Insights)<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](https://github.com/IBM/cp4ba-labs/blob/main/23.0.1/Content)<br/>[IBM Automation Decision Services](https://github.com/IBM/cp4ba-labs/blob/main/23.0.1/Decisions)<br/>[IBM Business Automation Workflow](https://github.com/IBM/cp4ba-labs/blob/main/23.0.1/Workflow) | Jam-in-a-box environment (deployment instructions are available in this [document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.1/DeployingClientOnboarding2301.md)) |
-| [IBM Process Mining](https://github.com/IBM/cp4ba-labs/blob/main/23.0.1/Process%20Mining) | Follow the instructions provided on the respective [lab overview page](https://github.com/IBM/cp4ba-labs/tree/main/23.0.1/Process%20Mining) |
-| [IBM Robotic Process Automation](https://github.com/IBM/cp4ba-labs/blob/main/23.0.1/Robotic%20Process%20Automation) | Follow the instructions provided on the respective [lab overview page](https://github.com/IBM/cp4ba-labs/tree/main/23.0.1/Robotic%20Process%20Automation) |
+| [IBM Cloud Pak for Business Automation (End-to-End)](https://github.com/IBM/cp4ba-labs/blob/main/22.0.2/IBM%20Cloud%20Pak%20for%20Business%20Automation%20(End-to-End))<br/>[IBM Business Automation Application](https://github.com/IBM/cp4ba-labs/blob/main/22.0.2/Business%20Automation%20Application)<br/>[IBM Business Automation Insights](https://github.com/IBM/cp4ba-labs/blob/main/22.0.2/Business%20Automation%20Insights)<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](https://github.com/IBM/cp4ba-labs/blob/main/22.0.2/Content)<br/>[IBM Automation Decision Services](https://github.com/IBM/cp4ba-labs/blob/main/22.0.2/Decisions)<br/>[IBM Business Automation Workflow](https://github.com/IBM/cp4ba-labs/blob/main/22.0.2/Workflow) | Jam-in-a-box environment (deployment instructions are available in this [document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/22.0.2/DeployingClientOnboarding2202.md)) |
+| [IBM Process Mining](https://github.com/IBM/cp4ba-labs/blob/main/22.0.2/Process%20Mining) | Follow the instructions provided on the respective [lab overview page](https://github.com/IBM/cp4ba-labs/tree/main/22.0.2/Process%20Mining) |
+| [IBM Robotic Process Automation](https://github.com/IBM/cp4ba-labs/blob/main/22.0.1/Robotic%20Process%20Automation) | Follow the instructions provided on the respective [lab overview page](https://github.com/IBM/cp4ba-labs/tree/main/22.0.1/Robotic%20Process%20Automation) |
 
 ##### Lab Considerations
 
