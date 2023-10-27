@@ -30,7 +30,7 @@ The [Client Onboarding](https://github.com/IBM/cp4ba-client-onboarding-scenario)
 
 More information on the assets, how to reserve an environment and the labs are listed below for the versions of CP4BA that are currently supported (versions not mentioned are not or no longer supported!)
 
-- [CP4BA 23.0.1 (draft)](https://github.com/IBM/cp4ba-jam-in-a-box/tree/main/Solutions/Client%20Onboarding/README.md)
+- [CP4BA 23.0.1](https://github.com/IBM/cp4ba-jam-in-a-box/tree/main/Solutions/Client%20Onboarding/README.md)
 - [CP4BA 22.0.2](https://github.com/IBM/cp4ba-jam-in-a-box/tree/main/Solutions/Client%20Onboarding/README_2202.md)
 
 

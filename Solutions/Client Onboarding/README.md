@@ -1,10 +1,10 @@
-# Client Onboarding (DRAFT)
+# Client Onboarding
 
 ## **Overview:**
 
 **Introduction and solution exports:** https://github.com/IBM/cp4ba-client-onboarding-scenario 
 
-**Assets:** The solution has [nine hands-on labs](https://github.com/IBM/cp4ba-labs/tree/main/23.0.1) associated with it.
+**Assets:** The solution has [nine hands-on labs](https://github.com/IBM/cp4ba-labs/tree/main/23.0.1) (IBM watsonx Orchestrate is not supported) associated with it.
 
 **Jam-in-a-Box-environment:** In order to use the solution in your own Jam-in-a-Box environment, deploy the Client Onboarding solution and labs as described in [this document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.1/DeployingClientOnboarding2301.md). The document also contains hints in case you don't have access to/can't get an IBM TechZone environment.
 
