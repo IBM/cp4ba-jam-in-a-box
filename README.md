@@ -39,9 +39,11 @@ More information on the assets, how to reserve an environment and the labs are l
 We aim to support successfully utilizing our Jam-in-a-Box.
 
 **Business Partners and IBMers**
+
 To engage us, drop us a message at [#jam-in-a-box-business-automation](https://ibm-cloudpak-partners.slack.com/archives/C04SMFNLA3T).
 
 **All others**
+
 Open a new issue in this GitHub
 
 ## Disclaimer
