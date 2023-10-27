@@ -38,9 +38,11 @@ Most labs are accessible using the Jam-in-a-Box environment. For some labs, you 
 We aim to support successfully utilizing our Jam-in-a-Box.
 
 **Business Partners (require an invitation) and IBMers**
+
 To engage us, drop us a message at [#jam-in-a-box-business-automation](https://ibm-cloudpak-partners.slack.com/archives/C04SMFNLA3T).
 
 **All others**
+
 Open a new issue in this GitHub
 
 ## Disclaimer
