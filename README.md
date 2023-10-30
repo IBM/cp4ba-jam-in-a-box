@@ -33,6 +33,12 @@ More information on the assets, how to reserve an environment and the labs are l
 - [CP4BA 23.0.1](https://github.com/IBM/cp4ba-jam-in-a-box/tree/main/Solutions/Client%20Onboarding/README.md)
 - [CP4BA 22.0.2](https://github.com/IBM/cp4ba-jam-in-a-box/tree/main/Solutions/Client%20Onboarding/README_2202.md)
 
+### Email Server and Web-based Client
+
+It can be useful to have an email server and client locally deployed within a Cloud Pak for Business Automation instance. While this email server can only handle emails  locally, other CP4BA capabilities can be connected to it, e.g. to send notificactions. In that way the CP4BA instance is self-contained without external dependencies.
+
+Follow these [instructions](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/DeployingEmailServerClient.md) to deploy such a setup into a CP4BA 22.0.2 or 23.0.1 Starter deployment environment. It will also also you to add additional users to the CP4BA environment which can be useful for demos.
+
 
 ## Support
 
