@@ -32,7 +32,7 @@ Most labs are accessible using the Jam-in-a-Box environment. For some labs, you 
 
 - The lab instructions refer to using the URLs found on the Tech Jam event page. For Jam-in-a-Box environments, please use those URLs provided when the deployment completes and/or refer to the `client-onboarding-information` ConfigMap that is created when the deployment is successful.
 - The lab instructions mention how to receive your user credentials using a link on the Tech Jam event page. For Jam-in-a-Box environments, please use the admin user and admin password (or one of the business users) provided when the deployment completes and/or refer to the `client-onboarding-information` ConfigMap that is created when the deployment is successful.
-- The lab instructions mostly mention to prefix your artifacts with "usrXYZ". This is important when working in a shared environment. You may choose to still follow the instructions in this point, even when this is not strictly required for the Jam-in-a-Box environment that is normally considered a single-user environment.
+- The lab instructions mostly mention to prefix your artifacts with "usrXYZ". This is important when working in a shared environment. You may choose to still follow the instructions in this point, even when this is not strictly required for the Jam-in-a-Box environment that is normally considered a single-user environment. For the watsonX Orchestrate lab you should still do this as you are probably working on a shared instance with other users. 
 
 ## Support
 
