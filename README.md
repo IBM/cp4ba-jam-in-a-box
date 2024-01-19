@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-1. Select the solution and version or the asset of interest from the [Solutions and Assets](#Solutions and Assets) section
+1. Select the solution and version or the asset of interest from the [Solutions and Assets](#solutions-and-assets) section
 2. Follow the instructions in the **Quick Start** section of the linked document
 
 ## Introduction
@@ -25,7 +25,7 @@ Jam-in-a-Box removes hurdles to Business Automation adoption through easing avai
 
 ## Jam-in-a-Box Environments
 
-The [Solutions and Assets](#Solutions and Assets) section below lists the available demos that can be imported into the environment along with instructions on how to reserve the environment.
+The [Solutions and Assets](#solutions-and-assets) section below lists the available demos that can be imported into the environment along with instructions on how to reserve the environment.
 
 ## Solutions and Assets
 
