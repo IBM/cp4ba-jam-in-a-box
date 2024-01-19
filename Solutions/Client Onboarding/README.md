@@ -2,9 +2,9 @@
 
 ## Quick Start
 
-1. Select the lab(s) you want to do from the table in the [Labs](##Labs) section below
+1. Select the lab(s) you want to do from the table in the [Labs](#Labs) section below
 1. Follow the instructions for the lab(s) in right column to get and prepare the required environment(s)
-1. Read the [Lab Considerations](##### Lab Considerations) section for specifics of using the labs in the context of Jam-in-a-Box
+1. Read the [Lab Considerations](#Lab Considerations) section for specifics of using the labs in the context of Jam-in-a-Box
 1. Follow the link(s) to the documentation of the lab(s) in the left column and perform the lab(s)
 
 ## **Overview**
