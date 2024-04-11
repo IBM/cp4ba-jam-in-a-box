@@ -2,7 +2,7 @@
 >
 > Under construction
 
-# Jam-in-a-Box - Client Onboarding for CP4BA 23.0.2
+# Jam-in-a-Box - Client Onboarding for CP4BA 23.0.2/watsonX Orchestrate
 
 ## Quick Start
 
@@ -15,7 +15,7 @@
 
 **Introduction of the Client Onboarding solution and solution exports:** https://github.com/IBM/cp4ba-client-onboarding-scenario 
 
-**Lab assets:** The solution has [ten hands-on labs](https://github.com/IBM/cp4ba-labs/tree/main/23.0.2) associated with it
+**Lab assets:** The solution has [eleven hands-on labs](https://github.com/IBM/cp4ba-labs/tree/main/23.0.2) associated with it
 
 **Jam-in-a-Box environment:** In order to use the solution in your own Jam-in-a-Box environment, deploy the Client Onboarding solution and labs as described in this [document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.2/StarterDeploymentViaJob.md) for a **Starter** deployment or refer to this [document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.2/README.md) for **Enterprise** deployments.
 
