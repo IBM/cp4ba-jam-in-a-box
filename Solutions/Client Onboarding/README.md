@@ -1,7 +1,3 @@
-> [!WARNING]
->
-> Under construction
-
 # Jam-in-a-Box - Client Onboarding for CP4BA 23.0.2/watsonX Orchestrate
 
 ## Quick Start
