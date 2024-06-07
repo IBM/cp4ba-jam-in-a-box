@@ -113,8 +113,15 @@ The lab instructions are written in context of a Tech Jam event. When performing
 
 Below you find the links to the lab instructions for the labs supported in this environment:
 
-| [IBM Cloud Pak for Business Automation (End-to-End)](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/IBM%20Cloud%20Pak%20for%20Business%20Automation%20(End-to-End))<br/>[IBM Business Automation Application](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Business%20Automation%20Application)<br/>[IBM Automation Decision Services](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Decisions)<br/>[IBM Automation Document Processing](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Document%20Processing)<br />[IBM Business Automation Insights](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Business%20Automation%20Insights)<br/>[IBM Business Automation Workflow](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Workflow)<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Content) |
-| ------------------------------------------------------------ |
+- [IBM Cloud Pak for Business Automation (End-to-End)](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/IBM%20Cloud%20Pak%20for%20Business%20Automation%20(End-to-End))
+- [IBM Business Automation Application](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Business%20Automation%20Application)
+- [IBM Automation Decision Services](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Decisions)
+- [IBM Automation Document Processing](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Document%20Processing)
+- [IBM Business Automation Insights](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Business%20Automation%20Insights)
+- [IBM Business Automation Workflow](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Workflow)
+- [IBM FileNet Content Services (CPE, GraphQL & Navigator)](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Content)
+
+
 
 ## Support
 
