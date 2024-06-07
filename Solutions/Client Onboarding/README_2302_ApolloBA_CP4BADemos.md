@@ -19,6 +19,8 @@
 
 ## **Overview**
 
+This Jam-in-a-Box environment is provided to you as a cooperation between the owners of the Apollo Business Automation approach and the IBM Business Automation and Digital Labor SWAT team.
+
 The major benefits of using this environment are:
 
 - This environment can be used for a single user use case or for running mini-Tech Jams with at least 10 participants
