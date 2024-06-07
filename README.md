@@ -62,17 +62,17 @@ Most labs are accessible using a single Jam-in-a-Box environment. For some labs,
 - **Single-user/self-paced** Client Onboarding demo and labs on **CP4BA 23.0.2**
   - [Pre-deployed Client Onboarding from TechZone](/Solutions/Client%20Onboarding/README.md)
     - **Benefits:** Provisioning time only 2-3 hours; Support of ADP lab
-    - **Limitations:** Need to use RDP to connect to bastion host to perform demo/labs; No support for RPA as part of Client Onboarding; No support for watsonX Orchestrate lab (all three to be lifted)
+    - **Limitations:** Need to use RDP to connect to bastion host to perform demo/labs; No support for RPA as part of Client Onboarding demo; No support for watsonX Orchestrate lab (all three to be lifted)
   - [Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos](/Solutions/Client%20Onboarding/README_2302_ApolloBA_CP4BADemos.md)
     - **Benefits:** Accessible from any web browser; Supports watsonX Orchestrate lab; Supports ADP lab
-    - **Limitations:** Provisioning time 5-7 hours
+    - **Limitations:** Provisioning time 5-7 hours; No support for RPA as part of Client Onboarding demo
 - **Workshop/Mini-Tech Jam** with 10-20 participants on **CP4BA 23.0.2**
   - Pre-deployed Client Onboarding from TechZone (coming soon)
     - **Benefits:** Provisioning time only 2-3 hours; Comes with 20 users for mini-Tech Jams; Accessible from any web browser; Supports watsonX Orchestrate lab; Can be configured to use RPA as part of Client Onboarding demo
     - **Limitations:** No support for ADP lab (due to ADP design limitations)
   - [Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos](/Solutions/Client%20Onboarding/README_2302_ApolloBA_CP4BADemos.md)
     - **Benefits:** Comes with 20 users for mini-Tech Jams; Accessible from any web browser; Supports watsonX Orchestrate lab
-    - **Limitations:** Provisioning time 5-7 hours; No support for ADP lab as part of mini-Tech Jam (due to ADP design limitations)
+    - **Limitations:** Provisioning time 5-7 hours; No support for RPA as part of Client Onboarding demo; No support for ADP lab as part of mini-Tech Jam (due to ADP design limitations)
 
 
 
