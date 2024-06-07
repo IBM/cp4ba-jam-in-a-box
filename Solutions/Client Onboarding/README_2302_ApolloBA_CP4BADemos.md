@@ -23,9 +23,9 @@ This Jam-in-a-Box environment is provided to you as a cooperation between the ow
 
 The major benefits of using this environment are:
 
-- This environment can be used for a single user use case or for running mini-Tech Jams with at least 10 participants
+- Environment can be used for a single-user use case and for running mini-Tech Jams with approximately 10 participants (feedback welcome if you used it more users)
 - Client Onboarding scenario and lab artifacts are pre-deployed for you
-- 20 business users have been that can be given to participants of a mini-Tech Jam
+- 20 business users have been created that can be given to participants of a mini-Tech Jam
 
 > [!CAUTION]
 >
@@ -37,9 +37,9 @@ The major benefits of using this environment are:
 
 Follow the journey [Apollo Business Automation - CP4BA Demos](https://techzone.ibm.com/collection/apollo-business-automation/journey-cp4ba-demos) to reserve your environment on IBM TechZone. It consists of three major steps:
 
-1. Requesting the environment in step 1 and waiting till the environment is **Ready** and fully deployed. This will normally take approximately 5-7 hours.
+1. Requesting the environment in step 1 and waiting till the environment is **Ready** **and fully deployed**. This will normally take approximately 5-7 hours.
 2. Validating the successful deployment of the Cloud Pak for Business Automation as described in step 2.
-3. Validating the successful deployment of the Client Onboarding scenario as described in step 3.
+3. Validating the successful deployment of the Client Onboarding scenario assets as described in step 3.
 
 
 
@@ -51,8 +51,8 @@ The lab instructions are written in context of a Tech Jam event. When performing
 
 | Lab instructions mention...                                  | As part of this Jam-in-a-Box environment...                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| using the **URLs** found on the Tech Jam event page          | please login to the OpenShift console, go to **Workloads -> ConfigMaps** and search for **client-onboarding-information**.<br />The ConfigMap contains all relevant URLs for this environment. |
-| how to receive your **user credentials** using a link on the Tech Jam event page | please login to the OpenShift console, go to **Workloads -> ConfigMaps** and search for **client-onboarding-information**.<br />The ConfigMap contains all relevant user names and password for this environment. |
+| using the **URLs** found on the Tech Jam event page          | please login to the OpenShift console, go to **Workloads -> ConfigMaps** and search for **client-onboarding-information**.<br />The ConfigMap contains all relevant URLs for this environment. <br />For a mini-Tech Jam share them with the participants in a suitable form. |
+| how to receive your **user credentials** using a link on the Tech Jam event page | please login to the OpenShift console, go to **Workloads -> ConfigMaps** and search for **client-onboarding-information**.<br />The ConfigMap contains all relevant user names and password for this environment.<br />For a mini-Tech Jam share a dedicated user name and password with each participants in a suitable form. |
 | to **prefix your artifacts** with "usrXYZ"                   | depending on if you use the environment as a single-user environment or for running a mini-Tech Jam, you may choose to follow the instructions in this point |
 
 
