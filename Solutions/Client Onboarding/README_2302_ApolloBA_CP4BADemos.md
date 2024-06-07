@@ -25,6 +25,10 @@ The major benefits of using this environment are:
 - Client Onboarding scenario and lab artifacts are pre-deployed for you
 - 20 business users have been that can be given to participants of a mini-Tech Jam
 
+> [!CAUTION]
+>
+> It can take 5-7 hours until the environment is available.
+
 
 
 ## Reserve the CP4BA Demos Environment
