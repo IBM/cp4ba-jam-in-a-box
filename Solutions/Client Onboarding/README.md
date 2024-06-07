@@ -12,7 +12,7 @@
 > - In addition, to use this environment, accessing the bastion host via **RDP** is required. Ensure you have an RDP tool of choice for your operating system.
 > - At this point it is **not possible to configure RPA** as part of the Client Onboarding scenario.
 >
-> If you have your own Cloud Pak for Business Automation (CP4BA) 23.0.2 environment, can't use RDP, or need the RPA bot in action, please refer to this [document](../../README.md) for other options.
+> If you have your own Cloud Pak for Business Automation (CP4BA) 23.0.2 environment, can't use RDP, or need the RPA bot in action, please refer to this [document](../../README.md) and this [document](README_2302_SelfDeploy.md) for other options.
 
 
 
