@@ -50,9 +50,9 @@ Based on the technology used to achieve a short provisioning time, you need to p
    On the **Create a reservation** page make the following selections:
 
    - **Purpose**: e.g. Education
-   - **Purpose description**: Enter any text
+   - **Purpose description**: Enter any text<br/>
      **Tip:** The selection you make here determines if you need to specify a 'Sales Opportunity number' and the 'reservation policy' (how long the environment is available and how often it can be extended).
-   - **Preferred Geography**: Select the geography that is closest to you. 
+   - **Preferred Geography**: Select the geography that is closest to you. <br/>
      **Remark:** Depending on available capacity the deployment have been seen to fail sometimes. Please request another environment, potentially selecting a different geography.
    - **End date and time**: Should get populated automatically. No changes needed.
    - **Accept the terms and conditions**: In the lower right corner, check the box 
