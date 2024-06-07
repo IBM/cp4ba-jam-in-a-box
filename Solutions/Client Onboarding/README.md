@@ -1,46 +1,120 @@
-# Jam-in-a-Box - Client Onboarding for CP4BA 23.0.2/watsonX Orchestrate
+> [!CAUTION]
+>
+> Under construction
+
+
+
+# Jam-in-a-Box - Single User Environment for CP4BA 23.0.2
+
+> [!IMPORTANT]
+>
+> - As this approach relies on reserving an environment from IBM TechZone, this document is **only applicable to IBM Business Partners** that have the ability to request environments from TechZone **and IBMers**. 
+> - In addition, to use this environment, accessing the bastion host via **RDP** is required. Ensure you have an RDP tool of choice for your operating system.
+> - At this point it is **not possible to configure RPA** as part of the Client Onboarding scenario.
+>
+> If you have your own Cloud Pak for Business Automation (CP4BA) 23.0.2 environment, can't use RDP, or need the RPA bot in action, please refer to this [document](../../README.md) for other options.
+
+
 
 ## Quick Start
 
-1. Select the lab(s) you want to do from the table in the [Labs](#labs) section below
-1. Follow the instructions for the lab(s) in **right column** to get and prepare the required environment(s)
-1. Read the [Lab Considerations](#lab-considerations) section for specifics of using the labs in the context of Jam-in-a-Box
-1. Follow the link(s) to the documentation of the lab(s) in the **left column** and perform the lab(s)
+1. Reserve and prepare the Jam-in-a-Box environment as described in the [section](#reserve-and-prepare-the-jam-in-a-box-single-user-environment) below
+1. Read the [Lab Considerations](#lab-considerations) section for specifics of using the labs in the context of this Jam-in-a-Box environment
+1. Follow the link to the documentation of the lab you want to perform in the [Lab Instructions](#lab-instructions) section
+
+
 
 ## **Overview**
 
-**Introduction of the Client Onboarding solution and solution exports:** https://github.com/IBM/cp4ba-client-onboarding-scenario 
+This Jam-in-a-Box environment is provided to you by the IBM Business Automation and Digital Labor SWAT team.
 
-**Lab assets:** The solution has [eleven hands-on labs](https://github.com/IBM/cp4ba-labs/tree/main/23.0.2) associated with it
+The major benefits of using this environment are:
 
-**Jam-in-a-Box environment:** In order to use the solution in your own Jam-in-a-Box environment, deploy the Client Onboarding solution and labs as described in this [document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.2/StarterDeploymentViaJob.md) for a **Starter** deployment or refer to this [document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.2/README.md) for **Enterprise** deployments.
+- Provisioning time is only 2-3 hours
+- Client Onboarding scenario and lab artifacts are pre-deployed for you
+- All links and user credentials are stored for you in Firefox
+
+Based on the technology used to achieve a short provisioning time, you need to perform a few simple steps before you can use the environment.
 
 **What's included:**
 
 - Red Hat OpenShift (OCP 4.14) on VMWare on IBM Cloud
 - IBM Cloud Pak for Business Automation 23.0.2 IF002
-- IBM Process Mining 1.14.3
-- IBM Robotic Process Automation 23.0.13
 
-## Labs
 
-Most labs are accessible using the Jam-in-a-Box environment. For some labs, you will need a separate environment. The table below provides the respective details:
 
-**Mapping of labs to environments**
+## Reserve and Prepare the Jam-in-a-Box Single User Environment
 
-| Lab(s)                                                       | Environment (IBM TechZone - Business Partners and IBMers only) |
+1. Reserve your environment on IBM TechZone from the [IBM Cloud Pak for Business Automation and Digital Labor - Jam-in-a-Box](https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-and-digital-labor-jam-in-a-box/environments) collection by clicking on the **Jam in a Box - Single-User** tile
+
+   On the **Create a reservation** page make the following selections:
+
+   - **Purpose**: e.g. Education
+
+     > [!TIP]
+     >
+     > The selection you make here determines if you need to specify a 'Sales Opportunity number' and the 'reservation policy' (how long the environment is available and how often it can be extended).
+
+   - **Purpose description**: Enter any text
+   - **Preferred Geography**: Select the geography that is closest to you. 
+     **Remark:** Depending on available capacity the deployment have been seen to fail sometimes. Please request another environment, potentially selecting a different geography.
+   - **End date and time**: Should get populated automatically. No changes needed.
+   - **Accept the terms and conditions**: In the lower right corner, check the box 
+   - **Submit**
+
+2. Wait till the environment is **Ready**, this will normally take between 2-3 hours
+
+3. Once your environment is Ready, connect to the bastion host through **RDP** (open the reserved environment from **https://techzone.ibm.com/my/reservations** and copy the RDP value at the top to your RDP tool)
+
+   > [!TIP]
+   >
+   > The credentials to login to the bastion host are mention in the description of the tile
+
+4. From within the bastion host
+
+   1. **Open** **Firefox** using the icon on the desktop
+   2. **Open** the **Red Hat OpenShift console** by clicking the **Red Hat OpenShift bookmark**
+   3. **Login** to the Red Hat OpenShift console using the credentials for the user **ocadmin** that are stored in Firefox
+   4. Copy the **login command** to the clipboard 
+      (Under "ocadmin" in the top right corner click **Copy login command**, a new tab opens, log in again using **ocadmin**, click **Display Token**, and then copy the entire line under **Log in with this token**)
+   5. Open a **Terminal** using the respective icon on the desktop, **paste the content from the clipboard** (right click on the Terminal window, then select "Paste"), and press **Enter** to login to your Red Hat OpenShift cluster from the command line
+   6. Type **./31-prepareJiaB4usage.sh** ()including the dot at the beginning) and press **Enter** to execute the script that prepares the environment for usage
+   7. When the script asks you if you want to continue, enter **y** (or Y or Yes or YES) and press **Enter**
+   8. Once the script completes, your environment is ready to be used for the supported labs. Follow the respective lab instructions for the next steps
+
+   > [!IMPORTANT]
+   >
+   > It might happen that:
+   >
+   > - the login does not work, or shows "Error 502 - Bad Gateway". In this case please wait for some more time (about 15 minutes), then the log-in should work and the requested page is shown
+   > - the login results in "404 Page not found" error.  In this case please wait for some more time, then the log-in should work and the requested page is shown
+   >
+   > These issues are the result of restarting some pods, which may take a different amount of time depending on the resources available on TechZone.
+
+
+
+## Labs Instructions & Considerations
+
+#### Lab Considerations
+
+The lab instructions are written in context of a Tech Jam event. When performing the labs as part of Jam-in-a-Box keep in mind:
+
+| Lab instructions mention...                                  | As part of this Jam-in-a-Box environment...                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [IBM Cloud Pak for Business Automation (End-to-End)](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/IBM%20Cloud%20Pak%20for%20Business%20Automation%20(End-to-End))<br/>[IBM Business Automation Application](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Business%20Automation%20Application)<br/>[IBM Business Automation Insights](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Business%20Automation%20Insights)<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Content)<br/>[IBM Automation Decision Services](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Decisions)<br/>[IBM Business Automation Workflow](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Workflow)<br/>[IBM Automation Document Processing](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Document%20Processing) | Jam-in-a-Box environment (deployment instructions are available in this [document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.2/StarterDeploymentViaJob.md) for Starter pattern, or this [document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.2/README.md) for Enterprise pattern) |
-| [IBM watsonx Orchestrate](https://github.com/IBM/cp4ba-labs/tree/main/23.0.2/watsonx%20Orchestrate) | Jam-in-a-Box environment (deployment instructions are available in this [document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.2/StarterDeploymentViaJob.md) for Starter pattern, or this [document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.2/README.md) for Enterprise pattern)<br/>Access to a watsonx Orchestrate instance is required as an additional prerequisite. Please check the watsonx Orchestrate content on Seismic to learn how to get access to such an instance. |
-| [IBM Process Mining](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Process%20Mining) | Please reserve a TechZone Process Mining Environment [here](https://techzone.ibm.com/collection/process-mining-with-task-mining-demo-and-etl/environments). Make sure to select the **IBM Process Mining 1.14.3 with Task Mining and ETL - US East only**. |
-| [IBM Robotic Process Automation](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Robotic%20Process%20Automation) | Follow the instructions provided on the respective [lab overview page](https://github.com/IBM/cp4ba-labs/tree/main/23.0.2/Robotic%20Process%20Automation) |
-| [Bring-up Lab (Deployment of CP4BA)](https://github.com/IBM/cp4ba-labs/tree/main/23.0.2/Bring-up) | Follow the instructions provided on the respective [lab overview page](https://github.com/IBM/cp4ba-labs/tree/main/23.0.2/Bring-up) |
+| using the **URLs** found on the Tech Jam event page          | please use the **bookmarks** created for you in **Firefox**  |
+| how to receive your **user credentials** using a link on the Tech Jam event page | please use the **credentials stored** within **Firefox** for either the admin user **cp4badmin** or the business user **usr001** |
+| to **prefix your artifacts** with "usrXYZ"                   | you may choose to still follow the instructions in this point, even when this is not strictly required as this is a single-user environment |
 
-##### Lab Considerations
+> [!TIP]
+>
+> Initially the environment may appear a little slow. Once the components have warmed up, it should perform reasonably well.
 
-- The lab instructions refer to using the URLs found on the Tech Jam event page. For Jam-in-a-Box environments, please use those URLs provided when the deployment completes and/or refer to the `client-onboarding-information` ConfigMap that is created when the deployment is successful.
-- The lab instructions mention how to receive your user credentials using a link on the Tech Jam event page. For Jam-in-a-Box environments, please use the admin user and admin password (or one of the business users) provided when the deployment completes and/or refer to the `client-onboarding-information` ConfigMap that is created when the deployment is successful. In case your Jam-in-a-Box environment uses an external LDAP check with the party that owns the LDAP on available users and passwords.
-- The lab instructions mostly mention to prefix your artifacts with "usrXYZ". This is important when working in a shared environment. You may choose to still follow the instructions in this point, even when this is not strictly required for the Jam-in-a-Box environment (at least if a Starter pattern environment) that is normally considered a single-user environment. For the watsonx Orchestrate lab you should still do this as you are probably working on a shared watsonx Orchestrate instance with other users. 
+#### Lab Instructions
+
+Below you find the links to the lab instructions for the labs supported in this environment:
+
+| [IBM Cloud Pak for Business Automation (End-to-End)](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/IBM%20Cloud%20Pak%20for%20Business%20Automation%20(End-to-End))<br/>[IBM Business Automation Application](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Business%20Automation%20Application)<br/>[IBM Automation Decision Services](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Decisions)<br/>[IBM Automation Document Processing](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Document%20Processing)<br />[IBM Business Automation Insights](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Business%20Automation%20Insights)<br/>[IBM Business Automation Workflow](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Workflow)<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](https://github.com/IBM/cp4ba-labs/blob/main/23.0.2/Content) |
+| ------------------------------------------------------------ |
 
 ## Support
 
@@ -53,6 +127,8 @@ To engage us, drop us a message at [#jam-in-a-box-business-automation](https://i
 **All others**
 
 Open a new issue in this GitHub
+
+
 
 ## Disclaimer
 
