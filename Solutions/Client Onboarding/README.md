@@ -50,12 +50,8 @@ Based on the technology used to achieve a short provisioning time, you need to p
    On the **Create a reservation** page make the following selections:
 
    - **Purpose**: e.g. Education
-
-     > [!TIP]
-     >
-     > The selection you make here determines if you need to specify a 'Sales Opportunity number' and the 'reservation policy' (how long the environment is available and how often it can be extended).
-
    - **Purpose description**: Enter any text
+     **Tip:** The selection you make here determines if you need to specify a 'Sales Opportunity number' and the 'reservation policy' (how long the environment is available and how often it can be extended).
    - **Preferred Geography**: Select the geography that is closest to you. 
      **Remark:** Depending on available capacity the deployment have been seen to fail sometimes. Please request another environment, potentially selecting a different geography.
    - **End date and time**: Should get populated automatically. No changes needed.
@@ -65,10 +61,7 @@ Based on the technology used to achieve a short provisioning time, you need to p
 2. Wait till the environment is **Ready**, this will normally take between 2-3 hours
 
 3. Once your environment is Ready, connect to the bastion host through **RDP** (open the reserved environment from **https://techzone.ibm.com/my/reservations** and copy the RDP value at the top to your RDP tool)
-
-   > [!TIP]
-   >
-   > The credentials to login to the bastion host are mention in the description of the tile
+   **Important:** The credentials to login to the bastion host are mention in the description of the tile
 
 4. From within the bastion host
 
@@ -82,14 +75,15 @@ Based on the technology used to achieve a short provisioning time, you need to p
    7. When the script asks you if you want to continue, enter **y** (or Y or Yes or YES) and press **Enter**
    8. Once the script completes, your environment is ready to be used for the supported labs. Follow the respective lab instructions for the next steps
 
-   > [!IMPORTANT]
-   >
-   > It might happen that:
-   >
-   > - the login does not work, or shows "Error 502 - Bad Gateway". In this case please wait for some more time (about 15 minutes), then the log-in should work and the requested page is shown
-   > - the login results in "404 Page not found" error.  In this case please wait for some more time, then the log-in should work and the requested page is shown
-   >
-   > These issues are the result of restarting some pods, which may take a different amount of time depending on the resources available on TechZone.
+
+> [!IMPORTANT]
+>
+> It might happen that:
+>
+> - the login does not work, or shows "Error 502 - Bad Gateway". In this case please wait for some more time (about 15 minutes), then the log-in should work and the requested page is shown
+> - the login results in "404 Page not found" error.  In this case please wait for some more time, then the log-in should work and the requested page is shown
+>
+> These issues are the result of restarting some pods, which may take a different amount of time depending on the resources available on TechZone.
 
 
 
