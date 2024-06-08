@@ -38,7 +38,7 @@ Based on the technology used to achieve a short provisioning time, you need to p
 
 **What's included:**
 
-- Red Hat OpenShift (OCP 4.14) on VMWare on IBM Cloud
+- Red Hat OpenShift (OCP 4.12) on VMWare on IBM Cloud
 - IBM Cloud Pak for Business Automation 23.0.2 IF002
 
 
@@ -71,7 +71,7 @@ Based on the technology used to achieve a short provisioning time, you need to p
    4. Copy the **login command** to the clipboard 
       (Under "ocadmin" in the top right corner click **Copy login command**, a new tab opens, log in again using **ocadmin**, click **Display Token**, and then copy the entire line under **Log in with this token**)
    5. Open a **Terminal** using the respective icon on the desktop, **paste the content from the clipboard** (right click on the Terminal window, then select "Paste"), and press **Enter** to login to your Red Hat OpenShift cluster from the command line
-   6. Type **./31-prepareJiaB4usage.sh** ()including the dot at the beginning) and press **Enter** to execute the script that prepares the environment for usage
+   6. Type **./31-prepareJiaB4usage.sh** (including the dot) at the beginning) and press **Enter** to execute the script that prepares the environment for usage
    7. When the script asks you if you want to continue, enter **y** (or Y or Yes or YES) and press **Enter**
    8. Once the script completes, your environment is ready to be used for the supported labs. Follow the respective lab instructions for the next steps
 
