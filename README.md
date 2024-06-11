@@ -1,7 +1,3 @@
-> [!WARNING]
->
-> Being updated
-
 # Jam-in-a-Box for Business Automation & Digital Labor
 
 ## Quick Start

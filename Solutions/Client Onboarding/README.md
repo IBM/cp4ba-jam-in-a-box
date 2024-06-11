@@ -1,9 +1,3 @@
-> [!CAUTION]
->
-> Under construction
-
-
-
 # Jam-in-a-Box - Single User Environment for CP4BA 23.0.2
 
 > [!IMPORTANT]
