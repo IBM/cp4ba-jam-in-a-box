@@ -52,7 +52,7 @@ We aim to support successfully utilizing our Jam-in-a-Box.
 
 **Business Partners (require an invitation) and IBMers**
 
-To engage us, drop us a message at [#jam-in-a-box-business-automation](https://ibm-cloudpak-partners.slack.com/archives/C04SMFNLA3T).
+To engage us, drop us a message at [#jam-in-a-box-ba-dl](https://ibm-cloudpak-partners.slack.com/archives/C04SMFNLA3T).
 
 **All others**
 
