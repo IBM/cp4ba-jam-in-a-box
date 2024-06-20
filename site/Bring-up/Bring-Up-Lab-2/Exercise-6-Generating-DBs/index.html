@@ -1,0 +1,873 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+    
+    
+      
+        <title>Exercise 6: Generating CP4BA Databases and Verifying Configuration - BADL - Labs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercise-6-generating-cp4ba-databases-and-verifying-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="BADL - Labs" class="md-header__button md-logo" aria-label="BADL - Labs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BADL - Labs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exercise 6: Generating CP4BA Databases and Verifying Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Readme/" class="md-tabs__link">
+        
+  
+    
+  
+  Bring-up
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Business%20Automation%20Application/" class="md-tabs__link">
+        
+  
+    
+  
+  Business Automation Application
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Business%20Automation%20Insights/" class="md-tabs__link">
+        
+  
+    
+  
+  Business Automation Insights
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Content/Readme/" class="md-tabs__link">
+        
+  
+    
+  
+  Content
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Decisions/README.md" class="md-tabs__link">
+        
+  
+    
+  
+  Decisions
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Document%20Processing/Readme/" class="md-tabs__link">
+        
+  
+    
+  
+  Document Processing
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../IBM%20Cloud%20Pak%20for%20Business%20Automation%20%28End-to-End%29/" class="md-tabs__link">
+        
+  
+    
+  
+  IBM Cloud Pak for Business Automation (End-to-End)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Process%20Mining/" class="md-tabs__link">
+        
+  
+    
+  
+  Process Mining
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Robotic%20Process%20Automation/" class="md-tabs__link">
+        
+  
+    
+  
+  Robotic Process Automation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../watsonx%20Orchestrate/" class="md-tabs__link">
+        
+  
+    
+  
+  Watsonx Orchestrate
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Workflow/" class="md-tabs__link">
+        
+  
+    
+  
+  Workflow
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="BADL - Labs" class="md-nav__button md-logo" aria-label="BADL - Labs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    BADL - Labs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bring-up
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Business%20Automation%20Application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Business Automation Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Business%20Automation%20Insights/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Business Automation Insights
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Content/Readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Content
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Decisions/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decisions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document%20Processing/Readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Document Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IBM%20Cloud%20Pak%20for%20Business%20Automation%20%28End-to-End%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Cloud Pak for Business Automation (End-to-End)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Process%20Mining/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Process Mining
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Robotic%20Process%20Automation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Robotic Process Automation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../watsonx%20Orchestrate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Watsonx Orchestrate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="exercise-6-generating-cp4ba-databases-and-verifying-configuration">Exercise 6: Generating CP4BA Databases and Verifying Configuration<a class="headerlink" href="#exercise-6-generating-cp4ba-databases-and-verifying-configuration" title="Permanent link">&para;</a></h1>
+<h1 id="61-introduction">6.1 Introduction<a class="headerlink" href="#61-introduction" title="Permanent link">&para;</a></h1>
+<p>In the last two exercises, the configuration parameters in the property files created by the <code>cp4a-prerequisites.sh</code> script, have been set to the required values. This is a required precondition for 
+running the <code>cp4a-prerequisites.sh</code> now in <strong>generate</strong> mode. In this mode, the script will first review completeness of the configuration variables, and will then generate the required Kubernetes secret definitions, as well as sql scripts to create the databases on the PostgreSQL database server.</p>
+<p>The PostgreSQL database creation scripts need to be copied into the PostgreSQL database server. They need some manual modifications, as PostgreSQL deployments with different operators are different from each other. The DB scripts can be transferred, edited and executed one by one, or as its done here, concatenated to each other and executed as one large script. As the files are in different directories, the concatenation approach seems easier, and is applied here.</p>
+<p>Attention must be applied with editing of the database creation scripts. If thats done incorrectly, all databases might at the end use a single tablespace, which will limit overall performance. Follow the Valiation steps in the last section to verify which tablespace is defined for which database.</p>
+<p>Applying the Kubernetes secrets is easy, it can be done using the steps indicated here. Alternatively another script from the case package can also be used.</p>
+<p>In the verification section of this Exercise, the <code>cp4a-prerequisites.sh</code> script run in <strong>validate mode</strong>, to validate the configuration and deployment of the prerequisites. As the connection to the database is also verified, and as the database can only be reached from inside the Kubernetes cluster, the checks cannot be run directly on the bastion node, without giving error messages from the unavailable database server. Therefore, to run the validation, the case package script is copied into the <code>/tmp</code> directory of the CP4BA Operator, and run from there. </p>
+<h1 id="62-exercise-instructions">6.2 Exercise Instructions<a class="headerlink" href="#62-exercise-instructions" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>Switch to the <strong>Terminal</strong> window. Change to the <strong>cert-kubernetes/scripts</strong> directory.</p>
+<div class="highlight"><pre><span></span><code>cd $HOME/cp4ba/cert-kubernetes/scripts
+</code></pre></div>
+</li>
+<li>
+<p>Run the <strong>cp4a-prerequisites.sh</strong> script in <strong>generate</strong> mode. In this mode, information configured in the property files is reviewed, and the CP4BA Configuration files are generated. </p>
+<div class="highlight"><pre><span></span><code>./cp4a-prerequisites.sh -m generate
+</code></pre></div>
+<p>If error messages are printed, get back to the last exercise and edit the two property files, to find any configuration value which still contains a <code>&lt;required&gt;</code> value.</p>
+<blockquote>
+<p>Note When running it without parameters, the <code>cp4a-prerequisites.sh</code> scriptsupplies a usage.</p>
+<p><img alt="Usage of prerequisites script" src="../Images/7.1-prerequisites-usage.png" /></p>
+</blockquote>
+</li>
+<li>
+<p>The script does not ask for further input, in this mode. Result of checking the property files is indicated in green or red color, red color indicates errors or missing values. </p>
+<p>Expected output:</p>
+<p><img alt="Generating the Configuration Files" src="../Images/7.1-generating-configuration.png" /></p>
+</li>
+<li>
+<p>The database creation scripts are generated in directory <strong>cp4ba-prerequisites/dbscript</strong>, so change into that directory.</p>
+<div class="highlight"><pre><span></span><code>cd cp4ba-prerequisites/dbscript
+</code></pre></div>
+</li>
+<li>
+<p>Generate a combined database creation script, by collecting all files ending in .sql, and concatenating into one named dbscript.</p>
+<div class="highlight"><pre><span></span><code>find . -name \*.sql | xargs cat &gt; dbscript
+</code></pre></div>
+</li>
+<li>
+<p>Edit the generated script, and comment the <strong>create role</strong> and the <strong>create tablespace</strong> commands, as the user and the tablespace have been pre-created through the CloudNativePG Operator. Each statement, <strong>create role</strong> and the <strong>create tablespace</strong> should appear 4 times, once for every database. </p>
+<div class="highlight"><pre><span></span><code>gedit dbscript
+</code></pre></div>
+</li>
+<li>
+<p>Also, some connection reset statements need to be added, because the single DB creation scripts were concatenated. After each statement <strong>grant create on tablespace</strong>, the statement "\c" needs to be added, to reset the connection to the lastly created database. This is also needed 4 times.</p>
+</li>
+<li>
+<p>Further, in the create database commands, the tablespace clause is missing, when using CP4BA 23.0.2 Base release. The problem is fixed in later IFIXes. They need to be inserted.</p>
+<p>Refer to <a href="../Images/7.1-complete-modified-db-creation-script-base-release.png">Complete Modified DB Creation Script</a> for verification of the completed modifications.</p>
+</li>
+<li>
+<p>For creating the databases, the db creation script needs to be made available in the Postgres Pod. The CloudNativePG Postgres operator automatically protects the container filesystem from modifications. The directory where the database configuration is stored, is an exception. Copy the db creation script into that directory, in the Postgres Pod.</p>
+<div class="highlight"><pre><span></span><code>oc cp dbscript postgres-1:/var/lib/postgresql/data/dbscript
+</code></pre></div>
+</li>
+<li>
+<p>Now run that script.</p>
+<div class="highlight"><pre><span></span><code>oc exec postgres-1 -it -- psql -U postgres -f /var/lib/postgresql/data/dbscript
+</code></pre></div>
+<p>Expected output:</p>
+<p><img alt="Creating the Databases" src="../Images/7.1-creating-databases.png" /></p>
+</li>
+<li>
+<p>Check the created databases with the psql command \l+</p>
+<div class="highlight"><pre><span></span><code>oc exec postgres-1 -it -- psql -U postgres -c &#39;\l+&#39;
+</code></pre></div>
+<p>Expected output:</p>
+<p><img alt="Database Listing" src="../Images/7.1-database-listing.png" /></p>
+<p>Verify especially that the correct tablespaces (last column) are assigned to the databases. </p>
+<p>If the script was not yet correct, and the tablespaces are showing up incorrectly, you can delete the Postgres cluster <code>oc delete -f postgres.yaml</code>, recreate it <code>oc apply -f postgres.yaml</code>.
+Before applying the dbscript again, copy the modified postgresql.conf file into the Postgres pod, and rerun Postgres by deleting the pod.</p>
+</li>
+<li>
+<p>The next steps is to apply the generated secrets. Thankfully the secrets are ready and don’t need manual updating.</p>
+<div class="highlight"><pre><span></span><code>cd ../secret_template
+find . -name \*.yaml | xargs -l oc apply -f
+</code></pre></div>
+<p>Expected output:</p>
+<p><img alt="Creating K8s Secrets" src="../Images/7.1-creating-secrets.png" /></p>
+</li>
+</ol>
+<h2 id="63-validation-steps">6.3 Validation steps<a class="headerlink" href="#63-validation-steps" title="Permanent link">&para;</a></h2>
+<p>In this section, the <code>cp4a-prerequisite.sh</code> is executed in validate mode. This is an optional step, but highly recommended to verify consistency of the specification, and check for common problems.</p>
+<ol>
+<li>
+<p>When the databases are created, the settings should be validated before providing the specifications to the CP4BA Operator. As the connection to the Postgres database can only be validated from within a pod, the complete specification script directory needs to be copied into the cp4ba operator.</p>
+<div class="highlight"><pre><span></span><code>cd $HOME/cp4ba
+oc get pods
+oc cp cert-kubernetes &lt;cp4ba operator podname&gt;:/tmp/
+</code></pre></div>
+<p>Expected output:</p>
+<p><img alt="Copying case package script directory into Operator Pod" src="../Images/7.1-copying-case-package-script-into-operator.png" /></p>
+</li>
+<li>
+<p>Run a shell inside the Operator, and run the validation script. At the beginning of its execution, some error messages on unavailable command tput and clear are printed. Those are not harmful.</p>
+<div class="highlight"><pre><span></span><code>oc exec &lt;cp4ba operator podname&gt; -it -- bash
+cd /tmp/cert-kubernetes/scripts
+./cp4a-prerequisites.sh -m validate
+</code></pre></div>
+</li>
+</ol>
+<p>Review the generated output. It checks not only the storage class, ldap settings and database settings, but measures also the typical connection delay to the LDAP server and the database. </p>
+<ol>
+<li>
+<p>Expected output of storage class checking:</p>
+<p><img alt="Checking Storage Classes" src="../Images/7.1-checking-storage-classes.png" /></p>
+<p>With errors in this step, check if the right storage class names were provided, and whether the storage class is defined, by running <code>oc get storageclass</code>. With any updates, it needed to update the configuration, by re-running the prerequisite script in generate mode, see beginning of this chapter for reference.</p>
+</li>
+<li>
+<p>Expected output of secret checking</p>
+<p><img alt="Checking Secrets" src="../Images/7.1-Checking-Secrets.png" /></p>
+<p>With errors in this step, please check if the files with the Kubernetes secrets were correctly applied, see last step of preceding section for reference.</p>
+</li>
+<li>
+<p>Expected output of LDAP connection speed testing</p>
+<p><img alt="Checking LDAP Server Connectivity" src="../Images/7.1-checking-ldap.png" /></p>
+<p>With errors in this step, check if the SDS is running, and whether the correct IP address and port number were configured in the properties files. If SDS is not running, or not responding correctly, it can be restarted by running <code>sudo systemctl restart sds</code>. If configuration files need to be updated, generate the configuration again, apply the secrets, and rerun these verification steps. If <em>only</em> the latency is bad, this can be ignored in this sample environment. In a production environment of a customer, this would need to be investigated properly.</p>
+</li>
+<li>
+<p>Expected output of Database configuration and connection speed checking</p>
+<p><img alt="Checking Databases" src="../Images/7.1-checking-dbs.png" /></p>
+<p>With errors in this step, determine if the databases are incorrectly created (run the psql command \l+), or if database server address or database user / password are incorrect. If its needed to recreate the databases, it might be needed to delete the Postgres deployment <code>oc delete -f Postgres.yaml</code>. Check if all resources from PostgreSQL databases are gone, only the operator should still exist. Then follow steps above to recreate the databases. </p>
+</li>
+<li>
+<p>Exit out of the Operator</p>
+<p>```
+exit
+````</p>
+</li>
+</ol>
+<p>Congratulations, with completion of this exercise, the required prerequisites for the deployment of Cloud Pak For Business Automation should be in place. In the <a href="../Exercise-7-Deploy-CP4BA/">next exercise</a>, the case package script <code>cp4a-deployment.sh</code> is used to generate the so-called <em>CR</em> (shorthand for Custom Resource). Applying that YAML file to Kubernetes will kick-start the deployment of the Cloud Pak For Business Automation.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+    
+  </body>
+</html>
