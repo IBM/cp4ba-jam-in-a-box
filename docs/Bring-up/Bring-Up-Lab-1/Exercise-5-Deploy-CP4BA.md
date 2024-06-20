@@ -102,7 +102,7 @@ Follow these step-by-step instructions to deploy CP4BA using the rapid deploymen
    
    This script will prompt you for various input. Please have a look at the sample script output provided below to see the answers you must use.
    
-   You need your Entitlement Registry key handy, see also **https://myibm.ibm.com/products-services/containerlibrary**.
+   You need your Entitlement Registry key handy, see also **<a href="https://myibm.ibm.com/products-services/containerlibrary" target="_blank">https://myibm.ibm.com/products-services/containerlibrary</a>**.
    
    When you paste your Entitlement Registry key, it will not be shown; therefore, paste it just once and hit the Enter key.
    
@@ -329,10 +329,10 @@ You have completed this exercise and learned how to leverage the CP4BA rapid dep
 
 ### 5.3.1 About CP4BA Rapid Deployment Scripts
 
-The CP4BA rapid deployment scripts (https://github.com/IBM/cp4ba-rapid-deployment) are accessible by customers, business partners, and IBMers. The IBM Automation SWAT team continuously maintains them. Feel free to use them.
+The CP4BA rapid deployment scripts (<a href="https://github.com/IBM/cp4ba-rapid-deployment" target="_blank">https://github.com/IBM/cp4ba-rapid-deployment</a>) are accessible by customers, business partners, and IBMers. The IBM Automation SWAT team continuously maintains them. Feel free to use them.
 
 At the moment, only one template is available for CP4BA version 23.0.2, the one you used while this lab. Moving forward, more templates will get added to the rapid deployment scripts that allow you to rapidly install more CP4BA patterns.
 
 Congratulations! You have now successfully installed IBM Cloud Pak for Business Autiomation version 23.0.2 IF002 on your OpenShift cluster using the rapid deployment scripts. With that, this lab is complete.
 
-Now that you completed all exercises of this lab, you can do the [Quiz for Bring-up Lab 1](https://learn.ibm.com/course/view.php?id=11286) to earn the [Badge for Lab 1](https://www.credly.com/org/ibm/badge/ibm-cloud-pak-for-business-automation-installation-tech-jam).
+Now that you completed all exercises of this lab, you can do the <a href="https://learn.ibm.com/course/view.php?id=11286" target="_blank">Quiz for Bring-up Lab 1</a> to earn the <a href="https://www.credly.com/org/ibm/badge/ibm-cloud-pak-for-business-automation-installation-tech-jam" target="_blank">Badge for Lab 1</a>.

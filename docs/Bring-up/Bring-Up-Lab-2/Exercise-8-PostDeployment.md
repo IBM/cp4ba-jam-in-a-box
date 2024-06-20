@@ -59,7 +59,7 @@ In the previous exercises, the prerequisites for deployment of Cloud Pak For Bus
     ````    	
     
     
-The following post-deployment steps described here follow the description in the knowledge center under "What to do next": https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=cpd-option-1-installing-production-deployment-in-openshift-console 
+The following post-deployment steps described here follow the description in the knowledge center under "What to do next": <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=cpd-option-1-installing-production-deployment-in-openshift-console" target="_blank">https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=cpd-option-1-installing-production-deployment-in-openshift-console</a>
 
 1.	Choose the ConfigMaps menu in the Openshift Web Console in section Workloads. In the search box, type in **access-info**, and find the **content-cp4ba-access-info**. This is one of the places where you can get the URLs of the deployed CP4BA components. 
 

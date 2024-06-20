@@ -17,13 +17,13 @@ Version 1.0
 
 IBM Cloud Pak for Business Automation (CP4BA) assembles certified software from the IBM Automation Platform for Digital Business on multiple cloud infrastructures. It offers design, build, run, and automation services to rapidly scale your programs and fully execute and operationalize an automation strategy.
 
-You can read more about CP4BA here: **https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=overview-what-is-cloud-pak-business-automation**
+You can read more about CP4BA **<a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=overview-what-is-cloud-pak-business-automation" target="_blank">here</a>**
 
 ## Lab Overview
 
 In this Lab, you will learn how to **configure and install a CP4BA production deployment** on an OpenShift cluster using the **rapid deployment scripts** developed by the IBM Business Automation and Digital Labor SWAT team.
 
-The rapid deployment scripts cover a small area of deployments, and are thus the preferred choice for rapid deployment of PoC or Demo environments. They are available on **public GitHub** (**https://github.com/IBM/cp4ba-rapid-deployment**) and, therefore, can be used by customers, business partners, and IBMers.
+The rapid deployment scripts cover a small area of deployments, and are thus the preferred choice for rapid deployment of PoC or Demo environments. They are available on this **<a href="https://github.com/IBM/cp4ba-rapid-deployment" target="_blank">public GitHub</a>** and, therefore, can be used by customers, business partners, and IBMers.
 
 The rapid deployment scripts are available for **some selected CP4BA versions**.
 
@@ -105,7 +105,7 @@ This information contains examples of data and reports used in daily business op
 
 # Trademarks
 
-- IBM, the IBM logo, and ibm.com are trademarks or registered trademarks of International Business Machines Corp., registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies. A current list of IBM trademarks is available on the web at “Copyright and trademark information” at **www.ibm.com/legal/copytrade.shtml**.
+- IBM, the IBM logo, and ibm.com are trademarks or registered trademarks of International Business Machines Corp., registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies. A current list of IBM trademarks is available on the web at “Copyright and trademark information” at **<a href="https://www.ibm.com/legal/copyright-trademark" target="_blank">www.ibm.com/legal/copytrade.shtml</a>**.
 
 - Adobe, the Adobe logo, PostScript, and the PostScript logo are either registered trademarks or trademarks of Adobe Systems Incorporated in the United States, and/or other countries. 
 

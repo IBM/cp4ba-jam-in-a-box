@@ -8,7 +8,7 @@ This exercise verifies that you have all prerequisites in place and instructs yo
 
 A **bastion** host is a computer from which you access the OpenShift cluster through the command line to administrate the OCP cluster. Administration of an OCP cluster also includes the configuration and installation of new software such as CP4BA. To do that, this Lab shows you how to use the scripts and information provided by the CP4BA development teams, by executing these scripts on the bastion host. Therefore, the bastion host must be one of RHEL, CentOS, or macOS. Finally, all commands these scripts need must also be available on the bastion host, for example, the OpenShift CLI, Kubernetes CLI, and so on.
 
-The preparation of a bastion host is discussed in the documentation on this page: **[Preparing a client to connect to the cluster](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=deployment-preparing-client-connect-cluster)**.
+The preparation of a bastion host is discussed in the documentation on this page: **<a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=deployment-preparing-client-connect-cluster" target="_blank">Preparing a client to connect to the cluster</a>**.
 
 Other services are also deployed on this specific bastion host. The most important ones are the LDAP Server, which is used as the Authentication provider for the CP4BA deployment, and an NFS Server to provide persistent storage capabilities to the Openshift cluster.
 
@@ -29,7 +29,7 @@ Before you can start this Lab, you need the following prerequisites:
 
 To complete this Lab, you must have an entitlement key with access to pull CP4BA images from the IBM Container Software Library **cp.icr.io**.
 
-1. Check that you have an entitlement key with the proper image access. For this, please open **[IBM Container Library](https://myibm.ibm.com/products-services/containerlibrary)** and log in with your IBM ID. IBMers can use their w3 ID.
+1. Check that you have an entitlement key with the proper image access. For this, please open **<a href="https://myibm.ibm.com/products-services/containerlibrary" target="_blank">IBM Container Library</a>** and log in with your IBM ID. IBMers can use their w3 ID.
    
 2. Then, switch to the **Container software library** page. IBMers and some Business Partners will see the following, which means that they do have such an entitlement key available:
    
@@ -40,13 +40,13 @@ To complete this Lab, you must have an entitlement key with access to pull CP4BA
    
 ### 1.2.2 Reserve the OpenShift Tech Zone Envrioment
 
-1. To get an OpenShift cluster from TechZone, access IBM Technology Zone: **https://techzone.ibm.com/**
+1. To get an OpenShift cluster from TechZone, access IBM Technology Zone: **<a href="https://techzone.ibm.com/" target="_blank">https://techzone.ibm.com/</a>**
    
 2. To sign-in, either use your IBM ID or your company credentials if SSO is set up between your company and IBM. For example, if you have an IBM W3 or IBM Partnerworld ID, you should use this ID.
    
    > Dependent on the IBM ID used to sign in, you may or may not be able to reserve an OpenShift cluster. If you can't reserve a cluster with the current IBM ID, check if you have another IBM ID that is enabled for IBM Technology Zone reservations.
    
-3. Once signed in, open the lab resource page: **https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-demos-and-labs-bring-up-lab**
+3. Once signed in, open the lab resource page: **<a href="https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-demos-and-labs-bring-up-lab" target="_blank">https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-demos-and-labs-bring-up-lab</a>**
    
 4. On the left hand side select the **Environments** tab. There you should find environment **CP4BA Bring-Up Lab Environment v1.0**, for that environment click on **Reserve**.
    
@@ -76,7 +76,7 @@ To complete this Lab, you must have an entitlement key with access to pull CP4BA
 
 ### 1.2.3 Access the OpenShift Tech Zone Envrioment
 
-1. On your local machine, open the  **[TechZone My reservations](https://techzone.ibm.com/my/reservations)** page. In the browser window, select the reservation for the Bring Up lab.
+1. On your local machine, open the  **<a href="https://techzone.ibm.com/my/reservations" target="_blank">TechZone My reservations</a>** page. In the browser window, select the reservation for the Bring Up lab.
    
 2. Scroll down to the **VM Remote Console** section at the bottom. Click on the bastion VM. This will open the desktop of the bastion host in the Browser.
    

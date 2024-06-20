@@ -15,4 +15,4 @@ Going from simple, back-office task automation to scaled automation to handle ti
 
 
 
-The labs requires an IBM RPA environment which can be reserved [here](https://techzone.ibm.com/collection/ibm-business-automation-traditional-and-on-premise/environments). Once you have reserved an environment, you will receive a link to the environment via email. 
+The labs requires an IBM RPA environment which can be reserved <a href="https://techzone.ibm.com/collection/ibm-business-automation-traditional-and-on-premise/environments" target="_blank">here</a>. Once you have reserved an environment, you will receive a link to the environment via email. 

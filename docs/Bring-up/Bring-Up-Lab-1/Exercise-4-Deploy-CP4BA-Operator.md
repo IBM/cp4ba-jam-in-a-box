@@ -2,15 +2,15 @@
 
 ## 4.1 Introduction
 
-To install the Cloud Pak 4 Business Automation, two modes are available. The **Starter** type deployment is useful for demonstrations, and includes the deployment of most prerequisites such as LDAP Server and databases. Tn this Lab guide however the **Production** deployment type is used instead, which can also be used for demonstrations, but also for deployments, which are used in production environments of customers. The procedure is described in the knowledge center in the "Installing Production Deployments" section, available from **https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=installing-production-deployments**.
+To install the Cloud Pak 4 Business Automation, two modes are available. The **Starter** type deployment is useful for demonstrations, and includes the deployment of most prerequisites such as LDAP Server and databases. Tn this Lab guide however the **Production** deployment type is used instead, which can also be used for demonstrations, but also for deployments, which are used in production environments of customers. The procedure is described in the knowledge center in the "Installing Production Deployments" section, available from **<a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=installing-production-deployments" target="_blank">https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=installing-production-deployments</a>**.
 
 In Production deployments, separate installations of the databases and an LDAP server are needed. The LDAP server has been pre-installed in the lab environment used for this exercise, and the installation of the databases has been completed in previous exercises.
 
-For the installation, the **case package** is used, which is available for download in Github. The case package is maintained by the IBM Product Development teams, and for every new ifix an updated script package is available. The links to the case packages can be found on the "Cloud Pak for Business Automation Interim fix download document", which is available from **https://www.ibm.com/support/pages/node/6576423**.
+For the installation, the **case package** is used, which is available for download in Github. The case package is maintained by the IBM Product Development teams, and for every new ifix an updated script package is available. The links to the case packages can be found on the "Cloud Pak for Business Automation Interim fix download document", which is available from **<a href="https://www.ibm.com/support/pages/node/6576423" target="_blank">https://www.ibm.com/support/pages/node/6576423</a>**.
 
 For the successful deployment of Cloud Pak for Business Automation, apart from Database and LDAP Server, storage volumes to store the persistent storage requests need to be created. While the required storage volumes can be created manually, if needed, in this Lab a Storage Class will be used, a suitable one has also been provided with the Lab environment, this is checked in one of the steps below.
 
-For the main deployment of the CP4BA Operator, the documentation lists different possible solutions in the section "Setting up the cluster", available at **https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=deployment-setting-up-cluster**. In this lab, the approach to "Setting up the cluster by running a script" is used, which performs the required steps for creating the project, setting up the operator user account, deploying the cert manager and license manager, creating the secret for accessing the container library and finally setting up the CP4BA Operators. Those steps can be done separately too, in case a customer requires it. The alternative would be a more graphical deployment through forms done on the OCP Administration GUI.
+For the main deployment of the CP4BA Operator, the documentation lists different possible solutions in the section "Setting up the cluster", available at **<a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=deployment-setting-up-cluster" target="_blank">https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=deployment-setting-up-cluster</a>**. In this lab, the approach to "Setting up the cluster by running a script" is used, which performs the required steps for creating the project, setting up the operator user account, deploying the cert manager and license manager, creating the secret for accessing the container library and finally setting up the CP4BA Operators. Those steps can be done separately too, in case a customer requires it. The alternative would be a more graphical deployment through forms done on the OCP Administration GUI.
 
 The exercise instructions in the following paragraph will guide you through the download and unpacking of the case package. Scripts available in the case package are then used to deploy the Cloud Pak for Business Automation operators, the Licensing Operator and the Certificate Manager Operator into the Openshift cluster. Correct installation is reviewed in the following section called "Verification instructions".
 
@@ -24,7 +24,7 @@ The exercise instructions in the following paragraph will guide you through the 
    cd /home/cp4badmin/Desktop/Labfiles
    ```
    
-3. Buy running the following commands, create a temporary directory, e.g., `/tmp`, download the CP4BA 23.0.2 IF002 Case package: **https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz** into that temporary directory, and extract `ibm-cp-automation-5.1.2.tgz` into the same temporary directory.
+3. Buy running the following commands, create a temporary directory, e.g., `/tmp`, download the CP4BA 23.0.2 IF002 Case package: **<a href="https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz" target="_blank">https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz</a>** into that temporary directory, and extract `ibm-cp-automation-5.1.2.tgz` into the same temporary directory.
    
    ```sh
    mkdir tmp
@@ -104,7 +104,7 @@ The exercise instructions in the following paragraph will guide you through the 
     
     **Notes:**
     
-    You need your Entitlement Registry key handy, see also **https://myibm.ibm.com/products-services/containerlibrary**.
+    You need your Entitlement Registry key handy, see also **<a href="https://myibm.ibm.com/products-services/containerlibrary" target="_blank">https://myibm.ibm.com/products-services/containerlibrary</a>**.
     
     When you paste your Entitlement Registry key, it will not be shown; therefore, paste it just once and hit the Enter key.
     

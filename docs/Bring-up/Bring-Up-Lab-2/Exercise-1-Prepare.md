@@ -13,7 +13,7 @@ shows you how to use the scripts and information provided by the CP4BA developme
 Therefore, the bastion host must be one of RHEL, CentOS, or macOS. Finally, all commands these scripts need 
 must also be available on the bastion host, for example, the OpenShift CLI, Kubernetes CLI, and so on.
 
-The preparation of a bastion host is discussed in the documentation on this page: [Preparing a client to connect to the cluster](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=deployment-preparing-client-connect-cluster).
+The preparation of a bastion host is discussed in the documentation on this page: <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=deployment-preparing-client-connect-cluster" target="_blank">Preparing a client to connect to the cluster</a>.
 
 Other services are also deployed on this specific bastion host. The most important ones are the LDAP Server, which is used as the Authentication provider for the CP4BA deployment, and an NFS Server to provide persistent storage capabilities to the Openshift cluster.
 
@@ -34,7 +34,7 @@ Before you can start this Lab, you need the following prerequisites:
 
 To complete this Lab, you must have an entitlement key with access to pull CP4BA images from the IBM Container Software Library `cp.icr.io`.
 
-1. Check that you have an entitlement key with the proper image access. For this, please open [IBM Container Library](https://myibm.ibm.com/products-services/containerlibrary)
+1. Check that you have an entitlement key with the proper image access. For this, please open <a href="https://myibm.ibm.com/products-services/containerlibrary" target="_blank">https://myibm.ibm.com/products-services/containerlibrary</a>
    and log in with your IBM ID. IBMers can use their w3 ID.
 
 2. Then, switch to the Container software library page. IBMers and some Business Partners will see the following, which means that they do have 
@@ -43,12 +43,12 @@ To complete this Lab, you must have an entitlement key with access to pull CP4BA
  ![Container Library](Images/2.2.1-containerlibrary.png)
 
 **Business Partners** that do not see **all** here, before proceeding, **must verify that CP4BA is listed on the Container software library page**. 
-If you don’t see a CP4BA license listed, you can request here a CP4BA 60-day Trial license: https://www.ibm.com/account/reg/us-en/signup?formid=urx-44505. 
+If you don’t see a CP4BA license listed, you can request here a CP4BA 60-day Trial license: <a href="https://www.ibm.com/account/reg/us-en/signup?formid=urx-44505" target="_blank">https://www.ibm.com/account/reg/us-en/signup?formid=urx-44505</a>. 
 You cannot perform this bring-up Lab without a license and entitlement key.
 
 ### 1.2.2 Reserve the OpenShift Tech Zone Envrioment
 
-1.	To get an OpenShift cluster from TechZone, access IBM Technology Zone: https://techzone.ibm.com/
+1.	To get an OpenShift cluster from TechZone, access IBM Technology Zone: <a href="https://techzone.ibm.com/" target="_blank">https://techzone.ibm.com/</a>
 
 2.	To sign-in, either use your IBM ID or your company credentials if SSO is set up between your company and IBM. For example, if you have an
     IBM W3 or IBM Partnerworld ID, you should use this ID.
@@ -56,7 +56,7 @@ You cannot perform this bring-up Lab without a license and entitlement key.
     Note: Dependent on the IBM ID used to sign in, you may or may not be able to reserve a demo. If you can't reserve a demo with the current IBM ID, 
 	check if you have another IBM ID that is enabled for IBM Technology Zone reservations. 
 
-3.	Once signed in, open the lab resource page: https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-demos-and-labs-bring-up-lab
+3.	Once signed in, open the lab resource page: <a href="https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-demos-and-labs-bring-up-lab" target="_blank">https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-demos-and-labs-bring-up-lab/</a>
 
 4.	Scroll down to the **Environments** section. Choose an environment with the highest version number. If you have multiple with the highest number, choose the one in the nearest geo. Then click on **Reserve**.
 

@@ -2,7 +2,7 @@
 
 ## 2.1 Introduction
 
-A CP4BA production mode deployment requires you to provide the databases needed by the CP4BA components. In this exercise, you'll first deploy the DB2 Operator and containers on the OpenShift cluster. Other databases are also supported, for example, Oracle, SQL Server, or PostgreSQL. See Detailed system requirements: **https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=pcmppd-system-requirements**
+A CP4BA production mode deployment requires you to provide the databases needed by the CP4BA components. In this exercise, you'll first deploy the DB2 Operator and containers on the OpenShift cluster. Other databases are also supported, for example, Oracle, SQL Server, or PostgreSQL. See Detailed system requirements: **<a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=pcmppd-system-requirements" target="_blank">https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=pcmppd-system-requirements</a>**
 
 The database can run on OpenShift, but CP4BA also supports on-premises installations. We will be using OpenShfit to install the database.
 
@@ -106,7 +106,7 @@ In this exercise, you will run scripts to install DB2 Operator, and run the Oper
    
    This script will prompt you for various input. Please have a look at the sample script output provided below to see the answers you must use.
    
-   You need your Entitlement Registry key handy, see also **https://myibm.ibm.com/products-services/containerlibrary**.
+   You need your Entitlement Registry key handy, see also **<a href="https://myibm.ibm.com/products-services/containerlibrary" target="_blank">https://myibm.ibm.com/products-services/containerlibrary</a>**.
    
    When you paste your Entitlement Registry key, it will not be shown; therefore, paste it just once and hit the Enter key.
    

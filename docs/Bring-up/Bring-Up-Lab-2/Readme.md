@@ -17,7 +17,7 @@ Version 1.0
 
 IBM Cloud Pak for Business Automation (CP4BA) assembles certified software from the IBM Automation Platform for Digital Business on multiple cloud infrastructures. It offers design, build, run, and automation services to rapidly scale your programs and fully execute and operationalize an automation strategy.
 
-You can read more about CP4BA here: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=overview-what-is-cloud-pak-business-automation
+You can read more about CP4BA here: <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=overview-what-is-cloud-pak-business-automation" target="_blank">https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=overview-what-is-cloud-pak-business-automation</a>
 
 ## Lab Overview
 
@@ -25,7 +25,7 @@ In this Lab, you will learn how to **configure and install the CP4BA Production 
 
 The regular deployment scripts cover a wide area of different deployments, support Air-Gap deployment and encryption of all communication channel, 
 and are thus the preferred choice for deployment of customer environments which can be used on Production environments. They are available on 
-**public GitHub** (https://github.com/IBM/cloud-pak/blob/master/repo/case/ibm-cp-automation/index.yaml) and, therefore, can be used by customers, 
+**public GitHub** (<a href="https://github.com/IBM/cloud-pak/blob/master/repo/case/ibm-cp-automation/index.yaml" target="_blank">https://github.com/IBM/cloud-pak/blob/master/repo/case/ibm-cp-automation/index.yaml</a>) and, therefore, can be used by customers, 
 business partners, and IBMers.
 
 The regular deployment scripts are available for **all CP4BA versions**.

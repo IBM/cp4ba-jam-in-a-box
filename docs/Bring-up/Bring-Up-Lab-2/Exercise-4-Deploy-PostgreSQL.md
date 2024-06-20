@@ -4,7 +4,7 @@
 
 In this section, the PostgreSQL database will be deployed, and the database related property files of the CP4BA deployment updated with required configuration values. 
 For the deployment of the PostgreSQL database, the Cloud Native PG Postgres operator will be used. The Cloud Native PG Postgres Operator is an open source initiative, 
-its homepage can be found on https://cloudnative-pg.io/. The operator supports Openshift as well as plain Kubernetes, so called *CNCF* deployments. For commercial usage, 
+its homepage can be found on <a href="https://cloudnative-pg.io/" target="_blank">https://cloudnative-pg.io/</a>. The operator supports Openshift as well as plain Kubernetes, so called *CNCF* deployments. For commercial usage, 
 with needed software support, there exist commercial products derived from the offering from Cloud Native PG.
 
 # 4.2 Exercise Instructions
@@ -96,7 +96,7 @@ with needed software support, there exist commercial products derived from the o
 
     ![editing postgresql-conf](Images/5.2-postgresql-conf.png)
  
-18.	The second place to change is the line showing **max_prepared_transactions**. Remove the # character in front of the the line, and change the value to support **1000** prepared transactions. Read more about both updates in the CP4BA Documentation: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=tpdcpe-using-postgresql-max-connections-max-prepared-transactions
+18.	The second place to change is the line showing **max_prepared_transactions**. Remove the # character in front of the the line, and change the value to support **1000** prepared transactions. Read more about both updates in the CP4BA Documentation: <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=tpdcpe-using-postgresql-max-connections-max-prepared-transactions" target="_blank">https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=tpdcpe-using-postgresql-max-connections-max-prepared-transactions</a>
 
     ![editing max prepared transactions](Images/5.2-postgresql-conf2.png)
 	

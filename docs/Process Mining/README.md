@@ -13,4 +13,4 @@ Client Onboarding – identification of workflow automation process improvement 
         
 *Approximate Duration:* 1 hour 30 Minutes
 
-Click [here](https://ibm.box.com/v/PROC-TASK-MINING-LABS-1-14) to try other labs not featured in this event!
+Click <a href="https://ibm.box.com/v/PROC-TASK-MINING-LABS-1-14" target="_blank">here</a> to try other labs not featured in this event!
