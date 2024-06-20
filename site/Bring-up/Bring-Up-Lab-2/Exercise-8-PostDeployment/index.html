@@ -1625,30 +1625,35 @@
 </li>
 <li>
 <p>Optionally, for further troubleshooting, use the script <a href="../LabData/deploymentStatus.sh">deploymentStatus.sh</a>. By right-clicking the <strong>Raw</strong>  button the script can be saved to a local directory and executed. On a healthy environment it should print following output:</p>
-<p>```
-Content CR named content found
+</li>
+</ol>
+<pre><code>Content CR named content found
 Custom Resource of type Content is applied
-   Running  True    Running Running reconciliation
-   Ready        True    Successful</p>
-<p>ZenService Deployment Progress: 100% (The Current Operation Is Completed)
+    Running True    Running Running reconciliation
+    Ready        True    Successful
+
+ZenService Deployment Progress: 100% (The Current Operation Is Completed)
 ZenStatus: zen operator 5.0.2 build 41:  Completed
-   2024-04-08T10:29:32Z Awaiting next reconciliation
-   2024-04-08T11:03:37Z Last reconciliation succeeded
-   2024-04-08T11:03:37Z</p>
-<p>Foundation:
+    2024-04-08T10:29:32Z Awaiting next reconciliation
+    2024-04-08T11:03:37Z Last reconciliation succeeded
+    2024-04-08T11:03:37Z
+
+Foundation:
         Running reconciliation
-        Prerequisites execution done.</p>
-<p>Initialization Status:
+        Prerequisites execution done.
+
+
+
+Initialization Status:
 {
         cpe_initialized: True,
         cpe_os_number: 2,
         css_initialized: True,
         nav_initialized: True
-}</p>
-<p>IAM Login details: cpadmin / <password>
-````        </p>
-</li>
-</ol>
+}
+
+IAM Login details: cpadmin / &lt;password&gt;
+</code></pre>
 <p>The following post-deployment steps described here follow the description in the knowledge center under "What to do next": <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=cpd-option-1-installing-production-deployment-in-openshift-console" target="_blank">https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=cpd-option-1-installing-production-deployment-in-openshift-console</a></p>
 <ol>
 <li>
@@ -1769,7 +1774,7 @@ In the login window, this time select <strong>Enterprise LDAP</strong>, and supp
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.e2f4ecc1.min.js"></script>

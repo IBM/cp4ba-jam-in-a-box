@@ -13,30 +13,30 @@ You will run a script provided by the rapid deployment scripts to create the nee
 
 1. Run this command to verify you are still connected with OCP.
    
-   ```sh
-   oc version
-   ```
+```sh
+oc version
+```
    
    **Note:** If you are not connected to OCP, follow the instructions in **[Exercise 1: Prepare yourself for this Bring-Up Lab](Exercise-1-Prepare.md#123-access-the-openshift-tech-zone-envrioment)** to reconnect.
    
 2. Make sure to be in the right directory.
    
-   ```sh
-   cd /home/cp4badmin/Desktop/Labfiles/cp4ba-rapid-deployment/cp4ba-23-0-2/mycluster/deployment-db2-cp4ba
-   ```
+```sh
+cd /home/cp4badmin/Desktop/Labfiles/cp4ba-rapid-deployment/cp4ba-23-0-2/mycluster/deployment-db2-cp4ba
+```
    
 3. Run script **03-createCp4baDBs4Db2OnOCP.sh** to create the databases needed for the CP4BA template that you selected.
    
-   ```sh
-   ./03-createCp4baDBs4Db2OnOCP.sh
-   ```
+```sh
+./03-createCp4baDBs4Db2OnOCP.sh
+```
    
    **Note:** You can ignore the following warning:
-   ```
-   SQL1363W  One or more of the parameters submitted for immediate modification were not changed dynamically.
-   For these configuration parameters, the database must be shutdown and reactivated before the configuration
-   parameter changes become effective.
-   ```
+```
+SQL1363W  One or more of the parameters submitted for immediate modification were not changed dynamically.
+For these configuration parameters, the database must be shutdown and reactivated before the configuration
+parameter changes become effective.
+```
    
 5. Review the output of the script and make sure there were no errors and that the following three databases were created:
 

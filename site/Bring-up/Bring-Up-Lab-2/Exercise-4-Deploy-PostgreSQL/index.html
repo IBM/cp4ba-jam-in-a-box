@@ -1606,14 +1606,16 @@ its homepage can be found on <a href="https://cloudnative-pg.io/" target="_blank
 with needed software support, there exist commercial products derived from the offering from Cloud Native PG.</p>
 <h1 id="42-exercise-instructions">4.2 Exercise Instructions</h1>
 <ol>
-<li>
-<p>Switch to the <strong>Terminal</strong> window. Change to the cert-kubernetes/scripts directory.</p>
-<p><code>cd $HOME/cp4ba/cert-kubernetes/scripts</code></p>
-</li>
-<li>
-<p>Review the database property files, to determine further information about required databases.</p>
-<p><code>gedit cp4ba-prerequisites/propertyfile/cp4ba_db_name_user.property</code></p>
-</li>
+<li>Switch to the <strong>Terminal</strong> window. Change to the cert-kubernetes/scripts directory.</li>
+</ol>
+<pre><code>cd $HOME/cp4ba/cert-kubernetes/scripts
+</code></pre>
+<ol>
+<li>Review the database property files, to determine further information about required databases.</li>
+</ol>
+<pre><code>gedit cp4ba-prerequisites/propertyfile/cp4ba_db_name_user.property
+</code></pre>
+<ol>
 <li>
 <p>The file lists 4 databases, one for the GCD of the FileNet installation, two more for the two object stores, and one for Content Navigator. Close the gedit window again.</p>
 </li>
@@ -1648,31 +1650,41 @@ with needed software support, there exist commercial products derived from the o
 </li>
 <li>
 <p>Change to the Terminal window. Change to the <strong>Downloads</strong> folder, then check and apply the <strong>postgres.yaml</strong> file</p>
-<p><code>cd
+</li>
+</ol>
+<pre><code>cd
 cd Downloads
 gedit postgres.yaml
-oc apply -f postgres.yaml</code></p>
-<p>No changes are needed in the <strong>postgres.yaml</strong> file. Review, that the file mentions 4 tablespaces, and also creates two secret for the database user, and the database administrator. The database user will have the name <strong>cp4badbuser</strong>, and the database administrator will have the name <strong>postgres</strong>. Both have the same password, which is passw0rd, with the third-last character being a zero. Then close the editor again.</p>
-</li>
-<li>
-<p>Deployment of PostgreSQL will first create an initialization pod, which sets up the persistent volume claim, then one new Postgres pod will be created. Monitor the output of the <code>oc get pods</code> command until the <strong>postgres-1</strong> pod is running</p>
-<p><code>oc get pods</code></p>
-</li>
+oc apply -f postgres.yaml
+</code></pre>
+<pre><code>No changes are needed in the **postgres.yaml** file. Review, that the file mentions 4 tablespaces, and also creates two secret for the database user, and the database administrator. The database user will have the name **cp4badbuser**, and the database administrator will have the name **postgres**. Both have the same password, which is passw0rd, with the third-last character being a zero. Then close the editor again.
+</code></pre>
+<ol>
+<li>Deployment of PostgreSQL will first create an initialization pod, which sets up the persistent volume claim, then one new Postgres pod will be created. Monitor the output of the <code>oc get pods</code> command until the <strong>postgres-1</strong> pod is running</li>
+</ol>
+<pre><code>oc get pods
+</code></pre>
+<ol>
 <li>
 <p>The postgres.yaml file contains definitions which will deploy 4 tablespaces, one for each of the needed databases, into separate persistent volumes, which should give better performance over using only a single filesystem for all 4 databases. It assigns the tablespaces to the newly created database user <strong>cp4badbuser</strong>. The credentials for that user are provided to the secret <strong>cp4badbuser-secret</strong>, which is defined towards the bottom of the file. Lets verify if that succeeded properly. </p>
 <p><img alt="installed tablespaces" src="../Images/5.1-installed-tablespaces.png" /></p>
-<p>The required command is:
-<code>oc exec postgres-1 -- psql -U postgres -c '\db+'</code></p>
+<p>The required command is:</p>
 </li>
-<li>
-<p>Some of the postgres parameters need further customization, so copy out the parameters file for modification. The first command shows the full pathname of the postgresql.conf configuration file, which is needed for the subsequent commands.</p>
-<p><code>oc exec postgres-1 -- find /var/lib -name postgresql.conf
-oc cp postgres-1:/var/lib/postgresql/data/pgdata/postgresql.conf postgresql.conf</code></p>
-</li>
-<li>
-<p>Now edit the postgresql.conf configuration file.</p>
-<p><code>gedit postgresql.conf</code></p>
-</li>
+</ol>
+<pre><code>oc exec postgres-1 -- psql -U postgres -c '\db+'
+</code></pre>
+<ol>
+<li>Some of the postgres parameters need further customization, so copy out the parameters file for modification. The first command shows the full pathname of the postgresql.conf configuration file, which is needed for the subsequent commands.</li>
+</ol>
+<pre><code>oc exec postgres-1 -- find /var/lib -name postgresql.conf
+oc cp postgres-1:/var/lib/postgresql/data/pgdata/postgresql.conf postgresql.conf
+</code></pre>
+<ol>
+<li>Now edit the postgresql.conf configuration file.</li>
+</ol>
+<pre><code>gedit postgresql.conf
+</code></pre>
+<ol>
 <li>
 <p>The first place to change is the line showing <strong>max_connections</strong>. Change the value to at least <strong>500</strong>, which gives more than 50 connections per JDBC connector, as long as only one CPE pod is used.</p>
 <p><img alt="editing postgresql-conf" src="../Images/5.2-postgresql-conf.png" /></p>
@@ -1686,29 +1698,40 @@ oc cp postgres-1:/var/lib/postgresql/data/pgdata/postgresql.conf postgresql.conf
 </li>
 <li>
 <p>Copy back the configuration file into the container. The directory containing it is backed up by a persistent volume, so any changes on it will persist. After copying the container, its required to restart Postgres, so delete the Pod for it to happen.</p>
-<p><code>oc cp postgresql.conf postgres-1:/var/lib/postgresql/data/pgdata/postgresql.conf
-oc delete pod postgres-1</code></p>
 </li>
+</ol>
+<pre><code>oc cp postgresql.conf postgres-1:/var/lib/postgresql/data/pgdata/postgresql.conf
+oc delete pod postgres-1
+</code></pre>
+<ol>
 <li>
 <p>Next we need to confirm on the server name and port for connections to the database. As PostgreSQL is running in a pod, it can be reached through the service defined for it by the Postgres operator. There are three services, one of them allows modifications as well, it is named postgres-rw. It can be seen that the default port for PostgreSQL is 5432. </p>
 <p><img alt="determining service address for postgresql deployment" src="../Images/5.2-get-services.png" /></p>
 <p>The commands to determine this information are:</p>
-<p><code>oc get service</code></p>
 </li>
+</ol>
+<pre><code>oc get service
+</code></pre>
+<ol>
 <li>
 <p>That service is made available through the DNS of Kubernetes, with the name <servicename>.<namespace/project>.svc. Lets check it by opening a shell in the operator pod, and test connectivity. </p>
 <p><img alt="Checking Connectivity" src="../Images/5.2-checking-connectivity.png" /> </p>
 <p>Of course the <strong>curl</strong> command cannot terminate, as PostgreSQL is not telnet, so abort it by pressing <strong>Ctrl-C</strong>. But the verbose output allows checking, if the connection can be made. Within Containers, connectivity cannot be checked with the usual ping command. The required commands are:</p>
-<p><code>oc get pod
+</li>
+</ol>
+<pre><code>oc get pod
 oc exec &lt;name of ibm-cp4a-operator pod&gt; -it -- bash
-curl -v telnet://postgres-rw.ibm-cp4ba.svc:5432</code></p>
-<p>You can close the shell in the Operator pod again.</p>
-</li>
-<li>
-<p>The last step is to update the property files, which have been generated previously, with the information from the Postgres database deployment. Navigate back to the directory containing them, and edit the files.</p>
-<p><code>cd $HOME/cp4ba/cert-kubernetes/scripts/cp4ba-prerequisites/propertyfile
-gedit cp4ba_db_server.property</code></p>
-</li>
+curl -v telnet://postgres-rw.ibm-cp4ba.svc:5432
+</code></pre>
+<pre><code>You can close the shell in the Operator pod again.
+</code></pre>
+<ol>
+<li>The last step is to update the property files, which have been generated previously, with the information from the Postgres database deployment. Navigate back to the directory containing them, and edit the files.</li>
+</ol>
+<pre><code>cd $HOME/cp4ba/cert-kubernetes/scripts/cp4ba-prerequisites/propertyfile
+gedit cp4ba_db_server.property
+</code></pre>
+<ol>
 <li>
 <p>It is suggested to make the window wide enough to not be disturbed by the comments. Modify the server name, port, ssl, and client ssl settings in this file as indicated below.</p>
 <p><img alt="Editing database property file" src="../Images/5.2-editing-db-property-file.png" /></p>
@@ -1718,10 +1741,14 @@ gedit cp4ba_db_server.property</code></p>
 </li>
 <li>
 <p>Save the file, and close the editor. Then invoke the editor again on the other database related property file. Before invoking the editor, just determine how the database password passw0rd looks like, when its base64 encoded, that string is required when editing the next file.</p>
-<p><code>echo -n passw0rd | base64
-gedit cp4ba_db_name_user.property</code></p>
-<p><strong>Note:</strong> The <strong>-n</strong> option to echo will suppress the linefeed character, which echo normally prints following the output. If it is included, the linefeed will be part of the base64 encoded string, and might lead to illegal passwords, which are very hard to find later.</p>
 </li>
+</ol>
+<pre><code>echo -n passw0rd | base64
+gedit cp4ba_db_name_user.property
+</code></pre>
+<pre><code>**Note:** The **-n** option to echo will suppress the linefeed character, which echo normally prints following the output. If it is included, the linefeed will be part of the base64 encoded string, and might lead to illegal passwords, which are very hard to find later.
+</code></pre>
+<ol>
 <li>
 <p>First step for editing the document is to replace all passwords. You can invoke the search and replace function through the hamburger menu on top right corner (next to the Save button). You can copy and paste both values from the editor, and from the Terminal window. The password needs to be replaced 4 times, for the four databases.</p>
 <p><img alt="Editing DB User Property File - Passwords" src="../Images/5.2-db-user-properties.png" /></p>
@@ -1794,7 +1821,7 @@ gedit cp4ba_db_name_user.property</code></p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.e2f4ecc1.min.js"></script>

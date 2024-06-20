@@ -1707,44 +1707,44 @@
 <p>Open a Terminal, by clicking the link on the desktop. Switch to the Labfiles directory to host there the product deployment scripts.</p>
 </li>
 </ol>
-<p><code>sh
-   cd /home/cp4badmin/Desktop/Labfiles</code></p>
+<pre><code class="language-sh">cd /home/cp4badmin/Desktop/Labfiles
+</code></pre>
 <ol>
 <li>Buy running the following commands, create a temporary directory, e.g., <code>/tmp</code>, download the CP4BA 23.0.2 IF002 Case package: <strong><a href="https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz" target="_blank">https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz</a></strong> into that temporary directory, and extract <code>ibm-cp-automation-5.1.2.tgz</code> into the same temporary directory.</li>
 </ol>
-<p><code>sh
-   mkdir tmp</code></p>
-<p><code>sh
-   cd tmp</code></p>
-<p><code>sh
-   wget https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz</code></p>
-<p><code>sh
-   tar xvfz ibm-cp-automation-5.1.2.tgz</code></p>
+<pre><code class="language-sh">mkdir tmp
+</code></pre>
+<pre><code class="language-sh">cd tmp
+</code></pre>
+<pre><code class="language-sh">wget https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz
+</code></pre>
+<pre><code class="language-sh">tar xvfz ibm-cp-automation-5.1.2.tgz
+</code></pre>
 <ol>
 <li>Extract the content of archive ibm-cp-automation/inventory/cp4aOperatorSdk/files/deploy/crs/cert-k8s-23.0.2.tar into the Labfiles directory, delete the temporary directory.</li>
 </ol>
-<p><code>sh
-   cd ..</code></p>
-<p><code>sh
-   tar xvf tmp/ibm-cp-automation/inventory/cp4aOperatorSdk/files/deploy/crs/cert-k8s-23.0.2.tar</code></p>
-<p><code>sh
-   rm -r tmp</code></p>
+<pre><code class="language-sh">cd ..
+</code></pre>
+<pre><code class="language-sh">tar xvf tmp/ibm-cp-automation/inventory/cp4aOperatorSdk/files/deploy/crs/cert-k8s-23.0.2.tar
+</code></pre>
+<pre><code class="language-sh">rm -r tmp
+</code></pre>
 <ol>
 <li>Change into the cert-kubernetes/scripts directory</li>
 </ol>
-<p><code>sh
-   cd cert-kubernetes/scripts</code></p>
+<pre><code class="language-sh">cd cert-kubernetes/scripts
+</code></pre>
 <ol>
 <li>Before running the script, make sure that you are connected through the oc CLI.</li>
 </ol>
-<p><code>sh
-   oc version</code></p>
+<pre><code class="language-sh">oc version
+</code></pre>
 <p><strong>Note:</strong> If you are not connected to OCP, follow the instructions in <strong><a href="../Exercise-1-Prepare/#123-access-the-openshift-tech-zone-envrioment">Exercise 1: Prepare yourself for this Bring-Up Lab</a></strong> to reconnect. </p>
 <ol>
 <li>Start the deployment of the CP4BA Operator by running the clusteradmin setup script.</li>
 </ol>
-<p><code>sh
-   ./cp4a-clusteradmin-setup.sh</code></p>
+<pre><code class="language-sh">./cp4a-clusteradmin-setup.sh
+</code></pre>
 <ol>
 <li>The script initially prompts you for some input. First, select the correct type of environment. This environment uses an Openshift-environment on Private Cloud that is not ROKS, so select <strong>2</strong>, and hit the Enter key.</li>
 </ol>
@@ -1869,7 +1869,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.e2f4ecc1.min.js"></script>
