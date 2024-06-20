@@ -6,7 +6,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/Bring-up/Readme/</loc>
+         <loc>https://mydomain.org/mysite/README_other/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Archive/JamInABox2201/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Bring-up/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Bring-up/Bring-Up-Lab-1/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -36,7 +51,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/Bring-up/Bring-Up-Lab-1/Readme/</loc>
+         <loc>https://mydomain.org/mysite/Bring-up/Bring-Up-Lab-2/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -86,11 +101,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/Bring-up/Bring-Up-Lab-2/Readme/</loc>
-         <lastmod>2024-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://mydomain.org/mysite/Business%20Automation%20Application/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
@@ -101,17 +111,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/Content/Readme/</loc>
+         <loc>https://mydomain.org/mysite/Content/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/Decisions/Readme/</loc>
+         <loc>https://mydomain.org/mysite/Decisions/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/Document%20Processing/Readme/</loc>
+         <loc>https://mydomain.org/mysite/Document%20Processing/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -127,6 +137,31 @@
     </url>
     <url>
          <loc>https://mydomain.org/mysite/Robotic%20Process%20Automation/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Solutions/Client%20Onboarding/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Solutions/Client%20Onboarding/README_2202/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Solutions/Client%20Onboarding/README_2301/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Solutions/Client%20Onboarding/README_2302_ApolloBA_CP4BADemos/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Solutions/Client%20Onboarding/README_2302_SelfDeploy/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -29,4 +29,4 @@ Approximate Duration: 3-4 Hours
 ## Download
 > <a href="Lab%20Guide%20-%20Automation%20Document%20Processing%20(ADP).pdf" target="_blank">Lab documentation</a> - needed to run lab.
 >  
-> Download the three Zip files from github lab data - **[Lab Data](Lab%20Data)** these will used in the lab.  Unzip the files on your laptop
+> Download the three Zip files from github lab data - **[Lab Data](https://github.com/IBM/cp4ba-labs/tree/main/23.0.2/Document%20Processing/Lab%20Data)** these will used in the lab.  Unzip the files on your laptop
