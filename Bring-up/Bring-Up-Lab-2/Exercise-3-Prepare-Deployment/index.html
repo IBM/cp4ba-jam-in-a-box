@@ -1680,20 +1680,20 @@
 <p>Filling out the property values will be done in the next two exercises, step by step. When the property values are all filled out, the <code>cp4a-prerequisites.sh</code> can be invoked in <strong>generate</strong> mode. In this mode the provided information is taken to create the database creation scripts, as well as the Kuberetes secret definitions. With the generated files, the CP4BA databases need to be created. When this has been completed, with the last mode called <strong>validate</strong>, the integrity of the prerequisite configuration can be checked, so that the deployment can be completed.</p>
 <h2 id="32-exercise-instructions">3.2 Exercise Instructions</h2>
 <ol>
-<li>
-<p>Switch to the <strong>Terminal</strong> window. Change to the cert-kubernetes/scripts directory.</p>
-<p><code>sh
-cd $HOME/cp4ba/cert-kubernetes/scripts</code></p>
-</li>
-<li>
-<p>Run the cp4a-prerequisites.sh script in prepare mode. In this mode, information about the deployment is gathered, and property files are generated to supply required parameters.</p>
-<p><code>sh
-./cp4a-prerequisites.sh -m property</code></p>
-<blockquote>
-<p>When running it without parameters, it supplies a usage.</p>
-<p><img alt="Prerequisite Script Usage" src="../Images/4.1-prerequisites-script-usage.png" /></p>
-</blockquote>
-</li>
+<li>Switch to the <strong>Terminal</strong> window. Change to the cert-kubernetes/scripts directory.</li>
+</ol>
+<pre><code class="language-sh">cd $HOME/cp4ba/cert-kubernetes/scripts
+</code></pre>
+<ol>
+<li>Run the cp4a-prerequisites.sh script in prepare mode. In this mode, information about the deployment is gathered, and property files are generated to supply required parameters.</li>
+</ol>
+<pre><code class="language-sh">./cp4a-prerequisites.sh -m property
+</code></pre>
+<pre><code>&gt; When running it without parameters, it supplies a usage.
+
+&gt; ![Prerequisite Script Usage](Images/4.1-prerequisites-script-usage.png)
+</code></pre>
+<ol>
 <li>
 <p>First step is to collect, which components should be deployed. Select there only the FileNet Content Manager, by selecting <strong>1</strong>. Then simply press Return to continue.</p>
 <p><img alt="Selecting the Components" src="../Images/4.1-selecting-components.png" /></p>
@@ -1796,7 +1796,7 @@ cd $HOME/cp4ba/cert-kubernetes/scripts</code></p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.e2f4ecc1.min.js"></script>

@@ -1681,27 +1681,27 @@
 <ol>
 <li>On your bastion host use the Terminal to switch to a directory prepared for you to contain the rapid deployment and other scripts.</li>
 </ol>
-<p><code>sh
-   cd /home/cp4badmin/Desktop/Labfiles</code></p>
+<pre><code class="language-sh">cd /home/cp4badmin/Desktop/Labfiles
+</code></pre>
 <ol>
 <li>Clone the rapid deployment git repository onto your bastion host and copy the deployment scripts.</li>
 </ol>
 <p><strong>Note:</strong> As part of this doc, we assume you copy the deployment scripts into directory <strong>mycluster</strong>. If you select a different directory, you must change some of the commands in the steps below; otherwise, you can copy/paste them as is.</p>
-<p><code>sh
-   git clone https://github.com/IBM/cp4ba-rapid-deployment.git</code></p>
-<p><code>sh
-   cd cp4ba-rapid-deployment/cp4ba-23-0-2</code></p>
-<p><code>sh
-   cp -r scripts mycluster</code></p>
-<p><code>sh
-   cd mycluster/deployment-db2-cp4ba</code></p>
+<pre><code class="language-sh">git clone https://github.com/IBM/cp4ba-rapid-deployment.git
+</code></pre>
+<pre><code class="language-sh">cd cp4ba-rapid-deployment/cp4ba-23-0-2
+</code></pre>
+<pre><code class="language-sh">cp -r scripts mycluster
+</code></pre>
+<pre><code class="language-sh">cd mycluster/deployment-db2-cp4ba
+</code></pre>
 <p>Sample output of the previous commands:</p>
 <p><img alt="Get rapid deployment scripts" src="../images/2.2-getrapiddeploymentscripts.png" /></p>
 <ol>
 <li>Open the parameters file for DB2, 01-parametersForDb2OnOCP.sh, with gedit.</li>
 </ol>
-<p><code>sh
-   gedit 01-parametersForDb2OnOCP.sh</code></p>
+<pre><code class="language-sh">gedit 01-parametersForDb2OnOCP.sh
+</code></pre>
 <ol>
 <li>
 <p>Apply the following changes:</p>
@@ -1753,96 +1753,130 @@
 <p>Run script <strong>02-createDb2OnOCP.sh</strong>. This script will now install and configure DB2 for you based on the parameters previously specified in 01-parametersForDb2OnOCP.sh.</p>
 </li>
 </ol>
-<p><code>sh
-   ./02-createDb2OnOCP.sh</code></p>
+<pre><code class="language-sh">./02-createDb2OnOCP.sh
+</code></pre>
 <p><strong>Notes:</strong></p>
 <p>To successfully run the script, you need the  jq tool and podman installed on your bastion host. For this Lab, these tools are already available on your bastion host.</p>
 <p>This script will prompt you for various input. Please have a look at the sample script output provided below to see the answers you must use.</p>
 <p>You need your Entitlement Registry key handy, see also <strong><a href="https://myibm.ibm.com/products-services/containerlibrary" target="_blank">https://myibm.ibm.com/products-services/containerlibrary</a></strong>.</p>
 <p>When you paste your Entitlement Registry key, it will not be shown; therefore, paste it just once and hit the Enter key.</p>
 <p>This script will exit if errors are hit during the installation.</p>
-<p>If you get the error message:
-   <code>error: unable to recognize "db2OperatorCatalog.yaml": Unauthorized</code>
-   Check whether you have successfully logged on to the OCP cluster on the command line.</p>
+<p>If you get the error message:</p>
+<pre><code>error: unable to recognize &quot;db2OperatorCatalog.yaml&quot;: Unauthorized
+</code></pre>
+<p>Check whether you have successfully logged on to the OCP cluster on the command line.</p>
 <p>Sample script output:</p>
-<p>```
-   ./02-createDb2OnOCP.sh</p>
-<p>Found 01-parametersForDb2OnOCP.sh.  Reading in variables from that script.
-     Reading 01-parametersForDb2OnOCP.sh ...
-   Done!</p>
-<p>This script installs Db2u on OCP into project ibm-db2. For this, you need the jq tool installed and your Entitlement Registry key handy.</p>
-<p>Template ibm_cp4a_cr_template.002.ent.FoundationContent.yaml will be used
-   The template requires  1 database instances. Each instance uses 4 cpus and 16Gi memory.</p>
-<p>Do you want to continue (Yes/No, default: No): Yes   &lt;--- Enter Yes here</p>
-<p>Installing Db2U on OCP...</p>
-<p>Installing the DB2 Operator Catalog...
-   catalogsource.operators.coreos.com/ibm-db2uoperator-catalog created</p>
-<p>Creating project ibm-db2...
-   namespace/ibm-db2 created
-   Now using project "ibm-db2" on server "https://api.ocp.ibm.edu:6443".</p>
-<p>Creating secret ibm-registry. For this, your Entitlement Registry key is needed.</p>
-<p>You can get the Entitlement Registry key from here: https://myibm.ibm.com/products-services/containerlibrary</p>
-<p>Enter your Entitlement Registry key: <paste your Entitlement Registry key here ONCE, it will not be shown, then hit the Enter key>
-   Verifying the Entitlement Registry key...
-   Login Succeeded!
-   Entitlement Registry key is valid.
-   secret/ibm-registry created</p>
-<p>Modifying the OpenShift Global Pull Secret (you need jq tool for that):
-   secret/pull-secret data updated</p>
-<p>Creating Operator Group object for DB2 Operator
-   operatorgroup.operators.coreos.com/ibm-db2-group created</p>
-<p>Creating Subscription object for DB2 Operator
-   subscription.operators.coreos.com/db2u-operator created</p>
-<p>Waiting up to 5 minutes for DB2 Operator install plan to be generated.
-   Mon Apr  1 07:00:00 CDT 2024</p>
-<p>Approving DB2 Operator install plan.
-   installplan.operators.coreos.com/install-ggrgx patched</p>
-<p>Waiting up to 5 minutes for DB2 Operator to install.
-   Mon Apr  1 07:01:00 CDT 2024</p>
-<p>Deploying the Db2u cluster.
-   db2ucluster.db2u.databases.ibm.com/db2-inst1 created</p>
-<p>Waiting up to 15 minutes for c-db2-inst1-db2u statefulset to be created.
-   Mon Apr  1 07:02:00 CDT 2024</p>
-<p>Patching db2-inst1-db2u statefulset.
-   Skipped</p>
-<p>Waiting up to 30 minutes for db2-inst1-restore-morph job to complete successfully.
-   Mon Apr  1 07:03:00 CDT 2024</p>
-<p>Updating number of databases allowed by DB2 installation from 8 to 30.
-   configmap/c-db2-inst1-db2dbmconfig replaced</p>
-<p>Updating database manager running configuration.
-   DB20000I  The UPDATE DATABASE MANAGER CONFIGURATION command completed 
-   successfully.</p>
-<p>Restarting DB2 instance.
-   Wolverine HA management state was disabled successfully.
-   04/01/2024 07:04:00     0   0   SQL1064N  DB2STOP processing was successful.
-   SQL1064N  DB2STOP processing was successful.
-   04/01/2024 07:05:00     0   0   SQL1063N  DB2START processing was successful.
-   SQL1063N  DB2START processing was successful.
-   Wolverine HA management state was enabled successfully.</p>
-<hr />
-<p><strong><em>*</em></strong><strong> Installation and configuration of DB2 completed successfully! </strong><strong><em>*</em></strong></p>
-<hr />
-<p>Removing BLUDB from DB2 instance 1
-   DB20000I  The FORCE APPLICATION command completed successfully.
-   DB21024I  This command is asynchronous and may not be effective immediately.</p>
-<p>DB20000I  The DEACTIVATE DATABASE command completed successfully.
-   DB20000I  The DROP DATABASE command completed successfully.</p>
-<p>Existing databases on DB instance #1 are:</p>
-<p>Removing temporary files...
-   Done.</p>
-<hr />
-<p><strong><em>*</em></strong><strong> DB2 Connection Information: </strong><strong><em>*</em></strong></p>
-<hr />
-<p>Use this hostname/IP to access the databases e.g. with IBM Data Studio.
-       Hostname instance 1: router-default.apps.ocp.ibm.edu
-       Other possible addresses(If hostname not available above): 10.100.1.21,compute1.ocp.ibm.edu</p>
-<p>Use one of these NodePorts to access the databases e.g. with IBM Data Studio (usually the first one is for legacy-server (Db2 port 50000), the second for ssl-server (Db2 port 50001)).
-   Instance 1: 
-                   "nodePort": 30505,
-                   "nodePort": 30107,</p>
-<p>Use "db2inst1" and password "passw0rd" to access the databases e.g. with IBM Data Studio.</p>
-<p>Db2u installation complete! Congratulations. Exiting...
-   ```</p>
+<pre><code>./02-createDb2OnOCP.sh
+
+Found 01-parametersForDb2OnOCP.sh.  Reading in variables from that script.
+   Reading 01-parametersForDb2OnOCP.sh ...
+Done!
+
+This script installs Db2u on OCP into project ibm-db2. For this, you need the jq tool installed and your Entitlement Registry key handy.
+
+
+Template ibm_cp4a_cr_template.002.ent.FoundationContent.yaml will be used
+The template requires  1 database instances. Each instance uses 4 cpus and 16Gi memory.
+
+Do you want to continue (Yes/No, default: No): Yes   &lt;--- Enter Yes here
+
+Installing Db2U on OCP...
+
+Installing the DB2 Operator Catalog...
+catalogsource.operators.coreos.com/ibm-db2uoperator-catalog created
+
+Creating project ibm-db2...
+namespace/ibm-db2 created
+Now using project &quot;ibm-db2&quot; on server &quot;https://api.ocp.ibm.edu:6443&quot;.
+
+Creating secret ibm-registry. For this, your Entitlement Registry key is needed.
+
+You can get the Entitlement Registry key from here: https://myibm.ibm.com/products-services/containerlibrary
+
+Enter your Entitlement Registry key: &lt;paste your Entitlement Registry key here ONCE, it will not be shown, then hit the Enter key&gt;
+Verifying the Entitlement Registry key...
+Login Succeeded!
+Entitlement Registry key is valid.
+secret/ibm-registry created
+
+Modifying the OpenShift Global Pull Secret (you need jq tool for that):
+secret/pull-secret data updated
+
+Creating Operator Group object for DB2 Operator
+operatorgroup.operators.coreos.com/ibm-db2-group created
+
+Creating Subscription object for DB2 Operator
+subscription.operators.coreos.com/db2u-operator created
+
+Waiting up to 5 minutes for DB2 Operator install plan to be generated.
+Mon Apr  1 07:00:00 CDT 2024
+
+Approving DB2 Operator install plan.
+installplan.operators.coreos.com/install-ggrgx patched
+
+Waiting up to 5 minutes for DB2 Operator to install.
+Mon Apr  1 07:01:00 CDT 2024
+
+Deploying the Db2u cluster.
+db2ucluster.db2u.databases.ibm.com/db2-inst1 created
+
+Waiting up to 15 minutes for c-db2-inst1-db2u statefulset to be created.
+Mon Apr  1 07:02:00 CDT 2024
+
+Patching db2-inst1-db2u statefulset.
+Skipped
+
+Waiting up to 30 minutes for db2-inst1-restore-morph job to complete successfully.
+Mon Apr  1 07:03:00 CDT 2024
+
+Updating number of databases allowed by DB2 installation from 8 to 30.
+configmap/c-db2-inst1-db2dbmconfig replaced
+
+Updating database manager running configuration.
+DB20000I  The UPDATE DATABASE MANAGER CONFIGURATION command completed 
+successfully.
+
+Restarting DB2 instance.
+Wolverine HA management state was disabled successfully.
+04/01/2024 07:04:00     0   0   SQL1064N  DB2STOP processing was successful.
+SQL1064N  DB2STOP processing was successful.
+04/01/2024 07:05:00     0   0   SQL1063N  DB2START processing was successful.
+SQL1063N  DB2START processing was successful.
+Wolverine HA management state was enabled successfully.
+
+*********************************************************************************
+********* Installation and configuration of DB2 completed successfully! *********
+*********************************************************************************
+
+Removing BLUDB from DB2 instance 1
+DB20000I  The FORCE APPLICATION command completed successfully.
+DB21024I  This command is asynchronous and may not be effective immediately.
+
+DB20000I  The DEACTIVATE DATABASE command completed successfully.
+DB20000I  The DROP DATABASE command completed successfully.
+
+Existing databases on DB instance #1 are:
+
+Removing temporary files...
+Done.
+
+***********************************************
+********* DB2 Connection Information: *********
+***********************************************
+
+Use this hostname/IP to access the databases e.g. with IBM Data Studio.
+   Hostname instance 1: router-default.apps.ocp.ibm.edu
+   Other possible addresses(If hostname not available above): 10.100.1.21,compute1.ocp.ibm.edu
+
+Use one of these NodePorts to access the databases e.g. with IBM Data Studio (usually the first one is for legacy-server (Db2 port 50000), the second for ssl-server (Db2 port 50001)).
+Instance 1: 
+                  &quot;nodePort&quot;: 30505,
+                  &quot;nodePort&quot;: 30107,
+
+Use &quot;db2inst1&quot; and password &quot;passw0rd&quot; to access the databases e.g. with IBM Data Studio.
+
+Db2u installation complete! Congratulations. Exiting...
+</code></pre>
 <ol>
 <li>While the script is running, you optionally can review the changes applied:</li>
 </ol>
@@ -1873,8 +1907,8 @@
 <ol>
 <li>Run this command and verify that you see two completed pods and five pods Running and Ready (1/1).</li>
 </ol>
-<p><code>sh
-   oc get pods</code></p>
+<pre><code class="language-sh">oc get pods
+</code></pre>
 <p>You have now successfully installed the DB2 Operator, and run the Operator to create a DB2 instance.</p>
 <p>To continue, refer to <strong><a href="../Exercise-3-Create-DB2-Databases/">Exercise 3: Create DB2 Databases</a></strong>.</p>
 
@@ -1929,7 +1963,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.e2f4ecc1.min.js"></script>

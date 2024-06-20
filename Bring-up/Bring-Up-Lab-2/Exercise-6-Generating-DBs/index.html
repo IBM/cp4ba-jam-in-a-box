@@ -1608,19 +1608,22 @@ running the <code>cp4a-prerequisites.sh</code> now in <strong>generate</strong> 
 <p>In the verification section of this Exercise, the <code>cp4a-prerequisites.sh</code> script run in <strong>validate mode</strong>, to validate the configuration and deployment of the prerequisites. As the connection to the database is also verified, and as the database can only be reached from inside the Kubernetes cluster, the checks cannot be run directly on the bastion node, without giving error messages from the unavailable database server. Therefore, to run the validation, the case package script is copied into the <code>/tmp</code> directory of the CP4BA Operator, and run from there. </p>
 <h1 id="62-exercise-instructions">6.2 Exercise Instructions</h1>
 <ol>
-<li>
-<p>Switch to the <strong>Terminal</strong> window. Change to the <strong>cert-kubernetes/scripts</strong> directory.</p>
-<p><code>cd $HOME/cp4ba/cert-kubernetes/scripts</code></p>
-</li>
-<li>
-<p>Run the <strong>cp4a-prerequisites.sh</strong> script in <strong>generate</strong> mode. In this mode, information configured in the property files is reviewed, and the CP4BA Configuration files are generated. </p>
-<p><code>./cp4a-prerequisites.sh -m generate</code></p>
-<p>If error messages are printed, get back to the last exercise and edit the two property files, to find any configuration value which still contains a <code>&lt;required&gt;</code> value.</p>
-<blockquote>
-<p>Note When running it without parameters, the <code>cp4a-prerequisites.sh</code> scriptsupplies a usage.</p>
-<p><img alt="Usage of prerequisites script" src="../Images/7.1-prerequisites-usage.png" /></p>
-</blockquote>
-</li>
+<li>Switch to the <strong>Terminal</strong> window. Change to the <strong>cert-kubernetes/scripts</strong> directory.</li>
+</ol>
+<pre><code>cd $HOME/cp4ba/cert-kubernetes/scripts
+</code></pre>
+<ol>
+<li>Run the <strong>cp4a-prerequisites.sh</strong> script in <strong>generate</strong> mode. In this mode, information configured in the property files is reviewed, and the CP4BA Configuration files are generated. </li>
+</ol>
+<pre><code>./cp4a-prerequisites.sh -m generate
+</code></pre>
+<pre><code>If error messages are printed, get back to the last exercise and edit the two property files, to find any configuration value which still contains a `&lt;required&gt;` value.
+
+&gt; Note When running it without parameters, the `cp4a-prerequisites.sh` scriptsupplies a usage.
+
+&gt; ![Usage of prerequisites script](Images/7.1-prerequisites-usage.png)
+</code></pre>
+<ol>
 <li>
 <p>The script does not ask for further input, in this mode. Result of checking the property files is indicated in green or red color, red color indicates errors or missing values. </p>
 <p>Expected output:</p>
@@ -1628,16 +1631,21 @@ running the <code>cp4a-prerequisites.sh</code> now in <strong>generate</strong> 
 </li>
 <li>
 <p>The database creation scripts are generated in directory <strong>cp4ba-prerequisites/dbscript</strong>, so change into that directory.</p>
-<p><code>cd cp4ba-prerequisites/dbscript</code></p>
 </li>
-<li>
-<p>Generate a combined database creation script, by collecting all files ending in .sql, and concatenating into one named dbscript.</p>
-<p><code>find . -name \*.sql | xargs cat &gt; dbscript</code></p>
-</li>
-<li>
-<p>Edit the generated script, and comment the <strong>create role</strong> and the <strong>create tablespace</strong> commands, as the user and the tablespace have been pre-created through the CloudNativePG Operator. Each statement, <strong>create role</strong> and the <strong>create tablespace</strong> should appear 4 times, once for every database. </p>
-<p><code>gedit dbscript</code></p>
-</li>
+</ol>
+<pre><code>cd cp4ba-prerequisites/dbscript
+</code></pre>
+<ol>
+<li>Generate a combined database creation script, by collecting all files ending in .sql, and concatenating into one named dbscript.</li>
+</ol>
+<pre><code>find . -name \*.sql | xargs cat &gt; dbscript
+</code></pre>
+<ol>
+<li>Edit the generated script, and comment the <strong>create role</strong> and the <strong>create tablespace</strong> commands, as the user and the tablespace have been pre-created through the CloudNativePG Operator. Each statement, <strong>create role</strong> and the <strong>create tablespace</strong> should appear 4 times, once for every database. </li>
+</ol>
+<pre><code>gedit dbscript
+</code></pre>
+<ol>
 <li>
 <p>Also, some connection reset statements need to be added, because the single DB creation scripts were concatenated. After each statement <strong>grant create on tablespace</strong>, the statement "\c" needs to be added, to reset the connection to the lastly created database. This is also needed 4 times.</p>
 </li>
@@ -1647,49 +1655,63 @@ running the <code>cp4a-prerequisites.sh</code> now in <strong>generate</strong> 
 </li>
 <li>
 <p>For creating the databases, the db creation script needs to be made available in the Postgres Pod. The CloudNativePG Postgres operator automatically protects the container filesystem from modifications. The directory where the database configuration is stored, is an exception. Copy the db creation script into that directory, in the Postgres Pod.</p>
-<p><code>oc cp dbscript postgres-1:/var/lib/postgresql/data/dbscript</code></p>
-</li>
-<li>
-<p>Now run that script.</p>
-<p><code>oc exec postgres-1 -it -- psql -U postgres -f /var/lib/postgresql/data/dbscript</code></p>
-<p>Expected output:</p>
-<p><img alt="Creating the Databases" src="../Images/7.1-creating-databases.png" /></p>
-</li>
-<li>
-<p>Check the created databases with the psql command \l+</p>
-<p><code>oc exec postgres-1 -it -- psql -U postgres -c '\l+'</code></p>
-<p>Expected output:</p>
-<p><img alt="Database Listing" src="../Images/7.1-database-listing.png" /></p>
-<p>Verify especially that the correct tablespaces (last column) are assigned to the databases. </p>
-<p>If the script was not yet correct, and the tablespaces are showing up incorrectly, you can delete the Postgres cluster <code>oc delete -f postgres.yaml</code>, recreate it <code>oc apply -f postgres.yaml</code>.
-Before applying the dbscript again, copy the modified postgresql.conf file into the Postgres pod, and rerun Postgres by deleting the pod.</p>
-</li>
-<li>
-<p>The next steps is to apply the generated secrets. Thankfully the secrets are ready and don’t need manual updating.</p>
-<p><code>cd ../secret_template
-find . -name \*.yaml | xargs -l oc apply -f</code></p>
-<p>Expected output:</p>
-<p><img alt="Creating K8s Secrets" src="../Images/7.1-creating-secrets.png" /></p>
 </li>
 </ol>
+<pre><code>oc cp dbscript postgres-1:/var/lib/postgresql/data/dbscript
+</code></pre>
+<ol>
+<li>Now run that script.</li>
+</ol>
+<pre><code>oc exec postgres-1 -it -- psql -U postgres -f /var/lib/postgresql/data/dbscript
+</code></pre>
+<pre><code>Expected output:
+
+![Creating the Databases](Images/7.1-creating-databases.png)
+</code></pre>
+<ol>
+<li>Check the created databases with the psql command \l+</li>
+</ol>
+<pre><code>oc exec postgres-1 -it -- psql -U postgres -c '\l+'
+</code></pre>
+<pre><code>Expected output:
+
+![Database Listing](Images/7.1-database-listing.png)
+
+Verify especially that the correct tablespaces (last column) are assigned to the databases.
+
+If the script was not yet correct, and the tablespaces are showing up incorrectly, you can delete the Postgres cluster `oc delete -f postgres.yaml`, recreate it `oc apply -f postgres.yaml`.
+Before applying the dbscript again, copy the modified postgresql.conf file into the Postgres pod, and rerun Postgres by deleting the pod.
+</code></pre>
+<ol>
+<li>The next steps is to apply the generated secrets. Thankfully the secrets are ready and don’t need manual updating.</li>
+</ol>
+<pre><code>cd ../secret_template
+find . -name \*.yaml | xargs -l oc apply -f
+</code></pre>
+<pre><code>Expected output:
+
+![Creating K8s Secrets](Images/7.1-creating-secrets.png)
+</code></pre>
 <h2 id="63-validation-steps">6.3 Validation steps</h2>
 <p>In this section, the <code>cp4a-prerequisite.sh</code> is executed in validate mode. This is an optional step, but highly recommended to verify consistency of the specification, and check for common problems.</p>
 <ol>
-<li>
-<p>When the databases are created, the settings should be validated before providing the specifications to the CP4BA Operator. As the connection to the Postgres database can only be validated from within a pod, the complete specification script directory needs to be copied into the cp4ba operator.</p>
-<p><code>cd $HOME/cp4ba
-oc get pods
-oc cp cert-kubernetes &lt;cp4ba operator podname&gt;:/tmp/</code></p>
-<p>Expected output:</p>
-<p><img alt="Copying case package script directory into Operator Pod" src="../Images/7.1-copying-case-package-script-into-operator.png" /></p>
-</li>
-<li>
-<p>Run a shell inside the Operator, and run the validation script. At the beginning of its execution, some error messages on unavailable command tput and clear are printed. Those are not harmful.</p>
-<p><code>oc exec &lt;cp4ba operator podname&gt; -it -- bash
-cd /tmp/cert-kubernetes/scripts
-./cp4a-prerequisites.sh -m validate</code></p>
-</li>
+<li>When the databases are created, the settings should be validated before providing the specifications to the CP4BA Operator. As the connection to the Postgres database can only be validated from within a pod, the complete specification script directory needs to be copied into the cp4ba operator.</li>
 </ol>
+<pre><code>cd $HOME/cp4ba
+oc get pods
+oc cp cert-kubernetes &lt;cp4ba operator podname&gt;:/tmp/
+</code></pre>
+<pre><code>Expected output:
+
+![Copying case package script directory into Operator Pod](Images/7.1-copying-case-package-script-into-operator.png)
+</code></pre>
+<ol>
+<li>Run a shell inside the Operator, and run the validation script. At the beginning of its execution, some error messages on unavailable command tput and clear are printed. Those are not harmful.</li>
+</ol>
+<pre><code>oc exec &lt;cp4ba operator podname&gt; -it -- bash
+cd /tmp/cert-kubernetes/scripts
+./cp4a-prerequisites.sh -m validate
+</code></pre>
 <p>Review the generated output. It checks not only the storage class, ldap settings and database settings, but measures also the typical connection delay to the LDAP server and the database. </p>
 <ol>
 <li>
@@ -1714,11 +1736,10 @@ cd /tmp/cert-kubernetes/scripts
 </li>
 <li>
 <p>Exit out of the Operator</p>
-<p>```
-exit
-````</p>
 </li>
 </ol>
+<pre><code>exit
+</code></pre>
 <p>Congratulations, with completion of this exercise, the required prerequisites for the deployment of Cloud Pak For Business Automation should be in place. In the <a href="../Exercise-7-Deploy-CP4BA/">next exercise</a>, the case package script <code>cp4a-deployment.sh</code> is used to generate the so-called <em>CR</em> (shorthand for Custom Resource). Applying that YAML file to Kubernetes will kick-start the deployment of the Cloud Pak For Business Automation.</p>
 
 
@@ -1772,7 +1793,7 @@ exit
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.e2f4ecc1.min.js"></script>

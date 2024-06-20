@@ -1607,14 +1607,16 @@
 </blockquote>
 <h1 id="72-exercise-instructions">7.2 Exercise Instructions</h1>
 <ol>
-<li>
-<p>Switch to the <strong>Terminal</strong> window. Change to the <strong>cert-kubernetes/scripts</strong> directory.</p>
-<p><code>cd $HOME/cp4ba/cert-kubernetes/scripts</code></p>
-</li>
-<li>
-<p>Run the deployment script.</p>
-<p><code>./cp4a-deployment.sh</code></p>
-</li>
+<li>Switch to the <strong>Terminal</strong> window. Change to the <strong>cert-kubernetes/scripts</strong> directory.</li>
+</ol>
+<pre><code>cd $HOME/cp4ba/cert-kubernetes/scripts
+</code></pre>
+<ol>
+<li>Run the deployment script.</li>
+</ol>
+<pre><code>./cp4a-deployment.sh
+</code></pre>
+<ol>
 <li>
 <p>Indicate that you accept the license.</p>
 </li>
@@ -1647,10 +1649,13 @@
 </li>
 <li>
 <p>The script generates the specification file for Cloud Pak 4 Business Automation in the directory generated-cr. Navigate into this directory, and review the generated file.</p>
-<p><code>cd generated-cr
-ls -l 
-less ibm_content_cr_final.yaml</code></p>
 </li>
+</ol>
+<pre><code>cd generated-cr
+ls -l 
+less ibm_content_cr_final.yaml
+</code></pre>
+<ol>
 <li>
 <p>Note that the deployment scripts have chosen a specification for the "Content" Custom Resource Definition, which is being worked by the Content Operator. So any error messages will be logged by the Content Operator. Other deployments of the Cloud Pak for Business Automation, which include other components, such as Business Automation Workflow would require a different kind of specification, using the "ICP4ACluster" Custom Resource Definition, which would be worked by the CP4A Operator.</p>
 <p>Also, the "CR", the "Custom Resource" as it is called, is not always named "icp4acluster". This one has the default name "content", which you are free to change if needed. That name though will be used in many derived names, including some of the secret names, so better don’t change it for the moment.</p>
@@ -1661,16 +1666,15 @@ less ibm_content_cr_final.yaml</code></p>
 </li>
 <li>
 <p>Apply the specification.</p>
-<p><code>oc apply -f ibm_content_cr_final.yaml</code></p>
 </li>
 </ol>
+<pre><code>oc apply -f ibm_content_cr_final.yaml
+</code></pre>
 <h1 id="73-verification-instructions">7.3 Verification Instructions</h1>
 <p>At this point, the operator will start deployment according to the specification. During first half hour or so, nothing much will be notable from the working, as foundational components need to be deployed first. </p>
 <p>If you like looking at some changing text, you can open two Terminal windows and run these two commands in them, one in each. The first one displays the pods which are defined in the current project, the second one fetches the podname of the Content Operator, and displays its logging output,  thereby filtering out the lines containing the word "info".</p>
-<pre><code>```
-watch oc get pods
+<pre><code>watch oc get pods
 oc logs $(oc get pod -l name=ibm-content-operator -o jsonpath={.items[0].metadata.name}) -f | grep -v info
-```
 </code></pre>
 <p>Error messages in the logs would have red color, and typically contain keyword "failed", but not all error messages might require followup actions. For monitoring the deployment the best option might be to await the end of the current loop of the Content Operator, and start from reviewing its status, which can easily be viewed from the Openshift Console window. Refer to the <a href="../Exercise-8-PostDeployment/">Next Exercise</a> for instructions on monitoring the deployment and on required post-deployment activity.</p>
 
@@ -1725,7 +1729,7 @@ oc logs $(oc get pod -l name=ibm-content-operator -o jsonpath={.items[0].metadat
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.e2f4ecc1.min.js"></script>
