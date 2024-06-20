@@ -101,7 +101,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/Content/Readme/</loc>
+         <loc>https://mydomain.org/mysite/Content/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -111,7 +111,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/Document%20Processing/Readme/</loc>
+         <loc>https://mydomain.org/mysite/Document%20Processing/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
