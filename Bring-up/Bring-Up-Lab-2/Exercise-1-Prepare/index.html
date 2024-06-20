@@ -1796,7 +1796,7 @@ Administration of an OCP cluster also includes the configuration and installatio
 shows you how to use the scripts and information provided by the CP4BA development teams, by executing these scripts on the bastion host. 
 Therefore, the bastion host must be one of RHEL, CentOS, or macOS. Finally, all commands these scripts need 
 must also be available on the bastion host, for example, the OpenShift CLI, Kubernetes CLI, and so on.</p>
-<p>The preparation of a bastion host is discussed in the documentation on this page: <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=deployment-preparing-client-connect-cluster">Preparing a client to connect to the cluster</a>.</p>
+<p>The preparation of a bastion host is discussed in the documentation on this page: <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=deployment-preparing-client-connect-cluster" target="_blank">Preparing a client to connect to the cluster</a>.</p>
 <p>Other services are also deployed on this specific bastion host. The most important ones are the LDAP Server, which is used as the Authentication provider for the CP4BA deployment, and an NFS Server to provide persistent storage capabilities to the Openshift cluster.</p>
 <h3 id="112-red-hat-openshift-container-platform-ocp-cluster-vms">1.1.2 Red Hat OpenShift Container Platform (OCP) Cluster VMs</h3>
 <p>The OpenShift cluster was configured using OCP version 4.12.45. It will host the PostgreSQL and CP4BA containers which you will install 
@@ -1810,7 +1810,7 @@ later in this Lab. You can access your OCP cluster from the bastion host either 
 <p>To complete this Lab, you must have an entitlement key with access to pull CP4BA images from the IBM Container Software Library <code>cp.icr.io</code>.</p>
 <ol>
 <li>
-<p>Check that you have an entitlement key with the proper image access. For this, please open <a href="https://myibm.ibm.com/products-services/containerlibrary">IBM Container Library</a>
+<p>Check that you have an entitlement key with the proper image access. For this, please open <a href="https://myibm.ibm.com/products-services/containerlibrary" target="_blank">https://myibm.ibm.com/products-services/containerlibrary</a>
    and log in with your IBM ID. IBMers can use their w3 ID.</p>
 </li>
 <li>
@@ -1820,12 +1820,12 @@ later in this Lab. You can access your OCP cluster from the bastion host either 
 </ol>
 <p><img alt="Container Library" src="../Images/2.2.1-containerlibrary.png" /></p>
 <p><strong>Business Partners</strong> that do not see <strong>all</strong> here, before proceeding, <strong>must verify that CP4BA is listed on the Container software library page</strong>. 
-If you don’t see a CP4BA license listed, you can request here a CP4BA 60-day Trial license: https://www.ibm.com/account/reg/us-en/signup?formid=urx-44505. 
+If you don’t see a CP4BA license listed, you can request here a CP4BA 60-day Trial license: <a href="https://www.ibm.com/account/reg/us-en/signup?formid=urx-44505" target="_blank">https://www.ibm.com/account/reg/us-en/signup?formid=urx-44505</a>. 
 You cannot perform this bring-up Lab without a license and entitlement key.</p>
 <h3 id="122-reserve-the-openshift-tech-zone-envrioment">1.2.2 Reserve the OpenShift Tech Zone Envrioment</h3>
 <ol>
 <li>
-<p>To get an OpenShift cluster from TechZone, access IBM Technology Zone: https://techzone.ibm.com/</p>
+<p>To get an OpenShift cluster from TechZone, access IBM Technology Zone: <a href="https://techzone.ibm.com/" target="_blank">https://techzone.ibm.com/</a></p>
 </li>
 <li>
 <p>To sign-in, either use your IBM ID or your company credentials if SSO is set up between your company and IBM. For example, if you have an
@@ -1834,7 +1834,7 @@ You cannot perform this bring-up Lab without a license and entitlement key.</p>
 check if you have another IBM ID that is enabled for IBM Technology Zone reservations. </p>
 </li>
 <li>
-<p>Once signed in, open the lab resource page: https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-demos-and-labs-bring-up-lab</p>
+<p>Once signed in, open the lab resource page: <a href="https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-demos-and-labs-bring-up-lab" target="_blank">https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-demos-and-labs-bring-up-lab/</a></p>
 </li>
 <li>
 <p>Scroll down to the <strong>Environments</strong> section. Choose an environment with the highest version number. If you have multiple with the highest number, choose the one in the nearest geo. Then click on <strong>Reserve</strong>.</p>
