@@ -20,61 +20,61 @@ The exercise instructions in the following paragraph will guide you through the 
    
 2. Open a Terminal, by clicking the link on the desktop. Switch to the Labfiles directory to host there the product deployment scripts.
    
-   ```sh
-   cd /home/cp4badmin/Desktop/Labfiles
-   ```
+```sh
+cd /home/cp4badmin/Desktop/Labfiles
+```
    
 3. Buy running the following commands, create a temporary directory, e.g., `/tmp`, download the CP4BA 23.0.2 IF002 Case package: **<a href="https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz" target="_blank">https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz</a>** into that temporary directory, and extract `ibm-cp-automation-5.1.2.tgz` into the same temporary directory.
    
-   ```sh
-   mkdir tmp
-   ```
+```sh
+mkdir tmp
+```
    
-   ```sh
-   cd tmp
-   ```
-   
-   ```sh
-   wget https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz
-   ```
-   
-   ```sh
-   tar xvfz ibm-cp-automation-5.1.2.tgz
-   ```
-   
+```sh
+cd tmp
+```
+
+```sh
+wget https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz
+```
+
+```sh
+tar xvfz ibm-cp-automation-5.1.2.tgz
+```
+
 4. Extract the content of archive ibm-cp-automation/inventory/cp4aOperatorSdk/files/deploy/crs/cert-k8s-23.0.2.tar into the Labfiles directory, delete the temporary directory.
-   
-   ```sh
-   cd ..
-   ```
-   
-   ```sh
-   tar xvf tmp/ibm-cp-automation/inventory/cp4aOperatorSdk/files/deploy/crs/cert-k8s-23.0.2.tar
-   ```
-   
-   ```sh
-   rm -r tmp
-   ```
-   
+
+```sh
+cd ..
+```
+
+```sh
+tar xvf tmp/ibm-cp-automation/inventory/cp4aOperatorSdk/files/deploy/crs/cert-k8s-23.0.2.tar
+```
+
+```sh
+rm -r tmp
+```
+
 5. Change into the cert-kubernetes/scripts directory
-   
-   ```sh
-   cd cert-kubernetes/scripts
-   ```
-   
+
+```sh
+cd cert-kubernetes/scripts
+```
+
 6. Before running the script, make sure that you are connected through the oc CLI.
-   
-   ```sh
-   oc version
-   ```
-   
-   **Note:** If you are not connected to OCP, follow the instructions in **[Exercise 1: Prepare yourself for this Bring-Up Lab](Exercise-1-Prepare.md#123-access-the-openshift-tech-zone-envrioment)** to reconnect. 
-   
+
+```sh
+oc version
+```
+
+**Note:** If you are not connected to OCP, follow the instructions in **[Exercise 1: Prepare yourself for this Bring-Up Lab](Exercise-1-Prepare.md#123-access-the-openshift-tech-zone-envrioment)** to reconnect. 
+
 7. Start the deployment of the CP4BA Operator by running the clusteradmin setup script.
-   
-   ```sh
-   ./cp4a-clusteradmin-setup.sh
-   ```
+
+```sh
+./cp4a-clusteradmin-setup.sh
+```
    
 8. The script initially prompts you for some input. First, select the correct type of environment. This environment uses an Openshift-environment on Private Cloud that is not ROKS, so select **2**, and hit the Enter key.
    

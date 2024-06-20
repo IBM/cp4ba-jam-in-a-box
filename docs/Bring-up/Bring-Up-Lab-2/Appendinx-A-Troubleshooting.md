@@ -59,30 +59,30 @@ When the prerequisites are setup, and the `cp4a-prerequisites.sh` was successful
 
 3.	For further troubleshooting, use the script [deploymentStatus.sh](LabData/deploymentStatus.sh). By right-clicking the **Raw**  button the script can be saved to a local directory and executed. On a healthy environment it should print following output for a Content deployment:
 
-    ```
-    --------------------------------------------------------------
-    
-    Content CR named content found
-    Custom Resource of type Content is applied
-       Running      True    Running Running reconciliation
-       Ready        True    Successful
-    
-    ZenService Deployment Progress: 100% (The Current Operation Is Completed)
-    ZenStatus: zen operator 5.1.1 build 37:  Completed
-    
-    Foundation:
-            Running reconciliation
-            Prerequisites execution done.
-    
-    Initialization Status:
-    {
-            cpe_initialized: True,
-            cpe_os_number: 2,
-            css_initialized: True,
-            nav_initialized: True
-    }
-    
-    IAM Login details: cpadmin / <password>
-    ````    	
+```
+--------------------------------------------------------------
+
+Content CR named content found
+Custom Resource of type Content is applied
+    Running      True    Running Running reconciliation
+    Ready        True    Successful
+
+ZenService Deployment Progress: 100% (The Current Operation Is Completed)
+ZenStatus: zen operator 5.1.1 build 37:  Completed
+
+Foundation:
+        Running reconciliation
+        Prerequisites execution done.
+
+Initialization Status:
+{
+        cpe_initialized: True,
+        cpe_os_number: 2,
+        css_initialized: True,
+        nav_initialized: True
+}
+
+IAM Login details: cpadmin / <password>
+```   	
     
 	

@@ -22,9 +22,9 @@ Follow these step-by-step instructions to deploy CP4BA using the rapid deploymen
    
 2. Open a Terminal, by clicking the link on the desktop. Then, check that the Security Directory Server is running fine.
    
-   ```sh
-   systemctl status sds
-   ```
+```sh
+systemctl status sds
+```
    
    Expected output:
    
@@ -32,33 +32,33 @@ Follow these step-by-step instructions to deploy CP4BA using the rapid deploymen
    
    If you don't see `Active: active (running)` use these commands to stop and start SDS:
    
-   ```sh
-   sudo systemctl stop sds
-   ```
-   
-   ```sh
-   sudo systemctl start sds
-   ```
+```sh
+sudo systemctl stop sds
+```
+
+```sh
+sudo systemctl start sds
+```
    
 3. Run this command to verify you are still connected with OCP.
    
-   ```sh
-   oc version
-   ```
+```sh
+oc version
+```
    
    **Note:** If you are not connected to OCP, follow the instructions in **[Exercise 1: Prepare yourself for this Bring-Up Lab](Exercise-1-Prepare.md#123-access-the-openshift-tech-zone-envrioment)** to reconnect.
    
 4. Switch to the directory where you previously downloaded the rapid deployment scripts into.
    
-   ```sh
-   cd /home/cp4badmin/Desktop/Labfiles/cp4ba-rapid-deployment/cp4ba-23-0-2/mycluster/deployment-db2-cp4ba
-   ```
+```sh
+cd /home/cp4badmin/Desktop/Labfiles/cp4ba-rapid-deployment/cp4ba-23-0-2/mycluster/deployment-db2-cp4ba
+```
    
 5. Open rapid deployment script 05-parametersForCp4ba.sh, with gedit.
    
-   ```sh
-   gedit 05-parametersForCp4ba.sh
-   ```
+```sh
+gedit 05-parametersForCp4ba.sh
+```
 
 6. Apply the following changes:
    
@@ -94,9 +94,9 @@ Follow these step-by-step instructions to deploy CP4BA using the rapid deploymen
    
 7. Run script **07-createCp4baDeployment.sh**. This script will now deploy CP4BA using the parameters you previously provided in 01-parametersForDb2OnOCP.sh and 05-parametersForCp4ba.sh.
    
-   ```sh
-   ./07-createCp4baDeployment.sh
-   ```
+```sh
+./07-createCp4baDeployment.sh
+```
    
    **Notes:**
    
@@ -108,79 +108,79 @@ Follow these step-by-step instructions to deploy CP4BA using the rapid deploymen
    
    Sample script output:
    
-   ```
-   ./07-createCp4baDeployment.sh
+```
+./07-createCp4baDeployment.sh
+
+Found 01-parametersForDb2OnOCP.sh.  Reading in variables from that script.
+   Reading 01-parametersForDb2OnOCP.sh ...
+Done!
+
+Found 05-parametersForCp4ba.sh.  Reading in variables from that script.
+   Reading 05-parametersForCp4ba.sh ...
+   Extracting OCP Hostname
+   OCPHostname set to apps.ocp.ibm.edu
+Done!
+
+Using correct cp4ba version.
+
+This script PREPARES and optionaly CREATES the CP4BA deployment using template ibm_cp4a_cr_template.002.ent.FoundationContent.yaml in project ibm-cp4ba. 
    
-   Found 01-parametersForDb2OnOCP.sh.  Reading in variables from that script.
-     Reading 01-parametersForDb2OnOCP.sh ...
-   Done!
-   
-   Found 05-parametersForCp4ba.sh.  Reading in variables from that script.
-     Reading 05-parametersForCp4ba.sh ...
-     Extracting OCP Hostname
-     OCPHostname set to apps.ocp.ibm.edu
-   Done!
-   
-   Using correct cp4ba version.
-   
-   This script PREPARES and optionaly CREATES the CP4BA deployment using template ibm_cp4a_cr_template.002.ent.FoundationContent.yaml in project ibm-cp4ba. 
-    
-   Are 01-parametersForDb2OnOCP.sh and 05-parametersForCp4ba.sh up to date, and do you want to continue? (Yes/No, default: No): Yes   <--- Enter Yes here
-   
-   Preparing the CP4BA deployment...
-   
-   Switching to project ibm-cp4ba...
-   Already on project "ibm-cp4ba" on server "https://api.ocp.ibm.edu:6443".
-   
-   Collecting information for secret ibm-entitlement-key. For this, your Entitlement Registry key is needed.
-   
-   You can get the Entitlement Registry key from here: https://myibm.ibm.com/products-services/containerlibrary
-   
-   Enter your Entitlement Registry key: <paste your Entitlement Registry key here ONCE, it will not be shown, then hit the Enter key>
-   Verifying the Entitlement Registry key...
-   Login Succeeded!
-   Entitlement Registry key is valid.
-   
-   Deployment of CP4BA required synchronied clocks among the server nodes.
-   Synchronize clocks now (y/n) ? n   <--- Enter n here
-   Not synchronizing clocks...
-   
-   Preparing the CP4BA secrets...
-   
-   Preparing the CR YAML for deployment...
-   
-   All artefacts for deployment are prepared.
-   
-   Do you want to CREATE the CP4BA deployment in project ibm-cp4ba now? (Yes/No, default: No): Yes   <--- Enter Yes here
-   
-   Creating the CP4BA deployment...
-   Creating secret ibm-entitlement-key in project ibm-cp4ba...
-   Already exists
-   Already on project "ibm-cp4ba" on server "https://api.ocp.ibm.edu:6443".
-   
-   Creating CP4BA secrets...
-   secret/ldap-bind-secret created
-   secret/icp4a-shared-encryption-key created
-   secret/resource-registry-admin-secret created
-   secret/ibm-ban-secret created
-   secret/ibm-fncm-secret created
-   secret/icp4adeploy-bas-admin-secret created
-   secret/playback-server-admin-secret created
-   secret/icp4adeploy-workspace-aae-app-engine-admin-secret created
-   secret/ibm-adp-secret created
-   secret/ibm-bawaut-server-db-secret created
-   secret/ibm-pfs-admin-secret created
-   secret/ibm-bawaut-admin-secret created
-   secret/ibm-odm-db-secret created
-   secret/ibm-ier-secret created
-   Done.
-   
-   Creating the CP4BA deployment...
-   icp4acluster.icp4a.ibm.com/icp4adeploy created
-   Done.
-   
-   All changes got applied. Exiting...
-   ```
+Are 01-parametersForDb2OnOCP.sh and 05-parametersForCp4ba.sh up to date, and do you want to continue? (Yes/No, default: No): Yes   <--- Enter Yes here
+
+Preparing the CP4BA deployment...
+
+Switching to project ibm-cp4ba...
+Already on project "ibm-cp4ba" on server "https://api.ocp.ibm.edu:6443".
+
+Collecting information for secret ibm-entitlement-key. For this, your Entitlement Registry key is needed.
+
+You can get the Entitlement Registry key from here: https://myibm.ibm.com/products-services/containerlibrary
+
+Enter your Entitlement Registry key: <paste your Entitlement Registry key here ONCE, it will not be shown, then hit the Enter key>
+Verifying the Entitlement Registry key...
+Login Succeeded!
+Entitlement Registry key is valid.
+
+Deployment of CP4BA required synchronied clocks among the server nodes.
+Synchronize clocks now (y/n) ? n   <--- Enter n here
+Not synchronizing clocks...
+
+Preparing the CP4BA secrets...
+
+Preparing the CR YAML for deployment...
+
+All artefacts for deployment are prepared.
+
+Do you want to CREATE the CP4BA deployment in project ibm-cp4ba now? (Yes/No, default: No): Yes   <--- Enter Yes here
+
+Creating the CP4BA deployment...
+Creating secret ibm-entitlement-key in project ibm-cp4ba...
+Already exists
+Already on project "ibm-cp4ba" on server "https://api.ocp.ibm.edu:6443".
+
+Creating CP4BA secrets...
+secret/ldap-bind-secret created
+secret/icp4a-shared-encryption-key created
+secret/resource-registry-admin-secret created
+secret/ibm-ban-secret created
+secret/ibm-fncm-secret created
+secret/icp4adeploy-bas-admin-secret created
+secret/playback-server-admin-secret created
+secret/icp4adeploy-workspace-aae-app-engine-admin-secret created
+secret/ibm-adp-secret created
+secret/ibm-bawaut-server-db-secret created
+secret/ibm-pfs-admin-secret created
+secret/ibm-bawaut-admin-secret created
+secret/ibm-odm-db-secret created
+secret/ibm-ier-secret created
+Done.
+
+Creating the CP4BA deployment...
+icp4acluster.icp4a.ibm.com/icp4adeploy created
+Done.
+
+All changes got applied. Exiting...
+```
 
 ### 5.2.2 CP4BA Deployment Verification
 
@@ -209,13 +209,13 @@ In different CP4BA versions, you may see more pods.
 
 1. Get the user ID and password of the zen admin user by running those two commands:
    
-   ```sh
-   oc get secret ibm-iam-bindinfo-platform-auth-idp-credentials -o jsonpath='{.data.admin_username}' | base64 -d && echo
-   ```
-   
-   ```sh
-   oc get secret ibm-iam-bindinfo-platform-auth-idp-credentials -o jsonpath='{.data.admin_password}' | base64 -d && echo
-   ```
+```sh
+oc get secret ibm-iam-bindinfo-platform-auth-idp-credentials -o jsonpath='{.data.admin_username}' | base64 -d && echo
+```
+
+```sh
+oc get secret ibm-iam-bindinfo-platform-auth-idp-credentials -o jsonpath='{.data.admin_password}' | base64 -d && echo
+```
    
    **Note:** By default, the user id is **cpadmin**.
    

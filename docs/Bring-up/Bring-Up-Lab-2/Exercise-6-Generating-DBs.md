@@ -17,15 +17,15 @@ In the verification section of this Exercise, the `cp4a-prerequisites.sh` script
 
 1.	Switch to the **Terminal** window. Change to the **cert-kubernetes/scripts** directory.
 
-    ```
-    cd $HOME/cp4ba/cert-kubernetes/scripts
-    ```
+```
+cd $HOME/cp4ba/cert-kubernetes/scripts
+```
 
 2.	Run the **cp4a-prerequisites.sh** script in **generate** mode. In this mode, information configured in the property files is reviewed, and the CP4BA Configuration files are generated. 
 
-    ```
-    ./cp4a-prerequisites.sh -m generate
-    ```
+```
+./cp4a-prerequisites.sh -m generate
+```
 
 	If error messages are printed, get back to the last exercise and edit the two property files, to find any configuration value which still contains a `<required>` value.
 	
@@ -42,21 +42,21 @@ In the verification section of this Exercise, the `cp4a-prerequisites.sh` script
 
 7.	The database creation scripts are generated in directory **cp4ba-prerequisites/dbscript**, so change into that directory.
 
-    ```
-    cd cp4ba-prerequisites/dbscript
-    ```
-	
+```
+cd cp4ba-prerequisites/dbscript
+```
+
 8.	Generate a combined database creation script, by collecting all files ending in .sql, and concatenating into one named dbscript.
 
-    ```
-    find . -name \*.sql | xargs cat > dbscript
-    ```
+```
+find . -name \*.sql | xargs cat > dbscript
+```
 
 9.	Edit the generated script, and comment the **create role** and the **create tablespace** commands, as the user and the tablespace have been pre-created through the CloudNativePG Operator. Each statement, **create role** and the **create tablespace** should appear 4 times, once for every database. 
 
-    ```
-    gedit dbscript
-    ```
+```
+gedit dbscript
+```
 	
 10.	Also, some connection reset statements need to be added, because the single DB creation scripts were concatenated. After each statement **grant create on tablespace**, the statement "\c" needs to be added, to reset the connection to the lastly created database. This is also needed 4 times.
 
@@ -66,15 +66,15 @@ In the verification section of this Exercise, the `cp4a-prerequisites.sh` script
 
 11.	For creating the databases, the db creation script needs to be made available in the Postgres Pod. The CloudNativePG Postgres operator automatically protects the container filesystem from modifications. The directory where the database configuration is stored, is an exception. Copy the db creation script into that directory, in the Postgres Pod.
 
-    ```
-    oc cp dbscript postgres-1:/var/lib/postgresql/data/dbscript
-    ```
-	
+```
+oc cp dbscript postgres-1:/var/lib/postgresql/data/dbscript
+```
+
 12.	Now run that script.
 
-    ```
-    oc exec postgres-1 -it -- psql -U postgres -f /var/lib/postgresql/data/dbscript
-    ```
+```
+oc exec postgres-1 -it -- psql -U postgres -f /var/lib/postgresql/data/dbscript
+```
 
     Expected output:
 	
@@ -82,9 +82,9 @@ In the verification section of this Exercise, the `cp4a-prerequisites.sh` script
   
 13.	Check the created databases with the psql command \l+
 
-    ```
-    oc exec postgres-1 -it -- psql -U postgres -c '\l+'
-    ```
+```
+oc exec postgres-1 -it -- psql -U postgres -c '\l+'
+```
 
     Expected output:
 
@@ -97,10 +97,10 @@ In the verification section of this Exercise, the `cp4a-prerequisites.sh` script
  
 14.	The next steps is to apply the generated secrets. Thankfully the secrets are ready and don’t need manual updating.
 
-    ```
-    cd ../secret_template
-    find . -name \*.yaml | xargs -l oc apply -f
-    ```
+```
+cd ../secret_template
+find . -name \*.yaml | xargs -l oc apply -f
+```
 
     Expected output:
 	
@@ -112,11 +112,11 @@ In this section, the `cp4a-prerequisite.sh` is executed in validate mode. This i
  
 1.	When the databases are created, the settings should be validated before providing the specifications to the CP4BA Operator. As the connection to the Postgres database can only be validated from within a pod, the complete specification script directory needs to be copied into the cp4ba operator.
 
-    ```
-    cd $HOME/cp4ba
-    oc get pods
-    oc cp cert-kubernetes <cp4ba operator podname>:/tmp/
-    ```
+```
+cd $HOME/cp4ba
+oc get pods
+oc cp cert-kubernetes <cp4ba operator podname>:/tmp/
+```
 
     Expected output:
 	
@@ -124,11 +124,11 @@ In this section, the `cp4a-prerequisite.sh` is executed in validate mode. This i
  
 2.	Run a shell inside the Operator, and run the validation script. At the beginning of its execution, some error messages on unavailable command tput and clear are printed. Those are not harmful.
 
-    ```
-    oc exec <cp4ba operator podname> -it -- bash
-    cd /tmp/cert-kubernetes/scripts
-    ./cp4a-prerequisites.sh -m validate
-    ```
+```
+oc exec <cp4ba operator podname> -it -- bash
+cd /tmp/cert-kubernetes/scripts
+./cp4a-prerequisites.sh -m validate
+```
     
 Review the generated output. It checks not only the storage class, ldap settings and database settings, but measures also the typical connection delay to the LDAP server and the database. 
 
@@ -158,8 +158,8 @@ Review the generated output. It checks not only the storage class, ldap settings
 	
 7.  Exit out of the Operator
 
-    ```
-    exit
-    ````
+```
+exit
+```
 	
 Congratulations, with completion of this exercise, the required prerequisites for the deployment of Cloud Pak For Business Automation should be in place. In the [next exercise](Exercise-7-Deploy-CP4BA.md), the case package script `cp4a-deployment.sh` is used to generate the so-called *CR* (shorthand for Custom Resource). Applying that YAML file to Kubernetes will kick-start the deployment of the Cloud Pak For Business Automation.

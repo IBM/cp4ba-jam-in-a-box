@@ -10,15 +10,15 @@ In this exercise, the remaining configuration settings will be made. The exercis
 
 1.	Switch to the **Terminal** window. Change to the **propertyfile** directory inside the **cert-kubernetes/scripts** directory.
 
-    ```
-    cd $HOME/cp4ba/cert-kubernetes/scripts/cp4ba-prerequisites/propertyfile
-    ```
+```
+cd $HOME/cp4ba/cert-kubernetes/scripts/cp4ba-prerequisites/propertyfile
+```
 	
 2.	Check if the Security Directory Server is running. 
 
-    ```
-    systemctl status sds
-    ```
+```
+systemctl status sds
+```
 
     Expected output:
 
@@ -26,9 +26,9 @@ In this exercise, the remaining configuration settings will be made. The exercis
  
 3.	Determine the IP address of the bastion host. That value will later be the LDAP Server hostname.
 
-    ```
-    ip a
-    ```
+```
+ip a
+```
 
     Expected output, the IP address is marked in red:
 	
@@ -36,11 +36,11 @@ In this exercise, the remaining configuration settings will be made. The exercis
  
 4.	To check connectivity from the OCP cluster, we will again use the curl command from the ibm-cp4a-operator. Determine first the complete name of the pod, and insert that value in the next command to open a shell. Then verify connectivity with the curl command. You need to abort it again, when seeing that the connection could be established.
 
-    ```
-    oc get pod
-    oc exec <name of ibm-cp4a-operator pod> -it -- bash
-    curl -v telnet://10.100.1.8:389
-    ```
+```
+oc get pod
+oc exec <name of ibm-cp4a-operator pod> -it -- bash
+curl -v telnet://10.100.1.8:389
+```
 
     Expected output:
 	
@@ -48,9 +48,9 @@ In this exercise, the remaining configuration settings will be made. The exercis
  
 5.	Still in the shell in the ibm-cp4a-operator, we can verify the ldap credentials as well as getting the usernames
 
-    ```
-    ldapsearch -x -b 'dc=example,dc=com' -H ldap://10.100.1.8:389 -D cn=root -W
-    ```
+```
+ldapsearch -x -b 'dc=example,dc=com' -H ldap://10.100.1.8:389 -D cn=root -W
+```
 	
 	**Note:** Care must be taken when using this command on a production installation, where the connected LDAP Server might be used by all users of a company: The output would be very long, the runtime high. 
 	In this kind of environments, query a useful subset of the LDAP Server only.
@@ -59,17 +59,17 @@ In this exercise, the remaining configuration settings will be made. The exercis
 	
 6.	Before editing the LDAP Server property file, please determine the base64 encoded value for the LDAP server password, it will be needed. (Yes, also this 0 is a zero)
 
-    ```
-    echo -n passw0rd123 | base64
-    ```
+```
+echo -n passw0rd123 | base64
+```
 
 	**Note:** The **-n** option to echo will suppress the linefeed character, which echo normally prints following the output. If it is included, the linefeed will be part of the base64 encoded string, and might lead to illegal passwords, which are very hard to find later.
 	
 7.	Now edit the LDAP Server property file.
 
-    ```
-    gedit cp4ba_LDAP.property
-    ```
+```
+gedit cp4ba_LDAP.property
+```
 	
 8.	Most of the needed configuration values are contained already in the ldapsearch query executed above. The single exception to this is the SSL support, which would be disabled for now. For completeness, below table contains the values which need to be replaced. Make sure to retain the quotation marks. 
 
@@ -87,18 +87,18 @@ In this exercise, the remaining configuration settings will be made. The exercis
 	
 9.	Before editing the last configuration file, we again need the base64 encrypted value for the **cp4badmin** user, which we will also use as LTPA password and keystore password. The 0 is a zero.
 
-    ```
-    echo -n passw0rd | base64
-    ```
+```
+echo -n passw0rd | base64
+```
 	
 	**Note:** The **-n** option to echo will suppress the linefeed character, which echo normally prints following the output. If it is included, the linefeed will be part of the base64 encoded string, and might lead to illegal passwords, which are very hard to find later.
 	
 	
 10.	Now edit the CP4BA user name configuration file.
 
-    ```
-    gedit cp4ba_user_profile.property
-    ```
+```
+gedit cp4ba_user_profile.property
+```
 
 11.	When editing the file, all passwords are set to the base64 encrypted value resulting from above command. All admin user names are set to cp4badmin, and all admin groups to cp4badmins. The Object Store users group is set to cp4bausers. There are only few other values to replace. Some values are already preconfigured from the answers provided when generating the property files.
 

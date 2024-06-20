@@ -201,9 +201,9 @@ Once you get the email informing you that your environment is Ready, you can sta
  
 20.	Next, run this command
  
-    ```sh
-    oc version
-	```
+```sh
+oc version
+```
 	
     Expected output:
 	

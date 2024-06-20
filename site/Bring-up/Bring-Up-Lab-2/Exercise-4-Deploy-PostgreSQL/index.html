@@ -1602,7 +1602,7 @@
 <h1 id="41-introduction">4.1 Introduction</h1>
 <p>In this section, the PostgreSQL database will be deployed, and the database related property files of the CP4BA deployment updated with required configuration values. 
 For the deployment of the PostgreSQL database, the Cloud Native PG Postgres operator will be used. The Cloud Native PG Postgres Operator is an open source initiative, 
-its homepage can be found on https://cloudnative-pg.io/. The operator supports Openshift as well as plain Kubernetes, so called <em>CNCF</em> deployments. For commercial usage, 
+its homepage can be found on <a href="https://cloudnative-pg.io/" target="_blank">https://cloudnative-pg.io/</a>. The operator supports Openshift as well as plain Kubernetes, so called <em>CNCF</em> deployments. For commercial usage, 
 with needed software support, there exist commercial products derived from the offering from Cloud Native PG.</p>
 <h1 id="42-exercise-instructions">4.2 Exercise Instructions</h1>
 <ol>
@@ -1678,7 +1678,7 @@ oc cp postgres-1:/var/lib/postgresql/data/pgdata/postgresql.conf postgresql.conf
 <p><img alt="editing postgresql-conf" src="../Images/5.2-postgresql-conf.png" /></p>
 </li>
 <li>
-<p>The second place to change is the line showing <strong>max_prepared_transactions</strong>. Remove the # character in front of the the line, and change the value to support <strong>1000</strong> prepared transactions. Read more about both updates in the CP4BA Documentation: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=tpdcpe-using-postgresql-max-connections-max-prepared-transactions</p>
+<p>The second place to change is the line showing <strong>max_prepared_transactions</strong>. Remove the # character in front of the the line, and change the value to support <strong>1000</strong> prepared transactions. Read more about both updates in the CP4BA Documentation: <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=tpdcpe-using-postgresql-max-connections-max-prepared-transactions" target="_blank">https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=tpdcpe-using-postgresql-max-connections-max-prepared-transactions</a></p>
 <p><img alt="editing max prepared transactions" src="../Images/5.2-postgresql-conf2.png" /></p>
 </li>
 <li>

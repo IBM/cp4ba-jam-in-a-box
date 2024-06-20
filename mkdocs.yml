@@ -60,6 +60,7 @@ theme:
     repo: fontawesome/brands/github
   features:
     - navigation.top
+    - content.code.copy
   name: material
   palette:
     # Palette toggle for light mode

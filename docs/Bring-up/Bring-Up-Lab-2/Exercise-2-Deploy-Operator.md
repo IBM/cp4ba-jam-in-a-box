@@ -25,9 +25,9 @@ The exercise instructions in the following paragraph will guide you through the 
 1.	Click on the tile for the Bastion host. Login as the "cp4badmin" user, if needed, the password is "passw0rd" with a zero.
 
 2.	Open a Terminal, by clicking the link on the desktop. Create a directory to host the product deployment scripts. 
-    ```sh
-    mkdir cp4ba
-    ```
+```sh
+mkdir cp4ba
+```
 	
 3.	Open Firefox through clicking on the link on the desktop. Find the link for **CP4BA Case Packages** in the Bookmark toolbar, and navigate to it. The **Case Package** Directory for the Cloud Pak For Business Automation can be found here: <a href="https://github.com/IBM/cloud-pak/tree/master/repo/case/ibm-cp-automation" target="_blank">https://github.com/IBM/cloud-pak/tree/master/repo/case/ibm-cp-automation</a>. The document **index.yaml** contains a mapping of directory names to CP4BA Version numbers.  Click it to determine the directory for the **Version 23.0.2**. (There might be a typo on the version number.)
 
@@ -38,48 +38,48 @@ The exercise instructions in the following paragraph will guide you through the 
     ![Download Case Package](Images/2.2.1-download-case-package.png)
 
 6.	Back on the terminal window, navigate to the cp4ba directory, and unpack the case package.
-    ```sh
-    cd cp4ba
-    tar xvfz ../Downloads/ibm-cp-automation-5.1.0.tgz
-    ```
+```sh
+cd cp4ba
+tar xvfz ../Downloads/ibm-cp-automation-5.1.0.tgz
+```
 	
 7.	The case package contains a tar file containing the actual deployment scripts. Unpack that file in current directory. First search it:
-    ```sh
-    find . -name \*.tar
-	```
+```sh
+find . -name \*.tar
+```
 	
 8.	Copy & Paste the returned filename into the tar command:
-    ```sh
-    tar xvf (filename)
-	```
+```sh
+tar xvf (filename)
+```
     Expected output:
 	![tar xvf](Images/3.1-tarxf.png)
  
 9.	Change into the cert-kubernetes/scripts directory
-    ```sh
-    cd cert-kubernetes/scripts
-	```
+```sh
+cd cert-kubernetes/scripts
+```
 	
 10. Before the operator can be deployed, a connection to the OCP cluster must be established. If you did the previous exercise immediately before this one, the connection should still be valid, nothing needs to be done. If not, use **Firefox** to login to the OCP Console application, then generate a login command, and paste it into the Terminal window, as shown in the last exercise.
 
 14.	Verify, that on openshift a storage class has been created.
-    ```sh
-    oc get storageclasses
-	```
+```sh
+oc get storageclasses
+```
 	Expected output:
 	![Storageclasses](Images/3.1-storageclasses.png)	
  
 15.	Verify, that the ocpadmin user has indeed clusteradmin privileges. 
-    ```sh
-    oc auth can-i create project
-	````
+```sh
+oc auth can-i create project
+```
 	Expected output:
     ![Can Create Project](Images/3.1-Can-Create-Project.png)
  
 16.	Start the deployment of the CP4BA Operator by running the clusteradmin setup script.
-    ```sh
-    ./cp4a-clusteradmin-setup.sh
-	````
+```sh
+./cp4a-clusteradmin-setup.sh
+```
 	
 17.	Select the correct type of environment, when the script asks for it. This environment uses an Openshift-environment on Private Cloud that is not ROKS, so select **2**
 

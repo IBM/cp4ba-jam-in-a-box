@@ -29,34 +29,34 @@ In the previous exercises, the prerequisites for deployment of Cloud Pak For Bus
 	
 4.  Optionally, for further troubleshooting, use the script [deploymentStatus.sh](LabData/deploymentStatus.sh). By right-clicking the **Raw**  button the script can be saved to a local directory and executed. On a healthy environment it should print following output:
 
-    ```
-    Content CR named content found
-    Custom Resource of type Content is applied
-       Running	True    Running Running reconciliation
-       Ready        True    Successful
-    
-    ZenService Deployment Progress: 100% (The Current Operation Is Completed)
-    ZenStatus: zen operator 5.0.2 build 41:  Completed
-       2024-04-08T10:29:32Z Awaiting next reconciliation
-       2024-04-08T11:03:37Z Last reconciliation succeeded
-       2024-04-08T11:03:37Z
-    
-    Foundation:
-            Running reconciliation
-            Prerequisites execution done.
-    
-    
-    
-    Initialization Status:
-    {
-            cpe_initialized: True,
-            cpe_os_number: 2,
-            css_initialized: True,
-            nav_initialized: True
-    }
-    
-    IAM Login details: cpadmin / <password>
-    ````    	
+```
+Content CR named content found
+Custom Resource of type Content is applied
+    Running	True    Running Running reconciliation
+    Ready        True    Successful
+
+ZenService Deployment Progress: 100% (The Current Operation Is Completed)
+ZenStatus: zen operator 5.0.2 build 41:  Completed
+    2024-04-08T10:29:32Z Awaiting next reconciliation
+    2024-04-08T11:03:37Z Last reconciliation succeeded
+    2024-04-08T11:03:37Z
+
+Foundation:
+        Running reconciliation
+        Prerequisites execution done.
+
+
+
+Initialization Status:
+{
+        cpe_initialized: True,
+        cpe_os_number: 2,
+        css_initialized: True,
+        nav_initialized: True
+}
+
+IAM Login details: cpadmin / <password>
+```
     
     
 The following post-deployment steps described here follow the description in the knowledge center under "What to do next": <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=cpd-option-1-installing-production-deployment-in-openshift-console" target="_blank">https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=cpd-option-1-installing-production-deployment-in-openshift-console</a>

@@ -152,9 +152,9 @@ To complete this Lab, you must have an entitlement key with access to pull CP4BA
     
 19. Finally, **run** this command:
     
-    ```sh
-    oc version
-    ```
+```sh
+oc version
+```
     
     Expected output, make sure to see the `Server Version:` line:
     

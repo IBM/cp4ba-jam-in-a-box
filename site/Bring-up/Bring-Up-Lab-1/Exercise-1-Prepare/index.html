@@ -1791,7 +1791,7 @@
 <p>This exercise verifies that you have all prerequisites in place and instructs you how to reserve your lab environment. The lab environment consists of a Bastion Host VM and a Red Hat OpenShift Container Platform (OCP) Cluster with three master and three worker VMs.</p>
 <h3 id="111-bastion-host-vm">1.1.1 Bastion Host VM</h3>
 <p>A <strong>bastion</strong> host is a computer from which you access the OpenShift cluster through the command line to administrate the OCP cluster. Administration of an OCP cluster also includes the configuration and installation of new software such as CP4BA. To do that, this Lab shows you how to use the scripts and information provided by the CP4BA development teams, by executing these scripts on the bastion host. Therefore, the bastion host must be one of RHEL, CentOS, or macOS. Finally, all commands these scripts need must also be available on the bastion host, for example, the OpenShift CLI, Kubernetes CLI, and so on.</p>
-<p>The preparation of a bastion host is discussed in the documentation on this page: <strong><a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=deployment-preparing-client-connect-cluster">Preparing a client to connect to the cluster</a></strong>.</p>
+<p>The preparation of a bastion host is discussed in the documentation on this page: <strong><a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=deployment-preparing-client-connect-cluster" target="_blank">Preparing a client to connect to the cluster</a></strong>.</p>
 <p>Other services are also deployed on this specific bastion host. The most important ones are the LDAP Server, which is used as the Authentication provider for the CP4BA deployment, and an NFS Server to provide persistent storage capabilities to the Openshift cluster.</p>
 <h3 id="112-red-hat-openshift-container-platform-ocp-cluster-vms">1.1.2 Red Hat OpenShift Container Platform (OCP) Cluster VMs</h3>
 <p>The OpenShift cluster was configured using OCP version 4.12.53. It will host the DB2 and CP4BA containers which you will install later in this Lab. You can access your OCP cluster from the bastion host either by command line (oc command) or the OpenShift Web Console by Browser.
@@ -1807,7 +1807,7 @@ In addition, a storage class supporting mode read/write many (RWX), that is requ
 <p>To complete this Lab, you must have an entitlement key with access to pull CP4BA images from the IBM Container Software Library <strong>cp.icr.io</strong>.</p>
 <ol>
 <li>
-<p>Check that you have an entitlement key with the proper image access. For this, please open <strong><a href="https://myibm.ibm.com/products-services/containerlibrary">IBM Container Library</a></strong> and log in with your IBM ID. IBMers can use their w3 ID.</p>
+<p>Check that you have an entitlement key with the proper image access. For this, please open <strong><a href="https://myibm.ibm.com/products-services/containerlibrary" target="_blank">IBM Container Library</a></strong> and log in with your IBM ID. IBMers can use their w3 ID.</p>
 </li>
 <li>
 <p>Then, switch to the <strong>Container software library</strong> page. IBMers and some Business Partners will see the following, which means that they do have such an entitlement key available:</p>
@@ -1819,7 +1819,7 @@ In addition, a storage class supporting mode read/write many (RWX), that is requ
 <h3 id="122-reserve-the-openshift-tech-zone-envrioment">1.2.2 Reserve the OpenShift Tech Zone Envrioment</h3>
 <ol>
 <li>
-<p>To get an OpenShift cluster from TechZone, access IBM Technology Zone: <strong>https://techzone.ibm.com/</strong></p>
+<p>To get an OpenShift cluster from TechZone, access IBM Technology Zone: <strong><a href="https://techzone.ibm.com/" target="_blank">https://techzone.ibm.com/</a></strong></p>
 </li>
 <li>
 <p>To sign-in, either use your IBM ID or your company credentials if SSO is set up between your company and IBM. For example, if you have an IBM W3 or IBM Partnerworld ID, you should use this ID.</p>
@@ -1830,7 +1830,7 @@ In addition, a storage class supporting mode read/write many (RWX), that is requ
 </blockquote>
 <ol>
 <li>
-<p>Once signed in, open the lab resource page: <strong>https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-demos-and-labs-bring-up-lab</strong></p>
+<p>Once signed in, open the lab resource page: <strong><a href="https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-demos-and-labs-bring-up-lab" target="_blank">https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-demos-and-labs-bring-up-lab</a></strong></p>
 </li>
 <li>
 <p>On the left hand side select the <strong>Environments</strong> tab. There you should find environment <strong>CP4BA Bring-Up Lab Environment v1.0</strong>, for that environment click on <strong>Reserve</strong>.</p>
@@ -1859,7 +1859,7 @@ In addition, a storage class supporting mode read/write many (RWX), that is requ
 <h3 id="123-access-the-openshift-tech-zone-envrioment">1.2.3 Access the OpenShift Tech Zone Envrioment</h3>
 <ol>
 <li>
-<p>On your local machine, open the  <strong><a href="https://techzone.ibm.com/my/reservations">TechZone My reservations</a></strong> page. In the browser window, select the reservation for the Bring Up lab.</p>
+<p>On your local machine, open the  <strong><a href="https://techzone.ibm.com/my/reservations" target="_blank">TechZone My reservations</a></strong> page. In the browser window, select the reservation for the Bring Up lab.</p>
 </li>
 <li>
 <p>Scroll down to the <strong>VM Remote Console</strong> section at the bottom. Click on the bastion VM. This will open the desktop of the bastion host in the Browser.</p>

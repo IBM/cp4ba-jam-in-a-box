@@ -12,29 +12,29 @@ In this exercise, you will run scripts to install DB2 Operator, and run the Oper
 
 1. On your bastion host use the Terminal to switch to a directory prepared for you to contain the rapid deployment and other scripts.
    
-   ```sh
-   cd /home/cp4badmin/Desktop/Labfiles
-   ```
+```sh
+cd /home/cp4badmin/Desktop/Labfiles
+```
    
 2. Clone the rapid deployment git repository onto your bastion host and copy the deployment scripts.
    
    **Note:** As part of this doc, we assume you copy the deployment scripts into directory **mycluster**. If you select a different directory, you must change some of the commands in the steps below; otherwise, you can copy/paste them as is.
    
-   ```sh
-   git clone https://github.com/IBM/cp4ba-rapid-deployment.git
-   ```
-   
-   ```sh
-   cd cp4ba-rapid-deployment/cp4ba-23-0-2
-   ```
-   
-   ```sh
-   cp -r scripts mycluster
-   ```
-   
-   ```sh
-   cd mycluster/deployment-db2-cp4ba
-   ```
+```sh
+git clone https://github.com/IBM/cp4ba-rapid-deployment.git
+```
+
+```sh
+cd cp4ba-rapid-deployment/cp4ba-23-0-2
+```
+
+```sh
+cp -r scripts mycluster
+```
+
+```sh
+cd mycluster/deployment-db2-cp4ba
+```
    
    Sample output of the previous commands:
 
@@ -42,9 +42,9 @@ In this exercise, you will run scripts to install DB2 Operator, and run the Oper
 
 3. Open the parameters file for DB2, 01-parametersForDb2OnOCP.sh, with gedit.
    
-   ```sh
-   gedit 01-parametersForDb2OnOCP.sh
-   ```
+```sh
+gedit 01-parametersForDb2OnOCP.sh
+```
    
 4. Apply the following changes:
    
@@ -96,9 +96,9 @@ In this exercise, you will run scripts to install DB2 Operator, and run the Oper
    
 5. Run script **02-createDb2OnOCP.sh**. This script will now install and configure DB2 for you based on the parameters previously specified in 01-parametersForDb2OnOCP.sh.
    
-   ```sh
-   ./02-createDb2OnOCP.sh
-   ```
+```sh
+./02-createDb2OnOCP.sh
+```
    
    **Notes:**
    
@@ -113,125 +113,125 @@ In this exercise, you will run scripts to install DB2 Operator, and run the Oper
    This script will exit if errors are hit during the installation.
    
    If you get the error message:
-   ```
-   error: unable to recognize "db2OperatorCatalog.yaml": Unauthorized
-   ```
+```
+error: unable to recognize "db2OperatorCatalog.yaml": Unauthorized
+```
    Check whether you have successfully logged on to the OCP cluster on the command line.
    
    Sample script output:
    
-   ```
-   ./02-createDb2OnOCP.sh
-   
-   Found 01-parametersForDb2OnOCP.sh.  Reading in variables from that script.
-     Reading 01-parametersForDb2OnOCP.sh ...
-   Done!
-   
-   This script installs Db2u on OCP into project ibm-db2. For this, you need the jq tool installed and your Entitlement Registry key handy.
-   
-   
-   Template ibm_cp4a_cr_template.002.ent.FoundationContent.yaml will be used
-   The template requires  1 database instances. Each instance uses 4 cpus and 16Gi memory.
-   
-   Do you want to continue (Yes/No, default: No): Yes   <--- Enter Yes here
-   
-   Installing Db2U on OCP...
-   
-   Installing the DB2 Operator Catalog...
-   catalogsource.operators.coreos.com/ibm-db2uoperator-catalog created
-   
-   Creating project ibm-db2...
-   namespace/ibm-db2 created
-   Now using project "ibm-db2" on server "https://api.ocp.ibm.edu:6443".
-   
-   Creating secret ibm-registry. For this, your Entitlement Registry key is needed.
-   
-   You can get the Entitlement Registry key from here: https://myibm.ibm.com/products-services/containerlibrary
-   
-   Enter your Entitlement Registry key: <paste your Entitlement Registry key here ONCE, it will not be shown, then hit the Enter key>
-   Verifying the Entitlement Registry key...
-   Login Succeeded!
-   Entitlement Registry key is valid.
-   secret/ibm-registry created
-   
-   Modifying the OpenShift Global Pull Secret (you need jq tool for that):
-   secret/pull-secret data updated
-   
-   Creating Operator Group object for DB2 Operator
-   operatorgroup.operators.coreos.com/ibm-db2-group created
-   
-   Creating Subscription object for DB2 Operator
-   subscription.operators.coreos.com/db2u-operator created
-   
-   Waiting up to 5 minutes for DB2 Operator install plan to be generated.
-   Mon Apr  1 07:00:00 CDT 2024
-   
-   Approving DB2 Operator install plan.
-   installplan.operators.coreos.com/install-ggrgx patched
-   
-   Waiting up to 5 minutes for DB2 Operator to install.
-   Mon Apr  1 07:01:00 CDT 2024
-   
-   Deploying the Db2u cluster.
-   db2ucluster.db2u.databases.ibm.com/db2-inst1 created
-   
-   Waiting up to 15 minutes for c-db2-inst1-db2u statefulset to be created.
-   Mon Apr  1 07:02:00 CDT 2024
-   
-   Patching db2-inst1-db2u statefulset.
-   Skipped
-   
-   Waiting up to 30 minutes for db2-inst1-restore-morph job to complete successfully.
-   Mon Apr  1 07:03:00 CDT 2024
-   
-   Updating number of databases allowed by DB2 installation from 8 to 30.
-   configmap/c-db2-inst1-db2dbmconfig replaced
-   
-   Updating database manager running configuration.
-   DB20000I  The UPDATE DATABASE MANAGER CONFIGURATION command completed 
-   successfully.
-   
-   Restarting DB2 instance.
-   Wolverine HA management state was disabled successfully.
-   04/01/2024 07:04:00     0   0   SQL1064N  DB2STOP processing was successful.
-   SQL1064N  DB2STOP processing was successful.
-   04/01/2024 07:05:00     0   0   SQL1063N  DB2START processing was successful.
-   SQL1063N  DB2START processing was successful.
-   Wolverine HA management state was enabled successfully.
-   
-   *********************************************************************************
-   ********* Installation and configuration of DB2 completed successfully! *********
-   *********************************************************************************
-   
-   Removing BLUDB from DB2 instance 1
-   DB20000I  The FORCE APPLICATION command completed successfully.
-   DB21024I  This command is asynchronous and may not be effective immediately.
-   
-   DB20000I  The DEACTIVATE DATABASE command completed successfully.
-   DB20000I  The DROP DATABASE command completed successfully.
-   
-   Existing databases on DB instance #1 are:
-   
-   Removing temporary files...
-   Done.
-   
-   ***********************************************
-   ********* DB2 Connection Information: *********
-   ***********************************************
-   
-   Use this hostname/IP to access the databases e.g. with IBM Data Studio.
-	   Hostname instance 1: router-default.apps.ocp.ibm.edu
-	   Other possible addresses(If hostname not available above): 10.100.1.21,compute1.ocp.ibm.edu
-   
-   Use one of these NodePorts to access the databases e.g. with IBM Data Studio (usually the first one is for legacy-server (Db2 port 50000), the second for ssl-server (Db2 port 50001)).
-   Instance 1: 
-                   "nodePort": 30505,
-                   "nodePort": 30107,
-   
-   Use "db2inst1" and password "passw0rd" to access the databases e.g. with IBM Data Studio.
-   
-   Db2u installation complete! Congratulations. Exiting...
-   ```
+```
+./02-createDb2OnOCP.sh
+
+Found 01-parametersForDb2OnOCP.sh.  Reading in variables from that script.
+   Reading 01-parametersForDb2OnOCP.sh ...
+Done!
+
+This script installs Db2u on OCP into project ibm-db2. For this, you need the jq tool installed and your Entitlement Registry key handy.
+
+
+Template ibm_cp4a_cr_template.002.ent.FoundationContent.yaml will be used
+The template requires  1 database instances. Each instance uses 4 cpus and 16Gi memory.
+
+Do you want to continue (Yes/No, default: No): Yes   <--- Enter Yes here
+
+Installing Db2U on OCP...
+
+Installing the DB2 Operator Catalog...
+catalogsource.operators.coreos.com/ibm-db2uoperator-catalog created
+
+Creating project ibm-db2...
+namespace/ibm-db2 created
+Now using project "ibm-db2" on server "https://api.ocp.ibm.edu:6443".
+
+Creating secret ibm-registry. For this, your Entitlement Registry key is needed.
+
+You can get the Entitlement Registry key from here: https://myibm.ibm.com/products-services/containerlibrary
+
+Enter your Entitlement Registry key: <paste your Entitlement Registry key here ONCE, it will not be shown, then hit the Enter key>
+Verifying the Entitlement Registry key...
+Login Succeeded!
+Entitlement Registry key is valid.
+secret/ibm-registry created
+
+Modifying the OpenShift Global Pull Secret (you need jq tool for that):
+secret/pull-secret data updated
+
+Creating Operator Group object for DB2 Operator
+operatorgroup.operators.coreos.com/ibm-db2-group created
+
+Creating Subscription object for DB2 Operator
+subscription.operators.coreos.com/db2u-operator created
+
+Waiting up to 5 minutes for DB2 Operator install plan to be generated.
+Mon Apr  1 07:00:00 CDT 2024
+
+Approving DB2 Operator install plan.
+installplan.operators.coreos.com/install-ggrgx patched
+
+Waiting up to 5 minutes for DB2 Operator to install.
+Mon Apr  1 07:01:00 CDT 2024
+
+Deploying the Db2u cluster.
+db2ucluster.db2u.databases.ibm.com/db2-inst1 created
+
+Waiting up to 15 minutes for c-db2-inst1-db2u statefulset to be created.
+Mon Apr  1 07:02:00 CDT 2024
+
+Patching db2-inst1-db2u statefulset.
+Skipped
+
+Waiting up to 30 minutes for db2-inst1-restore-morph job to complete successfully.
+Mon Apr  1 07:03:00 CDT 2024
+
+Updating number of databases allowed by DB2 installation from 8 to 30.
+configmap/c-db2-inst1-db2dbmconfig replaced
+
+Updating database manager running configuration.
+DB20000I  The UPDATE DATABASE MANAGER CONFIGURATION command completed 
+successfully.
+
+Restarting DB2 instance.
+Wolverine HA management state was disabled successfully.
+04/01/2024 07:04:00     0   0   SQL1064N  DB2STOP processing was successful.
+SQL1064N  DB2STOP processing was successful.
+04/01/2024 07:05:00     0   0   SQL1063N  DB2START processing was successful.
+SQL1063N  DB2START processing was successful.
+Wolverine HA management state was enabled successfully.
+
+*********************************************************************************
+********* Installation and configuration of DB2 completed successfully! *********
+*********************************************************************************
+
+Removing BLUDB from DB2 instance 1
+DB20000I  The FORCE APPLICATION command completed successfully.
+DB21024I  This command is asynchronous and may not be effective immediately.
+
+DB20000I  The DEACTIVATE DATABASE command completed successfully.
+DB20000I  The DROP DATABASE command completed successfully.
+
+Existing databases on DB instance #1 are:
+
+Removing temporary files...
+Done.
+
+***********************************************
+********* DB2 Connection Information: *********
+***********************************************
+
+Use this hostname/IP to access the databases e.g. with IBM Data Studio.
+   Hostname instance 1: router-default.apps.ocp.ibm.edu
+   Other possible addresses(If hostname not available above): 10.100.1.21,compute1.ocp.ibm.edu
+
+Use one of these NodePorts to access the databases e.g. with IBM Data Studio (usually the first one is for legacy-server (Db2 port 50000), the second for ssl-server (Db2 port 50001)).
+Instance 1: 
+                  "nodePort": 30505,
+                  "nodePort": 30107,
+
+Use "db2inst1" and password "passw0rd" to access the databases e.g. with IBM Data Studio.
+
+Db2u installation complete! Congratulations. Exiting...
+```
    
 6. While the script is running, you optionally can review the changes applied:
    
@@ -269,9 +269,9 @@ In this exercise, you will run scripts to install DB2 Operator, and run the Oper
    
 9. Run this command and verify that you see two completed pods and five pods Running and Ready (1/1).
    
-   ```sh
-   oc get pods
-   ```
+```sh
+oc get pods
+```
 
 You have now successfully installed the DB2 Operator, and run the Operator to create a DB2 instance.
 

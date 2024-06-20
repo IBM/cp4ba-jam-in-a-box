@@ -15,15 +15,15 @@ Filling out the property values will be done in the next two exercises, step by 
 
 1.	Switch to the **Terminal** window. Change to the cert-kubernetes/scripts directory.
 
-    ```sh
-    cd $HOME/cp4ba/cert-kubernetes/scripts
-	```
+```sh
+cd $HOME/cp4ba/cert-kubernetes/scripts
+```
 
 3.	Run the cp4a-prerequisites.sh script in prepare mode. In this mode, information about the deployment is gathered, and property files are generated to supply required parameters.
 
-    ```sh
-    ./cp4a-prerequisites.sh -m property
-    ```
+```sh
+./cp4a-prerequisites.sh -m property
+```
 
     > When running it without parameters, it supplies a usage.
 	

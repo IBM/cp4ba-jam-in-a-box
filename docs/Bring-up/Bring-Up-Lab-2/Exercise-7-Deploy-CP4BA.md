@@ -12,16 +12,16 @@ With successful execution of the validation, the Case Package script `cp4a-deplo
 
 1.	Switch to the **Terminal** window. Change to the **cert-kubernetes/scripts** directory.
 
-    ```
-    cd $HOME/cp4ba/cert-kubernetes/scripts
-    ```
-	
+```
+cd $HOME/cp4ba/cert-kubernetes/scripts
+```
+
 2.	Run the deployment script.
 
-    ```
-    ./cp4a-deployment.sh
-    ```
-	
+```
+./cp4a-deployment.sh
+```
+
 3.	Indicate that you accept the license.
 
 4.	Next question is, if in the current OCP cluster you already have a deployment of FileNet Content Manager using the deployment scripts of FileNet. The answer is "No".
@@ -49,11 +49,11 @@ With successful execution of the validation, the Case Package script `cp4a-deplo
 
 11.	The script generates the specification file for Cloud Pak 4 Business Automation in the directory generated-cr. Navigate into this directory, and review the generated file.
 
-    ```
-    cd generated-cr
-    ls -l 
-    less ibm_content_cr_final.yaml
-    ```
+```
+cd generated-cr
+ls -l 
+less ibm_content_cr_final.yaml
+```
     
  
 12.	Note that the deployment scripts have chosen a specification for the "Content" Custom Resource Definition, which is being worked by the Content Operator. So any error messages will be logged by the Content Operator. Other deployments of the Cloud Pak for Business Automation, which include other components, such as Business Automation Workflow would require a different kind of specification, using the "ICP4ACluster" Custom Resource Definition, which would be worked by the CP4A Operator.
@@ -66,9 +66,9 @@ With successful execution of the validation, the Case Package script `cp4a-deplo
 	
 14.	Apply the specification.
 
-    ```
-    oc apply -f ibm_content_cr_final.yaml
-    ```
+```
+oc apply -f ibm_content_cr_final.yaml
+```
 	
 # 7.3 Verification Instructions	
 	
@@ -76,9 +76,9 @@ At this point, the operator will start deployment according to the specification
 
 If you like looking at some changing text, you can open two Terminal windows and run these two commands in them, one in each. The first one displays the pods which are defined in the current project, the second one fetches the podname of the Content Operator, and displays its logging output,  thereby filtering out the lines containing the word "info".
 
-    ```
-    watch oc get pods
-    oc logs $(oc get pod -l name=ibm-content-operator -o jsonpath={.items[0].metadata.name}) -f | grep -v info
-    ```
+```
+watch oc get pods
+oc logs $(oc get pod -l name=ibm-content-operator -o jsonpath={.items[0].metadata.name}) -f | grep -v info
+```
 
 Error messages in the logs would have red color, and typically contain keyword "failed", but not all error messages might require followup actions. For monitoring the deployment the best option might be to await the end of the current loop of the Content Operator, and start from reviewing its status, which can easily be viewed from the Openshift Console window. Refer to the [Next Exercise](Exercise-8-PostDeployment.md) for instructions on monitoring the deployment and on required post-deployment activity.
