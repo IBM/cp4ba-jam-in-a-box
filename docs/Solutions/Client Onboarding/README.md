@@ -41,16 +41,16 @@ Based on the technology used to achieve a short provisioning time, you need to p
 
 1. Reserve your environment on IBM TechZone from the [IBM Cloud Pak for Business Automation and Digital Labor - Jam-in-a-Box](https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-and-digital-labor-jam-in-a-box/environments) collection by clicking on the **Jam in a Box - Single-User** tile
 
-   On the **Create a reservation** page make the following selections:
+      On the **Create a reservation** page make the following selections:
 
-   - **Purpose**: e.g. Education
-   - **Purpose description**: Enter any text<br/>
-     **Tip:** The selection you make here determines if you need to specify a 'Sales Opportunity number' and the 'reservation policy' (how long the environment is available and how often it can be extended).
-   - **Preferred Geography**: Select the geography that is closest to you. <br/>
-     **Remark:** Depending on available capacity the deployment have been seen to fail sometimes. Please request another environment, potentially selecting a different geography.
-   - **End date and time**: Should get populated automatically. No changes needed.
-   - **Accept the terms and conditions**: In the lower right corner, check the box 
-   - **Submit**
+      - **Purpose**: e.g. Education
+      - **Purpose description**: Enter any text<br/>
+      **Tip:** The selection you make here determines if you need to specify a 'Sales Opportunity number' and the 'reservation policy' (how long the environment is available and how often it can be extended).
+      - **Preferred Geography**: Select the geography that is closest to you. <br/>
+      **Remark:** Depending on available capacity the deployment have been seen to fail sometimes. Please request another environment, potentially selecting a different geography.
+      - **End date and time**: Should get populated automatically. No changes needed.
+      - **Accept the terms and conditions**: In the lower right corner, check the box 
+      - **Submit**
 
 2. Wait till the environment is **Ready**, this will normally take between 2-3 hours
 
@@ -59,15 +59,15 @@ Based on the technology used to achieve a short provisioning time, you need to p
 
 4. From within the bastion host
 
-   1. **Open** **Firefox** using the icon on the desktop
-   2. **Open** the **Red Hat OpenShift console** by clicking the **Red Hat OpenShift bookmark**
-   3. **Login** to the Red Hat OpenShift console using the credentials for the user **ocadmin** that are stored in Firefox
-   4. Copy the **login command** to the clipboard 
-      (Under "ocadmin" in the top right corner click **Copy login command**, a new tab opens, log in again using **ocadmin**, click **Display Token**, and then copy the entire line under **Log in with this token**)
-   5. Open a **Terminal** using the respective icon on the desktop, **paste the content from the clipboard** (right click on the Terminal window, then select "Paste"), and press **Enter** to login to your Red Hat OpenShift cluster from the command line
-   6. Type **./31-prepareJiaB4usage.sh** (including the dot) at the beginning) and press **Enter** to execute the script that prepares the environment for usage
-   7. When the script asks you if you want to continue, enter **y** (or Y or Yes or YES) and press **Enter**
-   8. Once the script completes, your environment is ready to be used for the supported labs. Follow the respective lab instructions for the next steps
+      1. **Open** **Firefox** using the icon on the desktop
+      2. **Open** the **Red Hat OpenShift console** by clicking the **Red Hat OpenShift bookmark**
+      3. **Login** to the Red Hat OpenShift console using the credentials for the user **ocadmin** that are stored in Firefox
+      4. Copy the **login command** to the clipboard 
+         (Under "ocadmin" in the top right corner click **Copy login command**, a new tab opens, log in again using **ocadmin**, click **Display Token**, and then copy the entire line under **Log in with this token**)
+      5. Open a **Terminal** using the respective icon on the desktop, **paste the content from the clipboard** (right click on the Terminal window, then select "Paste"), and press **Enter** to login to your Red Hat OpenShift cluster from the command line
+      6. Type **./31-prepareJiaB4usage.sh** (including the dot) at the beginning) and press **Enter** to execute the script that prepares the environment for usage
+      7. When the script asks you if you want to continue, enter **y** (or Y or Yes or YES) and press **Enter**
+      8. Once the script completes, your environment is ready to be used for the supported labs. Follow the respective lab instructions for the next steps
 
 
 > [!IMPORTANT]
