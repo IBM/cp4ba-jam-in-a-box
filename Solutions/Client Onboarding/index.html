@@ -1822,19 +1822,19 @@
 </ul>
 <h2 id="reserve-and-prepare-the-jam-in-a-box-single-user-environment">Reserve and Prepare the Jam-in-a-Box Single User Environment</h2>
 <ol>
-<li>Reserve your environment on IBM TechZone from the <a href="https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-and-digital-labor-jam-in-a-box/environments">IBM Cloud Pak for Business Automation and Digital Labor - Jam-in-a-Box</a> collection by clicking on the <strong>Jam in a Box - Single-User</strong> tile</li>
-</ol>
+<li>
+<p>Reserve your environment on IBM TechZone from the <a href="https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-and-digital-labor-jam-in-a-box/environments">IBM Cloud Pak for Business Automation and Digital Labor - Jam-in-a-Box</a> collection by clicking on the <strong>Jam in a Box - Single-User</strong> tile</p>
 <p>On the <strong>Create a reservation</strong> page make the following selections:</p>
 <ul>
 <li><strong>Purpose</strong>: e.g. Education</li>
 <li><strong>Purpose description</strong>: Enter any text<br/>
-     <strong>Tip:</strong> The selection you make here determines if you need to specify a 'Sales Opportunity number' and the 'reservation policy' (how long the environment is available and how often it can be extended).</li>
+  <strong>Tip:</strong> The selection you make here determines if you need to specify a 'Sales Opportunity number' and the 'reservation policy' (how long the environment is available and how often it can be extended).</li>
 <li><strong>Preferred Geography</strong>: Select the geography that is closest to you. <br/>
-     <strong>Remark:</strong> Depending on available capacity the deployment have been seen to fail sometimes. Please request another environment, potentially selecting a different geography.</li>
+  <strong>Remark:</strong> Depending on available capacity the deployment have been seen to fail sometimes. Please request another environment, potentially selecting a different geography.</li>
 <li><strong>End date and time</strong>: Should get populated automatically. No changes needed.</li>
 <li><strong>Accept the terms and conditions</strong>: In the lower right corner, check the box </li>
-<li>
-<p><strong>Submit</strong></p>
+<li><strong>Submit</strong></li>
+</ul>
 </li>
 <li>
 <p>Wait till the environment is <strong>Ready</strong>, this will normally take between 2-3 hours</p>
@@ -1845,19 +1845,19 @@
 </li>
 <li>
 <p>From within the bastion host</p>
-</li>
-<li>
-<p><strong>Open</strong> <strong>Firefox</strong> using the icon on the desktop</p>
-</li>
+<ol>
+<li><strong>Open</strong> <strong>Firefox</strong> using the icon on the desktop</li>
 <li><strong>Open</strong> the <strong>Red Hat OpenShift console</strong> by clicking the <strong>Red Hat OpenShift bookmark</strong></li>
 <li><strong>Login</strong> to the Red Hat OpenShift console using the credentials for the user <strong>ocadmin</strong> that are stored in Firefox</li>
 <li>Copy the <strong>login command</strong> to the clipboard 
-      (Under "ocadmin" in the top right corner click <strong>Copy login command</strong>, a new tab opens, log in again using <strong>ocadmin</strong>, click <strong>Display Token</strong>, and then copy the entire line under <strong>Log in with this token</strong>)</li>
+     (Under "ocadmin" in the top right corner click <strong>Copy login command</strong>, a new tab opens, log in again using <strong>ocadmin</strong>, click <strong>Display Token</strong>, and then copy the entire line under <strong>Log in with this token</strong>)</li>
 <li>Open a <strong>Terminal</strong> using the respective icon on the desktop, <strong>paste the content from the clipboard</strong> (right click on the Terminal window, then select "Paste"), and press <strong>Enter</strong> to login to your Red Hat OpenShift cluster from the command line</li>
 <li>Type <strong>./31-prepareJiaB4usage.sh</strong> (including the dot) at the beginning) and press <strong>Enter</strong> to execute the script that prepares the environment for usage</li>
 <li>When the script asks you if you want to continue, enter <strong>y</strong> (or Y or Yes or YES) and press <strong>Enter</strong></li>
 <li>Once the script completes, your environment is ready to be used for the supported labs. Follow the respective lab instructions for the next steps</li>
-</ul>
+</ol>
+</li>
+</ol>
 <blockquote>
 <p>[!IMPORTANT]</p>
 <p>It might happen that:</p>
