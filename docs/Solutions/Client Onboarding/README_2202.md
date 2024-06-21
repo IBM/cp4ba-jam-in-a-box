@@ -50,7 +50,7 @@ To engage us, drop us a message at [#jam-in-a-box-ba-dl](https://ibm-cloudpak-pa
 
 **All others**
 
-Open a new issue in this GitHub
+For anyone who doesn’t fall into the business partner or IBM employee category, please feel free to open a new issue on our <a href="https://github.com/IBM/cp4ba-jam-in-a-box/issues" target="_blank">GitHub repository</a>. We’ll be more than happy to address your questions and concerns there.
 
 ## Disclaimer
 
