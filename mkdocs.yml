@@ -56,6 +56,7 @@ nav:
   
 
 theme:
+  custom_dir: custom/
   icon:
     repo: fontawesome/brands/github
   features:
