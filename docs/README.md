@@ -1,4 +1,4 @@
-# IBM Cloud Pak for Business Automation (CP4BA) 23.0.2 / watsonX Orchestrate Labs
+# IBM Cloud Pak for Business Automation (CP4BA) 23.0.2 / watsonx Orchestrate Labs
 
 To be able to perform labs listed below, you need to have IBM Cloud Pak for Business Automation 23.0.2 (either Starter or Starter deployment) installed and have imported the Client Onboarding scenario as described [here](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.2). For performing the watsonx Orchestrate lab, a watsonx Orchestrate instance is required as an additional  prerequisite.
 
@@ -20,7 +20,7 @@ The table below lists all capabilities for which currently labs are offered. A c
 
 ## Track descriptions
 
-The different tracks cater for different target groups and previous levels of exposure to Cloud Pack for Business Automation/watsonX Orchestrate.
+The different tracks cater for different target groups and previous levels of exposure to Cloud Pack for Business Automation/watsonx Orchestrate.
 
 **Track 1 – Foundation**
 
@@ -30,9 +30,9 @@ The different tracks cater for different target groups and previous levels of ex
 
 **Track 2 – Developer Role / Solution Implementation**
 
-- **Audience**: Base understanding of Cloud Pak for Business Automation (CP4BA) /watsonX Orchestrate
+- **Audience**: Base understanding of Cloud Pak for Business Automation (CP4BA) /watsonx Orchestrate
 
-- **Learning**: Overview of the Cloud Pak/watsonX Orchestrate from developer and partly user perspective
+- **Learning**: Overview of the Cloud Pak/watsonx Orchestrate from developer and partly user perspective
 
   ​		   Ability to develop pieces of the solution areas
 
