@@ -6,6 +6,7 @@ repo_name: CP4BA-JiaB
 
 nav:
   - 'Start': 'index.md'
+  - 'Additional Information': 'Additional.md'
   - 'IBM CP4BA (End-to-End)':
     - 'IBM Cloud Pak for Business Automation': 'IBM Cloud Pak for Business Automation (End-to-End)\README.md'
   - 'Business Automation Application (BAA)':

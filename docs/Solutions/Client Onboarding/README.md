@@ -39,7 +39,7 @@ Based on the technology used to achieve a short provisioning time, you need to p
 
 ## Reserve and Prepare the Jam-in-a-Box Single User Environment
 
-1. Reserve your environment on IBM TechZone from the [IBM Cloud Pak for Business Automation and Digital Labor - Jam-in-a-Box](https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-and-digital-labor-jam-in-a-box/environments) collection by clicking on the **Jam in a Box - Single-User** tile
+1. Reserve your environment on IBM TechZone from the <a href="https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-and-digital-labor-jam-in-a-box/environments" target="_blank">IBM Cloud Pak for Business Automation and Digital Labor - Jam-in-a-Box</a> collection by clicking on the **Jam in a Box - Single-User** tile
 
       On the **Create a reservation** page make the following selections:
 
@@ -54,7 +54,7 @@ Based on the technology used to achieve a short provisioning time, you need to p
 
 2. Wait till the environment is **Ready**, this will normally take between 2-3 hours
 
-3. Once your environment is Ready, connect to the bastion host through **RDP** (open the reserved environment from **https://techzone.ibm.com/my/reservations** and copy the RDP value at the top to your RDP tool)
+3. Once your environment is Ready, connect to the bastion host through **RDP** (open the reserved environment from **<a href="https://techzone.ibm.com/my/reservations" target="_blank">https://techzone.ibm.com/my/reservations</a>** and copy the RDP value at the top to your RDP tool)
    **Important:** The credentials to login to the bastion host are mention in the description of the tile
 
 4. From within the bastion host
@@ -117,7 +117,7 @@ We aim to support successfully utilizing our Jam-in-a-Box.
 
 **Business Partners (require an invitation) and IBMers**
 
-To engage us, drop us a message at [#jam-in-a-box-ba-dl](https://ibm-cloudpak-partners.slack.com/archives/C04SMFNLA3T).
+To engage us, drop us a message at <a href="https://ibm-cloudpak-partners.slack.com/archives/C04SMFNLA3T" target="_blank">#jam-in-a-box-ba-dl</a>.
 
 **All others**
 

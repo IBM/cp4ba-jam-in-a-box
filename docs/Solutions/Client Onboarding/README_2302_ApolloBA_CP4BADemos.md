@@ -80,7 +80,7 @@ For questions and issues around the Client Onboarding labs:
 
 **Business Partners (require an invitation) and IBMers**
 
-To engage us, drop us a message at [#jam-in-a-box-ba-dl](https://ibm-cloudpak-partners.slack.com/archives/C04SMFNLA3T).
+To engage us, drop us a message at <a href="https://ibm-cloudpak-partners.slack.com/archives/C04SMFNLA3T" target="_blank">#jam-in-a-box-ba-dl</a>.
 
 **All others**
 
