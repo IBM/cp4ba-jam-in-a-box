@@ -1,32 +1,24 @@
-site_name: IBM Business Automation and Digital Labor - Jam in a Box
+site_name: IBM Business Automation and Digital Labor - Jam-in-a-Box
 site_url: https://mydomain.org/mysite
 repo_url: https://github.com/IBM/cp4ba-jam-in-a-box
 repo_name: CP4BA-JiaB
 
+markdown_extensions:
+  - admonition
 
 nav:
   - 'Start': 'index.md'
   - 'Additional Information': 'Additional.md'
-  - 'IBM CP4BA (End-to-End)':
-    - 'IBM Cloud Pak for Business Automation': 'IBM Cloud Pak for Business Automation (End-to-End)\README.md'
-  - 'Business Automation Application (BAA)':
-    - 'IBM Business Automation Application' : 'Business Automation Application\README.md'
-  - 'Business Automation Insights (BAI)':
-    - 'IBM Business Automation Insights' : 'Business Automation Insights\README.md'
-  - 'Content':
-    - 'IBM FileNet Content Services' : 'Content\README.md'
-  - 'Automation Decision Services (ADS)':
-    - 'IBM Automation Decision Services' : 'Decisions\README.md'
-  - 'Process Mining (PM)':
-    - 'IBM Process Mining': 'Process Mining\README.md'
-  - 'Robotic Process Automation (RPA)':
-    - 'IBM Robotic Process Automation': 'Robotic Process Automation\README.md'
-  - 'Business Automation Workflow (BAW)':
-    - 'IBM Business Automation Workflow': 'Workflow\README.md'
-  - 'Automation Document Processing (ADP)':
-    - 'IBM Automation Document Processing': 'Document Processing\README.md'
-  - 'Watsonx Orchestrate (wxO)':
-    - 'IBM watsonx Orchestrate': 'watsonx Orchestrate\README.md'
+  - 'IBM Cloud Pak for Business Automation': 'IBM Cloud Pak for Business Automation (End-to-End)\README.md'
+  - 'IBM Business Automation Application' : 'Business Automation Application\README.md'
+  - 'IBM Business Automation Insights' : 'Business Automation Insights\README.md'
+  - 'IBM FileNet Content Services' : 'Content\README.md'
+  - 'IBM Automation Decision Services' : 'Decisions\README.md'
+  - 'IBM Process Mining': 'Process Mining\README.md'
+  - 'IBM Robotic Process Automation': 'Robotic Process Automation\README.md'
+  - 'IBM Business Automation Workflow': 'Workflow\README.md'
+  - 'IBM Automation Document Processing': 'Document Processing\README.md'
+  - 'IBM watsonx Orchestrate': 'watsonx Orchestrate\README.md'
   - 'Bring-Up (installation)':
     - 'Home': 'Bring-up\README.md'
     - 'Bring Up Lab 1':
@@ -47,14 +39,13 @@ nav:
       - 'Deploy CP4BA': 'Bring-up\Bring-Up-Lab-2\Exercise-7-Deploy-CP4BA.md'
       - 'Post Deployment': 'Bring-up\Bring-Up-Lab-2\Exercise-8-PostDeployment.md'
       - 'Appendix': 'Bring-up\Bring-Up-Lab-2\Appendinx-A-Troubleshooting.md'
-  - 'Other Environments': 'README_other.md'
   - 'Client Onboarding Solutions':
     - 'Single User Environment CP4BA 23.0.2': 'Solutions\Client Onboarding\README.md'
     - 'ApolloBA CP4BA 23.0.2': 'Solutions\Client Onboarding\README_2302_ApolloBA_CP4BADemos.md'
     - 'Self Deployment CP4BA 23.0.2': 'Solutions\Client Onboarding\README_2302_SelfDeploy.md'
     - 'CP4BA 22.0.2': 'Solutions\Client Onboarding\README_2202.md'
     - 'CP4BA 23.0.1': 'Solutions\Client Onboarding\README_2301.md'
-  
+    - 'Other Environments': 'README_other.md'
 
 theme:
   custom_dir: custom/
