@@ -12,4 +12,4 @@ Business Performance Center is a no-code monitoring application native to IBM Bu
 
 - <a href="Lab%20Guide%20-%20Operational%20Intelligence%20-%20BAI%20-%20Build%20Business%20Performance%20Center%20Dashboard.pdf" target="_blank">Build Business Performance Center Dashboards</a>: In the lab, you will learn how to build and use Business Performance Center dashboards to provide insights into a Client Onboarding workflow solution for line of business users.
   
-  **Approximate Duration**: 1 Hour
+    **Approximate Duration**: 1 Hour

@@ -19,14 +19,14 @@ IBM FileNet Content Services is a flexible, full-featured content management sol
   i.e. searches for documents based on information contained in the
   documents themselves, not (only) on their metadata.
 
-  On this lab, for triggering the custom actions, a custom javascript is
-  used to file a newly uploaded document into a folder, those identity
-  is derived from a search. The script is available in the <a href="https://github.com/IBM/cp4ba-labs/tree/main/23.0.2/Content/Lab%20Data" target="_blank">Lab Data</a> folder. Be aware that in the script, some
-  replacements need to be made, to make it refer to the right
-  properties. The username prefix is denoted by usrxxx in the script,
-  and the xxx part needs to be updated.
+    On this lab, for triggering the custom actions, a custom javascript is
+    used to file a newly uploaded document into a folder, those identity
+    is derived from a search. The script is available in the <a href="https://github.com/IBM/cp4ba-labs/tree/main/23.0.2/Content/Lab%20Data" target="_blank">Lab Data</a> folder. Be aware that in the script, some
+    replacements need to be made, to make it refer to the right
+    properties. The username prefix is denoted by usrxxx in the script,
+    and the xxx part needs to be updated.
 
-  **Approximate Duration**: 4 - 5 hours
+    **Approximate Duration**: 4 - 5 hours
 
 - <a href="CONTENT%20Lab%202%20-%20GraphQL.pdf" target="_blank">Interfacing FileNet Content Platform Engine with GraphQL on Cloud Pak for Business Automation</a>:
   The second lab on GraphQL builds on top of the first one, as the
@@ -36,7 +36,7 @@ IBM FileNet Content Services is a flexible, full-featured content management sol
   examples also show how to download documents using GraphQL, how to
   create folders, and modify security settings.
 
-  **Approximate Duration**: 1.5 - 2 hours
+    **Approximate Duration**: 1.5 - 2 hours
 
 - <a href="CONTENT%20Lab%203%20-%20ICN.pdf" target="_blank">Content Navigator on Cloud Pak for Business Automation</a>:
   The third lab on IBM Content Navigator builds on top of the first, but not the second one.
@@ -44,4 +44,4 @@ IBM FileNet Content Services is a flexible, full-featured content management sol
   The administration parts of the lab cannot be performed in the context of the shared lab environment of the JAM, and
   are provided as Walkthroughs in the lab guide.
   
-  **Approximate Duration**: 1.5 - 2 hours
+    **Approximate Duration**: 1.5 - 2 hours

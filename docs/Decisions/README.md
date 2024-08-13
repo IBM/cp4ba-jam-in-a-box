@@ -10,9 +10,11 @@ Part of the IBM Cloud Pak® for Business Automation platform, IBM Automation Dec
 
 - <a href="Lab%20Guide%20-%20Automation%20Decision%20Services.pdf" target="_blank">Manage Decisions and Infuse Machine Learning</a> 
 
-  This Lab introduces you to the key concepts of IBM Business Automation Decision Services. It includes 3 exercises that can be done individually. In this Lab you learn how to model business decisions, infuse intelligence by adding a predictive model, share and publish decision services.
+    This Lab introduces you to the key concepts of IBM Business Automation Decision Services. It includes 3 exercises that can be done individually. In this Lab you learn how to model business decisions, infuse intelligence by adding a predictive model, share and publish decision services.
+    
+    This lab requires additional files that can be found in the <a href="https://github.com/IBM/cp4ba-labs/tree/main/23.0.2/Decisions/Lab%20Data" target="_blank">Lab Data</a> folder.
 
-  *Approximate Duration:* 3 hours
+    **Approximate Duration:** 3 hours
 
 
 
