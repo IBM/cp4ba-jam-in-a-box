@@ -12,7 +12,7 @@ nav:
   - 'IBM Cloud Pak for Business Automation': 'IBM Cloud Pak for Business Automation (End-to-End)\README.md'
   - 'IBM Business Automation Application' : 'Business Automation Application\README.md'
   - 'IBM Business Automation Insights' : 'Business Automation Insights\README.md'
-  - 'IBM FileNet Content Services' : 'Content\README.md'
+  - 'IBM FileNet Content Manager' : 'Content\README.md'
   - 'IBM Automation Decision Services' : 'Decisions\README.md'
   - 'IBM Process Mining': 'Process Mining\README.md'
   - 'IBM Robotic Process Automation': 'Robotic Process Automation\README.md'

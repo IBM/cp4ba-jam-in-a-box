@@ -16,5 +16,5 @@ IBM Business Automation Workflow is software that combines business process mana
 
     **Approximate Duration**: 2 hours
 
-    This lab requires additional files that can be found in the <a href="https://github.com/IBM/cp4ba-labs/tree/main/23.0.2/Workflow/Lab%20Data" target="_blank">Lab Data</a> folder.
+    These labs require additional files that can be found in the <a href="https://github.com/IBM/cp4ba-labs/tree/main/23.0.2/Workflow/Lab%20Data" target="_blank">Lab Data</a> folder.
 
