@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a low-code capability of IBM Cloud Pak for Business Automation that let's business users leverage services built by developers in other parts of the platform such as Workflow, Decisions & Content. 
+This is a low-code capability of IBM Cloud Pak for Business Automation that lets business users leverage services built by developers in other parts of the platform such as Workflow, Decisions & Content. 
 
 ## Labs
 

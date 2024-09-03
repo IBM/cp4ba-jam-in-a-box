@@ -1,6 +1,6 @@
 # CP4BA Demos Environment based on Apollo Business Automation/Cloud Pak Deployer for CP4BA 23.0.2
 
-> [!IMPORTANT]
+!!! IMPORTANT
 >
 > - As this approach relies on reserving an environment from IBM TechZone, this document is **only applicable to IBM Business Partners** that have the ability to request environments from TechZone **and IBMers**. 
 > - The **RPA** part of the Client Onboarding scenario is not configured.
@@ -27,7 +27,7 @@ The major benefits of using this environment are:
 - Client Onboarding scenario and lab artifacts are pre-deployed for you
 - 20 business users have been created that can be given to participants of a mini-Tech Jam
 
-> [!CAUTION]
+!!! CAUTION
 >
 > It can take 5-7 hours until the environment is available.
 
@@ -35,7 +35,7 @@ The major benefits of using this environment are:
 
 ## Reserve the CP4BA Demos Environment
 
-Follow the journey [Apollo Business Automation - CP4BA Demos](https://techzone.ibm.com/collection/apollo-business-automation/journey-cp4ba-demos) to reserve your environment on IBM TechZone. It consists of three major steps:
+Follow the journey [Apollo Business Automation - CP4BA Demos](https://techzone.ibm.com/collection/apollo-business-automation/journey--archive) to reserve your environment on IBM TechZone. It consists of three major steps:
 
 1. Requesting the environment in step 1 and waiting till the environment is **Ready** **and fully deployed**. This will normally take approximately 5-7 hours.
 2. Validating the successful deployment of the Cloud Pak for Business Automation as described in step 2.

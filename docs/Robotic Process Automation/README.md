@@ -6,7 +6,9 @@ Going from simple, back-office task automation to scaled automation to handle ti
 
 ## Labs
 
-**Developer Role / Solution Implementation**
+**Track 2 - Developer Role / Solution Implementation**
+
+The labs requires an IBM RPA environment which can be reserved <a href="https://techzone.ibm.com/collection/ibm-business-automation-traditional-and-on-premise/environments" target="_blank">here</a>. Once you have reserved an environment, you will receive a link to the environment via email. 
 
 - <a href="Lab 1 - Application Automation\Lab Guide - Application Automation using IBM RPA.pdf" target="_blank">Application Automation using IBM RPA</a>: In this lab you will learn how to use IBM RPA Studio to develop a bot to automate a Java swing application and a web application. 
 
@@ -24,4 +26,4 @@ Going from simple, back-office task automation to scaled automation to handle ti
 
     This lab requires additional files that can be found in the <a href="https://github.com/IBM/cp4ba-labs/tree/main/23.0.2/Robotic%20Process%20Automation/Lab%204%20-%20Exception%20Handling/Scripts" target="_blank">Lab Data</a> and <a href="https://github.com/IBM/cp4ba-labs/tree/main/23.0.2/Robotic%20Process%20Automation/Lab%204%20-%20Exception%20Handling/Input" target="_blank">Input</a>.
 
-    The labs requires an IBM RPA environment which can be reserved <a href="https://techzone.ibm.com/collection/ibm-business-automation-traditional-and-on-premise/environments" target="_blank">here</a>. Once you have reserved an environment, you will receive a link to the environment via email. 
+    

@@ -2,7 +2,7 @@
 
 ## Overview
 
-IBM FileNet Content Services is a flexible, full-featured content management solution that provides the foundation for IBM Cloud Pak® for Business Automation. In labs you will get introduced to important core concepts of FileNet Content Platform Engine and Content Services GraphQL and IBM Content Navigator which will enable you to use FileNet Content Platform Engine to build the information architecture for automation projects realized with Cloud Pak for Business Automation. 
+IBM FileNet Content Services is a flexible, full-featured content management solution that is part of the foundation for IBM Cloud Pak® for Business Automation. In labs you will get introduced to important core concepts of FileNet Content Platform Engine and Content Services GraphQL and IBM Content Navigator which will enable you to use FileNet Content Platform Engine to build the information architecture for automation projects realized with Cloud Pak for Business Automation. 
 
 ## Labs
 

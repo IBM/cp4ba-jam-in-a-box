@@ -1,6 +1,6 @@
 # Jam-in-a-Box - Single User Environment for CP4BA 23.0.2
 
-> [!IMPORTANT]
+!!! IMPORTANT
 >
 > - As this approach relies on reserving an environment from IBM TechZone, this document is **only applicable to IBM Business Partners** that have the ability to request environments from TechZone **and IBMers**. 
 > - In addition, to use this environment, accessing the bastion host via **RDP** is required. Ensure you have an RDP tool of choice for your operating system.
@@ -70,7 +70,7 @@ Based on the technology used to achieve a short provisioning time, you need to p
       8. Once the script completes, your environment is ready to be used for the supported labs. Follow the respective lab instructions for the next steps
 
 
-> [!IMPORTANT]
+!!! IMPORTANT
 >
 > It might happen that:
 >
@@ -93,7 +93,7 @@ The lab instructions are written in context of a Tech Jam event. When performing
 | how to receive your **user credentials** using a link on the Tech Jam event page | please use the **credentials stored** within **Firefox** for either the admin user **cp4badmin** or the business user **usr001** |
 | to **prefix your artifacts** with "usrXYZ"                   | you may choose to still follow the instructions in this point, even when this is not strictly required as this is a single-user environment |
 
-> [!TIP]
+!!! TIP
 >
 > Initially the environment may appear a little slow. Once the components have warmed up, it should perform reasonably well.
 
