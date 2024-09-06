@@ -17,9 +17,6 @@ The major benefits of using this environment are:
 - Full flexibility in which pieces of the Client Onboarding scenario and labs to be deployed and with which options
 
 
-
-**Introduction to the Client Onboarding solution and solution exports:** https://github.com/IBM/cp4ba-client-onboarding-scenario 
-
 **Jam-in-a-Box environment:** In order to use the solution in your own Jam-in-a-Box environment, deploy the Client Onboarding solution and labs as described in this [document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.2/StarterDeploymentViaJob.md) for a **Starter** deployment or refer to this [document](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/23.0.2/README.md) for **Enterprise** deployments.
 
 ## Labs
@@ -30,8 +27,8 @@ The lab instructions are written in context of a Tech Jam event. When performing
 
 | Lab instructions mention...                                  | As part of this Jam-in-a-Box environment...                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| using the **URLs** found on the Tech Jam event page          | please use those URLs provided when the deployment completes and/or refer to the `client-onboarding-information` ConfigMap that is created when the deployment is successful |
-| how to receive your **user credentials** using a link on the Tech Jam event page | please use the admin user and admin password (or one of the business users) provided when the deployment completes and/or refer to the `client-onboarding-information` ConfigMap that is created when the deployment is successful |
+| using the **URLs** found on the Tech Jam event page          | please use those URLs provided when the deployment completes and/or refer to the `000-client-onboarding-information` ConfigMap that is created when the deployment is successful |
+| how to receive your **user credentials** using a link on the Tech Jam event page | please use the admin user and admin password (or one of the business users) provided when the deployment completes and/or refer to the `000-client-onboarding-information` ConfigMap that is created when the deployment is successful |
 | to **prefix your artifacts** with "usrXYZ"                   | this is important when working in a shared environment. You may choose to still follow the instructions in this point, even when this is not strictly required for the Jam-in-a-Box environment (at least if a Starter pattern environment) that is normally considered a single-user environment. For the watsonx Orchestrate lab you should still do this as you are probably working on a shared watsonx Orchestrate instance with other users. |
 
 

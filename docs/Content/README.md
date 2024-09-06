@@ -41,7 +41,6 @@ IBM FileNet Content Services is a flexible, full-featured content management sol
 - <a href="CONTENT%20Lab%203%20-%20ICN.pdf" target="_blank">Content Navigator on Cloud Pak for Business Automation</a>:
   The third lab on IBM Content Navigator builds on top of the first, but not the second one.
   In it you can learn important concepts which allow you to configure IBM Content Navigator for a business application.
-  The administration parts of the lab cannot be performed in the context of the shared lab environment of the JAM, and
-  are provided as Walkthroughs in the lab guide.
+  The administration parts of the lab can only be performed in environments with administrative access. For other cases walkthroughs are provided in the lab guide.
   
     **Approximate Duration**: 1.5 - 2 hours
