@@ -3,7 +3,7 @@
 !!! IMPORTANT
 >
 > - As this approach relies on reserving an environment from IBM TechZone, this document is **only applicable to IBM Business Partners** that have the ability to request environments from TechZone **and IBMers**. 
-> - The **RPA** part of the Client Onboarding scenario is not configured.
+> - Showcasing **RPA** in action as part of the Client Onboarding scenario requires a few manual steps as described below.
 > 
 >If you have your own Cloud Pak for Business Automation (CP4BA) 23.0.2 environment or need the RPA bot in action, please refer to this [document](../../index.md) for other options.
 
@@ -35,13 +35,32 @@ The major benefits of using this environment are:
 
 ## Reserve the CP4BA Demos Environment
 
-Follow the journey [Apollo Business Automation - CP4BA Demos](https://techzone.ibm.com/collection/apollo-business-automation/journey--archive) to reserve your environment on IBM TechZone. It consists of three major steps:
+Follow the journey [Apollo Business Automation - CP4BA Demos](https://techzone.ibm.com/collection/apollo-business-automation/journey-cp4ba-demos) to reserve your environment on IBM TechZone. It consists of three steps:
 
-1. Requesting the environment in step 1 and waiting till the environment is **Ready** **and fully deployed**. This will normally take approximately 5-7 hours.
+1. Requesting the environment in step 1 (use one of the 🤩CP4BA Demos tiles from the [Archive](https://techzone.ibm.com/collection/apollo-business-automation/journey--archive) for **CP4BA 23.0.2**!!!) and waiting till the environment is **Ready** **and fully deployed**. This will normally take approximately 5-7 hours.
+   The difference between the two tiles is that for one tile the passwords for user001-usr020 are randomly generated, whereas the password for the other tile is set to a pre-defined value as stated on the tile itself.
 2. Validating the successful deployment of the Cloud Pak for Business Automation as described in step 2.
 3. Validating the successful deployment of the Client Onboarding scenario assets as described in step 3.
 
+## (Optional) Reserve an RPA VM and Update the Jam-in-a-Box Single User Environment
 
+1. Reserve your RPA environment on IBM TechZone from the <a href="https://techzone.ibm.com/collection/ibm-business-automation-traditional-and-on-premise/environments" target="_blank">IBM Business Automation - Traditional and On-Premises</a> collection by clicking on one of the **IBM Business Automation - Traditional and On-premises. V4.3** tiles
+2. Fill in the reservation details and wait till the environment is **Ready**. This will normally take between 2-3 hours
+3. Once your environment is **Ready**, click on the reservation in **<a href="https://techzone.ibm.com/my/reservations" target="_blank">TechZone</a>** and copy the URL shown for **RPA Asynch Server API** at the top under **Published services**
+4. In your **Apollo Business Automation - CP4BA Demos** environment you need to launch the Cloud Pak Accelerator homepage in your browser. There are two different ways to do so:
+   1. Construct the URL based on the following naming pattern, replacing the your-environment in the link https://cp4accelerator.apps.your-environment.ocp.techzone.ibm.com/demos with the value (e.g. console-openshift-console.apps.**66e433006794d822e0236c61**.ocp.techzone.ibm.com/) from the Desktop url from the reservation
+   2. Open the **OpenShift Console**, navigate to **Networking --> Routes** and use the link under location for the **cp4accelerator-route** route and switch to the **Deploy Demo** tab
+
+5. Click the blue **Update** button for the **Client Onboarding** tile
+6. Put the value of the **RPA Asynch Server API** that you copied in step 3 into the **RPA Server** field
+7. Put **cpadmin** or any other user for which the RPA bot should be invoked into the **RPA User** field
+8. Finally click on the blue **Update Client Onboarding** button
+
+!!! TIP
+>
+> Even after you have made the change, the value shown on the update Client Onboarding deployment page will remain to reflect the original values. That is expected, as only the runtime, not the design time values are updated while the design time values are shown.
+
+After you have applied this configuration change the RPA bot will be invoked when you perform the Client Onboarding scenario with use **cpadmin** or the user you specified.
 
 ## Labs Instructions & Considerations
 
@@ -53,7 +72,8 @@ The lab instructions are written in context of a Tech Jam event. When performing
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | using the **URLs** found on the Tech Jam event page          | please login to the OpenShift console, go to **Workloads -> ConfigMaps** and search for **client-onboarding-information**.<br />The ConfigMap contains all relevant URLs for this environment. <br />For a mini-Tech Jam share them with the participants in a suitable form. |
 | how to receive your **user credentials** using a link on the Tech Jam event page | please login to the OpenShift console, go to **Workloads -> ConfigMaps** and search for **client-onboarding-information**.<br />The ConfigMap contains all relevant user names and password for this environment.<br />For a mini-Tech Jam share a dedicated user name and password with each participants in a suitable form. |
-| to **prefix your artifacts** with "usrXYZ"                   | depending on if you use the environment as a single-user environment or for running a mini-Tech Jam, you may choose to follow the instructions in this point |
+| to **prefix your artifacts** with "usrXYZ"                   | depending on if you use the environment as a single-user environment or for running a mini-Tech Jam, you may choose to follow the instructions in this point. |
+| object store **CONTENT** (FileNet labs)                      | the object store to use is called **BAWDOCS**.               |
 
 
 
