@@ -4,7 +4,7 @@
 >
 > - As this approach relies on reserving an environment from IBM TechZone, this document is **only applicable to IBM Business Partners** that have the ability to request environments from TechZone **and IBMers**. 
 > - In addition, to use this environment, accessing the bastion host via **RDP** is required. Ensure you have an RDP tool of choice for your operating system.
-> - At this point it is **not possible to configure RPA** as part of the Client Onboarding scenario.
+> - Showcasing **RPA** in action as part of the Client Onboarding scenario requires a few manual steps.
 >
 > If you have your own Cloud Pak for Business Automation (CP4BA) 23.0.2 environment, can't use RDP, or need the RPA bot in action, please refer to this [document](../../../index.md) and this [document](README_2302_SelfDeploy.md) for other options.
 
@@ -79,7 +79,22 @@ Based on the technology used to achieve a short provisioning time, you need to p
 >
 > These issues are the result of restarting some pods, which may take a different amount of time depending on the resources available on TechZone.
 
+## Reserve RPA VM and Update the Jam-in-a-Box Single User Environment
 
+1. Reserve your RPA environment on IBM TechZone from the <a href="https://techzone.ibm.com/collection/ibm-business-automation-traditional-and-on-premise/environments" target="_blank">IBM Business Automation - Traditional and On-Premises</a> collection by clicking on one of the **IBM Business Automation - Traditional and On-premises. V4.3** tiles
+2. Fill in the reservation details and wait till the environment is **Ready**. This will normally take between 2-3 hours
+3. Once your environment is **Ready**, click on the reservation in **<a href="https://techzone.ibm.com/my/reservations" target="_blank">TechZone</a>** and copy the URL shown for **RPA Asynch Server API** at the top under **Published services**
+4. In your **Jam-in-a-Box - Single-User environment**, open a browser and click on the **IBM BA Studio** bookmark
+5. From the top-left hamburger menu select **Business Automation**
+6. On the left click on **Workflow** and then on the tile **Client Onboarding** on the right (don't click the open link)
+7. Click on the **three dots** next to the blue open button and select **Open in Process Designer**
+8. Select **Environment variables** as part of the Workflow automation settings 
+9. Scroll down to the variables **rpaBotExecutionUser** and **rpaServer**
+10. For **rpaBotExecutionUser** set the value to **cp4badmin**
+11. For **rpaServer** set the value to the value you copied previously from **RPA Asynch Server API**
+12. Click on the **round checkmark icon** with a small 1 in the top right corner and click on **Business automations** in the bread crump
+
+After you have manually applied this configuration change the RPA bot will be invoked when you perform the Client Onboarding scenario with use **cp4badmin**.
 
 ## Labs Instructions & Considerations
 
