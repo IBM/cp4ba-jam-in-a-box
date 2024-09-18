@@ -7,45 +7,70 @@ markdown_extensions:
   - admonition
 
 nav:
-  - 'Start': 'index.md'
-  - 'Tracks & Capabilities Overview': 'Additional.md'
-  - 'Labs':
-    - 'IBM Cloud Pak for Business Automation Demo': 'IBM Cloud Pak for Business Automation (End-to-End)\README.md'
-    - 'IBM Business Automation Application' : 'Business Automation Application\README.md'
-    - 'IBM Automation Decision Services' : 'Decisions\README.md'
-    - 'IBM Automation Document Processing': 'Document Processing\README.md'
-    - 'IBM Business Automation Insights' : 'Business Automation Insights\README.md'
-    - 'IBM Business Automation Workflow': 'Workflow\README.md'
-    - 'IBM FileNet Content Manager' : 'Content\README.md'
-    - 'IBM watsonx Orchestrate': 'watsonx Orchestrate\README.md'
-    - 'IBM Process Mining': 'Process Mining\README.md'
-    - 'IBM Robotic Process Automation': 'Robotic Process Automation\README.md'
-    - 'Bring-up Lab':
-      - 'Home': 'Bring-up\README.md'
-      - 'Bring-up Lab 1':
-        - 'Rapid Deployment Scripts': 'Bring-up\Bring-Up-Lab-1\README.md'
-        - 'Prepare': 'Bring-up\Bring-Up-Lab-1\Exercise-1-Prepare.md'
-        - 'Deploy DB2': 'Bring-up\Bring-Up-Lab-1\Exercise-2-Deploy-DB2.md'
-        - 'Create DB2 Databases': 'Bring-up\Bring-Up-Lab-1\Exercise-3-Create-DB2-Databases.md'
-        - 'Deploy CP4BA Operator': 'Bring-up\Bring-Up-Lab-1\Exercise-4-Deploy-CP4BA-Operator.md'
-        - 'Deploy CP4BA': 'Bring-up\Bring-Up-Lab-1\Exercise-5-Deploy-CP4BA.md'
-      - 'Bring-up Lab 2':
-        - 'Regular Deployment Scripts': 'Bring-up\Bring-Up-Lab-2\README.md'
-        - 'Deployment Operator': 'Bring-up\Bring-Up-Lab-2\Exercise-2-Deploy-Operator.md'
-        - 'Prepare': 'Bring-up\Bring-Up-Lab-2\Exercise-1-Prepare.md'
-        - 'Prepare Deployment': 'Bring-up\Bring-Up-Lab-2\Exercise-3-Prepare-Deployment.md'
-        - 'Deploy PostgreSQL': 'Bring-up\Bring-Up-Lab-2\Exercise-4-Deploy-PostgreSQL.md'
-        - 'Configure LDAP': 'Bring-up\Bring-Up-Lab-2\Exercise-5-Configure-LDAP.md'
-        - 'Generating DBs': 'Bring-up\Bring-Up-Lab-2\Exercise-6-Generating-DBs.md'
-        - 'Deploy CP4BA': 'Bring-up\Bring-Up-Lab-2\Exercise-7-Deploy-CP4BA.md'
-        - 'Post Deployment': 'Bring-up\Bring-Up-Lab-2\Exercise-8-PostDeployment.md'
-        - 'Appendix': 'Bring-up\Bring-Up-Lab-2\Appendinx-A-Troubleshooting.md'
-  - 'CP4BA Environment Options':
-    - 'Single User Environment CP4BA 23.0.2': 'Solutions\Client Onboarding\README.md'
-    - 'ApolloBA CP4BA 23.0.2': 'Solutions\Client Onboarding\README_2302_ApolloBA_CP4BADemos.md'
-    - 'Self-deploy scenario to CP4BA 23.0.2': 'Solutions\Client Onboarding\README_2302_SelfDeploy.md'
-  
-
+  - '23.0.2':
+    - 'Start': 'index.md'
+    - 'Tracks & Capabilities Overview': '23.0.2\Additional.md'
+    - 'Labs':
+      - 'IBM Cloud Pak for Business Automation Demo': '23.0.2\IBM Cloud Pak for Business Automation (End-to-End)\README.md'
+      - 'IBM Business Automation Application' : '23.0.2\Business Automation Application\README.md'
+      - 'IBM Automation Decision Services' : '23.0.2\Decisions\README.md'
+      - 'IBM Automation Document Processing': '23.0.2\Document Processing\README.md'
+      - 'IBM Business Automation Insights' : '23.0.2\Business Automation Insights\README.md'
+      - 'IBM Business Automation Workflow': '23.0.2\Workflow\README.md'
+      - 'IBM FileNet Content Manager' : '23.0.2\Content\README.md'
+      - 'IBM watsonx Orchestrate': '23.0.2\watsonx Orchestrate\README.md'
+      - 'IBM Process Mining': '23.0.2\Process Mining\README.md'
+      - 'IBM Robotic Process Automation': '23.0.2\Robotic Process Automation\README.md'
+      - 'Bring-up Lab':
+        - 'Home': '23.0.2\Bring-up\README.md'
+        - 'Bring-up Lab 1':
+          - 'Rapid Deployment Scripts': '23.0.2\Bring-up\Bring-Up-Lab-1\README.md'
+          - 'Prepare': '23.0.2\Bring-up\Bring-Up-Lab-1\Exercise-1-Prepare.md'
+          - 'Deploy DB2': '23.0.2\Bring-up\Bring-Up-Lab-1\Exercise-2-Deploy-DB2.md'
+          - 'Create DB2 Databases': '23.0.2\Bring-up\Bring-Up-Lab-1\Exercise-3-Create-DB2-Databases.md'
+          - 'Deploy CP4BA Operator': '23.0.2\Bring-up\\Bring-Up-Lab-1\\Exercise-4-Deploy-CP4BA-Operator.md'
+          - 'Deploy CP4BA': '23.0.2\Bring-up\\Bring-Up-Lab-1\\Exercise-5-Deploy-CP4BA.md'
+        - 'Bring-up Lab 2':
+          - 'Regular Deployment Scripts': '23.0.2\Bring-up\Bring-Up-Lab-2\README.md'
+          - 'Deployment Operator': '23.0.2\Bring-up\Bring-Up-Lab-2\Exercise-2-Deploy-Operator.md'
+          - 'Prepare': '23.0.2\Bring-up\Bring-Up-Lab-2\Exercise-1-Prepare.md'
+          - 'Prepare Deployment': '23.0.2\Bring-up\Bring-Up-Lab-2\Exercise-3-Prepare-Deployment.md'
+          - 'Deploy PostgreSQL': '23.0.2\Bring-up\Bring-Up-Lab-2\Exercise-4-Deploy-PostgreSQL.md'
+          - 'Configure LDAP': '23.0.2\Bring-up\Bring-Up-Lab-2\Exercise-5-Configure-LDAP.md'
+          - 'Generating DBs': '23.0.2\Bring-up\Bring-Up-Lab-2\Exercise-6-Generating-DBs.md'
+          - 'Deploy CP4BA': '23.0.2\Bring-up\Bring-Up-Lab-2\Exercise-7-Deploy-CP4BA.md'
+          - 'Post Deployment': '23.0.2\Bring-up\Bring-Up-Lab-2\Exercise-8-PostDeployment.md'
+          - 'Appendix': '23.0.2\Bring-up\Bring-Up-Lab-2\Appendinx-A-Troubleshooting.md'
+    - 'CP4BA Environment Options':
+      - 'Single User Environment CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README.md'
+      - 'ApolloBA CP4BA 23.0.2': '23.0.2\Solutions/Client Onboarding/README_2302_ApolloBA_CP4BADemos.md'
+      - 'Self-deploy scenario to CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README_2302_SelfDeploy.md'
+  - '24.0.0':
+    - 'Start': '24.0.0\README.md'
+    - 'Labs':
+      - 'IBM Cloud Pak for Business Automation Demo': '24.0.0\IBM Cloud Pak for Business Automation (End-to-End)/README.md'
+      - 'IBM Business Automation Application': '24.0.0\Business Automation Application/README.md'
+      - 'IBM Automation Decision Services': '24.0.0\Decisions/README.md'
+      - 'IBM Business Automation Insights': '24.0.0\Business Automation Insights/README.md'
+      - 'IBM Business Automation Workflow': '24.0.0\Workflow/README.md'
+      - 'IBM FileNet Content Manager': '24.0.0\Content/README.md'
+      - 'IBM watsonx Orchestrate': '24.0.0\watsonx Orchestrate/README.md'
+      - 'IBM Robotic Process Automation': '24.0.0\Robotic Process Automation/README.md'
+      - 'Bring-up Lab':
+        - 'Home': '24.0.0\Bring-Up/README.md'
+        - 'Bring-up Lab 2':
+          - 'Regular Deployment Scripts': '24.0.0\Bring-Up\Bring-Up-Lab-2/README.md'
+          - 'Prepare': '24.0.0\Bring-Up\Bring-Up-Lab-2/Exercise-1-Prepare.md'
+          - 'Deploy': '24.0.0\Bring-Up\Bring-Up-Lab-2/Exercise-2-Deploy-Operator.md'
+          - 'Preparing the Deployment': '24.0.0\Bring-Up\Bring-Up-Lab-2/Exercise-3-Prepare-Deployment.md'
+          - 'Deploy PostgreSQL': '24.0.0\Bring-Up\Bring-Up-Lab-2/Exercise-4-Deploy-PostgreSQL.md'
+          - 'Apply LDAP Configuration': '24.0.0\Bring-Up\Bring-Up-Lab-2/Exercise-5-Configure-LDAP.md'
+          - 'Generating CP4BA Databases and Verifying Configuration': '24.0.0\Bring-Up\Bring-Up-Lab-2/Exercise-6-Generating-DBs.md'
+          - 'Deploy CP4BA': '24.0.0\Bring-Up\Bring-Up-Lab-2/Exercise-7-Deploy-CP4BA.md'
+          - 'Post Deployment Steps / Deployment Verification': '24.0.0\Bring-Up\Bring-Up-Lab-2/Exercise-8-PostDeployment.md'
+          - 'Appendix A': '24.0.0\Bring-Up\Bring-Up-Lab-2/Appendinx-A-Troubleshooting.md'
+      
+      
 theme:
   custom_dir: custom/
   icon:
@@ -53,6 +78,7 @@ theme:
   features:
     - navigation.top
     - content.code.copy
+    - navigation.tabs
   name: material
   palette:
     # Palette toggle for light mode
