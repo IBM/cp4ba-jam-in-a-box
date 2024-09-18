@@ -1,0 +1,2305 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mydomain.org/mysite/23.0.2/Bring-up/Bring-Up-Lab-1/Exercise-2-Deploy-DB2/">
+      
+      
+        <link rel="prev" href="../Exercise-1-Prepare/">
+      
+      
+        <link rel="next" href="../Exercise-3-Create-DB2-Databases/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+    
+    
+      
+        <title>Deploy DB2 - IBM Business Automation and Digital Labor - Jam-in-a-Box</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="black">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercise-2-deploy-db2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="IBM Business Automation and Digital Labor - Jam-in-a-Box" class="md-header__button md-logo" aria-label="IBM Business Automation and Digital Labor - Jam-in-a-Box" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IBM Business Automation and Digital Labor - Jam-in-a-Box
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Deploy DB2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="black"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/IBM/cp4ba-jam-in-a-box" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BA&DL-JiaB
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+  23.0.2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../24.0.0/" class="md-tabs__link">
+          
+  
+  24.0.0
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="IBM Business Automation and Digital Labor - Jam-in-a-Box" class="md-nav__button md-logo" aria-label="IBM Business Automation and Digital Labor - Jam-in-a-Box" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    IBM Business Automation and Digital Labor - Jam-in-a-Box
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/IBM/cp4ba-jam-in-a-box" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BA&DL-JiaB
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    23.0.2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            23.0.2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Additional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tracks & Capabilities Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Labs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Labs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IBM%20Cloud%20Pak%20for%20Business%20Automation%20%28End-to-End%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Cloud Pak for Business Automation Demo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Business%20Automation%20Application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Business Automation Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Decisions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Automation Decision Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document%20Processing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Automation Document Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Business%20Automation%20Insights/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Business Automation Insights
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Business Automation Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Content/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM FileNet Content Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../watsonx%20Orchestrate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM watsonx Orchestrate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Process%20Mining/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Process Mining
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Robotic%20Process%20Automation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Robotic Process Automation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_11" id="__nav_1_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bring-up Lab
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            Bring-up Lab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_11_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_11_2" id="__nav_1_3_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bring-up Lab 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_11_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_3_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Bring-up Lab 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rapid Deployment Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exercise-1-Prepare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prepare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Deploy DB2
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Deploy DB2
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-exercise-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Exercise Instructions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exercise-3-Create-DB2-Databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create DB2 Databases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exercise-4-Deploy-CP4BA-Operator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy CP4BA Operator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exercise-5-Deploy-CP4BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy CP4BA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_11_3" id="__nav_1_3_11_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bring-up Lab 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            Bring-up Lab 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bring-Up-Lab-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Regular Deployment Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bring-Up-Lab-2/Exercise-2-Deploy-Operator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deployment Operator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bring-Up-Lab-2/Exercise-1-Prepare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prepare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bring-Up-Lab-2/Exercise-3-Prepare-Deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prepare Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bring-Up-Lab-2/Exercise-4-Deploy-PostgreSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy PostgreSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bring-Up-Lab-2/Exercise-5-Configure-LDAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure LDAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bring-Up-Lab-2/Exercise-6-Generating-DBs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating DBs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bring-Up-Lab-2/Exercise-7-Deploy-CP4BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy CP4BA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bring-Up-Lab-2/Exercise-8-PostDeployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Post Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bring-Up-Lab-2/Appendinx-A-Troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CP4BA Environment Options
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            CP4BA Environment Options
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Solutions/Client%20Onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Single User Environment CP4BA 23.0.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Solutions/Client%20Onboarding/README_2302_ApolloBA_CP4BADemos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ApolloBA CP4BA 23.0.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Solutions/Client%20Onboarding/README_2302_SelfDeploy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Self-deploy scenario to CP4BA 23.0.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    24.0.0
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            24.0.0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Labs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Labs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/IBM%20Cloud%20Pak%20for%20Business%20Automation%20%28End-to-End%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Cloud Pak for Business Automation Demo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Business%20Automation%20Application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Business Automation Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Decisions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Automation Decision Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Business%20Automation%20Insights/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Business Automation Insights
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Business Automation Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Content/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM FileNet Content Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/watsonx%20Orchestrate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM watsonx Orchestrate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Robotic%20Process%20Automation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Robotic Process Automation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bring-up Lab
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            Bring-up Lab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_9_2" id="__nav_2_2_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bring-up Lab 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Bring-up Lab 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Regular Deployment Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-1-Prepare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prepare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-2-Deploy-Operator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-3-Prepare-Deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preparing the Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-4-Deploy-PostgreSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy PostgreSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-5-Configure-LDAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apply LDAP Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-6-Generating-DBs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating CP4BA Databases and Verifying Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-7-Deploy-CP4BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy CP4BA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-8-PostDeployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Post Deployment Steps / Deployment Verification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Appendinx-A-Troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-exercise-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Exercise Instructions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="exercise-2-deploy-db2">Exercise 2: Deploy DB2</h1>
+<h2 id="21-introduction">2.1 Introduction</h2>
+<p>A CP4BA production mode deployment requires you to provide the databases needed by the CP4BA components. In this exercise, you'll first deploy the DB2 Operator and containers on the OpenShift cluster. Other databases are also supported, for example, Oracle, SQL Server, or PostgreSQL. See Detailed system requirements: <strong><a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=pcmppd-system-requirements" target="_blank">https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/23.0.2?topic=pcmppd-system-requirements</a></strong></p>
+<p>The database can run on OpenShift, but CP4BA also supports on-premises installations. We will be using OpenShfit to install the database.</p>
+<p>In this exercise, you will run scripts to install DB2 Operator, and run the Operator to create a DB2 instance.</p>
+<h2 id="22-exercise-instructions">2.2 Exercise Instructions</h2>
+<ol>
+<li>On your bastion host use the Terminal to switch to a directory prepared for you to contain the rapid deployment and other scripts.</li>
+</ol>
+<pre><code class="language-sh">cd /home/cp4badmin/Desktop/Labfiles
+</code></pre>
+<ol>
+<li>Clone the rapid deployment git repository onto your bastion host and copy the deployment scripts.</li>
+</ol>
+<p><strong>Note:</strong> As part of this doc, we assume you copy the deployment scripts into directory <strong>mycluster</strong>. If you select a different directory, you must change some of the commands in the steps below; otherwise, you can copy/paste them as is.</p>
+<pre><code class="language-sh">git clone https://github.com/IBM/cp4ba-rapid-deployment.git
+</code></pre>
+<pre><code class="language-sh">cd cp4ba-rapid-deployment/cp4ba-23-0-2
+</code></pre>
+<pre><code class="language-sh">cp -r scripts mycluster
+</code></pre>
+<pre><code class="language-sh">cd mycluster/deployment-db2-cp4ba
+</code></pre>
+<p>Sample output of the previous commands:</p>
+<p><img alt="Get rapid deployment scripts" src="../images/2.2-getrapiddeploymentscripts.png" /></p>
+<ol>
+<li>Open the parameters file for DB2, 01-parametersForDb2OnOCP.sh, with gedit.</li>
+</ol>
+<pre><code class="language-sh">gedit 01-parametersForDb2OnOCP.sh
+</code></pre>
+<ol>
+<li>
+<p>Apply the following changes:</p>
+</li>
+<li>
+<p>cp4baTemplateToUse – Name of CP4BA deployment template that will be used</p>
+<p>set the value to <strong>ibm_cp4a_cr_template.002.ent.FoundationContent.yaml</strong></p>
+<p><strong>Notes:</strong></p>
+<p>The rapid deployment scripts provide multiple CP4BA templates from which you can choose. For example, this "FoundationContent" template deploys the foundation and the content patterns of CP4BA. Other templates deploy different patterns and thus can be used when other components are needed.</p>
+<p>The ClientOnboardingDemo pattern, for example, also deploys the Application, Decisions_ads, and Workflow patterns and brings with it most components needed to run the Client Onboarding Demo.</p>
+<p>Due to the available OpenShift cluster size, other templates can't be used for this bring-up Lab. Of course, if you later deploy on your own OCP cluster that provides more CPU and memory, you would also be able to deploy larger templates.</p>
+<p>The template name is important at this point as it defines the needed databases and the CPU and memory needed for the DB2 container. It also contains a definition of the databases that need to be generated by the scripts.</p>
+</li>
+<li>
+<p>db2OnOcpProjectName – Project/namespace where DB2 should be installed, for example, ibm-db2 (you could specify any project name here, if that does not exist yet, it will be created by the scripts)</p>
+<p>set the value to <strong>ibm-db2</strong></p>
+</li>
+<li>
+<p>db2AdminUserPassword – Password that will be assigned to the db2 instance user.</p>
+<p>set the value to <strong>passw0rd</strong> (where the third-last character is a zero)</p>
+</li>
+<li>
+<p>db2StandardLicenseKey – A DB2 Standard License key to assign to DB2 to allow for larger use of CPU and memory</p>
+<p><strong>remove the default value REQUIRED</strong>, and leave this parameter empty</p>
+<p><strong>Note:</strong> The CP4BA template you are deploying as part of this Lab requires three databases. DB2 community edition (installed when you don't specify a DB2 Standard License key) allows for enough CPU and memory for those three databases. Only when selecting a larger CP4BA template, would this key be needed.</p>
+</li>
+<li>
+<p>db2Cpu – Number of CPUs for DB2 pod according to the selected CP4BA template</p>
+<p>set the value to <strong>4</strong></p>
+</li>
+<li>
+<p>db2Memory – Amount of memory for DB2 pod according to the selected CP4BA template</p>
+<p>set the value to <strong>16Gi</strong></p>
+</li>
+<li>
+<p>The changes you made so far should look as shown below.</p>
+<p><img alt="Edit DB2 Parameters" src="../images/2.2-editdb2parameters.png" /></p>
+</li>
+<li>
+<p>Leave all other parameters at their default values</p>
+<blockquote>
+<p>The storage class <strong>nfs-client</strong> available on your OpenShift cluster from TechZone is already referenced under property <strong>db2OnOcpStorageClassName</strong> as default value.</p>
+</blockquote>
+</li>
+<li>
+<p>Finally, save your changes and close the editor.</p>
+</li>
+<li>
+<p>Run script <strong>02-createDb2OnOCP.sh</strong>. This script will now install and configure DB2 for you based on the parameters previously specified in 01-parametersForDb2OnOCP.sh.</p>
+</li>
+</ol>
+<pre><code class="language-sh">./02-createDb2OnOCP.sh
+</code></pre>
+<p><strong>Notes:</strong></p>
+<p>To successfully run the script, you need the  jq tool and podman installed on your bastion host. For this Lab, these tools are already available on your bastion host.</p>
+<p>This script will prompt you for various input. Please have a look at the sample script output provided below to see the answers you must use.</p>
+<p>You need your Entitlement Registry key handy, see also <strong><a href="https://myibm.ibm.com/products-services/containerlibrary" target="_blank">https://myibm.ibm.com/products-services/containerlibrary</a></strong>.</p>
+<p>When you paste your Entitlement Registry key, it will not be shown; therefore, paste it just once and hit the Enter key.</p>
+<p>This script will exit if errors are hit during the installation.</p>
+<p>If you get the error message:</p>
+<pre><code>error: unable to recognize &quot;db2OperatorCatalog.yaml&quot;: Unauthorized
+</code></pre>
+<p>Check whether you have successfully logged on to the OCP cluster on the command line.</p>
+<p>Sample script output:</p>
+<pre><code>./02-createDb2OnOCP.sh
+
+Found 01-parametersForDb2OnOCP.sh.  Reading in variables from that script.
+   Reading 01-parametersForDb2OnOCP.sh ...
+Done!
+
+This script installs Db2u on OCP into project ibm-db2. For this, you need the jq tool installed and your Entitlement Registry key handy.
+
+
+Template ibm_cp4a_cr_template.002.ent.FoundationContent.yaml will be used
+The template requires  1 database instances. Each instance uses 4 cpus and 16Gi memory.
+
+Do you want to continue (Yes/No, default: No): Yes   &lt;--- Enter Yes here
+
+Installing Db2U on OCP...
+
+Installing the DB2 Operator Catalog...
+catalogsource.operators.coreos.com/ibm-db2uoperator-catalog created
+
+Creating project ibm-db2...
+namespace/ibm-db2 created
+Now using project &quot;ibm-db2&quot; on server &quot;https://api.ocp.ibm.edu:6443&quot;.
+
+Creating secret ibm-registry. For this, your Entitlement Registry key is needed.
+
+You can get the Entitlement Registry key from here: https://myibm.ibm.com/products-services/containerlibrary
+
+Enter your Entitlement Registry key: &lt;paste your Entitlement Registry key here ONCE, it will not be shown, then hit the Enter key&gt;
+Verifying the Entitlement Registry key...
+Login Succeeded!
+Entitlement Registry key is valid.
+secret/ibm-registry created
+
+Modifying the OpenShift Global Pull Secret (you need jq tool for that):
+secret/pull-secret data updated
+
+Creating Operator Group object for DB2 Operator
+operatorgroup.operators.coreos.com/ibm-db2-group created
+
+Creating Subscription object for DB2 Operator
+subscription.operators.coreos.com/db2u-operator created
+
+Waiting up to 5 minutes for DB2 Operator install plan to be generated.
+Mon Apr  1 07:00:00 CDT 2024
+
+Approving DB2 Operator install plan.
+installplan.operators.coreos.com/install-ggrgx patched
+
+Waiting up to 5 minutes for DB2 Operator to install.
+Mon Apr  1 07:01:00 CDT 2024
+
+Deploying the Db2u cluster.
+db2ucluster.db2u.databases.ibm.com/db2-inst1 created
+
+Waiting up to 15 minutes for c-db2-inst1-db2u statefulset to be created.
+Mon Apr  1 07:02:00 CDT 2024
+
+Patching db2-inst1-db2u statefulset.
+Skipped
+
+Waiting up to 30 minutes for db2-inst1-restore-morph job to complete successfully.
+Mon Apr  1 07:03:00 CDT 2024
+
+Updating number of databases allowed by DB2 installation from 8 to 30.
+configmap/c-db2-inst1-db2dbmconfig replaced
+
+Updating database manager running configuration.
+DB20000I  The UPDATE DATABASE MANAGER CONFIGURATION command completed 
+successfully.
+
+Restarting DB2 instance.
+Wolverine HA management state was disabled successfully.
+04/01/2024 07:04:00     0   0   SQL1064N  DB2STOP processing was successful.
+SQL1064N  DB2STOP processing was successful.
+04/01/2024 07:05:00     0   0   SQL1063N  DB2START processing was successful.
+SQL1063N  DB2START processing was successful.
+Wolverine HA management state was enabled successfully.
+
+*********************************************************************************
+********* Installation and configuration of DB2 completed successfully! *********
+*********************************************************************************
+
+Removing BLUDB from DB2 instance 1
+DB20000I  The FORCE APPLICATION command completed successfully.
+DB21024I  This command is asynchronous and may not be effective immediately.
+
+DB20000I  The DEACTIVATE DATABASE command completed successfully.
+DB20000I  The DROP DATABASE command completed successfully.
+
+Existing databases on DB instance #1 are:
+
+Removing temporary files...
+Done.
+
+***********************************************
+********* DB2 Connection Information: *********
+***********************************************
+
+Use this hostname/IP to access the databases e.g. with IBM Data Studio.
+   Hostname instance 1: router-default.apps.ocp.ibm.edu
+   Other possible addresses(If hostname not available above): 10.100.1.21,compute1.ocp.ibm.edu
+
+Use one of these NodePorts to access the databases e.g. with IBM Data Studio (usually the first one is for legacy-server (Db2 port 50000), the second for ssl-server (Db2 port 50001)).
+Instance 1: 
+                  &quot;nodePort&quot;: 30505,
+                  &quot;nodePort&quot;: 30107,
+
+Use &quot;db2inst1&quot; and password &quot;passw0rd&quot; to access the databases e.g. with IBM Data Studio.
+
+Db2u installation complete! Congratulations. Exiting...
+</code></pre>
+<ol>
+<li>While the script is running, you optionally can review the changes applied:</li>
+</ol>
+<p>a. First, the IBM DB2 Operator Catalog is deployed, see   db2OperatorCatalog.yaml   in folder   cp4ba-rapid-deployment/cp4ba-23-0-2/mycluster/deployment-db2-cp4ba   . An operator catalog gives you access to a set of operators, for example the D2 operator.</p>
+<p>b. A new project in OCP is created using a by the 02 script generated file named   db2-namespace.yaml   . This file gets generated from template file   db2-namespace.template.yaml   by injecting some of the parameters from   01-parametersForDb2OnOCP.sh   , for example parameter   db2OnOcpProjectName   that is set to value   ibm-db2   .</p>
+<p>c. A new secret is created in the new project using your Entitlement Registry key named   ibm-registry   .</p>
+<pre><code>  Note: A dummy email is used by the scripts.
+</code></pre>
+<p>d. The OpenShift Global Pull Secret is modified to ensure you can pull the container images for DB2.</p>
+<p>e. An Operator Group object for DB2 Operator is created. The 02 script generated a file named   db2-operatorgroup.yaml   . This file gets generated from template file   db2-operatorgroup.template.yaml   by injecting some of the parameters from   01-parametersForDb2OnOCP.sh   .</p>
+<p>f. A Subscription for the DB2 Operator is created. The 02 script generated a file named   db2-subscription.yaml   . This file gets generated from template file   db2-subscription.template.yaml   by injecting some of the parameters from   01-parametersForDb2OnOCP.sh   . For example, the namespace (project name), channel and startingCSV are set.</p>
+<pre><code>  Applying this Subscription causes the DB2 operator to install. As you can see in the definition, installPlanApproval is set to Manual. This is to avoid DB2 operator to automatically update to latest version as this can cause issues while the DB2 instance deployment. Therefore, the script has to approve the first DB2 Operator install plan to allow the version provided under startingCSV to install. Install plans generated afterwards should not get approved by you manually to avoid issues while the creation of the DB2 instance.
+</code></pre>
+<p>g. Once the DB2 Operator is installed, the script is deploying the Db2u cluster. For this, the 02 script generated a file named   db2.yaml   . This file gets generated from template file   db2.template.yaml   by injecting some of the parameters from   01-parametersForDb2OnOCP.sh   . For example, the namespace, license, admin user password and instance version are set.</p>
+<pre><code>  Applying this resource causes the Db2u cluster to be installed using the specified parameters.
+
+  Between the applied files there are multiple dependencies, for example between DB2 Operator version installed (startingCSV) and Db2u cluster version installed. For example, newer DB2 Operators will not install older Db2u cluster versions and vice versa. Due to the rapid deployment scripts and the set of default values provided by them, beginners don’t need to care about such dependencies. Advanced users could modify these properties as well to deploy newer DB2 versions, for example also on a newer OpenShift version. But, in some cases changing the parameters in   01-parametersForDb2OnOCP.sh   is not sufficient, further changes in the .template. files will most likely be needed, too.
+</code></pre>
+<p>h. Once the Db2u cluster is up and running, the 02 script waits till the job   c-db2ucluster-restore-morph   completes, which is the last step in deploying the cluster. Then, the script does also apply some further configuration changes to the Db2u cluster, performs a full re-start of DB2 and drops the default database BLUDB as this one is not needed for your CP4BA deployment. Last but not least some useful information is provided in case you want to connect to this DB2 cluster with for example IBM Data Studio.</p>
+<ol>
+<li>Once the script completed, review the script output and ensure there are no errors, and that it is completed as shown in the sample script output.</li>
+</ol>
+<p>If you you have hit an issue and you don't know how to resolve it, please reach out to your hosting staff.</p>
+<ol>
+<li>Look at the output of your script and verify that the deletion of BLUDB was successful. If this is not the case, delete it manually.</li>
+</ol>
+<p>Note: This database is created out of the box by DB2 but is not needed for the CP4BA deployment.</p>
+<ol>
+<li>Run this command and verify that you see two completed pods and five pods Running and Ready (1/1).</li>
+</ol>
+<pre><code class="language-sh">oc get pods
+</code></pre>
+<p>You have now successfully installed the DB2 Operator, and run the Operator to create a DB2 instance.</p>
+<p>To continue, refer to <strong><a href="../Exercise-3-Create-DB2-Databases/">Exercise 3: Create DB2 Databases</a></strong>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.top", "content.code.copy", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+<script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "b309a6b8-f4bf-4f39-844d-50305bf18c83", // The ID of this integration.
+      region: "aws-us-east-1", // The region your integration is hosted in.
+      serviceInstanceID: "20240117-1327-3518-4015-20b686392f52", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+  
+    
+      <script src="../../../../assets/javascripts/bundle.e2f4ecc1.min.js"></script>
+      
+    
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "b309a6b8-f4bf-4f39-844d-50305bf18c83", // The ID of this integration.
+          region: "aws-us-east-1", // The region your integration is hosted in.
+          serviceInstanceID: "20240117-1327-3518-4015-20b686392f52", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+      
+
+  </body>
+</html>
