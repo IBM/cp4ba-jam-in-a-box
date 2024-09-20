@@ -47,10 +47,12 @@ nav:
       - 'Self-deploy scenario to CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README_2302_SelfDeploy.md'
   - '24.0.0':
     - 'Start': '24.0.0\README.md'
+    - 'Tracks & Capabilities Overview': '24.0.0\Additional.md'
     - 'Labs':
       - 'IBM Cloud Pak for Business Automation Demo': '24.0.0\IBM Cloud Pak for Business Automation (End-to-End)/README.md'
       - 'IBM Business Automation Application': '24.0.0\Business Automation Application/README.md'
       - 'IBM Automation Decision Services': '24.0.0\Decisions/README.md'
+      - 'IBM Automation Document Processing': '24.0.0\Document Processing\README.md'
       - 'IBM Business Automation Insights': '24.0.0\Business Automation Insights/README.md'
       - 'IBM Business Automation Workflow': '24.0.0\Workflow/README.md'
       - 'IBM FileNet Content Manager': '24.0.0\Content/README.md'
@@ -69,7 +71,10 @@ nav:
           - 'Deploy CP4BA': '24.0.0\Bring-Up\Bring-Up-Lab-2/Exercise-7-Deploy-CP4BA.md'
           - 'Post Deployment Steps / Deployment Verification': '24.0.0\Bring-Up\Bring-Up-Lab-2/Exercise-8-PostDeployment.md'
           - 'Appendix A': '24.0.0\Bring-Up\Bring-Up-Lab-2/Appendinx-A-Troubleshooting.md'
-      
+    - 'CP4BA Environment Options':
+      - 'Single User Environment CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README.md'
+      - 'ApolloBA CP4BA 24.0.0': '24.0.0\Solutions/Client Onboarding/README_2302_ApolloBA_CP4BADemos.md'
+      - 'Self-deploy scenario to CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README_2302_SelfDeploy.md'
       
 theme:
   custom_dir: custom/

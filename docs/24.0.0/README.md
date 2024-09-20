@@ -14,7 +14,7 @@ The table below lists all capabilities for which currently labs are offered. Not
 | IBM Process Mining (coming soon) |      2      |      1-2 hours per lab      | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-pm' target = '_blank'>PM Survey</a> |
 | [IBM Robotic Process Automation](Robotic Process Automation\README.md) |      2      |      3-4 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-rpa' target = '_blank'>RPA Survey</a> |
 | [IBM Business Automation Workflow](Workflow\README.md) |      2      |      5-6 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-baw' target = '_blank'>BAW Survey</a> |
-| IBM Automation Document Processing (coming soon) |      2      |      3-4 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-adp' target = '_blank'>ADP Survey</a> |
+| [IBM Automation Document Processing](Document Processing\README.md) |      2      |      3-4 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-adp' target = '_blank'>ADP Survey</a> |
 | <a href='https://github.com/IBM/cp4ba-labs/tree/main/23.0.2/watsonx%20Orchestrate' target = '_blank'>IBM watsonx Orchestrate</a> | 2            | 2-3 hours             | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-wxo' target = '_blank'>wxO Survey</a> |
 | [IBM CP4BA - Bring-up Lab](Bring-Up\README.md) | 3 | 6-14 hours | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-bring-up' target = '_blank'>Bring-up Survey</a> |
 
