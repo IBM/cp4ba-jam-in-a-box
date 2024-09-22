@@ -5,7 +5,7 @@
 > - As this approach relies on reserving an environment from IBM TechZone, this document is **only applicable to IBM Business Partners** that have the ability to request environments from TechZone **and IBMers**. 
 > - Showcasing **RPA** in action as part of the Client Onboarding scenario requires a few manual steps as described below.
 > 
->If you have your own Cloud Pak for Business Automation (CP4BA) 23.0.2 environment or need the RPA bot in action, please refer to this [document](../../../index.md) for other options.
+>If you have your own Cloud Pak for Business Automation (CP4BA) 23.0.2 environment, please refer to this [document](../../../index.md) for other options.
 
 
 
@@ -38,7 +38,7 @@ The major benefits of using this environment are:
 Follow the journey [Apollo Business Automation - CP4BA Demos](https://techzone.ibm.com/collection/apollo-business-automation/journey-cp4ba-demos) to reserve your environment on IBM TechZone. It consists of three steps:
 
 1. Requesting the environment in step 1 (use one of the 🤩CP4BA Demos tiles from the [Archive](https://techzone.ibm.com/collection/apollo-business-automation/journey--archive) for **CP4BA 23.0.2**!!!) and waiting till the environment is **Ready** **and fully deployed**. This will normally take approximately 5-7 hours.
-   The difference between the two tiles is that for one tile the passwords for user001-usr020 are randomly generated, whereas the password for the other tile is set to a pre-defined value as stated on the tile itself.
+   The difference between the two tiles is that for one tile the passwords for usr001-usr020 are randomly generated, whereas the password for the other tile is set to a pre-defined value as stated on the tile itself.
 2. Validating the successful deployment of the Cloud Pak for Business Automation as described in step 2.
 3. Validating the successful deployment of the Client Onboarding scenario assets as described in step 3.
 
