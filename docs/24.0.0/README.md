@@ -11,7 +11,7 @@ The table below lists all capabilities for which currently labs are offered. A c
 | [IBM Business Automation Insights](Business Automation Insights\README.md) |        2        |        1 hour        | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-bai' target = '_blank'>BAI Survey</a> |
 | [IBM FileNet Content Services](Content\README.md) |      2      |      4-5 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-fncm' target = '_blank'>FNCM Survey</a> |
 | [IBM Automation Decision Services](Decisions\README.md) |       2       |       3 hours        | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-ads' target = '_blank'>ADS Survey</a> |
-| [IBM Process Mining](Robotic Process Automation\README.md) (independent of version of CP4BA) |      2      |      1-2 hours per lab      | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-pm' target = '_blank'>PM Survey</a> |
+| [IBM Process Mining](Process Mining\README.md) (independent of version of CP4BA) |      2      |      1-2 hours per lab      | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-pm' target = '_blank'>PM Survey</a> |
 | [IBM Robotic Process Automation](Robotic Process Automation\README.md) (independent of version of CP4BA) |      2      |      3-4 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-rpa' target = '_blank'>RPA Survey</a> |
 | [IBM Business Automation Workflow](Workflow\README.md) |      2      |      5-6 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-baw' target = '_blank'>BAW Survey</a> |
 | [IBM Automation Document Processing](Document Processing\README.md) |      2      |      3-4 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-adp' target = '_blank'>ADP Survey</a> |
