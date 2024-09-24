@@ -63,8 +63,8 @@ nav:
           - 'Appendix A': '24.0.0\Bring-Up\Bring-Up-Lab-2\Appendix-A-Troubleshooting.md'
     - 'CP4BA Environment Options':
       - 'Single User Environment CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README.md'
-      - 'ApolloBA CP4BA 24.0.0': '24.0.0\Solutions/Client Onboarding/README_2302_ApolloBA_CP4BADemos.md'
-      - 'Self-deploy scenario to CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README_2302_SelfDeploy.md'
+      - 'ApolloBA CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README_2400_ApolloBA_CP4BADemos.md'
+      - 'Self-deploy scenario to CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README_2400_SelfDeploy.md'
       
 theme:
   custom_dir: custom/
