@@ -1,4 +1,4 @@
-# Jam-in-a-Box for Business Automation & Digital Labor
+# Jam-in-a-Box for Business Automation (CP4BA 23.0.2) & Digital Labor
 
 ## Quick Start
 
@@ -58,7 +58,7 @@ Most labs are accessible using a single Jam-in-a-Box environment. For some labs,
 - **Single-user/self-paced** Client Onboarding demo and labs on **CP4BA 23.0.2**
     - [Pre-deployed Client Onboarding from TechZone](23.0.2/Solutions/Client%20Onboarding/README.md)
         - **Benefits:** Provisioning time only 2-3 hours; Supports ADP lab
-        - **Limitations:** Need to use Remote Desktop client (RDP) to connect to bastion host to perform demo/labs; No support for RPA as part of Client Onboarding demo; No support for watsonx Orchestrate lab
+        - **Limitations:** Need to use Remote Desktop client (RDP) to connect to bastion host to perform demo/labs; No support for watsonx Orchestrate lab
     - [Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos](23.0.2/Solutions/Client%20Onboarding/README_2302_ApolloBA_CP4BADemos.md)
         - **Benefits:** Accessible from any web browser; Supports watsonx Orchestrate lab; Supports ADP lab
         - **Limitations:** Provisioning time 5-7 hours

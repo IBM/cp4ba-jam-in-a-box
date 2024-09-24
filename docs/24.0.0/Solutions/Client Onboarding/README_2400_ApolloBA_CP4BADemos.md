@@ -3,9 +3,9 @@
 !!! IMPORTANT
 >
 > - As this approach relies on reserving an environment from IBM TechZone, this document is **only applicable to IBM Business Partners** that have the ability to request environments from TechZone **and IBMers**. 
-> - Showcasing **RPA** in action as part of the Client Onboarding scenario requires a few manual steps as described below.
+> - Showcasing **RPA** in action as part of the Client Onboarding scenario requires a few manual configuration steps as described below.
 > 
->If you have your own Cloud Pak for Business Automation (CP4BA) 23.0.2 environment, please refer to this [document](../../../index.md) for other options.
+>If you have your own Cloud Pak for Business Automation (CP4BA) 24.0.0 environment, please refer to this [document](../../../index.md) for other options.
 
 
 
@@ -23,7 +23,7 @@ This Jam-in-a-Box environment is provided to you as a cooperation between the ow
 
 The major benefits of using this environment are:
 
-- Environment can be used for a single-user use case and for running mini-Tech Jams with approximately 10 participants (feedback welcome if you used it more users)
+- Environment can be used for a single-user use case and for running mini-Tech Jams with approximately 10 participants (feedback welcome in case you used it with more users)
 - Client Onboarding scenario and lab artifacts are pre-deployed for you
 - 20 business users have been created that can be given to participants of a mini-Tech Jam
 
@@ -70,8 +70,8 @@ The lab instructions are written in context of a Tech Jam event. When performing
 
 | Lab instructions mention...                                  | As part of this Jam-in-a-Box environment...                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| using the **URLs** found on the Tech Jam event page          | please login to the OpenShift console, go to **Workloads -> ConfigMaps** and search for **client-onboarding-information**.<br />The ConfigMap contains all relevant URLs for this environment. <br />For a mini-Tech Jam share them with the participants in a suitable form. |
-| how to receive your **user credentials** using a link on the Tech Jam event page | please login to the OpenShift console, go to **Workloads -> ConfigMaps** and search for **client-onboarding-information**.<br />The ConfigMap contains all relevant user names and password for this environment.<br />For a mini-Tech Jam share a dedicated user name and password with each participants in a suitable form. |
+| using the **URLs** found on the Tech Jam event page          | please login to the OpenShift console, go to **Workloads -> ConfigMaps**, and check the **000-client-onboarding-information** ConfigMap. It should appear at the top of the list.<br />The ConfigMap contains all relevant URLs for this environment. <br />For a mini-Tech Jam share them with the participants in a suitable form. |
+| how to receive your **user credentials** using a link on the Tech Jam event page | please login to the OpenShift console, go to **Workloads -> ConfigMaps**, and check the **000-client-onboarding-information** ConfigMap. It should appear at the top of the list.<br />The ConfigMap contains all relevant user names and password for this environment.<br />For a mini-Tech Jam share a dedicated user name and password with each participants in a suitable form. |
 | to **prefix your artifacts** with "usrXYZ"                   | depending on if you use the environment as a single-user environment or for running a mini-Tech Jam, you may choose to follow the instructions in this point. |
 | object store **CONTENT** (FileNet labs)                      | the object store to use is called **BAWDOCS**.               |
 

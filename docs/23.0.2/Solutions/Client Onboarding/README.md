@@ -2,11 +2,11 @@
 
 !!! IMPORTANT
 >
-> - As this approach relies on reserving an environment from IBM TechZone, this document is **only applicable to IBM Business Partners** that have the ability to request environments from TechZone **and IBMers**. 
-> - In addition, to use this environment, accessing the bastion host via **RDP** is required. Ensure you have an RDP tool of choice for your operating system.
-> - Showcasing **RPA** in action as part of the Client Onboarding scenario requires a few manual steps.
+>- As this approach relies on reserving an environment from IBM TechZone, this document is **only applicable to IBM Business Partners** that have the ability to request environments from TechZone **and IBMers**. 
+>- In addition, to use this environment, accessing the bastion host via **RDP** is required. Ensure you have an RDP tool of choice for your operating system.
+>- Showcasing **RPA** in action as part of the Client Onboarding scenario requires a few manual configuration steps as described below.
 >
-> If you have your own Cloud Pak for Business Automation (CP4BA) 23.0.2 environment, can't use RDP, or need the RPA bot in action, please refer to this [document](../../../index.md) and this [document](README_2302_SelfDeploy.md) for other options.
+>If you have your own Cloud Pak for Business Automation (CP4BA) 23.0.2 environment or can't use RDP, please refer to this [document](../../../index.md) and this [document](README_2302_SelfDeploy.md) for other options.
 
 
 

@@ -11,7 +11,7 @@
 >
 > - As this approach relies on reserving an environment from IBM TechZone, this document is **only applicable to IBM Business Partners** that have the ability to request environments from TechZone **and IBMers**. 
 > - In addition, to use this environment, accessing the bastion host via **RDP** is required. Ensure you have an RDP tool of choice for your operating system.
-> - Showcasing **RPA** in action as part of the Client Onboarding scenario requires a few manual steps.
+> - Showcasing **RPA** in action as part of the Client Onboarding scenario requires a few manual configuration steps as described below.
 >
 > If you have your own Cloud Pak for Business Automation (CP4BA) 24.0.0 environment and can't use RDP, please refer to this [document](../../../index.md) and this [document](README_2400_SelfDeploy.md) for other options.
 
@@ -46,7 +46,7 @@ Based on the technology used to achieve a short provisioning time, you need to p
 
 ## Reserve and Prepare the Jam-in-a-Box Single User Environment
 
-1. Reserve your environment on IBM TechZone from the <a href="https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-and-digital-labor-jam-in-a-box/environments" target="_blank">IBM Cloud Pak for Business Automation and Digital Labor - Jam-in-a-Box</a> collection by clicking on the **Jam in a Box - Single-User - CP4BA 24.0.0** tile
+1. Reserve your environment on IBM TechZone from the <a href="https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-and-digital-labor-jam-in-a-box/environments" target="_blank">IBM Cloud Pak for Business Automation and Digital Labor - Jam-in-a-Box</a> collection by clicking on the **Jam in a Box - Single-User - CP4BA 24.0.0** tile (coming soon)
 
       On the **Create a reservation** page make the following selections:
 
