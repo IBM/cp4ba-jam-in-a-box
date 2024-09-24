@@ -49,7 +49,7 @@ Most labs are accessible using a single Jam-in-a-Box environment. For some labs,
 
 !!! Note
 >
-> The options mentioned for the first two rows are focused on TechZone environments with **pre-deployed** Client Onboarding assets. If you have your own CP4BA environment (from TechZone or not), into which you want to deploy the Client Onboarding assets yourself, please refer to this [document](23.0.2/README_other.md) for details.
+> The options mentioned for the first two rows are focused on TechZone environments with **pre-deployed** Client Onboarding assets. If you have your own CP4BA environment (from TechZone or not), into which you want to deploy the Client Onboarding assets yourself, please refer to this [document](23.0.2/Solutions/Client%20Onboarding/README_2302_SelfDeploy.md) for details.
 
 
 
