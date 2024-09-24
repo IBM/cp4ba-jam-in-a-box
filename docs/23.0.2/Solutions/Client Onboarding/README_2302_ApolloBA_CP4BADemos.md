@@ -35,9 +35,9 @@ The major benefits of using this environment are:
 
 ## Reserve the CP4BA Demos Environment
 
-Follow the journey [Apollo Business Automation - CP4BA Demos](https://techzone.ibm.com/collection/apollo-business-automation/journey-cp4ba-demos) to reserve your environment on IBM TechZone. It consists of three steps:
+Follow the journey <a href="https://techzone.ibm.com/collection/apollo-business-automation/journey-cp4ba-demos" target="_blank">Apollo Business Automation - CP4BA Demos</a> to reserve your environment on IBM TechZone. It consists of three steps:
 
-1. Requesting the environment in step 1 (use one of the 🤩CP4BA Demos tiles from the [Archive](https://techzone.ibm.com/collection/apollo-business-automation/journey--archive) for **CP4BA 23.0.2**!!!) and waiting till the environment is **Ready** **and fully deployed**. This will normally take approximately 5-7 hours.
+1. Requesting the environment in step 1 (use one of the 🤩CP4BA Demos tiles from the <a href="https://techzone.ibm.com/collection/apollo-business-automation/journey--archive" target="_blank">Archive</a> for **CP4BA 23.0.2**!!!) and waiting till the environment is **Ready** **and fully deployed**. This will normally take approximately 5-7 hours.
    The difference between the two tiles is that for one tile the passwords for usr001-usr020 are randomly generated, whereas the password for the other tile is set to a pre-defined value as stated on the tile itself.
 2. Validating the successful deployment of the Cloud Pak for Business Automation as described in step 2.
 3. Validating the successful deployment of the Client Onboarding scenario assets as described in step 3.
