@@ -55,7 +55,7 @@ Most labs are accessible using a single Jam-in-a-Box environment. For some labs,
 
 ## Environment Selection for Core Labs
 
-- **Single-user/self-paced** Client Onboarding demo and labs on **CP4BA 24.0.0*
+- **Single-user/self-paced** Client Onboarding demo and labs on **CP4BA 24.0.0**
     - Pre-deployed Client Onboarding from TechZone (coming soon)
         - **Benefits:** Provisioning time only 2-3 hours; Supports ADP lab
         - **Limitations:** Need to use Remote Desktop client (RDP) to connect to bastion host to perform demo/labs; No support for watsonx Orchestrate lab

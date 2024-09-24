@@ -1,9 +1,5 @@
 # IBM Cloud Pak for Business Automation (CP4BA) 24.0.0 / watsonx Orchestrate Labs
 
-Please refer to the [Labs to Environments Mapping](#capabilities) section for information about how to request the required environment
-
-
-
 ## Track descriptions
 
 The different tracks cater for different target groups and previous levels of exposure to Cloud Pack for Business Automation/watsonx Orchestrate.
@@ -40,7 +36,7 @@ The table below lists all capabilities sorted by track for which currently labs 
 | [IBM Business Automation Application](Business Automation Application\README.md) |      2      |      2 hours       |  <a href='https://www.credly.com/org/ibm/badge/ibm-business-automation-application-tech-jam' target = '_blank'>Badge</a> \| <a href='https://learn.ibm.com/course/view.php?id=9357' target = '_blank'>Quiz</a> | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-baa' target = '_blank'>BAA Survey</a> |
 | [IBM Business Automation Insights](Business Automation Insights\README.md) |        2        |        1 hour        | - |[BAI Survey](https://www.surveymonkey.com/r/ba-dl-tech-jam-bai) |
 | [IBM FileNet Content Services](Content/README.md)        |      2      |      4-5 hours       | <a href='https://www.credly.com/org/ibm/badge/ibm-filenet-content-manager-tech-jam' target = '_blank'>Badge</a> \| <a href='https://learn.ibm.com/course/view.php?id=9358' target = '_blank'>Quiz</a> | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-fncm' target = '_blank'>FNCM Survey</a> |
-| [IBM Automation Decision Services](Decisions\README.md) |       2       |       3 hours        | <a href='https://www.credly.com/org/ibm/badge/ibm-automation-decision-services-tech-jam' target = '_blank'>Badge</a> \| <a href='https://learn.ibm.com/course/view.php?id=9416' target = '_blank'>Quiz</a>  <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-ads' target = '_blank'>ADS Survey</a> ||
+| [IBM Automation Decision Services](Decisions\README.md) |       2       |       3 hours        | <a href='https://www.credly.com/org/ibm/badge/ibm-automation-decision-services-tech-jam' target = '_blank'>Badge</a> \| <a href='https://learn.ibm.com/course/view.php?id=9416' target = '_blank'>Quiz</a> |<a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-ads' target = '_blank'>ADS Survey</a>|
 | [IBM Process Mining](Process Mining\README.md) |      2      |      1-2 hours per lab      | <a href='https://www.credly.com/org/ibm/badge/ibm-process-mining-tech-jam' target = '_blank'>Badge</a> \| <a href='https://learn.ibm.com/course/view.php?id=9355' target = '_blank'>Quiz</a> | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-pm' target = '_blank'>PM Survey</a> |
 | [IBM Robotic Process Automation](Robotic Process Automation\README.md) |      2      |      3-4 hours       | <a href='https://www.credly.com/org/ibm/badge/ibm-robotic-process-automation-tech-jam' target = '_blank'>Badge</a> \| <a href='https://learn.ibm.com/course/view.php?id=9356' target = '_blank'>Quiz</a> | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-rpa' target = '_blank'>RPA Survey</a> |
 | [IBM Business Automation Workflow](Workflow\README.md) |      2      |      5-6 hours       | <a href='https://www.credly.com/org/ibm/badge/ibm-business-automation-workflow-tech-jam' target = '_blank'>Badge</a> \| <a href='https://learn.ibm.com/course/view.php?id=9354' target = '_blank'>Quiz</a> | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-baw' target = '_blank'>BAW Survey</a> |
