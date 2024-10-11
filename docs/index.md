@@ -59,17 +59,11 @@ Most labs are accessible using a single Jam-in-a-Box environment. For some labs,
     - [Pre-deployed Client Onboarding from TechZone](23.0.2/Solutions/Client%20Onboarding/README.md)
         - **Benefits:** Provisioning time only 2-3 hours; Supports ADP lab
         - **Limitations:** Need to use Remote Desktop client (RDP) to connect to bastion host to perform demo/labs; No support for watsonx Orchestrate lab
-    - [Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos](23.0.2/Solutions/Client%20Onboarding/README_2302_ApolloBA_CP4BADemos.md)
-        - **Benefits:** Accessible from any web browser; Supports watsonx Orchestrate lab; Supports ADP lab
-        - **Limitations:** Provisioning time 5-7 hours
-
+    - Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos
+        - No longer available, refer to [CP4BA 24.0.0](24.0.0/README.md)
+    
 - **Workshop/Mini-Tech Jam** with 10-20 participants on **CP4BA 23.0.2**
-    - Pre-deployed Client Onboarding from TechZone (coming soon)
-        - **Benefits:** Provisioning time only 2-3 hours; Comes with 20 users for mini-Tech Jams
-        - **Limitations:** Need to use Remote Desktop client (RDP) to connect to student VMs to perform demo/labs; No support for watsonx Orchestrate lab; No support for ADP lab (due to ADP design limitations)
-    - [Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos](23.0.2/Solutions/Client%20Onboarding/README_2302_ApolloBA_CP4BADemos.md)
-        - **Benefits:** Comes with 20 users for mini-Tech Jams; Accessible from any web browser; Supports watsonx Orchestrate lab
-        - **Limitations:** Provisioning time 5-7 hours; No support for ADP lab as part of mini-Tech Jam (due to ADP design limitations)
+    - Not longer available, refer to [CP4BA 24.0.0](24.0.0/README.md)
 
 
 
