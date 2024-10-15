@@ -32,7 +32,6 @@ nav:
           - 'Deploy CP4BA': '23.0.2\Bring-up\\Bring-Up-Lab-1\\Exercise-5-Deploy-CP4BA.md'
     - 'CP4BA Environment Options':
       - 'Single User Environment CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README.md'
-      - 'ApolloBA CP4BA 23.0.2': '23.0.2\Solutions/Client Onboarding/README_2302_ApolloBA_CP4BADemos.md'
       - 'Self-deploy scenario to CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README_2302_SelfDeploy.md'
   - '24.0.0':
     - 'Start': '24.0.0\README.md'
