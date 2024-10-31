@@ -1,6 +1,7 @@
 site_name: IBM Business Automation and Digital Labor - Jam-in-a-Box
 site_url: https://mydomain.org/mysite
 repo_url: https://github.com/IBM/cp4ba-jam-in-a-box
+
 repo_name: BA&DL-JiaB
 
 markdown_extensions:
