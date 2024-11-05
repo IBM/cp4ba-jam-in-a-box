@@ -1,0 +1,2288 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mydomain.org/mysite/23.0.2/Bring-up/Bring-Up-Lab-1/Exercise-5-Deploy-CP4BA/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Exercise 5: Deploy CP4BA - IBM Business Automation and Digital Labor - Jam-in-a-Box</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="black">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercise-5-deploy-cp4ba" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="IBM Business Automation and Digital Labor - Jam-in-a-Box" class="md-header__button md-logo" aria-label="IBM Business Automation and Digital Labor - Jam-in-a-Box" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IBM Business Automation and Digital Labor - Jam-in-a-Box
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exercise 5: Deploy CP4BA
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="black"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/IBM/cp4ba-jam-in-a-box" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BA&DL-JiaB
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+  23.0.2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../24.0.0/README.md" class="md-tabs__link">
+          
+  
+  24.0.0
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="IBM Business Automation and Digital Labor - Jam-in-a-Box" class="md-nav__button md-logo" aria-label="IBM Business Automation and Digital Labor - Jam-in-a-Box" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IBM Business Automation and Digital Labor - Jam-in-a-Box
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/IBM/cp4ba-jam-in-a-box" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BA&DL-JiaB
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    23.0.2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            23.0.2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Additional.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tracks & Capabilities Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Labs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Labs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IBM Cloud Pak for Business Automation (End-to-End)/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Cloud Pak for Business Automation Demo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Business Automation Application/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Business Automation Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Decisions/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Automation Decision Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document Processing/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Automation Document Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Business Automation Insights/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Business Automation Insights
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Workflow/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Business Automation Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Content/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM FileNet Content Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../watsonx Orchestrate/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM watsonx Orchestrate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Process Mining/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Process Mining
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Robotic Process Automation/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Robotic Process Automation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_11" id="__nav_1_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bring-up Lab
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            Bring-up Lab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_11_2" id="__nav_1_3_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bring-up Lab 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Bring-up Lab 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rapid Deployment Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exercise-1-Prepare.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prepare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exercise-2-Deploy-DB2.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy DB2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exercise-3-Create-DB2-Databases.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create DB2 Databases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exercise-4-Deploy-CP4BA-Operator.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy CP4BA Operator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exercise-5-Deploy-CP4BA.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy CP4BA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CP4BA Environment Options
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            CP4BA Environment Options
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Solutions/Client Onboarding/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Single User Environment CP4BA 23.0.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Solutions/Client Onboarding/README_2302_SelfDeploy.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Self-deploy scenario to CP4BA 23.0.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    24.0.0
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            24.0.0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Additional.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tracks & Capabilities Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Labs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Labs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/IBM Cloud Pak for Business Automation (End-to-End)/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Cloud Pak for Business Automation Demo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Business Automation Application/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Business Automation Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Decisions/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Automation Decision Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Document Processing/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Automation Document Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Business Automation Insights/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Business Automation Insights
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Workflow/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Business Automation Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Content/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM FileNet Content Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/watsonx Orchestrate/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM watsonx Orchestrate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Process Mining/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Process Mining
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Robotic Process Automation/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Robotic Process Automation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_11" id="__nav_2_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bring-up Lab
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            Bring-up Lab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_11_2" id="__nav_2_3_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bring-up Lab 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Bring-up Lab 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Regular Deployment Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-1-Prepare.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prepare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-2-Deploy-Operator.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-3-Prepare-Deployment.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preparing the Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-4-Deploy-PostgreSQL.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy PostgreSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-5-Configure-LDAP.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apply LDAP Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-6-Generating-DBs.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating CP4BA Databases and Verifying Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-7-Deploy-CP4BA.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy CP4BA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-8-PostDeployment.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Post Deployment Steps / Deployment Verification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Bring-Up/Bring-Up-Lab-2/Appendix-A-Troubleshooting.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CP4BA Environment Options
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            CP4BA Environment Options
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Solutions/Client Onboarding/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Single User Environment CP4BA 24.0.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Solutions/Client Onboarding/README_2400_ApolloBA_CP4BADemos.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ApolloBA CP4BA 24.0.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../24.0.0/Solutions/Client Onboarding/README_2400_SelfDeploy.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Self-deploy scenario to CP4BA 24.0.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#51-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-exercise-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Exercise Instructions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Exercise Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-deploy-cp4ba" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 Deploy CP4BA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-cp4ba-deployment-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.2 CP4BA Deployment Verification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-post-deployment-steps-enable-log-in-with-the-users-from-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.3 Post Deployment Steps - Enable log-in with the users from LDAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#524-post-deployment-steps-verify-that-ldap-users-can-log-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.4 Post Deployment Steps - Verify that LDAP users can log in
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#525-post-deployment-steps-verify-that-the-deployed-cp4ba-components-function-correctly" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.5 Post Deployment Steps - Verify that the deployed CP4BA components function correctly
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-about-cp4ba-rapid-deployment-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 About CP4BA Rapid Deployment Scripts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="exercise-5-deploy-cp4ba">Exercise 5: Deploy CP4BA</h1>
+<h2 id="51-introduction">5.1 Introduction</h2>
+<p>You have now completed <strong>all prerequisites</strong> for the CP4BA deployment: LDAP is installed on the bastion host, DB2 is deployed on the OpenShift cluster, and the needed databases are created. Also, the CP4BA Operators are deployed.</p>
+<p>You are now ready to get started with the <strong>deployment of the CP4BA Cluster</strong>!</p>
+<p>The first step is to verify <strong>LDAP is running correctly</strong>.</p>
+<p>Then you have to <strong>provide some more CP4BA-specific configuration parameters</strong> and then you can <strong>kick off the CP4BA deployment</strong> using the CP4BA Operator.</p>
+<p>Finally, there are some <strong>post-deployment and verification steps</strong> to verify that the deployment is healthy and that all deployed components are accessible.</p>
+<h2 id="52-exercise-instructions">5.2 Exercise Instructions</h2>
+<h3 id="521-deploy-cp4ba">5.2.1 Deploy CP4BA</h3>
+<p>Follow these step-by-step instructions to deploy CP4BA using the rapid deployment scripts:</p>
+<ol>
+<li>
+<p>Connect to your bastion host as documented in <strong><a href="../Exercise-1-Prepare/#123-access-the-openshift-tech-zone-envrioment">Exercise 1: Prepare yourself for this Bring-Up Lab</a></strong>. Login as the <strong>cp4badmin</strong> user, if needed, the password is <strong>passw0rd</strong> (where the third-last character is a zero).</p>
+</li>
+<li>
+<p>Open a Terminal, by clicking the link on the desktop. Then, check that the Security Directory Server is running fine.</p>
+</li>
+</ol>
+<pre><code class="language-sh">systemctl status sds
+</code></pre>
+<p>Expected output:</p>
+<p><img alt="SDS Status" src="../images/5.2.1-sdsstatus.png" /></p>
+<p>If you don't see <code>Active: active (running)</code> use these commands to stop and start SDS:</p>
+<pre><code class="language-sh">sudo systemctl stop sds
+</code></pre>
+<pre><code class="language-sh">sudo systemctl start sds
+</code></pre>
+<ol>
+<li>Run this command to verify you are still connected with OCP.</li>
+</ol>
+<pre><code class="language-sh">oc version
+</code></pre>
+<p><strong>Note:</strong> If you are not connected to OCP, follow the instructions in <strong><a href="../Exercise-1-Prepare/#123-access-the-openshift-tech-zone-envrioment">Exercise 1: Prepare yourself for this Bring-Up Lab</a></strong> to reconnect.</p>
+<ol>
+<li>Switch to the directory where you previously downloaded the rapid deployment scripts into.</li>
+</ol>
+<pre><code class="language-sh">cd /home/cp4badmin/Desktop/Labfiles/cp4ba-rapid-deployment/cp4ba-23-0-2/mycluster/deployment-db2-cp4ba
+</code></pre>
+<ol>
+<li>Open rapid deployment script 05-parametersForCp4ba.sh, with gedit.</li>
+</ol>
+<pre><code class="language-sh">gedit 05-parametersForCp4ba.sh
+</code></pre>
+<ol>
+<li>
+<p>Apply the following changes:</p>
+</li>
+<li>
+<p>cp4baProjectName – Name of the project/namespace to use to deploy CP4BA, for example, ibm-cp4ba – make sure to use the same value as used before when running script <code>cp4a-clusteradmin-setup.sh</code></p>
+<p>set the value to <strong>ibm-cp4ba</strong></p>
+</li>
+<li>
+<p>cp4baTlsSecretName – Parameter for ROKS deployments on IBM Cloud only – as you are not deploying on ROKS, leave empty</p>
+<p><strong>remove</strong> the default value REQUIRED, and leave this parameter <strong>empty</strong></p>
+</li>
+<li>
+<p>cp4baAdminPassword – Use the password for user cp4badmin (this user was for you created in the LDAP server).</p>
+<p>set the value to <strong>passw0rd</strong> (where the third-last character is a zero)</p>
+</li>
+<li>
+<p>ldapAdminPassword – Use the password that was specified for cn=root when setting up LDAP</p>
+<p>set the value to <strong>passw0rd123</strong> (where the sixth character is a zero)</p>
+</li>
+<li>
+<p>ldapServer – The hostname or IP of the LDAP server</p>
+<p>set the value to <strong>"10.100.1.8"</strong></p>
+</li>
+<li>
+<p>The changes you made so far should look as shown below.</p>
+<p><img alt="CP4BA Parameters" src="../images/5.2.1-cp4baparameters.png" /></p>
+</li>
+<li>
+<p>Leave all other properties at their default values</p>
+<blockquote>
+<p>The storage class <strong>nfs-client</strong> available on your OpenShift cluster from TechZone is already referenced under properties named <strong>cp4baScXXX</strong> and <strong>cp4baBlockScFast</strong> as default value.</p>
+</blockquote>
+</li>
+<li>
+<p>Save your changes and close the editor</p>
+</li>
+<li>
+<p>Run script <strong>07-createCp4baDeployment.sh</strong>. This script will now deploy CP4BA using the parameters you previously provided in 01-parametersForDb2OnOCP.sh and 05-parametersForCp4ba.sh.</p>
+</li>
+</ol>
+<pre><code class="language-sh">./07-createCp4baDeployment.sh
+</code></pre>
+<p><strong>Notes:</strong></p>
+<p>This script will prompt you for various input. Please have a look at the sample script output provided below to see the answers you must use.</p>
+<p>You need your Entitlement Registry key handy, see also <strong><a href="https://myibm.ibm.com/products-services/containerlibrary" target="_blank">https://myibm.ibm.com/products-services/containerlibrary</a></strong>.</p>
+<p>When you paste your Entitlement Registry key, it will not be shown; therefore, paste it just once and hit the Enter key.</p>
+<p>Sample script output:</p>
+<pre><code>./07-createCp4baDeployment.sh
+
+Found 01-parametersForDb2OnOCP.sh.  Reading in variables from that script.
+   Reading 01-parametersForDb2OnOCP.sh ...
+Done!
+
+Found 05-parametersForCp4ba.sh.  Reading in variables from that script.
+   Reading 05-parametersForCp4ba.sh ...
+   Extracting OCP Hostname
+   OCPHostname set to apps.ocp.ibm.edu
+Done!
+
+Using correct cp4ba version.
+
+This script PREPARES and optionaly CREATES the CP4BA deployment using template ibm_cp4a_cr_template.002.ent.FoundationContent.yaml in project ibm-cp4ba. 
+
+Are 01-parametersForDb2OnOCP.sh and 05-parametersForCp4ba.sh up to date, and do you want to continue? (Yes/No, default: No): Yes   &lt;--- Enter Yes here
+
+Preparing the CP4BA deployment...
+
+Switching to project ibm-cp4ba...
+Already on project &quot;ibm-cp4ba&quot; on server &quot;https://api.ocp.ibm.edu:6443&quot;.
+
+Collecting information for secret ibm-entitlement-key. For this, your Entitlement Registry key is needed.
+
+You can get the Entitlement Registry key from here: https://myibm.ibm.com/products-services/containerlibrary
+
+Enter your Entitlement Registry key: &lt;paste your Entitlement Registry key here ONCE, it will not be shown, then hit the Enter key&gt;
+Verifying the Entitlement Registry key...
+Login Succeeded!
+Entitlement Registry key is valid.
+
+Deployment of CP4BA required synchronied clocks among the server nodes.
+Synchronize clocks now (y/n) ? n   &lt;--- Enter n here
+Not synchronizing clocks...
+
+Preparing the CP4BA secrets...
+
+Preparing the CR YAML for deployment...
+
+All artefacts for deployment are prepared.
+
+Do you want to CREATE the CP4BA deployment in project ibm-cp4ba now? (Yes/No, default: No): Yes   &lt;--- Enter Yes here
+
+Creating the CP4BA deployment...
+Creating secret ibm-entitlement-key in project ibm-cp4ba...
+Already exists
+Already on project &quot;ibm-cp4ba&quot; on server &quot;https://api.ocp.ibm.edu:6443&quot;.
+
+Creating CP4BA secrets...
+secret/ldap-bind-secret created
+secret/icp4a-shared-encryption-key created
+secret/resource-registry-admin-secret created
+secret/ibm-ban-secret created
+secret/ibm-fncm-secret created
+secret/icp4adeploy-bas-admin-secret created
+secret/playback-server-admin-secret created
+secret/icp4adeploy-workspace-aae-app-engine-admin-secret created
+secret/ibm-adp-secret created
+secret/ibm-bawaut-server-db-secret created
+secret/ibm-pfs-admin-secret created
+secret/ibm-bawaut-admin-secret created
+secret/ibm-odm-db-secret created
+secret/ibm-ier-secret created
+Done.
+
+Creating the CP4BA deployment...
+icp4acluster.icp4a.ibm.com/icp4adeploy created
+Done.
+
+All changes got applied. Exiting...
+</code></pre>
+<h3 id="522-cp4ba-deployment-verification">5.2.2 CP4BA Deployment Verification</h3>
+<p>The deployment of CP4BA might take some time, <strong>usually about one hour</strong>.</p>
+<p>You can monitor the progress of the deployment either through the OpenShift Web Console in the  Web Browser or by command line using the <code>oc get pods</code> command or monitor the Operator's logs to spot any potential issues.</p>
+<p>This particular deployment is complete, when you see pod <strong>icp4adeploy-navigator-watcher-xxxxx</strong> in <strong>Running</strong> and <strong>Ready (1/1)</strong> state.</p>
+<p><strong>Note:</strong> As part of the CP4BA deployment, additional operators are added to project ibm-cp4ba.</p>
+<ol>
+<li>In the OCP Web Console, change project to <strong>ibm-cp4ba</strong>.</li>
+</ol>
+<p><img alt="OCP Web Console Project ibm-cp4ba" src="../images/5.2.2-ocpwebconsoleprojectibm-cp4ba.png" /></p>
+<ol>
+<li>Once the deployment has finished, you should see 40 Running and Ready pods, and about 12 or 13 Completed pods, but <strong>no Pending / CrashLoopBackOff pods</strong>.</li>
+</ol>
+<p><img alt="CP4BA Pods After Deployment" src="../images/5.2.2-cp4bapodsafterdeployment.png" /></p>
+<p><strong>Note:</strong>
+Some pods may be in Failed or Error state. For those, ensure another instance of that pod is in the Completed state. If this is the case, you can delete the Failed or Error pods. If there are pods in Failed or Error state where there is no other instance of that pod in a Completed state, the deployment is not healthy.</p>
+<p>In different CP4BA versions, you may see more pods.</p>
+<h3 id="523-post-deployment-steps-enable-log-in-with-the-users-from-ldap">5.2.3 Post Deployment Steps - Enable log-in with the users from LDAP</h3>
+<ol>
+<li>Get the user ID and password of the zen admin user by running those two commands:</li>
+</ol>
+<pre><code class="language-sh">oc get secret ibm-iam-bindinfo-platform-auth-idp-credentials -o jsonpath='{.data.admin_username}' | base64 -d &amp;&amp; echo
+</code></pre>
+<pre><code class="language-sh">oc get secret ibm-iam-bindinfo-platform-auth-idp-credentials -o jsonpath='{.data.admin_password}' | base64 -d &amp;&amp; echo
+</code></pre>
+<p><strong>Note:</strong> By default, the user id is <strong>cpadmin</strong>.</p>
+<ol>
+<li>
+<p>Switch to your Web Browser tab with the OCP Web Console and select <strong>Networking &gt;  Routes</strong>.</p>
+</li>
+<li>
+<p>If not on project <strong>ibm-cp4ba</strong>, switch to it.</p>
+</li>
+<li>
+<p>In the <strong>Location</strong> column on the <strong>cpd</strong> Route, <strong>click on the URL</strong> to open the cpd route in a new tab.</p>
+</li>
+</ol>
+<p><img alt="CPD Route" src="../images/5.2.3-cpdroute.png" /></p>
+<ol>
+<li>Accept the self-signed certificate.</li>
+</ol>
+<p><strong>Note:</strong> For deploying the CP4BA Cluster, properly signed certificates can be created, which don't raise security exceptions in the Web Browser. This requires having SSL Certificates from a Certificate Authority, which would be available, for example, in an OCP environment on IBM Cloud.</p>
+<ol>
+<li>
+<p>On the Log in to IBM Cloud Pak screen, select <strong>IBM-provided credentials (cpadmin only)</strong>.</p>
+</li>
+<li>
+<p><strong>Log in</strong> using the zen admin user credentials you gathered in <strong>Step 1</strong>.</p>
+</li>
+</ol>
+<p><img alt="Log-in Page" src="../images/5.2.3-loginpage.png" /></p>
+<ol>
+<li>You now see the IBM Cloud Pak Welcome page. Click <strong>Manage users</strong>.</li>
+</ol>
+<p><img alt="Welcome Page" src="../images/5.2.3-welcomepage.png" /></p>
+<ol>
+<li>Select tab <strong>User groups</strong> and click <strong>New user group</strong>.</li>
+</ol>
+<p><img alt="New User Group" src="../images/5.2.3-newusergroup.png" /></p>
+<ol>
+<li>
+<p>Enter the name <strong>cp4bausers</strong> and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>On the <strong>Users</strong> page, select <strong>Identity provider groups</strong>, search for <strong>cp4bausers</strong>, <strong>select the result</strong> and click <strong>Next</strong>.</p>
+<p><img alt="Users Page" src="../images/5.2.3-userspage.png" /></p>
+</li>
+<li>
+<p>On the <strong>Roles</strong> page, select <strong>Automation Developer</strong> (needed for CP4BA, for example, to access BAStudio) and <strong>User</strong>, then click <strong>Next</strong>.</p>
+<p><img alt="Roles Page" src="../images/5.2.3-rolespage.png" /></p>
+</li>
+<li>
+<p>On the <strong>Summary</strong> page, review the selections and click <strong>Create</strong>.</p>
+</li>
+<li>
+<p>Verify that the new group got created. Then, select the <strong>Users</strong> tab and click <strong>cp4badmin</strong>.</p>
+<p><img alt="User cp4badmin" src="../images/5.2.3-usercp4badmin.png" /></p>
+</li>
+<li>
+<p>Click on <strong>Assign roles</strong>.</p>
+</li>
+<li>
+<p><strong>Select all roles</strong> and click <strong>Assign 4 roles</strong>.</p>
+<p><img alt="Cp4badmin Roles" src="../images/5.2.3-cp4badminroles.png" /></p>
+</li>
+<li>
+<p>Verify the roles where assigned successfully. Then, log out with the zen admin user.</p>
+</li>
+</ol>
+<h3 id="524-post-deployment-steps-verify-that-ldap-users-can-log-in">5.2.4 Post Deployment Steps - Verify that LDAP users can log in</h3>
+<ol>
+<li>
+<p>Click Log in.</p>
+</li>
+<li>
+<p>As <strong>Log in with</strong> option, select this time <strong>Enterprise LDAP</strong>.</p>
+</li>
+<li>
+<p>Log in with <strong>cp4badmin</strong>, a user from LDAP. The password is <strong>passw0rd</strong> (where the third-last character is a zero).</p>
+</li>
+<li>
+<p>Verify that cp4badmin now has full administrative access to zen - cp4badmin should also see the <strong>Manage users</strong> option, and in the <strong>hamburger menu</strong> the entry <strong>Administration</strong>.</p>
+<p><img alt="Cp4badmin Logged In" src="../images/5.2.4-cp4badminloggedin.png" /> <img alt="Cp4badmin Logged In" src="../images/5.2.4-cp4badminloggedin2.png" /></p>
+</li>
+</ol>
+<h3 id="525-post-deployment-steps-verify-that-the-deployed-cp4ba-components-function-correctly">5.2.5 Post Deployment Steps - Verify that the deployed CP4BA components function correctly</h3>
+<p>In this chapter you will gather the cluster's URLs from config map <strong>icp4adeploy-cp4ba-access-info</strong> and test that all URLs work.</p>
+<ol>
+<li>
+<p>Switch to the Browser tab with <strong>OpenShift Web Console</strong> open.</p>
+</li>
+<li>
+<p>Select <strong>Workloads &gt; ConfigMaps</strong>.</p>
+</li>
+<li>
+<p>Search for <strong>icp4adeploy-cp4ba-access-info</strong>.</p>
+<p><img alt="Config Map" src="../images/5.2.5-configmap.png" /></p>
+</li>
+<li>
+<p>Click <strong>icp4adeploy-cp4ba-access-info</strong> to open this config map.</p>
+</li>
+<li>
+<p>Scroll down to the <strong>Data &gt; cpe-access-info</strong> section.</p>
+</li>
+<li>
+<p>In a new Web Browser tab, open the URL for <strong>Content Platform Engine administration</strong></p>
+</li>
+</ol>
+<p><strong>Note:</strong> As you are already logged in as cp4badmin, the ACCE will show up.</p>
+<ol>
+<li>Expand <strong>Object Stores</strong> and verify <strong>CONTENT</strong> is available.</li>
+</ol>
+<p><img alt="ACCE" src="../images/5.2.5-acce.png" /></p>
+<p><strong>Note:</strong> As part of the deployment it's possible to initialize the CPE domain and object stores. The selected template for deployment, creates P8DOMAIN and object store CONTENT.</p>
+<ol>
+<li>
+<p>Switch back to OpenShift Web Console tab where config map <strong>icp4adeploy-cp4ba-access-info</strong> is shown.</p>
+</li>
+<li>
+<p>Locate <strong>Business Automation Navigator for CP4BA</strong> URL in the <strong>navigator-access-info</strong> section.</p>
+</li>
+<li>
+<p>In a new Browser tab, open <strong>Business Automation Navigator for CP4BA URL</strong>.</p>
+<p><img alt="Navigator" src="../images/5.2.5-navigator.png" /></p>
+<p><strong>Note:</strong> The hamburger menu provides you access to some other navigator desktops.</p>
+</li>
+<li>
+<p>Similarly, verify the following two URL pages open correctly.</p>
+<ul>
+<li>
+<p>Content Management Interoperability Services for CP4BA (log in with cp4badmin / passw0rd, where the third-last character is a zero)</p>
+</li>
+<li>
+<p>Content Services GraphQL</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="53-summary">5.3 Summary</h2>
+<p>You have completed this exercise and learned how to leverage the CP4BA rapid deployment scripts to install CP4BA on an OCP cluster.</p>
+<h3 id="531-about-cp4ba-rapid-deployment-scripts">5.3.1 About CP4BA Rapid Deployment Scripts</h3>
+<p>The CP4BA rapid deployment scripts (<a href="https://github.com/IBM/cp4ba-rapid-deployment" target="_blank">https://github.com/IBM/cp4ba-rapid-deployment</a>) are accessible by customers, business partners, and IBMers. The IBM Automation SWAT team continuously maintains them. Feel free to use them.</p>
+<p>At the moment, only one template is available for CP4BA version 23.0.2, the one you used while this lab. Moving forward, more templates will get added to the rapid deployment scripts that allow you to rapidly install more CP4BA patterns.</p>
+<p>Congratulations! You have now successfully installed IBM Cloud Pak for Business Autiomation version 23.0.2 IF002 on your OpenShift cluster using the rapid deployment scripts. With that, this lab is complete.</p>
+<p>Now that you completed all exercises of this lab, you can do the <a href="https://learn.ibm.com/course/view.php?id=11286" target="_blank">Quiz for Bring-up Lab 1</a> to earn the <a href="https://www.credly.com/org/ibm/badge/ibm-cloud-pak-for-business-automation-installation-tech-jam" target="_blank">Badge for Lab 1</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.top", "content.code.copy", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+<script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "b309a6b8-f4bf-4f39-844d-50305bf18c83", // The ID of this integration.
+      region: "aws-us-east-1", // The region your integration is hosted in.
+      serviceInstanceID: "20240117-1327-3518-4015-20b686392f52", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+  
+    
+      <script src="../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "b309a6b8-f4bf-4f39-844d-50305bf18c83", // The ID of this integration.
+          region: "aws-us-east-1", // The region your integration is hosted in.
+          serviceInstanceID: "20240117-1327-3518-4015-20b686392f52", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+      
+
+  </body>
+</html>
