@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-1. Select the lab(s) you are interested in in the left column of the table of the [Labs to Environments Mapping](#labs-to-environments-mapping) section
+1. Select the lab(s) you are interested in on the left column of the table of the [Labs to Environments Mapping](#labs-to-environments-mapping) section
 2. Follow the instructions in the right column of the table to request the appropriate environment
 
 
