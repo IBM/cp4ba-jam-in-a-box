@@ -9,7 +9,7 @@
 
 ## Introduction
 
-The <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario" target="_blank">Client Onboarding</a> scenario is an end-to-end demo for Cloud Pak for Business Automation (CP4BA) and selected aspects of watsonx Orchestrate(wxO). 
+The <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario" target="_blank">Client Onboarding</a> scenario is an end-to-end demo for Cloud Pak for Business Automation (CP4BA) and selected aspects of watsonx Orchestrate (wxO). 
 
 The CP4BA part covers the following components: Automation Decision Services (ADS), Automation Document Processing (ADP), Business Automation Applications (BAA), Workflow, Content, Robotic Process Automation (RPA), Business Automation Insights (BAI). The wxO part covers skill, skill flow, and automation building.
 
