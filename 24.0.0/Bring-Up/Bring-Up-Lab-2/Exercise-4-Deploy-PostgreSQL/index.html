@@ -1499,6 +1499,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Deploy PostgreSQL
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1508,6 +1519,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-exercise-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Exercise Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-validation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Validation steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1779,6 +1836,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-exercise-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Exercise Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-validation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Validation steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1796,36 +1888,37 @@
 
 
 <h1 id="exercise-4-deploy-postgresql">Exercise 4: Deploy PostgreSQL</h1>
-<h1 id="41-introduction">4.1 Introduction</h1>
+<h2 id="41-introduction">4.1 Introduction</h2>
 <p>In this section, the PostgreSQL database will be deployed, and the database related property files of the CP4BA deployment updated with required configuration values. 
 For the deployment of the PostgreSQL database, the open source PostgreSQL container image from the docker repository will be used. For commercial usage, for example for Production environments of customers
 with needed software support, there exist commercial products such as the EDB PostgreSQL provided with the CP4BA since version 24.0.0</p>
-<h1 id="42-exercise-instructions">4.2 Exercise Instructions</h1>
+<h2 id="42-exercise-instructions">4.2 Exercise Instructions</h2>
 <ol>
 <li>
 <p>Switch to the <strong>Terminal</strong> window. Change to the cp4ba directory.</p>
-<p><code>cd $HOME/cp4ba</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd $HOME/cp4ba
+</span></code></pre></div>
 </li>
 <li>
 <p>Create a subdirectory to maintain postgres, and change into this subdirectory
-    <code>sh
-    mkdir postgres</code>
-    <code>sh
-    cd postgres</code></p>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir<span class="w"> </span>postgres
+</span></code></pre></div>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>postgres
+</span></code></pre></div></p>
 </li>
 <li>
 <p>Generate a self-signed certificate to be used with the PostgreSQL deployment. 
-    <code>sh
-    openssl req -new -text -passout pass:passw0rd -subj /CN=localhost -out server.req</code>
-    <code>sh
-    openssl rsa -in privkey.pem -passin pass:passw0rd -out server.key</code>
-    <code>sh
-    openssl req -x509 -in server.req -text -key server.key -out server.crt</code></p>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-text<span class="w"> </span>-passout<span class="w"> </span>pass:passw0rd<span class="w"> </span>-subj<span class="w"> </span>/CN<span class="o">=</span>localhost<span class="w"> </span>-out<span class="w"> </span>server.req
+</span></code></pre></div>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>openssl<span class="w"> </span>rsa<span class="w"> </span>-in<span class="w"> </span>privkey.pem<span class="w"> </span>-passin<span class="w"> </span>pass:passw0rd<span class="w"> </span>-out<span class="w"> </span>server.key
+</span></code></pre></div>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> </span>-in<span class="w"> </span>server.req<span class="w"> </span>-text<span class="w"> </span>-key<span class="w"> </span>server.key<span class="w"> </span>-out<span class="w"> </span>server.crt
+</span></code></pre></div></p>
 </li>
 <li>
 <p>Generate a Kubernetes TLS secret for the certificates.
-    <code>sh
-    kubectl create secret tls postgres-tls --key server.key --cert server.crt</code></p>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>tls<span class="w"> </span>postgres-tls<span class="w"> </span>--key<span class="w"> </span>server.key<span class="w"> </span>--cert<span class="w"> </span>server.crt
+</span></code></pre></div></p>
 </li>
 <li>
 <p>Open a new tab in Firefox and navigate to the <a href="../LabData/postgres.yaml">LabData/postgres.yaml</a> file. Download the file <strong>postgres.yaml</strong> to the lab environment. To do that, with the content of the postgres.yaml file displayed in the Github window, right-click on the "Raw" link above and save the link to file.</p>
@@ -1833,50 +1926,56 @@ with needed software support, there exist commercial products such as the EDB Po
 </li>
 <li>
 <p>Change to the Terminal window. Copy the postgres deployment file to the current folder, and edit the <strong>postgres.yaml</strong> file to review its contents.</p>
-<p><code>cp ~/Downloads/postgres.yaml postgres.yaml
-gedit postgres.yaml</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>cp ~/Downloads/postgres.yaml postgres.yaml
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>gedit postgres.yaml
+</span></code></pre></div>
 </li>
 <li>
 <p>No changes are needed in the <strong>postgres.yaml</strong> file. Review, that the postgres adminitrator will receive the name <strong>pgadmin</strong> and password <strong>passw0rd</strong> where the third-last character is a zero. A persistent volume claim having 20 Gbyte will be allocated for the database from the <strong>nfs-client</strong> storage class. The postgres pod will define a label named <strong>app</strong> with the value <strong>postgres</strong>, which can be used to search for the pod. Then close the editor again, and apply the specification:</p>
-<p><code>sh
-oc apply -f postgres.yaml</code>
+<p><div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>oc<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>postgres.yaml
+</span></code></pre></div>
 Expect following output:
-<code>sh
-serviceaccount/postgres created
-secret/postgres-secret created
-persistentvolumeclaim/postgres created
-deployment.apps/postgres created
-service/postgres created</code></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>serviceaccount/postgres<span class="w"> </span>created
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>secret/postgres-secret<span class="w"> </span>created
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>persistentvolumeclaim/postgres<span class="w"> </span>created
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>deployment.apps/postgres<span class="w"> </span>created
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>service/postgres<span class="w"> </span>created
+</span></code></pre></div></p>
 </li>
 <li>
 <p>Deployment of PostgreSQL will first create an initialization pod, which sets up the persistent volume claim, then one new Postgres pod will be created. Monitor the output of the <code>oc get pods</code> command until the <strong>postgres</strong> pod is running. The form below will only list the Postgres pod, and wait for updates of the status. Abort when you see its running.</p>
-<p><code>oc get pods -l app=postgres -w</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>oc get pods -l app=postgres -w
+</span></code></pre></div>
 </li>
 <li>
 <p>To allow running commands in the Postgres Pod without looking up its name every time, it is recommended to set a shell variable.
-    <code>POSTGRES=$(oc get pods -l app=postgres -o 'jsonpath={.items[0].metadata.name}'); echo "Postgres Pod is $POSTGRES"</code></p>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>POSTGRES=$(oc get pods -l app=postgres -o &#39;jsonpath={.items[0].metadata.name}&#39;); echo &quot;Postgres Pod is $POSTGRES&quot;
+</span></code></pre></div></p>
 </li>
 <li>
 <p>The postgres Pod contains a single filesystem, which will be used for all of the tablespacs needed for the databases, and which still need to be created. Lets verify that postgres is now available and has no tablespaces defined yet. The required command is:
-    <code>oc exec $POSTGRES -- psql -U pgadmin -c '\db+'</code>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>oc exec $POSTGRES -- psql -U pgadmin -c &#39;\db+&#39;
+</span></code></pre></div>
     Following output is expected:
-    <code>List of tablespaces
-        Name    |  Owner  | Location | Access privileges | Options |  Size  | Description 
-    ------------+---------+----------+-------------------+---------+--------+-------------
-     pg_default | pgadmin |          |                   |         | 29 MB  | 
-     pg_global  | pgadmin |          |                   |         | 531 kB | 
-    (2 rows)</code></p>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>                                    List of tablespaces
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    Name    |  Owner  | Location | Access privileges | Options |  Size  | Description 
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>------------+---------+----------+-------------------+---------+--------+-------------
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a> pg_default | pgadmin |          |                   |         | 29 MB  | 
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a> pg_global  | pgadmin |          |                   |         | 531 kB | 
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>(2 rows)
+</span></code></pre></div></p>
 </li>
 <li>
 <p>Some of the postgres parameters need further customization, so copy out the parameters file for modification. The first command shows the full pathname of the postgresql.conf configuration file, which is needed for the second commands.</p>
-<p><code>sh
-oc exec $POSTGRES -- find /var/lib -name postgresql.conf</code>
-<code>sh
-oc cp $POSTGRES:/var/lib/postgresql/data/pgdata/postgresql.conf postgresql.conf</code></p>
+<p><div class="language-sh highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>oc<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="nv">$POSTGRES</span><span class="w"> </span>--<span class="w"> </span>find<span class="w"> </span>/var/lib<span class="w"> </span>-name<span class="w"> </span>postgresql.conf
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>oc<span class="w"> </span>cp<span class="w"> </span><span class="nv">$POSTGRES</span>:/var/lib/postgresql/data/pgdata/postgresql.conf<span class="w"> </span>postgresql.conf
+</span></code></pre></div></p>
 </li>
 <li>
 <p>Now edit the postgresql.conf configuration file.</p>
-<p><code>gedit postgresql.conf</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>gedit postgresql.conf
+</span></code></pre></div>
 </li>
 <li>
 <p>The first place to change is the line showing <strong>max_connections</strong>. Change the value to at least <strong>500</strong>, which gives more than 50 connections per JDBC connector, as long as only one CPE pod is used.</p>
@@ -1890,21 +1989,26 @@ oc cp $POSTGRES:/var/lib/postgresql/data/pgdata/postgresql.conf postgresql.conf<
 <p>The third place to change is to insert some ssl-directives after the block with the ssl settings. The settings make the ssl certificate known to Postgres. Insert the following line after the block with the ssl settings, as shown in the picture:</p>
 <p><img alt="enable ssl" src="../Images/5.2-set-ssl.png" /></p>
 <p>Insert the following lines:
-<code>ssl = on
-ssl_cert_file = '/var/lib/postgresql/data/server.crt'
-ssl_key_file = '/var/lib/postgresql/data/server.key'</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>ssl = on
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>ssl_cert_file = &#39;/var/lib/postgresql/data/server.crt&#39;
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>ssl_key_file = &#39;/var/lib/postgresql/data/server.key&#39;
+</span></code></pre></div></p>
 </li>
 <li>
 <p>Save the file and close the editor.</p>
 </li>
 <li>
 <p>Copy back the configuration file into the container. The directory containing it is backed up by a persistent volume, so any changes on it will persist. After copying the container, its required to restart Postgres, so delete the Pod for it to happen.</p>
-<p><code>oc cp postgresql.conf $POSTGRES:/var/lib/postgresql/data/pgdata/postgresql.conf</code>
-<code>oc delete pod $POSTGRES</code>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>oc cp postgresql.conf $POSTGRES:/var/lib/postgresql/data/pgdata/postgresql.conf
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>oc delete pod $POSTGRES
+</span></code></pre></div>
 Monitor the Postgres pod for being started again:
-<code>oc get pods -l app=postgres -w</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>oc get pods -l app=postgres -w
+</span></code></pre></div></p>
 <p>As after that the newly started Postgres Pod gets a new name, re-create the shell variable:
-<code>POSTGRES=$(oc get pods -l app=postgres -o 'jsonpath={.items[0].metadata.name}'); echo "Postgres Pod is $POSTGRES"</code>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>POSTGRES=$(oc get pods -l app=postgres -o &#39;jsonpath={.items[0].metadata.name}&#39;); echo &quot;Postgres Pod is $POSTGRES&quot;
+</span></code></pre></div>
 In the verification section below, we will verify that the changes to the configuration were successful.</p>
 <p>Next we need to confirm on the server name and port for connections to the database. </p>
 <blockquote>
@@ -1915,21 +2019,24 @@ In the verification section below, we will verify that the changes to the config
 <p>As PostgreSQL is running in a pod, it can be reached through the service defined for it in the postgres specification. It can be seen that the default port for PostgreSQL is 5432. For the query we can also use the label which is used for the deployment, as shown below.</p>
 <p><img alt="determining service address for postgresql deployment" src="../Images/5.2-get-services.png" /></p>
 <p>The commands to determine this information are:</p>
-<p><code>oc get service -l app=postgres</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>oc get service -l app=postgres
+</span></code></pre></div>
 </li>
 <li>
 <p>That service is made available through the DNS of Kubernetes, with the name <servicename>.<namespace/project>.svc. Pods within the same project/namespace can also use only the servicename. Lets check it by opening a shell in the operator pod, and test connectivity. </p>
 <p><img alt="Checking Connectivity" src="../Images/5.2-checking-connectivity.png" /> </p>
 <p>Of course the <strong>curl</strong> command cannot terminate, as PostgreSQL is not telnet, so abort it by pressing <strong>Ctrl-C</strong>. But the verbose output allows checking, if the connection can be made. Within Containers, connectivity cannot be checked with the usual ping command. The required commands are:</p>
-<p><code>oc get pod -l name=ibm-cp4a-operator
-oc exec &lt;name of ibm-cp4a-operator pod&gt; -it -- bash
-curl -v telnet://postgres.ibm-cp4ba.svc:5432</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>oc get pod -l name=ibm-cp4a-operator
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>oc exec &lt;name of ibm-cp4a-operator pod&gt; -it -- bash
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>curl -v telnet://postgres.ibm-cp4ba.svc:5432
+</span></code></pre></div>
 <p>You can close the shell in the Operator pod again.</p>
 </li>
 <li>
 <p>The next step is to update the property files, which have been generated previously, with the information from the Postgres database deployment. Navigate back to the directory containing them, and edit the files.</p>
-<p><code>cd $HOME/cp4ba/cert-kubernetes/scripts/cp4ba-prerequisites/propertyfile
-gedit cp4ba_db_server.property</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>cd $HOME/cp4ba/cert-kubernetes/scripts/cp4ba-prerequisites/propertyfile
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>gedit cp4ba_db_server.property
+</span></code></pre></div>
 </li>
 <li>
 <p>It is suggested to make the window wide enough to not be disturbed by the comments. Modify the server name, port, ssl, and client ssl settings in this file as indicated below.</p>
@@ -1943,12 +2050,14 @@ gedit cp4ba_db_server.property</code></p>
 </li>
 <li>
 <p>The required certificate can be copied out of the directory where it was created, out of the Postgres pod, or out of the secret. The below command copies it out of the secret.</p>
-<p><code>oc get secret postgres-tls -o 'jsonpath={.data.tls\.crt}' | base64 --decode &gt; cert/db/db1/db-cert.crt</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>oc get secret postgres-tls -o &#39;jsonpath={.data.tls\.crt}&#39; | base64 --decode &gt; cert/db/db1/db-cert.crt
+</span></code></pre></div>
 </li>
 <li>
 <p>Then invoke the editor again on the other database related property file. Before invoking the editor, just determine how the database password passw0rd looks like, when its base64 encoded, that string is required when editing the next file.</p>
-<p><code>echo -n passw0rd | base64
-gedit cp4ba_db_name_user.property</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>echo -n passw0rd | base64
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>gedit cp4ba_db_name_user.property
+</span></code></pre></div>
 <p><strong>Note:</strong> The <strong>-n</strong> option to echo will suppress the linefeed character, which echo normally prints following the output. If it is included, the linefeed will be part of the base64 encoded string, and might lead to illegal passwords, which are very hard to find later.</p>
 </li>
 <li>
@@ -1966,14 +2075,14 @@ gedit cp4ba_db_name_user.property</code></p>
 <h2 id="43-validation-steps">4.3 Validation steps</h2>
 <p>Successful installation of the DB Server was verified by the steps above already. Successful modification of the database server and users property files will be done through running of the <code>cp4ba-prerequisite.sh</code> script in Validate mode, in a later exercise. </p>
 <p>A common error not detected (yet) by the prerequisite scripts in validate mode is to forget tuning the database configuration with increasing max connections and allowing prepared transactions. Therefore its recommended to double-check it at this point. Run the following command:</p>
-<pre><code>oc exec $POSTGRES -it -- psql -U pgadmin -c &quot;select name,setting from pg_settings where name IN ('max_connections', 'max_prepared_transactions') ;&quot;
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>oc exec $POSTGRES -it -- psql -U pgadmin -c &quot;select name,setting from pg_settings where name IN (&#39;max_connections&#39;, &#39;max_prepared_transactions&#39;) ;&quot;
+</span></code></pre></div>
 <p>It should print following table:</p>
 <p><img alt="Verifying Settings" src="../Images/5.3-verifying-settings.png" /></p>
-<p>Further lets check, if the SSL settings were accepted:</p>
-<pre><code>oc exec $POSTGRES -it -- psql -U pgadmin -c &quot;select name,setting from pg_settings where name LIKE 'ssl%' ;&quot;
-</code></pre>
-<p>Which should lead to:</p>
+<p>Further lets check, if the SSL settings were accepted:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>oc exec $POSTGRES -it -- psql -U pgadmin -c &quot;select name,setting from pg_settings where name LIKE &#39;ssl%&#39; ;&quot;
+</span></code></pre></div>
+Which should lead to:</p>
 <p><img alt="Verifying SSL" src="../Images/5.3-verifying-ssl.png" /></p>
 <p>In the <a href="../Exercise-5-Configure-LDAP/">Next Exercise</a> the remaining configuration values,  as well as the LDAP-server related configuration values will be updated in the property files.</p>
 

@@ -1541,6 +1541,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Generating CP4BA Databases and Verifying Configuration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1550,6 +1561,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-exercise-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Exercise Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-validation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Validation steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1779,6 +1836,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-exercise-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Exercise Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-validation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Validation steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1796,21 +1888,23 @@
 
 
 <h1 id="exercise-6-generating-cp4ba-databases-and-verifying-configuration">Exercise 6: Generating CP4BA Databases and Verifying Configuration</h1>
-<h1 id="61-introduction">6.1 Introduction</h1>
+<h2 id="61-introduction">6.1 Introduction</h2>
 <p>In the last two exercises, the configuration parameters in the property files created by the <code>cp4a-prerequisites.sh</code> script, have been set to the required values. This is a required precondition for 
 running the <code>cp4a-prerequisites.sh</code> now in <strong>generate</strong> mode. In this mode, the script will first review completeness of the configuration variables, and will then generate the required Kubernetes secret definitions, as well as sql scripts to create the databases on the PostgreSQL database server.</p>
 <p>The PostgreSQL database creation scripts need to be copied into the PostgreSQL database server. They need some manual modifications, as PostgreSQL deployments in different environment might differ from each other. The DB scripts can be transferred, edited and executed one by one, or as its done here, uploaded to and executed on the PostgreSQL pod via one shell command. </p>
 <p>Applying the Kubernetes secrets is easy, it can be done using the steps indicated here. Alternatively another script from the case package can also be used.</p>
 <p>In the verification section of this Exercise, the <code>cp4a-prerequisites.sh</code> script run in <strong>validate mode</strong>, to validate the configuration and deployment of the prerequisites. As the connection to the database is also verified, and as the database can only be reached from inside the Kubernetes cluster, the checks cannot be run directly on the bastion node, without giving error messages from the unavailable database server. Therefore, to run the validation, the deployment scripts directory is copied into the <code>/tmp</code> directory of the CP4BA Operator, and run from there. </p>
-<h1 id="62-exercise-instructions">6.2 Exercise Instructions</h1>
+<h2 id="62-exercise-instructions">6.2 Exercise Instructions</h2>
 <ol>
 <li>
 <p>Switch to the <strong>Terminal</strong> window. Change to the <strong>cert-kubernetes/scripts</strong> directory.</p>
-<p><code>cd $HOME/cp4ba/cert-kubernetes/scripts</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd $HOME/cp4ba/cert-kubernetes/scripts
+</span></code></pre></div>
 </li>
 <li>
 <p>Run the <strong>cp4a-prerequisites.sh</strong> script in <strong>generate</strong> mode. In this mode, information configured in the property files is reviewed, and the CP4BA Configuration files are generated. </p>
-<p><code>./cp4a-prerequisites.sh -m generate</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./cp4a-prerequisites.sh -m generate
+</span></code></pre></div>
 <p>If error messages are printed, get back to the last exercise and edit the two property files, to find any configuration value which still contains a <code>&lt;required&gt;</code> value.</p>
 <blockquote>
 <p>Note When running it without parameters, the <code>cp4a-prerequisites.sh</code> script supplies a usage.</p>
@@ -1824,12 +1918,14 @@ running the <code>cp4a-prerequisites.sh</code> now in <strong>generate</strong> 
 </li>
 <li>
 <p>The database creation scripts are generated in directory <strong>cp4ba-prerequisites/dbscript</strong>, so change into that directory.</p>
-<p><code>cd cp4ba-prerequisites/dbscript</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cd cp4ba-prerequisites/dbscript
+</span></code></pre></div>
 </li>
 <li>
 <p>List the database creation scripts that were generated, then invoke the editor with one of them, to review for any required changes.</p>
-<p><code>find . -name \*.sql -print
-gedit &lt;first database creation script&gt;</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>find . -name \*.sql -print
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>gedit &lt;first database creation script&gt;
+</span></code></pre></div>
 </li>
 <li>
 <p>In the opened editor, see that the database creation script will create the database user, with the passwords which were configured in the properties files. It will create one tablespace, and set 
@@ -1841,43 +1937,49 @@ to persist the tablespaces. Find out which directory is the right one in the fol
 </li>
 <li>
 <p>To find out the right directory, list the directories which have been mounted in the postgres pod. </p>
-<p><code>POSTGRES=$(oc get pods -l app=postgres -o 'jsonpath={.items[0].metadata.name}'); echo "Postgres Pod is $POSTGRES"
-oc exec $POSTGRES -- df</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>POSTGRES=$(oc get pods -l app=postgres -o &#39;jsonpath={.items[0].metadata.name}&#39;); echo &quot;Postgres Pod is $POSTGRES&quot;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>oc exec $POSTGRES -- df
+</span></code></pre></div>
 <p>Review in the output that the "/mnt" directory seems to be mounted to some storage from outside the container image, for example.</p>
 <p><img alt="DF Output" src="../Images/7.1-finding-tablespace-directory.png" /></p>
 </li>
 <li>
 <p>Run the following command to have Openshift describe the Postgres pod. Look in the output for the listing of the mouted storage.</p>
-<p><code>oc describe pod $POSTGRES</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>oc describe pod $POSTGRES
+</span></code></pre></div>
 <p>Find following part within the output (by scrolling up).</p>
 <p><img alt="Mounted Filesystems" src="../Images/7.1-mounted-filesystems.png" /></p>
 </li>
 <li>
 <p>Modify the tablespace creation command in all database scripts. The loop iterates over all SQL creation scripts</p>
-<p><code>sh
-for sql in $(find . -name \*.sql -print); do echo $sql; sed -i 's/pgsqldata/mnt/g' $sql; done</code></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">for</span><span class="w"> </span>sql<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="se">\*</span>.sql<span class="w"> </span>-print<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$sql</span><span class="p">;</span><span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/pgsqldata/mnt/g&#39;</span><span class="w"> </span><span class="nv">$sql</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div>
 </li>
 <li>
 <p>Check the sql database creation scripts for the modified tablespace commands
-    <code>grep "/mnt" $(find . -name \*.sql -print)</code></p>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>grep &quot;/mnt&quot; $(find . -name \*.sql -print)
+</span></code></pre></div></p>
 </li>
 <li>
 <p>For the tablespace creation commands to work, the directories containing the tablespces must exist. Open a shell in the Postgres pod and create the four directories.
-    <code>oc exec $POSTGRES -it -- bash -c "mkdir /mnt/{gcddb,os1db,os2db,icndb}; ls -lR /mnt"</code></p>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>oc exec $POSTGRES -it -- bash -c &quot;mkdir /mnt/{gcddb,os1db,os2db,icndb}; ls -lR /mnt&quot;
+</span></code></pre></div></p>
 </li>
 <li>
 <p>Then each of the database creation scripts needs to be copied into the PostgreSQL pod, and run from inside the pod. The following command does this. The command in the first line finds and loops over the sql files in the subfolders. For each of the files found, the next three commands are executed. The <code>done</code> command terminates the loop. It is recommended to copy &amp; paste each line by itself.</p>
-<p><code>for sql in $(find . -name \*.sql -print); do
-echo Creating Database $sql
-oc cp $sql $POSTGRES:/tmp/dbscript.sql
-oc exec $POSTGRES -it -- psql -U pgadmin -f /tmp/dbscript.sql
-done</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>for sql in $(find . -name \*.sql -print); do
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>echo Creating Database $sql
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>oc cp $sql $POSTGRES:/tmp/dbscript.sql
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>oc exec $POSTGRES -it -- psql -U pgadmin -f /tmp/dbscript.sql
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>done
+</span></code></pre></div>
 <p>Output should be similar to:</p>
 <p><img alt="Creating Databases" src="../Images/7.1-creating-databases-separate.png" /></p>
 </li>
 <li>
 <p>Check the created databases with the psql command \l+</p>
-<p><code>oc exec $POSTGRES -it -- psql -U pgadmin -c '\l+'</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>oc exec $POSTGRES -it -- psql -U pgadmin -c &#39;\l+&#39;
+</span></code></pre></div>
 <p>Expected output:</p>
 <p><img alt="Database Listing" src="../Images/7.1-database-listing.png" /></p>
 <p>In case the databases are created incorrectly, you can delete the Postgres cluster <code>oc delete -f postgres.yaml</code>, and recreate it <code>oc apply -f postgres.yaml</code>.
@@ -1885,8 +1987,9 @@ Before trying to recreate the databases, copy the modified <code>postgresql.conf
 </li>
 <li>
 <p>The next step is to apply the generated secrets. Thankfully the secrets are ready and don’t need manual updating, and there is even a shellscript for defining them. </p>
-<p><code>cd ../
-./create_secret.sh</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>cd ../
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>./create_secret.sh
+</span></code></pre></div>
 <p>Expected output:  <br />
 <img alt="Creating K8s Secrets" src="../Images/7.1-creating-secrets-ssl.png" /></p>
 <blockquote>
@@ -1903,18 +2006,20 @@ from inside the Openshift cluster, to check for any additional allowances to acc
 <li>
 <p>As the database is reachable only from within the Openshift cluster, it is needed to copy the directory containing the scripts, including all of the property files configured earlier, into a pod. 
     Here we choose the ibm-cp4a-operator pod, as it has all required commands to execute the validation script. </p>
-<p><code>cd $HOME/cp4ba
-oc get pods -l name=ibm-cp4a-operator
-oc cp cert-kubernetes &lt;cp4ba operator podname&gt;:/tmp/</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>cd $HOME/cp4ba
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>oc get pods -l name=ibm-cp4a-operator
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>oc cp cert-kubernetes &lt;cp4ba operator podname&gt;:/tmp/
+</span></code></pre></div>
 <p>Expected output:</p>
 <p><img alt="Copying case package script directory into Operator Pod" src="../Images/7.1-copying-case-package-script-into-operator.png" /></p>
 </li>
 <li>
 <p>Run a shell inside the Operator. Before we can run the validation script, the pathname of the certificate file directory needs to be corrected. Then you can run the validation script. At the beginning of its execution, some error messages on unavailable command tput and clear are printed. Those are not harmful.</p>
-<p><code>oc exec &lt;cp4ba operator podname&gt; -it -- bash
-cd /tmp/cert-kubernetes/scripts
-sed -i s@/home/cp4badmin/cp4ba/cert-kubernetes@/tmp/cert-kubernetes@g cp4ba-prerequisites/propertyfile/cp4ba_db_server.property
-./cp4a-prerequisites.sh -m validate</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>oc exec &lt;cp4ba operator podname&gt; -it -- bash
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>cd /tmp/cert-kubernetes/scripts
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>sed -i s@/home/cp4badmin/cp4ba/cert-kubernetes@/tmp/cert-kubernetes@g cp4ba-prerequisites/propertyfile/cp4ba_db_server.property
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>./cp4a-prerequisites.sh -m validate
+</span></code></pre></div>
 </li>
 </ol>
 <p>Review the generated output. It checks not only the storage class, ldap settings and database settings, but measures also the typical connection delay to the LDAP server and the database. </p>

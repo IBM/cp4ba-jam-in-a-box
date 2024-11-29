@@ -1879,13 +1879,13 @@
 <ol>
 <li>
 <p>Switch to the <strong>Terminal</strong> window. Change to the cert-kubernetes/scripts directory.</p>
-<p><code>sh
-cd $HOME/cp4ba/cert-kubernetes/scripts</code></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span><span class="nv">$HOME</span>/cp4ba/cert-kubernetes/scripts
+</span></code></pre></div>
 </li>
 <li>
 <p>Run the cp4a-prerequisites.sh script in prepare mode. In this mode, information about the deployment is gathered, and property files are generated to supply required parameters.</p>
-<p><code>sh
-./cp4a-prerequisites.sh -m property</code></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./cp4a-prerequisites.sh<span class="w"> </span>-m<span class="w"> </span>property
+</span></code></pre></div>
 <blockquote>
 <p>When running it without parameters, it supplies a usage.</p>
 <p><img alt="Prerequisite Script Usage" src="../Images/4.1-prerequisites-script-usage.png" /></p>
@@ -1941,8 +1941,8 @@ cd $HOME/cp4ba/cert-kubernetes/scripts</code></p>
 <h1 id="33-verification">3.3 Verification</h1>
 <p>The script should have created a directory with property files, for further configuration. </p>
 <p>List the files in the generated directory:</p>
-<pre><code class="language-sh">ls -ltR cp4ba-prerequisites
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ls<span class="w"> </span>-ltR<span class="w"> </span>cp4ba-prerequisites
+</span></code></pre></div>
 <p><img alt="Generated Configuration Files" src="../Images/4.1-generated-config-files.png" /></p>
 <p>These configuration files need to be filled with values. Before we get to it, we will first deploy the database in the <a href="../Exercise-4-Deploy-PostgreSQL/">next exercise</a>.</p>
 

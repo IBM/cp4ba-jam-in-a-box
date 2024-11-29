@@ -1908,8 +1908,8 @@
 </li>
 <li>
 <p>Open a Terminal, by clicking the link on the desktop. Create a directory to host the product deployment scripts. 
-    <code>sh
-    mkdir cp4ba</code></p>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>cp4ba
+</span></code></pre></div></p>
 </li>
 <li>
 <p>Open Firefox through clicking on the link on the desktop. Find the link for <strong>Cert-Kubernetes Repository</strong> in the Bookmark toolbar, and navigate to it, the URL is https://github.com/icp4a/cert-kubernetes. The cert-kubernetes repository contains different branches for the different versions of CP4BA. To obtain the download link, make sure the <code>24.0.0</code> branch is selected, then click on the green pulldown menu <code>&lt;&gt; Code</code>, and click on "Download ZIP". </p>
@@ -1917,26 +1917,28 @@
 </li>
 <li>
 <p>Back on the terminal window, navigate to the cp4ba directory, and unpack the cert-kubernetes repository copy. 
-    <code>sh
-    cd cp4ba</code>
-    <code>unzip ../Downloads/cert-kubernetes-24.0.0.zip</code></p>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>cp4ba
+</span></code></pre></div>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>unzip ../Downloads/cert-kubernetes-24.0.0.zip
+</span></code></pre></div></p>
 </li>
 <li>
 <p>In order to not have to upgrade all of the instructions with every new ifix of CP4BA, lets make the name a bit more generic.
-    <code>mv cert-kubernetes-24.0.0 cert-kubernetes</code> </p>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mv cert-kubernetes-24.0.0 cert-kubernetes
+</span></code></pre></div></p>
 </li>
 <li>
 <p>Change into the cert-kubernetes/scripts directory
-    <code>sh
-    cd cert-kubernetes/scripts</code></p>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>cert-kubernetes/scripts
+</span></code></pre></div></p>
 </li>
 <li>
 <p>Before the operator can be deployed, a connection to the OCP cluster must be established. If you did the previous exercise immediately before this one, the connection should still be valid, nothing needs to be done. If not, use <strong>Firefox</strong> to login to the OCP Console application, then generate a login command, and paste it into the Terminal window, as shown in the last exercise.</p>
 </li>
 <li>
 <p>Verify, that on openshift a storage class has been created.
-    <code>sh
-    oc get storageclasses</code>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>oc<span class="w"> </span>get<span class="w"> </span>storageclasses
+</span></code></pre></div>
     Expected output:
     <img alt="Storageclasses" src="../Images/3.1-storageclasses.png" />    </p>
 <blockquote>

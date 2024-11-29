@@ -1520,6 +1520,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Apply LDAP Configuration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1529,6 +1540,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#51-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-exercise-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Exercise Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-validation-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Validation Instructions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1779,6 +1836,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#51-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-exercise-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Exercise Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-validation-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Validation Instructions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1796,38 +1888,43 @@
 
 
 <h1 id="exercise-5-apply-ldap-configuration">Exercise 5: Apply LDAP Configuration</h1>
-<h1 id="51-introduction">5.1 Introduction</h1>
+<h2 id="51-introduction">5.1 Introduction</h2>
 <p>In prior exercises, empty property files were created by running the <code>cp4a-prerequisites.sh</code> in generate mode. Some of the property files were also modified with concrete values, in the last exercise, after having created the PostgreSQL database server. </p>
 <p>In this exercise, the remaining configuration settings will be made. The exercise will also validate that the LDAP Server is running, and can be connected from the CP4BA Operators, by running it to export an LDIF file, with defined users and groups. </p>
-<h1 id="52-exercise-instructions">5.2 Exercise Instructions</h1>
+<h2 id="52-exercise-instructions">5.2 Exercise Instructions</h2>
 <ol>
 <li>
 <p>Switch to the <strong>Terminal</strong> window. Change to the <strong>propertyfile</strong> directory inside the <strong>cert-kubernetes/scripts</strong> directory.</p>
-<p><code>cd $HOME/cp4ba/cert-kubernetes/scripts/cp4ba-prerequisites/propertyfile</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd $HOME/cp4ba/cert-kubernetes/scripts/cp4ba-prerequisites/propertyfile
+</span></code></pre></div>
 </li>
 <li>
 <p>Check if the Security Directory Server is running. </p>
-<p><code>systemctl status sds</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>systemctl status sds
+</span></code></pre></div>
 <p>Expected output:</p>
 <p><img alt="SDS running" src="../Images/6.2-sds-running.png" /></p>
 </li>
 <li>
 <p>Determine the IP address of the bastion host. That value will later be the LDAP Server hostname.</p>
-<p><code>ip a</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ip a
+</span></code></pre></div>
 <p>Expected output, the IP address is marked in red:</p>
 <p><img alt="Determine IP Address of Bastion" src="../Images/6.2-ip-addr.png" /></p>
 </li>
 <li>
 <p>To check connectivity from the OCP cluster, we will again use the curl command from the ibm-cp4a-operator. Determine first the complete name of the pod, and insert that value in the next command to open a shell. Then verify connectivity with the curl command. You need to abort it again, when seeing that the connection could be established.</p>
-<p><code>oc get pod -l name=ibm-cp4a-operator
-oc exec &lt;name of ibm-cp4a-operator pod&gt; -it -- bash
-curl -v telnet://10.100.1.8:389</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>oc get pod -l name=ibm-cp4a-operator
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>oc exec &lt;name of ibm-cp4a-operator pod&gt; -it -- bash
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>curl -v telnet://10.100.1.8:389
+</span></code></pre></div>
 <p>Expected output:</p>
 <p><img alt="Check Connectivity to LDAP Server" src="../Images/6.2-ldap-connectivity.png" /></p>
 </li>
 <li>
 <p>Still in the shell in the ibm-cp4a-operator, we can verify the ldap credentials as well as getting the usernames</p>
-<p><code>ldapsearch -x -b 'dc=example,dc=com' -H ldap://10.100.1.8:389 -D cn=root -W</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ldapsearch -x -b &#39;dc=example,dc=com&#39; -H ldap://10.100.1.8:389 -D cn=root -W
+</span></code></pre></div>
 <p><strong>Note:</strong> Care must be taken when using this command on a production installation, where the connected LDAP Server might be used by all users of a company: The output would be very long, the runtime high. 
 In this kind of environments, query a useful subset of the LDAP Server only.</p>
 <p>The command will prompt for the admin password for the LDAP server. Provide the value <strong>passw0rd123</strong> with a zero. The output should list the DN values of all users and groups, among them the admin user named <strong>cp4badmin</strong> and the group <strong>cp4badmins</strong>. Exit the shell, by pressing Ctrl-D.</p>
@@ -1836,12 +1933,14 @@ In this kind of environments, query a useful subset of the LDAP Server only.</p>
 <p>The passwords in the property files can be supplied unencrypted or as a base64 encrypted string, to allow for inclusion of any special characters. Therefore, before invoking the editor, just determine 
     how the LDAP bind user password <code>passw0rd123</code> looks like, when its base64 encoded. Alternatively you could specify the password without base64 encryption, in which case it would be needed to 
     remove the <code>{Base64}</code> prefix preceeding the value. </p>
-<p><code>echo -n passw0rd123 | base64</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>echo -n passw0rd123 | base64
+</span></code></pre></div>
 <p><strong>Note:</strong> The <strong>-n</strong> option to echo will suppress the linefeed character, which echo normally prints following the output. If it is included, the linefeed will be part of the base64 encoded string, and might lead to illegal passwords, which are very hard to find later.</p>
 </li>
 <li>
 <p>Now edit the LDAP Server property file.</p>
-<p><code>gedit cp4ba_LDAP.property</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>gedit cp4ba_LDAP.property
+</span></code></pre></div>
 </li>
 <li>
 <p>Most of the needed configuration values are contained already in the ldapsearch query executed above. The single exception to this is the SSL support, which would be disabled for now. For completeness, below table contains the values which need to be replaced. Make sure to retain the quotation marks. </p>
@@ -1889,12 +1988,14 @@ In this kind of environments, query a useful subset of the LDAP Server only.</p>
 </li>
 <li>
 <p>Before editing the last configuration file, we again need the base64 encrypted value for the <strong>cp4badmin</strong> user, which we will also use as LTPA password and keystore password. The 0 is a zero.</p>
-<p><code>echo -n passw0rd | base64</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>echo -n passw0rd | base64
+</span></code></pre></div>
 <p><strong>Note:</strong> The <strong>-n</strong> option to echo will suppress the linefeed character, which echo normally prints following the output. If it is included, the linefeed will be part of the base64 encoded string, and might lead to illegal passwords, which are very hard to find later.</p>
 </li>
 <li>
 <p>Now edit the CP4BA user name configuration file.</p>
-<p><code>gedit cp4ba_user_profile.property</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>gedit cp4ba_user_profile.property
+</span></code></pre></div>
 </li>
 <li>
 <p>When editing the file, all passwords are set to the base64 encrypted value resulting from above command. All admin user names are set to cp4badmin, and all admin groups to cp4badmins. The Object Store users group is set to cp4bausers. There are only few other values to replace. Some values are already preconfigured from the answers provided when generating the property files.</p>
@@ -1992,7 +2093,7 @@ it can then not be found anymore under its original unique id value. This can af
 <p>Save the configuration file and close the editor.</p>
 </li>
 </ol>
-<h1 id="53-validation-instructions">5.3 Validation Instructions</h1>
+<h2 id="53-validation-instructions">5.3 Validation Instructions</h2>
 <p>The settings are validated by running the prerequisites script in generate and validate mode, in later exercises. So, for now please continue to generate and use the Database creation scripts in the <a href="../Exercise-6-Generating-DBs/">Next Exercise</a>.</p>
 
 

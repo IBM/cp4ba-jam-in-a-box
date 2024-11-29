@@ -1562,6 +1562,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Deploy CP4BA
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1571,6 +1582,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-exercise-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Exercise Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-verification-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Verification Instructions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1779,6 +1836,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-exercise-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Exercise Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-verification-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Verification Instructions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1796,21 +1888,23 @@
 
 
 <h1 id="exercise-7-deploy-cp4ba">Exercise 7: Deploy CP4BA</h1>
-<h1 id="71-introduction">7.1 Introduction</h1>
+<h2 id="71-introduction">7.1 Introduction</h2>
 <p>All of the prerequisites required for the deployment of Cloud Pak For Business Automation have been installed in the previous execises, and the configuration has been validated by running the <code>cp4a-prerequisites.sh</code> in validate mode. </p>
 <p>With successful execution of the validation, the Case Package script <code>cp4a-deployment.sh</code> is invoked. As outlined earlier, the script detects and reuses the information made for the <code>cp4a-prerequisites.sh</code> script, so no real further informtion needs to be provided. The Case package script <code>cp4a-deployment.sh</code> generates the Custom Resource definition, which in our case is a Custom Resource of type <em>Content</em>. Applying it completes the deployment phase, and participants are due for a break to await further deployment done by the Cloud Pak For Business Automation Operators.</p>
 <blockquote>
 <p><strong>Note:</strong> When deploying only the Content-Pattern, the Case package deployment scripts now generate a Custom Resource of type <strong>Content</strong>, where a general deployment of Cloud Pak for Business Automation would use the type <strong>ICP4ACluster</strong>. Gladly, the specifications are needing same settings, with the same syntax, and there would be few, if any settings allowed in one of them, but not on the other. So, if a configuration of type <strong>Content</strong> needs to be extended by components not covered by the Content Operator, such as Business Automation Insights or Business Automation Workflow, it would be needed to change the type of the CR file accordingly, and applying it to Kubernetes, for the operator to update the environment. Take care to not change the name of the CR file, only the type. </p>
 </blockquote>
-<h1 id="72-exercise-instructions">7.2 Exercise Instructions</h1>
+<h2 id="72-exercise-instructions">7.2 Exercise Instructions</h2>
 <ol>
 <li>
 <p>Switch to the <strong>Terminal</strong> window. Change to the <strong>cert-kubernetes/scripts</strong> directory.</p>
-<p><code>cd $HOME/cp4ba/cert-kubernetes/scripts</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd $HOME/cp4ba/cert-kubernetes/scripts
+</span></code></pre></div>
 </li>
 <li>
 <p>Run the deployment script.</p>
-<p><code>./cp4a-deployment.sh</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./cp4a-deployment.sh
+</span></code></pre></div>
 </li>
 <li>
 <p>Indicate that you accept the license.</p>
@@ -1847,19 +1941,22 @@
 </li>
 <li>
 <p>Then the scripts asks, in which project the CP4BA operands (running pods and configuration information) should be generated. Provide the namespace <code>ibm-cp4ba</code> on this question. After completing this step, navigate into the <code>generated-cr</code> directory, and review the generated Custom Resource file.</p>
-<p><code>cd generated-cr
-ls -l</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cd generated-cr
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ls -l 
+</span></code></pre></div>
 </li>
 <li>
 <p>Review, if any required fields are left to be filled out in the custom resource. The first command prints a version of the custom resource, which does not have any comments anymore. The grep command then searches for the required keyword, and lists two lines before and after it for a context.</p>
-<p><code>sed 's/#.*$//g' ibm_content_cr_final.yaml | grep -A2 -E2 -i '&lt;required&gt;'</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sed &#39;s/#.*$//g&#39; ibm_content_cr_final.yaml | grep -A2 -E2 -i &#39;&lt;required&gt;&#39;
+</span></code></pre></div>
 </li>
 <li>
 <p>Run an editor with the custom resource. Locate any sections above and provide a value. The required value for the <code>oc_cpe_obj_store_admin_user_groups</code> field is <code>cp4badmins</code>, it case it occurs.</p>
 <p>Note that the deployment scripts have chosen a specification for the "Content" Custom Resource Definition, which is being worked by the Content Operator. So any error messages will be logged by the Content Operator. Other deployments of the Cloud Pak for Business Automation, which also include other patterns, such as Business Automation Workflow would require a different kind of specification, using the "ICP4ACluster" Custom Resource Definition, which would be worked by the CP4A Operator.</p>
 <p>Also, the "CR", the "Custom Resource" as it is called, is not always named "icp4acluster". This one has the default name "content", which you are free to change if needed. That name will be used in many derived names though, including some of the secret names, so better don’t change it for the moment.</p>
 <p>For editing Custom Resources, or more general YAML files, it is good to use an editor supporting the special requirements of YAML files, and also supporting syntax highlighting. The author of this lab uses emacs for this purpose, and the yaml-mode for Emacs, which is available through open-source. Of course there are further options.</p>
-<p><code>gedit ibm_content_cr_final.yaml</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>gedit ibm_content_cr_final.yaml
+</span></code></pre></div>
 </li>
 <li>
 <p>In the Custom Resource which is open in the Editor, search for <code>initialize_configuration</code>. In some versions, the required values for the <code>oc_cpe_obj_store_admin_user_groups</code> settings are not properly copied from the propertyfiles to the CR. Update the values, the group name is <code>cp4badmins</code>.</p>
@@ -1868,13 +1965,14 @@ ls -l</code></p>
 <p>Note that no FileNet Process Engine Workflow system has been requested on any of the two object stores OS01 and OS02. Also note (by reviewing the <code>ic_icn_init_info</code> section) that Content Navigator will contain only the repository connection for the first object store, and give it the name <code>demo_repo1</code>. Update the settings as shown here:</p>
 <p><img alt="Define Process Engine Workflow System" src="../Images/8.1-customize-cr-1.png" /></p>
 <p>Insert the following lines at the indicated position. Take care to indent correctly. In YAML files, tabs must not be used for indenting, and each indentation step must be two spaces. For the addition, every line must be indented with exactly 8 spaces, no tabs.</p>
-<p><code>oc_cpe_obj_store_enable_workflow: true
-        oc_cpe_obj_store_workflow_region_name: "OS01Region1"
-        oc_cpe_obj_store_workflow_region_number: 1
-        oc_cpe_obj_store_workflow_data_tbl_space: "os1db_tbs"
-        oc_cpe_obj_store_workflow_admin_group: "cp4badmins"
-        oc_cpe_obj_store_workflow_config_group: "cp4bausers"
-        oc_cpe_obj_store_workflow_pe_conn_point_name: "pe_conn_os1"</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>        oc_cpe_obj_store_enable_workflow: true
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>        oc_cpe_obj_store_workflow_region_name: &quot;OS01Region1&quot;
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        oc_cpe_obj_store_workflow_region_number: 1
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        oc_cpe_obj_store_workflow_data_tbl_space: &quot;os1db_tbs&quot;
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        oc_cpe_obj_store_workflow_admin_group: &quot;cp4badmins&quot;
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        oc_cpe_obj_store_workflow_config_group: &quot;cp4bausers&quot;
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        oc_cpe_obj_store_workflow_pe_conn_point_name: &quot;pe_conn_os1&quot;
+</span></code></pre></div>
 <blockquote>
 <p><strong>Note:</strong> The FileNet Process Engine workflow system, which is being created in OS01 from the above specification, is needed on the BAWTOS Object store(s), for the implementation of Case Manager solutions.</p>
 </blockquote>
@@ -1886,22 +1984,24 @@ ls -l</code></p>
 <li>
 <p>Before you can apply the specification, it is needed to synchronize the clocks between the worker nodes of the Openshift cluster, find more on this topic in the documentation on
     https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/24.0.0?topic=cpd-option-1b-deploying-custom-resource-you-created-deployment-script. </p>
-<p><code>oc get node -l node-role.kubernetes.io/worker --no-headers -o name | xargs -I {} --  oc debug {} -- chroot /host sh -c 'systemctl restart chronyd'</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>oc get node -l node-role.kubernetes.io/worker --no-headers -o name | xargs -I {} --  oc debug {} -- chroot /host sh -c &#39;systemctl restart chronyd&#39;
+</span></code></pre></div>
 </li>
 <li>
 <p>Apply the specification. </p>
-<p><code>oc apply -f ibm_content_cr_final.yaml</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>oc apply -f ibm_content_cr_final.yaml
+</span></code></pre></div>
 <p><strong>Note:</strong> If you get errors, review if you have used inproper indentation on the above changes. If you have, correct the indentation and try again.</p>
 </li>
 </ol>
-<h1 id="73-verification-instructions">7.3 Verification Instructions</h1>
+<h2 id="73-verification-instructions">7.3 Verification Instructions</h2>
 <p>At this point, the operator will start deployment according to the specification. During first half hour or so, nothing much will be notable from the working, as foundational components need to be deployed first. </p>
 <p>If you like looking at some changing text, you can open two Terminal windows and run these two commands in them, one in each. The first one displays the pods which are defined in the current project, the second one fetches the podname of the Content Operator, and displays its logging output,  thereby filtering out the lines containing the word "info".</p>
-<pre><code>```
+<div class="language-text highlight"><pre><span></span><code>```
 watch oc get pods
 oc logs $(oc get pod -l name=ibm-content-operator -o jsonpath={.items[0].metadata.name}) -f | grep -v info
 ```
-</code></pre>
+</code></pre></div>
 <p>Error messages in the logs would have red color, and typically contain keyword "failed", but not all error messages might require followup actions. For monitoring the deployment the best option might be to await the end of the current loop of the Content Operator, and start from reviewing its status, which can easily be viewed from the Openshift Console window. Refer to the <a href="../Exercise-8-PostDeployment/">Next Exercise</a> for instructions on monitoring the deployment and on required post-deployment activity.</p>
 
 

@@ -1904,44 +1904,44 @@
 <p>Open a Terminal, by clicking the link on the desktop. Switch to the Labfiles directory to host there the product deployment scripts.</p>
 </li>
 </ol>
-<pre><code class="language-sh">cd /home/cp4badmin/Desktop/Labfiles
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>/home/cp4badmin/Desktop/Labfiles
+</span></code></pre></div>
 <ol>
 <li>Buy running the following commands, create a temporary directory, e.g., <code>/tmp</code>, download the CP4BA 23.0.2 IF002 Case package: <strong><a href="https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz" target="_blank">https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz</a></strong> into that temporary directory, and extract <code>ibm-cp-automation-5.1.2.tgz</code> into the same temporary directory.</li>
 </ol>
-<pre><code class="language-sh">mkdir tmp
-</code></pre>
-<pre><code class="language-sh">cd tmp
-</code></pre>
-<pre><code class="language-sh">wget https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz
-</code></pre>
-<pre><code class="language-sh">tar xvfz ibm-cp-automation-5.1.2.tgz
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir<span class="w"> </span>tmp
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>tmp
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>wget<span class="w"> </span>https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/5.1.2/ibm-cp-automation-5.1.2.tgz
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>tar<span class="w"> </span>xvfz<span class="w"> </span>ibm-cp-automation-5.1.2.tgz
+</span></code></pre></div>
 <ol>
 <li>Extract the content of archive ibm-cp-automation/inventory/cp4aOperatorSdk/files/deploy/crs/cert-k8s-23.0.2.tar into the Labfiles directory, delete the temporary directory.</li>
 </ol>
-<pre><code class="language-sh">cd ..
-</code></pre>
-<pre><code class="language-sh">tar xvf tmp/ibm-cp-automation/inventory/cp4aOperatorSdk/files/deploy/crs/cert-k8s-23.0.2.tar
-</code></pre>
-<pre><code class="language-sh">rm -r tmp
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>..
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>tar<span class="w"> </span>xvf<span class="w"> </span>tmp/ibm-cp-automation/inventory/cp4aOperatorSdk/files/deploy/crs/cert-k8s-23.0.2.tar
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>rm<span class="w"> </span>-r<span class="w"> </span>tmp
+</span></code></pre></div>
 <ol>
 <li>Change into the cert-kubernetes/scripts directory</li>
 </ol>
-<pre><code class="language-sh">cd cert-kubernetes/scripts
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd</span><span class="w"> </span>cert-kubernetes/scripts
+</span></code></pre></div>
 <ol>
 <li>Before running the script, make sure that you are connected through the oc CLI.</li>
 </ol>
-<pre><code class="language-sh">oc version
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>oc<span class="w"> </span>version
+</span></code></pre></div>
 <p><strong>Note:</strong> If you are not connected to OCP, follow the instructions in <strong><a href="../Exercise-1-Prepare/#123-access-the-openshift-tech-zone-envrioment">Exercise 1: Prepare yourself for this Bring-Up Lab</a></strong> to reconnect. </p>
 <ol>
 <li>Start the deployment of the CP4BA Operator by running the clusteradmin setup script.</li>
 </ol>
-<pre><code class="language-sh">./cp4a-clusteradmin-setup.sh
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>./cp4a-clusteradmin-setup.sh
+</span></code></pre></div>
 <ol>
 <li>The script initially prompts you for some input. First, select the correct type of environment. This environment uses an Openshift-environment on Private Cloud that is not ROKS, so select <strong>2</strong>, and hit the Enter key.</li>
 </ol>

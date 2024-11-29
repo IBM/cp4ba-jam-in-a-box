@@ -1880,24 +1880,24 @@
 <ol>
 <li>Run this command to verify you are still connected with OCP.</li>
 </ol>
-<pre><code class="language-sh">oc version
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>oc<span class="w"> </span>version
+</span></code></pre></div>
 <p><strong>Note:</strong> If you are not connected to OCP, follow the instructions in <strong><a href="../Exercise-1-Prepare/#123-access-the-openshift-tech-zone-envrioment">Exercise 1: Prepare yourself for this Bring-Up Lab</a></strong> to reconnect.</p>
 <ol>
 <li>Make sure to be in the right directory.</li>
 </ol>
-<pre><code class="language-sh">cd /home/cp4badmin/Desktop/Labfiles/cp4ba-rapid-deployment/cp4ba-23-0-2/mycluster/deployment-db2-cp4ba
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>/home/cp4badmin/Desktop/Labfiles/cp4ba-rapid-deployment/cp4ba-23-0-2/mycluster/deployment-db2-cp4ba
+</span></code></pre></div>
 <ol>
 <li>Run script <strong>03-createCp4baDBs4Db2OnOCP.sh</strong> to create the databases needed for the CP4BA template that you selected.</li>
 </ol>
-<pre><code class="language-sh">./03-createCp4baDBs4Db2OnOCP.sh
-</code></pre>
-<p><strong>Note:</strong> You can ignore the following warning:</p>
-<pre><code>SQL1363W  One or more of the parameters submitted for immediate modification were not changed dynamically.
-For these configuration parameters, the database must be shutdown and reactivated before the configuration
-parameter changes become effective.
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./03-createCp4baDBs4Db2OnOCP.sh
+</span></code></pre></div>
+<p><strong>Note:</strong> You can ignore the following warning:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>SQL1363W  One or more of the parameters submitted for immediate modification were not changed dynamically.
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>For these configuration parameters, the database must be shutdown and reactivated before the configuration
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>parameter changes become effective.
+</span></code></pre></div></p>
 <ol>
 <li>Review the output of the script and make sure there were no errors and that the following three databases were created:</li>
 </ol>
