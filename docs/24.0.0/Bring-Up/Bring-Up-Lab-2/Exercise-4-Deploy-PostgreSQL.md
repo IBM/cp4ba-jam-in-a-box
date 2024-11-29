@@ -1,12 +1,12 @@
 # Exercise 4: Deploy PostgreSQL
 
-# 4.1 Introduction
+## 4.1 Introduction
 
 In this section, the PostgreSQL database will be deployed, and the database related property files of the CP4BA deployment updated with required configuration values. 
 For the deployment of the PostgreSQL database, the open source PostgreSQL container image from the docker repository will be used. For commercial usage, for example for Production environments of customers
 with needed software support, there exist commercial products such as the EDB PostgreSQL provided with the CP4BA since version 24.0.0
 
-# 4.2 Exercise Instructions
+## 4.2 Exercise Instructions
 
 1.	Switch to the **Terminal** window. Change to the cp4ba directory.
 

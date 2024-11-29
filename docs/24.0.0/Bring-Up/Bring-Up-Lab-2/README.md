@@ -11,7 +11,7 @@ Version 1.0
 
 ---
 
-# Introduction
+## Introduction
 
 ## IBM Cloud Pak for Business Automation
 
@@ -54,7 +54,7 @@ Paragraphs like the below contain additional information, which would help to un
 
 **Approximate Duration:** 8 hours
 
-# Table of Exercises
+## Table of Exercises
 
 - [Exercise 1: Prepare yourself for this Bring-Up Lab](Exercise-1-Prepare.md) 
   
@@ -92,7 +92,7 @@ Paragraphs like the below contain additional information, which would help to un
 
   If things don't work as they should, this section may help to identify the cause of the problem.
   
-# Notices
+## Notices
 
 This information was developed for products and services offered in the USA.
 
@@ -118,7 +118,7 @@ Information concerning non-IBM products was obtained from the suppliers of those
 
 This information contains examples of data and reports used in daily business operations. To illustrate them as completely as possible, the examples include the names of individuals, companies, brands, and products. All of these names are fictitious and any similarity to the names and addresses used by an actual business enterprise is entirely coincidental.
 
-# Trademarks
+## Trademarks
 
 - IBM, the IBM logo, and ibm.com are trademarks or registered trademarks of International Business Machines Corp., registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies. A current list of IBM trademarks is available on the web at "Copyright and trademark information" at www.ibm.com/legal/copytrade.shtml.
 

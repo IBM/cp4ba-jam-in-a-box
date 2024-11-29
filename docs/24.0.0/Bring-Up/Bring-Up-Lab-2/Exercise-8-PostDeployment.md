@@ -1,10 +1,10 @@
 # Exercise 8: Post Deployment Steps / Deployment Verification
 
-# 8.1 Introduction
+## 8.1 Introduction
 
 In the previous exercises, the prerequisites for deployment of Cloud Pak For Business Automation have been setup, and a Content-deployment has been started. In this exercise it is shown how to determine, if the deployment is completed, or if errors have happened during the deployment. In the second part, required Post-Deployment steps are performed, and the URLs for usage of ACCE and Content Navigator are extracted from the Openshift Environment.
 
-# 8.2 Exercise Instructions
+## 8.2 Exercise Instructions
 
 1.	Switch to the **Firefox** window, and login to the **Openshift Web Console**. Open the **Home** menu, and select **Search**. Make sure you use the **ibm-cp4ba** project. Click on **Resources** and type in **Content**. Press return to display all custom resources for the "Content" Custom Resource Definition, in project ibm-cp4ba.
 

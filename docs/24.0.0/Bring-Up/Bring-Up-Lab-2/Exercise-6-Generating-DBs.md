@@ -1,6 +1,6 @@
 # Exercise 6: Generating CP4BA Databases and Verifying Configuration
 
-# 6.1 Introduction
+## 6.1 Introduction
 
 In the last two exercises, the configuration parameters in the property files created by the `cp4a-prerequisites.sh` script, have been set to the required values. This is a required precondition for 
 running the `cp4a-prerequisites.sh` now in **generate** mode. In this mode, the script will first review completeness of the configuration variables, and will then generate the required Kubernetes secret definitions, as well as sql scripts to create the databases on the PostgreSQL database server.
@@ -11,7 +11,7 @@ Applying the Kubernetes secrets is easy, it can be done using the steps indicate
 
 In the verification section of this Exercise, the `cp4a-prerequisites.sh` script run in **validate mode**, to validate the configuration and deployment of the prerequisites. As the connection to the database is also verified, and as the database can only be reached from inside the Kubernetes cluster, the checks cannot be run directly on the bastion node, without giving error messages from the unavailable database server. Therefore, to run the validation, the deployment scripts directory is copied into the `/tmp` directory of the CP4BA Operator, and run from there. 
 
-# 6.2 Exercise Instructions
+## 6.2 Exercise Instructions
 
 1.	Switch to the **Terminal** window. Change to the **cert-kubernetes/scripts** directory.
 

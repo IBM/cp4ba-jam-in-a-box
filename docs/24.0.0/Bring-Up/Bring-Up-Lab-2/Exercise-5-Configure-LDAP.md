@@ -1,12 +1,12 @@
 # Exercise 5: Apply LDAP Configuration
 
-# 5.1 Introduction
+## 5.1 Introduction
 
 In prior exercises, empty property files were created by running the `cp4a-prerequisites.sh` in generate mode. Some of the property files were also modified with concrete values, in the last exercise, after having created the PostgreSQL database server. 
 
 In this exercise, the remaining configuration settings will be made. The exercise will also validate that the LDAP Server is running, and can be connected from the CP4BA Operators, by running it to export an LDIF file, with defined users and groups. 
 
-# 5.2 Exercise Instructions
+## 5.2 Exercise Instructions
 
 1.	Switch to the **Terminal** window. Change to the **propertyfile** directory inside the **cert-kubernetes/scripts** directory.
 
@@ -139,6 +139,6 @@ In this exercise, the remaining configuration settings will be made. The exercis
 
 12.	Save the configuration file and close the editor.
 
-# 5.3 Validation Instructions
+## 5.3 Validation Instructions
 
 The settings are validated by running the prerequisites script in generate and validate mode, in later exercises. So, for now please continue to generate and use the Database creation scripts in the [Next Exercise](Exercise-6-Generating-DBs.md).

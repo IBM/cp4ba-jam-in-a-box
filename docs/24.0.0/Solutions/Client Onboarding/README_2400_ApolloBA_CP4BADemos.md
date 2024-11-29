@@ -48,8 +48,8 @@ Follow the journey <a href="https://techzone.ibm.com/collection/apollo-business-
 2. Fill in the reservation details and wait till the environment is **Ready**. This will normally take between 2-3 hours
 3. Once your environment is **Ready**, click on the reservation in **<a href="https://techzone.ibm.com/my/reservations" target="_blank">TechZone</a>** and copy the URL shown for **RPA Asynch Server API** at the top under **Published services**
 4. In your **Apollo Business Automation - CP4BA Demos** environment you need to launch the Cloud Pak Accelerator homepage in your browser. There are two different ways to do so:
-   1. Construct the URL based on the following naming pattern, replacing the your-environment in the link https://cp4accelerator.apps.your-environment.ocp.techzone.ibm.com/demos with the value (e.g. console-openshift-console.apps.**66e433006794d822e0236c61**.ocp.techzone.ibm.com/) from the Desktop url from the reservation
-   2. Open the **OpenShift Console**, navigate to **Networking --> Routes** and use the link under location for the **cp4accelerator-route** route and switch to the **Deploy Demo** tab
+      1. Construct the URL based on the following naming pattern, replacing the your-environment in the link https://cp4accelerator.apps.your-environment.ocp.techzone.ibm.com/demos with the value (e.g. console-openshift-console.apps.**66e433006794d822e0236c61**.ocp.techzone.ibm.com/) from the Desktop url from the reservation
+      2. Open the **OpenShift Console**, navigate to **Networking --> Routes** and use the link under location for the **cp4accelerator-route** route and switch to the **Deploy Demo** tab
 
 5. Click the blue **Update** button for the **Client Onboarding** tile
 6. Put the value of the **RPA Asynch Server API** that you copied in step 3 into the **RPA Server** field

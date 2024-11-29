@@ -1,6 +1,6 @@
 # Exercise 7: Deploy CP4BA
 
-# 7.1 Introduction
+## 7.1 Introduction
 
 All of the prerequisites required for the deployment of Cloud Pak For Business Automation have been installed in the previous execises, and the configuration has been validated by running the `cp4a-prerequisites.sh` in validate mode. 
 
@@ -8,7 +8,7 @@ With successful execution of the validation, the Case Package script `cp4a-deplo
 
 > **Note:** When deploying only the Content-Pattern, the Case package deployment scripts now generate a Custom Resource of type **Content**, where a general deployment of Cloud Pak for Business Automation would use the type **ICP4ACluster**. Gladly, the specifications are needing same settings, with the same syntax, and there would be few, if any settings allowed in one of them, but not on the other. So, if a configuration of type **Content** needs to be extended by components not covered by the Content Operator, such as Business Automation Insights or Business Automation Workflow, it would be needed to change the type of the CR file accordingly, and applying it to Kubernetes, for the operator to update the environment. Take care to not change the name of the CR file, only the type. 
 
-# 7.2 Exercise Instructions
+## 7.2 Exercise Instructions
 
 1.	Switch to the **Terminal** window. Change to the **cert-kubernetes/scripts** directory.
 
@@ -113,7 +113,7 @@ With successful execution of the validation, the Case Package script `cp4a-deplo
 	
     **Note:** If you get errors, review if you have used inproper indentation on the above changes. If you have, correct the indentation and try again.
 
-# 7.3 Verification Instructions	
+## 7.3 Verification Instructions	
 	
 At this point, the operator will start deployment according to the specification. During first half hour or so, nothing much will be notable from the working, as foundational components need to be deployed first. 
 
