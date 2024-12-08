@@ -55,7 +55,9 @@ Based on the technology used to achieve a short provisioning time, you need to p
 2. Wait till the environment is **Ready**, this will normally take between 2-3 hours
 
 3. Once your environment is Ready, connect to the bastion host through **RDP** (open the reserved environment from **<a href="https://techzone.ibm.com/my/reservations" target="_blank">https://techzone.ibm.com/my/reservations</a>** and copy the RDP value at the top to your RDP tool)
-   **Important:** The credentials to login to the bastion host are mention in the description of the tile
+   **Important:** The credentials to login to the bastion host are mention in the description of the tile. You may need to click a little twisty icon to see the full description with the credentials that are mentioned at the bottom.
+
+   For hints on how to access the bastion host via RDP for Windows and Mac, refer to this [document](AccessingBastionHostViaRDP.md).
 
 4. From within the bastion host
 
