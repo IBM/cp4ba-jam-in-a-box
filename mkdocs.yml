@@ -40,6 +40,7 @@ nav:
     - 'CP4BA Environment Options':
       - 'Single User Environment CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README.md'
       - 'Self-deploy scenario to CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README_2302_SelfDeploy.md'
+      - 'Accessing Bastion Host Via RDP': '23.0.2\Solutions\Client Onboarding\AccessingBastionHostViaRDP.md'
   - '24.0.0':
     - 'Start': '24.0.0\README.md'
     - 'Tracks & Capabilities Overview': '24.0.0\Additional.md'
