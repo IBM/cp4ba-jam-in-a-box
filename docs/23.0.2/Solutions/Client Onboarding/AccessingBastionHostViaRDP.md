@@ -4,11 +4,11 @@
 
 Access to a **Jam-in-a-Box Single User Environment** requires to connect to the bastion host via RDP. It cannot be accessed directly from your local browser.
 
-This page provides hints on how to access a Jam-in-a-Box Single User Environment via RDP from both Mac and Windows.
+This page provides hints on how to access a [Jam-in-a-Box Single User Environment](README.md) via RDP from both Mac and Windows.
 
-## **Mac Users**
+## Mac Users
 
-Mac users normally need to download and install a separate application to be able to connect to a remote system via RDP. While multiple application exist, below instructions showcase how to use **Windows App** from Microsoft as a free option (the previous version of the application was called Microsoft Remote Desktop).
+Mac users normally need to download and install a separate application to be able to connect to a remote system via RDP. While multiple applications exist, below instructions showcase how to use **Windows App** from Microsoft as a free option (the previous version of the application was called Microsoft Remote Desktop).
 
 1. In case not already installed, download and install <a href="https://apps.apple.com/us/app/windows-app/id1295203466" target="_blank">Windows App</a> through your Mac App Store
 
@@ -24,7 +24,7 @@ Mac users normally need to download and install a separate application to be abl
 
        ![](images/WindowsApp_Credentials.jpg)
 
-5. Once you added a PC, a tile is created on the main page. To access the environment later on, click on the tile.
+5. Once you added a PC, a tile is created on the main page. To access the environment later on, click on the tile
 
        ![](images/WindowsApp_Overview.jpg)
 
@@ -40,8 +40,11 @@ Windows users should have the Remote Desktop Connection app pre-installed on the
 
 2. Enter the RDP URL of your environment as **Computer** in the dialog shown when launching the App and click on Connect leaving all other settings unchanged
 
+       ![](images/Windows_RemoteDesktopApp.jpg)
+
 3. Once connected to your environment, **enter** the **username** and **password** in the login dialog **Login to bastion**
 
+       ![](images/Windows_RemoteDesktopLogin.jpg)
 
 
 ## Support
