@@ -10,6 +10,6 @@ IBM Business Automation Application (BAA) is a low-code capability of IBM Cloud 
 
 - **<a href="Lab%20Guide%20-%20Introduction%20to%20IBM%20Business%20Automation%20Application.pdf" target="_blank">Introduction to IBM Business Automation Application</a>**: This lab introduces you to the key concepts of IBM Business Automation Application including Application Designer. In this you will learn how to create toolkits, templates and applications that integrate with the Workflow, Decisions & Content capabilities of the CP4BA platform.
 
-    This lab requires additional files that can be found in the <a href="https://github.com/IBM/cp4ba-labs/tree/main/24.0.0/Business%20Automation%20Application/Lab%20Data" target="_blank">Lab Data</a> folder.
+    This lab requires additional files that can be found in the <a href="https://github.com/IBM/cp4ba-labs/tree/main/24.0.1/Business%20Automation%20Application/Lab%20Data" target="_blank">Lab Data</a> folder.
 
   **Approximate Duration:** 2 hours
