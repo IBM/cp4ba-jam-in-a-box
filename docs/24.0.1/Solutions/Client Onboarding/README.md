@@ -126,7 +126,7 @@ Below you find the links to the lab instructions for the labs supported in this 
 - [IBM Cloud Pak for Business Automation (End-to-End)](../../IBM Cloud Pak for Business Automation (End-to-End)\README.md)
 - [IBM Business Automation Application](../../Business Automation Application\README.md)
 - [IBM Automation Decision Services](../../Decisions\README.md)
-- [IBM Automation Document Processing](../../Document Processing\README.md)
+- IBM Automation Document Processing(Coming Soon)
 - [IBM Business Automation Insights](../../Business Automation Insights\README.md)
 - [IBM Business Automation Workflow](../../Workflow\README.md)
 - [IBM FileNet Content Services (CPE, GraphQL & Navigator)](../../Content\README.md)
