@@ -2,262 +2,332 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mydomain.org/mysite/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Additional/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/README_other/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Bring-up/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Bring-up/Bring-Up-Lab-1/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Bring-up/Bring-Up-Lab-1/Exercise-1-Prepare/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Bring-up/Bring-Up-Lab-1/Exercise-2-Deploy-DB2/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Bring-up/Bring-Up-Lab-1/Exercise-3-Create-DB2-Databases/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Bring-up/Bring-Up-Lab-1/Exercise-4-Deploy-CP4BA-Operator/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Bring-up/Bring-Up-Lab-1/Exercise-5-Deploy-CP4BA/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Business%20Automation%20Application/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Business%20Automation%20Insights/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Content/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Decisions/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Document%20Processing/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/IBM%20Cloud%20Pak%20for%20Business%20Automation%20%28End-to-End%29/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Process%20Mining/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Robotic%20Process%20Automation/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Solutions/Client%20Onboarding/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Solutions/Client%20Onboarding/AccessingBastionHostViaRDP/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Solutions/Client%20Onboarding/README_2202/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Solutions/Client%20Onboarding/README_2301/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Solutions/Client%20Onboarding/README_2302_SelfDeploy/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/Workflow/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/23.0.2/watsonx%20Orchestrate/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Additional/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/README_other/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Bring-Up/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Bring-Up/Bring-Up-Lab-2/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Bring-Up/Bring-Up-Lab-2/Appendix-A-Troubleshooting/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-1-Prepare/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-2-Deploy-Operator/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-3-Prepare-Deployment/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-4-Deploy-PostgreSQL/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-5-Configure-LDAP/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-6-Generating-DBs/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-7-Deploy-CP4BA/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Bring-Up/Bring-Up-Lab-2/Exercise-8-PostDeployment/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Business%20Automation%20Application/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Business%20Automation%20Insights/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Content/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Decisions/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Document%20Processing/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/IBM%20Cloud%20Pak%20for%20Business%20Automation%20%28End-to-End%29/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Process%20Mining/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Robotic%20Process%20Automation/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Solutions/Client%20Onboarding/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Solutions/Client%20Onboarding/README_2400_ApolloBA_CP4BADemos/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Solutions/Client%20Onboarding/README_2400_SelfDeploy/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/Workflow/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/24.0.0/watsonx%20Orchestrate/</loc>
-         <lastmod>2024-12-11</lastmod>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/24.0.1/</loc>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/24.0.1/Additional/</loc>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/24.0.1/Business%20Automation%20Application/</loc>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/24.0.1/Business%20Automation%20Insights/</loc>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/24.0.1/Content/</loc>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/24.0.1/Decisions/</loc>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/24.0.1/IBM%20Cloud%20Pak%20for%20Business%20Automation%20%28End-to-End%29/</loc>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/24.0.1/Robotic%20Process%20Automation/</loc>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/24.0.1/Solutions/Client%20Onboarding/</loc>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/24.0.1/Solutions/Client%20Onboarding/README_2401_ApolloBA_CP4BADemos/</loc>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/24.0.1/Solutions/Client%20Onboarding/README_2401_SelfDeploy/</loc>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/24.0.1/Workflow/</loc>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/24.0.1/watsonx%20Orchestrate/</loc>
+         <lastmod>2025-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/BAMOE/</loc>
+         <lastmod>2025-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
