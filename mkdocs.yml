@@ -72,6 +72,9 @@ nav:
       - 'Single User Environment CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README.md'
       - 'ApolloBA CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README_2400_ApolloBA_CP4BADemos.md'
       - 'Self-deploy scenario to CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README_2400_SelfDeploy.md'
+  - 'BAMOE':
+    - 'IBM Business Automation Manager Open Editions': 'BAMOE\README.md'
+    
       
 theme:
   custom_dir: custom/
