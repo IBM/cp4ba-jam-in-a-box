@@ -1,12 +1,8 @@
-# IBM Cloud Pak for Business Automation (CP4BA) 24.0.1 / watsonX Orchestrate Labs
+# IBM Cloud Pak for Business Automation (CP4BA) 24.0.1
 
-!!! IMPORTANT
->
-> Under construction!
+To be able to perform labs listed below, you need to have IBM Cloud Pak for Business Automation 24.0.1 (either Starter or Enterprise deployment) installed and have imported the Client Onboarding scenario as described [here](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/24.0.1).
 
-To be able to perform labs listed below, you need to have IBM Cloud Pak for Business Automation 24.0.1 (either Starter or Starter deployment) installed and have imported the Client Onboarding scenario as described [here](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/24.0.1). For performing the watsonx Orchestrate lab, a watsonx Orchestrate instance is required as an additional  prerequisite.
-
-The table below lists all capabilities for which currently labs are offered. Not all labs have been updated for CP4BA 24.0.1. More will come shortly. A capability may contain one or more labs.
+The table below lists all capabilities for which currently labs are offered. Not all labs have been updated for CP4BA 24.0.1. A capability may contain one or more labs.
 
 | Capability                                                   | Track | Approximate Duration | Survey |
 | :----------------------------------------------------------- | :------------------: | :-----: | :-----: |
@@ -15,16 +11,13 @@ The table below lists all capabilities for which currently labs are offered. Not
 | [IBM Business Automation Insights](Business Automation Insights/README.md) |        2        |        1 hour        | <a href=https://www.surveymonkey.com/r/ba-dl-tech-jam-bai target = '_blank'>BAI Survey</a> |
 | [IBM FileNet Content Services](Content/README.md) |      2      |      4-5 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-fncm' target = '_blank'>FNCM Survey</a> |
 | [IBM Automation Decision Services](Decisions/README.md) |       2       |       3 hours        | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-ads' target = '_blank'>ADS Survey</a> |
-| IBM Process Mining (coming soon) |      2      |      1-2 hours per lab      | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-pm' target = '_blank'>PM Survey</a> |
 | [IBM Robotic Process Automation](Robotic Process Automation/README.md) (independent of CP4BA version) |      2      |      3-4 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-rpa' target = '_blank'>RPA Survey</a> |
 | [IBM Business Automation Workflow](Workflow/README.md) |      2      |      5-6 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-baw' target = '_blank'>BAW Survey</a> |
-| IBM Automation Document Processing (coming soon) |      2      |      3-4 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-adp' target = '_blank'>ADP Survey</a> |
-| [IBM watsonx Orchestrate](watsonx Orchestrate/README.md) (independent of CP4BA version) | 2            | 2-3 hours             | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-wxo' target = '_blank'>wxO Survey</a> |
-| IBM CP4BA - Bring-up Lab (coming soon) | 3 | 6-14 hours | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-bring-up' target = '_blank'>Bring-up Survey</a> |
+| IBM CP4BA - Bring-up Labs<br />Lab 1 (based on CP4BA 23.0.2)<br />Lab 2 (based on CP4BA 24.0.0) | 3 | 6-14 hours | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-bring-up' target = '_blank'>Bring-up Survey</a> |
 
 ## Track descriptions
 
-The different tracks cater for different target groups and previous levels of exposure to Cloud Pack for Business Automation/watsonX Orchestrate.
+The different tracks cater for different target groups and previous levels of exposure to Cloud Pack for Business Automation.
 
 **Track 1 – Foundation**
 
@@ -34,9 +27,9 @@ The different tracks cater for different target groups and previous levels of ex
 
 **Track 2 – Developer Role / Solution Implementation**
 
-- **Audience**: Base understanding of Cloud Pak for Business Automation (CP4BA)/watsonX Orchestrate
+- **Audience**: Base understanding of Cloud Pak for Business Automation (CP4BA)
 
-- **Learning**: Overview of the Cloud Pak/watsonX Orchestrate from developer and partly user perspective
+- **Learning**: Overview of the Cloud Pak from developer and partly user perspective
 
   ​		   Ability to develop pieces of the solution areas
 

@@ -1,4 +1,4 @@
-# Jam-in-a-Box - Client Onboarding for CP4BA 24.0.1/watsonX Orchestrate - Deploying the Assets Yourself
+# Jam-in-a-Box - Client Onboarding for CP4BA 24.0.1 - Deploying the Assets Yourself
 
 ## Quick Start
 
@@ -9,7 +9,7 @@
 
 ## **Overview**
 
-This type of Jam-in-a-Box approach provides you with the largest flexibility to deploy the Client Onboarding assets to the environment of your choice. It is provided to you by the IBM Business Automation and Digital Labor SWAT team through the deployment tool.
+This type of Jam-in-a-Box approach provides you with the largest flexibility to deploy the Client Onboarding assets to the environment of your choice. It is provided to you by the IBM Business Automation and Digital Labor Tiger (aka SWAT) team through the deployment tool.
 
 The major benefits of using this environment are:
 
@@ -37,8 +37,7 @@ The lab instructions are written in context of a Tech Jam event. When performing
 
 | Lab(s)                                                       | Environment (IBM TechZone - Business Partners and IBMers only) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [IBM Cloud Pak for Business Automation (End-to-End)](../../IBM Cloud Pak for Business Automation (End-to-End)\README.md)<br/>[IBM Automation Decision Services](../../Decisions\README.md)<br/> IBM Automation Document Processing (Coming Soon)<br/>[IBM Business Automation Application](../../Business Automation Application\README.md)<br/>[IBM Business Automation Insights](../../Business Automation Insights\README.md)<br/>[IBM Business Automation Workflow](../../Workflow\README.md)<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](../../Content\README.md) | Jam-in-a-Box environment (deployment instructions are available in this <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/24.0.1/StarterDeploymentViaJob.md" target="_blank">document</a> for Starter pattern, or this <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/24.0.1/README.md" target="_blank">document</a> for Enterprise pattern) |
-| [IBM watsonx Orchestrate](../../watsonx Orchestrate\README.md) | Jam-in-a-Box environment (deployment instructions are available in this <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/24.0.1/StarterDeploymentViaJob.md" target="_blank">document</a> for Starter pattern, or this <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/24.0.1/README.md" target="_blank">document</a> for Enterprise pattern)<br/>Access to a watsonx Orchestrate instance is required as an additional prerequisite. Please check the watsonx Orchestrate content on Seismic to learn how to get access to such an instance. |
+| [IBM Cloud Pak for Business Automation (End-to-End)](../../IBM Cloud Pak for Business Automation (End-to-End)\README.md)<br/>[IBM Automation Decision Services](../../Decisions\README.md)<br/>[IBM Business Automation Application](../../Business Automation Application\README.md)<br/>[IBM Business Automation Insights](../../Business Automation Insights\README.md)<br/>[IBM Business Automation Workflow](../../Workflow\README.md)<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](../../Content\README.md) | Jam-in-a-Box environment (deployment instructions are available in this <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/24.0.1/StarterDeploymentViaJob.md" target="_blank">document</a> for Starter pattern, or this <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/24.0.1/README.md" target="_blank">document</a> for Enterprise pattern) |
 
 
 
