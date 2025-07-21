@@ -42,7 +42,7 @@ Most labs are accessible using a single Jam-in-a-Box environment. For some labs,
 | Lab(s)                                                       | Environment (IBM TechZone - Business Partners and IBMers only) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [IBM Cloud Pak for Business Automation (End-to-End)](IBM Cloud Pak for Business Automation (End-to-End)\README.md) <br/>-<br/>[IBM Business Automation Application](Business Automation Application\README.md) <br/>-<br/>[IBM Automation Decision Services](Decisions\README.md) <br/>-<br/>[IBM Business Automation Insights](Business Automation Insights\README.md)<br/>-<br/>[IBM Business Automation Workflow](Workflow\README.md)<br/>-<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](Content\README.md) | See section [Environment Selection for Core Labs](#environment-selection-for-core-labs) below |
-| IBM CP4BA - Bring-up Labs<br />[Lab 1 (based on CP4BA 23.0.2)](../23.0.2/Bring-up)<br />[Lab 2 (based on CP4BA 24.0.0)](../24.0.0/Bring-up) | One environment required per user in case of mini-Tech Jams!<br/>Follow the instructions provided on the respective lab overview page |
+| IBM CP4BA - Bring-up Labs<br />[Lab 1 (based on CP4BA 23.0.2)](../23.0.2/Bring-up/README.md)<br />[Lab 2 (based on CP4BA 24.0.0)](../24.0.0/Bring-Up/README.md) | One environment required per user in case of mini-Tech Jams!<br/>Follow the instructions provided on the respective lab overview page |
 
 !!! Note
 >
