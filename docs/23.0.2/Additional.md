@@ -1,8 +1,8 @@
-# IBM Cloud Pak for Business Automation (CP4BA) 23.0.2 / watsonx Orchestrate Labs
+# IBM Cloud Pak for Business Automation (CP4BA) 23.0.2
 
 ## Track descriptions
 
-The different tracks cater for different target groups and previous levels of exposure to Cloud Pack for Business Automation/watsonx Orchestrate.
+The different tracks cater for different target groups and previous levels of exposure to Cloud Pack for Business Automation.
 
 **Track 1 – Foundation**
 
@@ -12,9 +12,9 @@ The different tracks cater for different target groups and previous levels of ex
 
 **Track 2 – Developer Role / Solution Implementation**
 
-- **Audience**: Base understanding of Cloud Pak for Business Automation (CP4BA) /watsonx Orchestrate
+- **Audience**: Base understanding of Cloud Pak for Business Automation (CP4BA) 
 
-- **Learning**: Overview of the Cloud Pak/watsonx Orchestrate from developer and partly user perspective. Ability to develop pieces of the solution areas
+- **Learning**: Overview of the Cloud Pak from developer and partly user perspective. Ability to develop pieces of the solution areas
 
 - **Approach**: Detailed lab instructions to build respective solution aspects
 
@@ -41,6 +41,5 @@ The table below lists all capabilities sorted by track for which currently labs 
 | [IBM Robotic Process Automation](Robotic Process Automation\README.md) |      2      |      3-4 hours       | <a href='https://www.credly.com/org/ibm/badge/ibm-robotic-process-automation-tech-jam' target = '_blank'>Badge</a> \| <a href='https://learn.ibm.com/course/view.php?id=9356' target = '_blank'>Quiz</a> | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-rpa' target = '_blank'>RPA Survey</a> |
 | [IBM Business Automation Workflow](Workflow\README.md) |      2      |      5-6 hours       | <a href='https://www.credly.com/org/ibm/badge/ibm-business-automation-workflow-tech-jam' target = '_blank'>Badge</a> \| <a href='https://learn.ibm.com/course/view.php?id=9354' target = '_blank'>Quiz</a> | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-baw' target = '_blank'>BAW Survey</a> |
 | [IBM Automation Document Processing](Document Processing\README.md) |      2      |      3-4 hours       |  <a href='https://www.credly.com/org/ibm/badge/ibm-automation-document-processing-tech-jam' target = '_blank'>Badge</a> \| <a href='https://learn.ibm.com/course/view.php?id=12413' target = '_blank'>Quiz</a> | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-adp' target = '_blank'>ADP Survey</a> |
-| [IBM watsonx Orchestrate](watsonx Orchestrate\README.md) | 2            | 2-3 hours             | - | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-wxo' target = '_blank'>wxO Survey</a> |
 | [IBM CP4BA - Bring-up Lab](Bring-up\README.md) | 3 | 6 hours | <a href='https://www.credly.com/org/ibm/badge/ibm-cloud-pak-for-business-automation-installation-tech-jam' target = '_blank'>Badge Lab#1</a> \| <a href='https://learn.ibm.com/course/view.php?id=11286' target = '_blank'>Quiz Lab#1</a> | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-bring-up' target = '_blank'>Bring-up Survey</a> |
 

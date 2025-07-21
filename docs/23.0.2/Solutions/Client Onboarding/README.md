@@ -83,7 +83,7 @@ Based on the technology used to achieve a short provisioning time, you need to p
 
 ## Reserve RPA VM and Update the Jam-in-a-Box Single User Environment
 
-1. Reserve your RPA environment on IBM TechZone from the <a href="https://techzone.ibm.com/collection/ibm-business-automation-traditional-and-on-premise/environments" target="_blank">IBM Business Automation - Traditional and On-Premises</a> collection by clicking on one of the **IBM Business Automation - Traditional and On-premises. V4.3** tiles
+1. Reserve your RPA environment on IBM TechZone from the <a href="https://techzone.ibm.com/collection/ibm-business-automation-traditional-and-on-premise/environments" target="_blank">IBM Business Automation - Traditional and On-Premises</a> collection by clicking on one of the **IBM Business Automation - Traditional and On-premises. V4.x** tiles
 2. Fill in the reservation details and wait till the environment is **Ready**. This will normally take between 2-3 hours
 3. Once your environment is **Ready**, click on the reservation in **<a href="https://techzone.ibm.com/my/reservations" target="_blank">TechZone</a>** and copy the URL shown for **RPA Asynch Server API** at the top under **Published services**
 4. In your **Jam-in-a-Box - Single-User environment**, open a browser and click on the **IBM BA Studio** bookmark

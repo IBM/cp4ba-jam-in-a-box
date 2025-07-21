@@ -13,20 +13,16 @@ Mac users normally need to download and install a separate application to be abl
 1. In case not already installed, download and install <a href="https://apps.apple.com/us/app/windows-app/id1295203466" target="_blank">Windows App</a> through your Mac App Store
 
 2. Open Windows App and click the **+ sign** in the top right corner, followed by **Add PC**
-
-       ![](images/WindowsApp_Overview_AddPC.jpg)
+   ![](images/WindowsApp_Overview_AddPC.jpg)
 
 3. Enter the RDP URL of your environment as **PC name** in the *Add PC* dialog. In the **Credentials** field, leave **Ask when required**. Afterwards, click the **Add** button
-
-       ![](images/WindowsApp_AddPC.jpg)
+   ![](images/WindowsApp_AddPC.jpg)
 
 4. In the **Enter Your Credentials** dialog, enter the credentials that were provided to you and click **Continue**
-
-       ![](images/WindowsApp_Credentials.jpg)
+   ![](images/WindowsApp_Credentials.jpg)
 
 5. Once you added a PC, a tile is created on the main page. To access the environment later on, click on the tile
-
-       ![](images/WindowsApp_Overview.jpg)
+![](images/WindowsApp_Overview.jpg)
 
 
 
@@ -35,16 +31,13 @@ Mac users normally need to download and install a separate application to be abl
 Windows users should have the Remote Desktop Connection app pre-installed on their machine, with no need for any additional installation.
 
 1. **Click** on the **Search** icon in the taskbar and **type** *Remote* which should result in the app to be found
-
-       ![](images/Windows_RemoteDesktop.jpg)
+   ![](images/Windows_RemoteDesktop.jpg)
 
 2. Enter the RDP URL of your environment as **Computer** in the dialog shown when launching the App and click on Connect leaving all other settings unchanged
-
-       ![](images/Windows_RemoteDesktopApp.jpg)
+   ![](images/Windows_RemoteDesktopApp.jpg)
 
 3. Once connected to your environment, **enter** the **username** and **password** in the login dialog **Login to bastion**
-
-       ![](images/Windows_RemoteDesktopLogin.jpg)
+![](images/Windows_RemoteDesktopLogin.jpg)
 
 
 ## Support
