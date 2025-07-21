@@ -41,6 +41,37 @@ nav:
       - 'Single User Environment CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README.md'
       - 'Self-deploy scenario to CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README_2302_SelfDeploy.md'
       - 'Accessing Bastion Host Via RDP': '23.0.2\Solutions\Client Onboarding\AccessingBastionHostViaRDP.md'
+  - '25.0.0':
+    - 'Start': '25.0.0\README.md'
+    - 'Tracks & Capabilities Overview': '25.0.0\TracksCapabilitiesOverview.md'
+    - 'Labs':
+      - 'IBM Cloud Pak for Business Automation Demo': '25.0.0\IBM Cloud Pak for Business Automation (End-to-End)/README.md' 
+      - 'IBM Business Automation Application': '25.0.0\Business Automation Application/README.md'
+      - 'IBM Business Automation Insights': '25.0.0\Business Automation Insights/README.md'
+      - 'IBM Automation Decision Services': '25.0.0\Decisions/README.md'
+      - 'IBM Business Automation Workflow': '25.0.0\Workflow/README.md'
+      - 'IBM FileNet Content Manager': '25.0.0\Content/README.md'
+    - 'CP4BA Environment Options':
+      - 'Single User Environment CP4BA 25.0.0': '25.0.0\Solutions\Client Onboarding\README.md'
+      - 'ApolloBA CP4BA 25.0.0': '25.0.0\Solutions\Client Onboarding\README_2500_ApolloBA_CP4BADemos.md'
+      - 'Self-deploy scenario to CP4BA 25.0.0': '25.0.0\Solutions\Client Onboarding\README_2500_SelfDeploy.md'
+  - 'BAMOE':
+    - 'IBM Business Automation Manager Open Editions': 'BAMOE\README.md'
+  - '24.0.1':
+    - 'Start': '24.0.1\README.md'
+    - 'Tracks & Capabilities Overview': '24.0.1\Additional.md'
+    - 'Labs':
+      - 'IBM Cloud Pak for Business Automation Demo': '24.0.1\IBM Cloud Pak for Business Automation (End-to-End)/README.md' 
+      - 'IBM Business Automation Application': '24.0.1\Business Automation Application/README.md'
+      - 'IBM Business Automation Insights': '24.0.1\Business Automation Insights/README.md'
+      - 'IBM Automation Decision Services': '24.0.1\Decisions/README.md'
+      - 'IBM Business Automation Workflow': '24.0.1\Workflow/README.md'
+      - 'IBM FileNet Content Manager': '24.0.1\Content/README.md'
+      - 'IBM watsonx Orchestrate': '24.0.1\watsonx Orchestrate/README.md'
+      - 'IBM Robotic Process Automation': '24.0.1\Robotic Process Automation/README.md'
+    - 'CP4BA Environment Options':
+      - 'ApolloBA CP4BA 24.0.1': '24.0.1\Solutions\Client Onboarding\README.md'
+      - 'Self-deploy scenario to CP4BA 24.0.1': '24.0.1\Solutions\Client Onboarding\README_2401_SelfDeploy.md'
   - '24.0.0':
     - 'Start': '24.0.0\README.md'
     - 'Tracks & Capabilities Overview': '24.0.0\Additional.md'
@@ -69,28 +100,8 @@ nav:
           - 'Post Deployment Steps / Deployment Verification': '24.0.0\Bring-Up\Bring-Up-Lab-2/Exercise-8-PostDeployment.md'
           - 'Appendix A': '24.0.0\Bring-Up\Bring-Up-Lab-2\Appendix-A-Troubleshooting.md'
     - 'CP4BA Environment Options':
-      - 'Single User Environment CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README.md'
-      - 'ApolloBA CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README_2400_ApolloBA_CP4BADemos.md'
-      - 'Self-deploy scenario to CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README_2400_SelfDeploy.md'
-  - '24.0.1':
-    - 'Start': '24.0.1\README.md'
-    - 'Tracks & Capabilities Overview': '24.0.1\Additional.md'
-    - 'Labs':
-      - 'IBM Cloud Pak for Business Automation Demo': '24.0.1\IBM Cloud Pak for Business Automation (End-to-End)/README.md' 
-      - 'IBM Business Automation Application': '24.0.1\Business Automation Application/README.md'
-      - 'IBM Business Automation Insights': '24.0.1\Business Automation Insights/README.md'
-      - 'IBM Automation Decision Services': '24.0.1\Decisions/README.md'
-      - 'IBM Business Automation Workflow': '24.0.1\Workflow/README.md'
-      - 'IBM FileNet Content Manager': '24.0.1\Content/README.md'
-      - 'IBM watsonx Orchestrate': '24.0.1\watsonx Orchestrate/README.md'
-      - 'IBM Robotic Process Automation': '24.0.1\Robotic Process Automation/README.md'
-    - 'CP4BA Environment Options':
-      - 'Single User Environment CP4BA 24.0.1': '24.0.1\Solutions\Client Onboarding\README.md'
-      - 'ApolloBA CP4BA 24.0.1': '24.0.1\Solutions\Client Onboarding\README_2401_ApolloBA_CP4BADemos.md'
-      - 'Self-deploy scenario to CP4BA 24.0.1': '24.0.1\Solutions\Client Onboarding\README_2401_SelfDeploy.md'
-  - 'BAMOE':
-    - 'IBM Business Automation Manager Open Editions': 'BAMOE\README.md'
-    
+      - 'ApolloBA CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README.md'
+      - 'Self-deploy scenario to CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README_2400_SelfDeploy.md'    
       
 theme:
   custom_dir: custom/
