@@ -1,4 +1,4 @@
-# Jam-in-a-Box for Business Automation (CP4BA 23.0.2) & Digital Labor
+# Jam-in-a-Box for Business Automation (CP4BA 23.0.2)
 
 ## Quick Start
 
@@ -9,15 +9,15 @@
 
 ## Introduction
 
-The <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario" target="_blank">Client Onboarding</a> scenario is an end-to-end demo for Cloud Pak for Business Automation (CP4BA) and selected aspects of watsonx Orchestrate (wxO). 
+The <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario" target="_blank">Client Onboarding</a> scenario is an end-to-end demo for Cloud Pak for Business Automation (CP4BA). 
 
-The CP4BA part covers the following components: Automation Decision Services (ADS), Automation Document Processing (ADP), Business Automation Applications (BAA), Workflow, Content, Robotic Process Automation (RPA), Business Automation Insights (BAI). The wxO part covers skill, skill flow, and automation building.
+The CP4BA part covers the following components: Automation Decision Services (ADS), Automation Document Processing (ADP), Business Automation Applications (BAA), Workflow, Content, Robotic Process Automation (RPA), Business Automation Insights (BAI).
 
 Labs for each capability provide an easy way to gain familiarity with the development aspects to build the respective parts of the Client Onboarding solution.
 
-The Jam-in-a-Box environments provide the ability to demo the out-of-box end-to-end <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario" target="_blank">Client Onboarding</a> solution and more, run your own mini-Tech Jam, or get self-educated on Business Automation and watsonX Orchestrate as part of Digital Labor.
+The Jam-in-a-Box environments provide the ability to demo the out-of-box end-to-end <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario" target="_blank">Client Onboarding</a> solution and more, run your own mini-Tech Jam, or get self-educated on Business Automation.
 
-Jam-in-a-Box removes hurdles to Business Automation and Digital Labor adoption through easing availability and sharing of technical enablement. Towards this it offers a set of self-provisionable environments hosted on IBM TechZone, combined with a set of hands-on technical labs spanning all capabilities of Business Automation and watsonx Orchestrate (for watsonx Orchestrate a separate wxO SaaS instance is required).
+Jam-in-a-Box removes hurdles to Business Automation adoption through easing availability and sharing of technical enablement. Towards this it offers a set of self-provisionable environments hosted on IBM TechZone, combined with a set of hands-on technical labs spanning all capabilities of Business Automation.
 
 
 
@@ -25,12 +25,12 @@ Jam-in-a-Box removes hurdles to Business Automation and Digital Labor adoption t
 
 ### 1. Technical Enablement
 
-1. Self-enablement - use the environments to gain hands-on experience on one or all capabilities of Business Automation and Digital Labor using a realistic business scenario
+1. Self-enablement - use the environments to gain hands-on experience on one or all capabilities of Business Automation using a realistic business scenario
 2. Client-enablement - use the environments to host a mini-Tech Jam for your clients
 
 ### 2. Demo/PoX
 
-1. Demo - use the out-of-box Client Onboarding solution and more to present a live demo of Business Automation and Digital Labor capabilities
+1. Demo - use the out-of-box Client Onboarding solution and more to present a live demo of Business Automation capabilities
 2. PoX - use the environments as a base to customize/extend the business scenario based on your client’s needs
 
 
@@ -59,7 +59,7 @@ Most labs are accessible using a single Jam-in-a-Box environment. For some labs,
         - **Benefits:** Provisioning time only 2-3 hours; Supports ADP lab
         - **Limitations:** Need to use Remote Desktop client (RDP) to connect to bastion host to perform demo/labs; No support for watsonx Orchestrate lab
     - Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos
-        - No longer available, refer to [CP4BA 24.0.1](24.0.1/README.md)
+        - No longer available, refer to [CP4BA 25.0.0](25.0.0/README.md)
     
 - **Workshop/Mini-Tech Jam** with 10-20 participants on **CP4BA 23.0.2**
     - No longer available, refer to [CP4BA 25.0.0](25.0.0/README.md)
@@ -83,3 +83,4 @@ For anyone who doesn’t fall into the business partner or IBM employee category
 ## Disclaimer
 
 The information, tools, and artifacts describes and linked are provided AS-IS and without any warranty. Please also refer to the license that is part of this repository for details.
+

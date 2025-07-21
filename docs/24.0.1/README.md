@@ -25,12 +25,12 @@ Jam-in-a-Box removes hurdles to Business Automation adoption through easing avai
 
 ### 1. Technical Enablement
 
-1. Self-enablement - use the environments to gain hands-on experience on one or all capabilities of Business Automation and Digital Labor using a realistic business scenario
+1. Self-enablement - use the environments to gain hands-on experience on one or all capabilities of Business Automation using a realistic business scenario
 2. Client-enablement - use the environments to host a mini-Tech Jam for your clients
 
 ### 2. Demo/PoX
 
-1. Demo - use the out-of-box Client Onboarding solution and more to present a live demo of Business Automation and Digital Labor capabilities
+1. Demo - use the out-of-box Client Onboarding solution and more to present a live demo of Business Automation capabilities
 2. PoX - use the environments as a base to customize/extend the business scenario based on your client’s needs
 
 
@@ -41,10 +41,9 @@ Most labs are accessible using a single Jam-in-a-Box environment. For some labs,
 
 | Lab(s)                                                       | Environment (IBM TechZone - Business Partners and IBMers only) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [IBM Cloud Pak for Business Automation (End-to-End)](IBM Cloud Pak for Business Automation (End-to-End)\README.md) <br/>-<br/>[IBM Business Automation Application](Business Automation Application\README.md) <br/>-<br/>[IBM Automation Decision Services](Decisions\README.md) <br/>-<br/>[IBM Automation Document Processing](Document Processing\README.md)<br/>-<br/>[IBM Business Automation Insights](Business Automation Insights\README.md)<br/>-<br/>[IBM Business Automation Workflow](Workflow\README.md)<br/>-<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](Content\README.md) | See section [Environment Selection for Core Labs](#environment-selection-for-core-labs) below |
-| [IBM Process Mining](Process Mining\README.md) (independent of version of CP4BA) | One environment required per user in case of mini-Tech Jams!<br/>Please reserve a TechZone Process Mining Environment <a href="https://techzone.ibm.com/collection/process-mining-with-task-mining-demo-and-etl/environments" target="_blank">here</a>. Make sure to select the **IBM Process Mining 1.15 with Task Mining and ETL - Multizone**. |
+| [IBM Cloud Pak for Business Automation (End-to-End)](IBM Cloud Pak for Business Automation (End-to-End)\README.md) <br/>-<br/>[IBM Business Automation Application](Business Automation Application\README.md) <br/>-<br/>[IBM Automation Decision Services](Decisions\README.md) <br/>-<br/>[IBM Business Automation Insights](Business Automation Insights\README.md)<br/>-<br/>[IBM Business Automation Workflow](Workflow\README.md)<br/>-<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](Content\README.md) | See section [Environment Selection for Core Labs](#environment-selection-for-core-labs) below |
 | [IBM Robotic Process Automation](Robotic Process Automation\README.md)  (independent of version of CP4BA) | One environment required per user in case of mini-Tech Jams!<br/>Follow the instructions provided on the respective [lab overview page](Robotic Process Automation\README.md) |
-| IBM CP4BA - Bring-up Labs<br />Lab 1 (based on CP4BA 23.0.2)<br />Lab 2 (based on CP4BA 24.0.0) | One environment required per user in case of mini-Tech Jams!<br/>Follow the instructions provided on the respective lab overview page |
+| IBM CP4BA - Bring-up Labs<br />[Lab 1 (based on CP4BA 23.0.2)](../23.0.2/Bring-up)<br />[Lab 2 (based on CP4BA 24.0.0)](../24.0.0/Bring-up) | One environment required per user in case of mini-Tech Jams!<br/>Follow the instructions provided on the respective lab overview page |
 
 !!! Note
 >
@@ -56,13 +55,13 @@ Most labs are accessible using a single Jam-in-a-Box environment. For some labs,
 
 - **Single-user/self-paced** Client Onboarding demo and labs on **CP4BA 24.0.1**
     - [Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos](Solutions/Client%20Onboarding/README.md)
-        - **Benefits:** Accessible from any web browser; Supports ADP lab
+        - **Benefits:** Accessible from any web browser
         - **Limitations:** Provisioning time 5-7 hours
     
 - **Workshop/Mini-Tech Jam** with 10-20 participants on **CP4BA 24.0.1**
     - [Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos](Solutions/Client%20Onboarding/README.md)
-        - **Benefits:** Comes with 20 users for mini-Tech Jams; Accessible from any web browser; Supports watsonx Orchestrate lab
-        - **Limitations:** Provisioning time 5-7 hours; No support for ADP lab as part of mini-Tech Jam (due to ADP design limitations)
+        - **Benefits:** Comes with 20 users for mini-Tech Jams; Accessible from any web browser
+        - **Limitations:** Provisioning time 5-7 hours
 
 
 

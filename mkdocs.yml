@@ -57,7 +57,7 @@ nav:
       - 'Self-deploy scenario to CP4BA 25.0.0': '25.0.0\Solutions\Client Onboarding\README_2500_SelfDeploy.md'
   - 'BAMOE':
     - 'IBM Business Automation Manager Open Editions': 'BAMOE\README.md'
-  - '24.0.1':
+  - '24.0.1 (Archived)':
     - 'Start': '24.0.1\README.md'
     - 'Tracks & Capabilities Overview': '24.0.1\Additional.md'
     - 'Labs':
@@ -72,7 +72,7 @@ nav:
     - 'CP4BA Environment Options':
       - 'ApolloBA CP4BA 24.0.1': '24.0.1\Solutions\Client Onboarding\README.md'
       - 'Self-deploy scenario to CP4BA 24.0.1': '24.0.1\Solutions\Client Onboarding\README_2401_SelfDeploy.md'
-  - '24.0.0':
+  - '24.0.0 (Archived)':
     - 'Start': '24.0.0\README.md'
     - 'Tracks & Capabilities Overview': '24.0.0\Additional.md'
     - 'Labs':

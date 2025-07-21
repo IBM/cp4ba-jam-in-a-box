@@ -25,12 +25,12 @@ Jam-in-a-Box removes hurdles to Business Automation adoption through easing avai
 
 ### 1. Technical Enablement
 
-1. Self-enablement - use the environments to gain hands-on experience on one or all capabilities of Business Automation and Digital Labor using a realistic business scenario
+1. Self-enablement - use the environments to gain hands-on experience on one or all capabilities of Business Automation using a realistic business scenario
 2. Client-enablement - use the environments to host a mini-Tech Jam for your clients
 
 ### 2. Demo/PoX
 
-1. Demo - use the out-of-box Client Onboarding solution and more to present a live demo of Business Automation and Digital Labor capabilities
+1. Demo - use the out-of-box Client Onboarding solution and more to present a live demo of Business Automation capabilities
 2. PoX - use the environments as a base to customize/extend the business scenario based on your client’s needs
 
 

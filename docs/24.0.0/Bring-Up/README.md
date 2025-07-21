@@ -14,7 +14,7 @@ Install and configure a **Production** deployment of IBM Cloud Pak for Business 
 If you like to bring-up your own CP4BA instance independently of a Tech Jam, simply follow the instructions in our **<a href="https://github.com/IBM/cp4ba-rapid-deployment" target="_blank">CP4BA rapid deployment project</a>**
 
 
-- **Bring-up Lab #1**: Learn how to quickly bring-up a Production deployment of IBM CP4BA using the **rapid deployment scripts**. Complete this Lab to earn a Badge. **(coming soon)**
+- **[Bring-up Lab #1](../../23.0.2/Bring-up)** (based on CP4BA 23.0.2): Learn how to quickly bring-up a Production deployment of IBM CP4BA using the **rapid deployment scripts**. Complete this Lab to earn a Badge.
 
     **Approximate Duration**: 6 hours
 

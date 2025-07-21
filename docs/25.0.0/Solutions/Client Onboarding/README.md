@@ -2,7 +2,7 @@
 
 !!! IMPORTANT
 
->This is **not** yet available but should hopefully be coming soon. For now please refer to this [document](README_2500_ApolloBA_CP4BADemos.md) for an alternative.
+>This is **not** yet available but should hopefully be coming soon. For now please refer to this [document](README_2500_ApolloBA_CP4BADemos.md) for an alternative or use the environment for [CP4BA 23.0.2](../../../23.0.2/Solutions/Client%20Onboarding/README.md).
 
 
 
