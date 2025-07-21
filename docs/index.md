@@ -42,8 +42,7 @@ Most labs are accessible using a single Jam-in-a-Box environment. For some labs,
 | Lab(s)                                                       | Environment (IBM TechZone - Business Partners and IBMers only) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [IBM Cloud Pak for Business Automation (End-to-End)](23.0.2/IBM Cloud Pak for Business Automation (End-to-End)\README.md) <br/>-<br/>[IBM Business Automation Application](23.0.2/Business Automation Application\README.md) <br/>-<br/>[IBM Automation Decision Services](23.0.2/Decisions\README.md) <br/>-<br/>[IBM Automation Document Processing](23.0.2/Document Processing\README.md)<br/>-<br/>[IBM Business Automation Insights](23.0.2/Business Automation Insights\README.md)<br/>-<br/>[IBM Business Automation Workflow](23.0.2/Workflow\README.md)<br/>-<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](23.0.2/Content\README.md) | See section [Environment Selection for Core Labs](#environment-selection-for-core-labs) below |
-| [IBM watsonx Orchestrate](23.0.2/watsonx Orchestrate\README.md)     | **Remarks:**<br/>- Access to a watsonx Orchestrate SaaS instance is required as an additional prerequisite. Please check the watsonx Orchestrate content on Seismic to learn how to get access to such an instance.<br/>- The Jam-in-a-Box environment referenced in the previous row for the core labs can only be accessed from the bastion host or student VMs of the environment. Therefore, it does not support the watsonx Orchestrate lab. |
-| [IBM Process Mining](23.0.2/Process Mining\README.md)               | One environment required per user in case of mini-Tech Jams!<br/>Please reserve a TechZone Process Mining Environment <a href="https://techzone.ibm.com/collection/process-mining-with-task-mining-demo-and-etl/environments" target="_blank">here</a>. Make sure to select the **IBM Process Mining 1.14.3 with Task Mining and ETL - US East only**. |
+| [IBM Process Mining](23.0.2/Process Mining\README.md)        | One environment required per user in case of mini-Tech Jams!<br/>Please reserve a TechZone Process Mining Environment <a href="https://techzone.ibm.com/collection/process-mining-with-task-mining-demo-and-etl/environments" target="_blank">here</a>. Make sure to select the **IBM Process Mining 1.15 with Task Mining and ETL - Multizone**. |
 | [IBM Robotic Process Automation](23.0.2/Robotic Process Automation\README.md) | One environment required per user in case of mini-Tech Jams!<br/>Follow the instructions provided on the respective [lab overview page](23.0.2/Robotic Process Automation\README.md) |
 | [IBM CP4BA - Bring-up (Deployment of CP4BA)](23.0.2/Bring-up\README.md) | One environment required per user in case of mini-Tech Jams!<br/>Follow the instructions provided on the respective [lab overview page](23.0.2/Bring-up\README.md) |
 
@@ -60,10 +59,10 @@ Most labs are accessible using a single Jam-in-a-Box environment. For some labs,
         - **Benefits:** Provisioning time only 2-3 hours; Supports ADP lab
         - **Limitations:** Need to use Remote Desktop client (RDP) to connect to bastion host to perform demo/labs; No support for watsonx Orchestrate lab
     - Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos
-        - No longer available, refer to [CP4BA 24.0.0](24.0.0/README.md)
+        - No longer available, refer to [CP4BA 24.0.1](24.0.1/README.md)
     
 - **Workshop/Mini-Tech Jam** with 10-20 participants on **CP4BA 23.0.2**
-    - No longer available, refer to [CP4BA 24.0.0](24.0.0/README.md)
+    - No longer available, refer to [CP4BA 25.0.0](25.0.0/README.md)
 
 
 
