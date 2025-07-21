@@ -1,46 +1,85 @@
-# IBM Cloud Pak for Business Automation (CP4BA) 24.0.1
+# Jam-in-a-Box for Business Automation (CP4BA 24.0.1)
 
-To be able to perform labs listed below, you need to have IBM Cloud Pak for Business Automation 24.0.1 (either Starter or Enterprise deployment) installed and have imported the Client Onboarding scenario as described [here](https://github.com/IBM/cp4ba-client-onboarding-scenario/blob/main/24.0.1).
+## Quick Start
 
-The table below lists all capabilities for which currently labs are offered. Not all labs have been updated for CP4BA 24.0.1. A capability may contain one or more labs.
+1. Select the lab(s) you are interested in on the left column of the table of the [Labs to Environments Mapping](#labs-to-environments-mapping) section
+2. Follow the instructions in the right column of the table to request the appropriate environment
 
-| Capability                                                   | Track | Approximate Duration | Survey |
-| :----------------------------------------------------------- | :------------------: | :-----: | :-----: |
-| [IBM Cloud Pak for Business Automation](IBM Cloud Pak for Business Automation (End-to-End)/README.md) (End-to-End Demo) |       1       |       2 hours        | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-e2e' target = '_blank'>E2E Survey</a> |
-| [IBM Business Automation Application](Business Automation Application/README.md) |      2      |      2 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-baa' target = '_blank'>BAA Survey</a> |
-| [IBM Business Automation Insights](Business Automation Insights/README.md) |        2        |        1 hour        | <a href=https://www.surveymonkey.com/r/ba-dl-tech-jam-bai target = '_blank'>BAI Survey</a> |
-| [IBM FileNet Content Services](Content/README.md) |      2      |      4-5 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-fncm' target = '_blank'>FNCM Survey</a> |
-| [IBM Automation Decision Services](Decisions/README.md) |       2       |       3 hours        | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-ads' target = '_blank'>ADS Survey</a> |
-| [IBM Robotic Process Automation](Robotic Process Automation/README.md) (independent of CP4BA version) |      2      |      3-4 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-rpa' target = '_blank'>RPA Survey</a> |
-| [IBM Business Automation Workflow](Workflow/README.md) |      2      |      5-6 hours       | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-baw' target = '_blank'>BAW Survey</a> |
-| IBM CP4BA - Bring-up Labs<br />Lab 1 (based on CP4BA 23.0.2)<br />Lab 2 (based on CP4BA 24.0.0) | 3 | 6-14 hours | <a href='https://www.surveymonkey.com/r/ba-dl-tech-jam-bring-up' target = '_blank'>Bring-up Survey</a> |
 
-## Track descriptions
 
-The different tracks cater for different target groups and previous levels of exposure to Cloud Pack for Business Automation.
+## Introduction
 
-**Track 1 – Foundation**
+The <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario" target="_blank">Client Onboarding</a> scenario is an end-to-end demo for Cloud Pak for Business Automation (CP4BA). 
 
-- **Audience**: New to Cloud Pak for Business Automation (CP4BA)
-- **Learning**: Overview of the Cloud Pak from an end-user perspective
-- **Approach**: Perform the Client Onboarding scenario
+The CP4BA part covers the following components: Automation Decision Services (ADS), Automation Document Processing (ADP), Business Automation Applications (BAA), Workflow, Content, Robotic Process Automation (RPA), Business Automation Insights (BAI).
 
-**Track 2 – Developer Role / Solution Implementation**
+Labs for each capability provide an easy way to gain familiarity with the development aspects to build the respective parts of the Client Onboarding solution.
 
-- **Audience**: Base understanding of Cloud Pak for Business Automation (CP4BA)
+The Jam-in-a-Box environments provide the ability to demo the out-of-box end-to-end <a href="https://github.com/IBM/cp4ba-client-onboarding-scenario" target="_blank">Client Onboarding</a> solution and more, run your own mini-Tech Jam, or get self-educated on Business Automation.
 
-- **Learning**: Overview of the Cloud Pak from developer and partly user perspective
+Jam-in-a-Box removes hurdles to Business Automation adoption through easing availability and sharing of technical enablement. Towards this it offers a set of self-provisionable environments hosted on IBM TechZone, combined with a set of hands-on technical labs spanning all capabilities of Business Automation.
 
-  ​		   Ability to develop pieces of the solution areas
 
-- **Approach**: Detailed lab instructions to build respective solution aspects
 
-**Track 3 – Administrator Role**
+## Use Cases for Jam-in-a-Box
 
-- **Audience**: Base understanding of Cloud Pak for Business Automation (CP4BA)
+### 1. Technical Enablement
 
-- **Learning**: Overview of the Cloud Pak from administrator/DevOps engineer perspective
+1. Self-enablement - use the environments to gain hands-on experience on one or all capabilities of Business Automation and Digital Labor using a realistic business scenario
+2. Client-enablement - use the environments to host a mini-Tech Jam for your clients
 
-  ​	           Ability to install and configure components of CP4BA
+### 2. Demo/PoX
 
-- **Approach**: Detailed lab instructions to install and configure CP4BA
+1. Demo - use the out-of-box Client Onboarding solution and more to present a live demo of Business Automation and Digital Labor capabilities
+2. PoX - use the environments as a base to customize/extend the business scenario based on your client’s needs
+
+
+
+## Labs to Environments Mapping
+
+Most labs are accessible using a single Jam-in-a-Box environment. For some labs, you will need a separate environment. The table below provides the respective details:
+
+| Lab(s)                                                       | Environment (IBM TechZone - Business Partners and IBMers only) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [IBM Cloud Pak for Business Automation (End-to-End)](IBM Cloud Pak for Business Automation (End-to-End)\README.md) <br/>-<br/>[IBM Business Automation Application](Business Automation Application\README.md) <br/>-<br/>[IBM Automation Decision Services](Decisions\README.md) <br/>-<br/>[IBM Automation Document Processing](Document Processing\README.md)<br/>-<br/>[IBM Business Automation Insights](Business Automation Insights\README.md)<br/>-<br/>[IBM Business Automation Workflow](Workflow\README.md)<br/>-<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](Content\README.md) | See section [Environment Selection for Core Labs](#environment-selection-for-core-labs) below |
+| [IBM Process Mining](Process Mining\README.md) (independent of version of CP4BA) | One environment required per user in case of mini-Tech Jams!<br/>Please reserve a TechZone Process Mining Environment <a href="https://techzone.ibm.com/collection/process-mining-with-task-mining-demo-and-etl/environments" target="_blank">here</a>. Make sure to select the **IBM Process Mining 1.15 with Task Mining and ETL - Multizone**. |
+| [IBM Robotic Process Automation](Robotic Process Automation\README.md)  (independent of version of CP4BA) | One environment required per user in case of mini-Tech Jams!<br/>Follow the instructions provided on the respective [lab overview page](Robotic Process Automation\README.md) |
+| IBM CP4BA - Bring-up Labs<br />Lab 1 (based on CP4BA 23.0.2)<br />Lab 2 (based on CP4BA 24.0.0) | One environment required per user in case of mini-Tech Jams!<br/>Follow the instructions provided on the respective lab overview page |
+
+!!! Note
+>
+> The options mentioned for the first two rows are focused on TechZone environments with **pre-deployed** Client Onboarding assets. If you have your own CP4BA environment (from TechZone or not), into which you want to deploy the Client Onboarding assets yourself, please refer to this [document](Solutions/Client%20Onboarding/README_2401_SelfDeploy.md) for details.
+
+
+
+## Environment Selection for Core Labs
+
+- **Single-user/self-paced** Client Onboarding demo and labs on **CP4BA 24.0.1**
+    - [Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos](Solutions/Client%20Onboarding/README.md)
+        - **Benefits:** Accessible from any web browser; Supports ADP lab
+        - **Limitations:** Provisioning time 5-7 hours
+    
+- **Workshop/Mini-Tech Jam** with 10-20 participants on **CP4BA 24.0.1**
+    - [Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos](Solutions/Client%20Onboarding/README.md)
+        - **Benefits:** Comes with 20 users for mini-Tech Jams; Accessible from any web browser; Supports watsonx Orchestrate lab
+        - **Limitations:** Provisioning time 5-7 hours; No support for ADP lab as part of mini-Tech Jam (due to ADP design limitations)
+
+
+
+## Support
+
+We aim to support successfully utilizing our Jam-in-a-Box.
+
+**Business Partners and IBMers**
+
+To engage us, drop us a message at <a href='https://ibm-cloudpak-partners.slack.com/archives/C04SMFNLA3T' target = '_blank'>#jam-in-a-box-ba-dl</a>.
+
+**All others**
+
+For anyone who doesn’t fall into the business partner or IBM employee category, please feel free to open a new issue on our <a href="https://github.com/IBM/cp4ba-jam-in-a-box/issues" target="_blank">GitHub repository</a>. We’ll be more than happy to address your questions and concerns there.
+
+
+
+## Disclaimer
+
+The information, tools, and artifacts describes and linked are provided AS-IS and without any warranty. Please also refer to the license that is part of this repository for details.
