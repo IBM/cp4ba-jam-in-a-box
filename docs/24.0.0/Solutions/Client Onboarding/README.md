@@ -1,107 +1,66 @@
-# Jam-in-a-Box - Single User Environment for CP4BA 24.0.0 (coming soon)
+# CP4BA Demos Environment based on Apollo Business Automation/Cloud Pak Deployer for CP4BA 24.0.0
 
 !!! IMPORTANT
-
->This is **not** yet available but should hopefully be coming soon. For now please refer to this [document](README_2400_ApolloBA_CP4BADemos.md) for an alternative.
-
-
-
-!!! IMPORTANT
-
 >
 > - As this approach relies on reserving an environment from IBM TechZone, this document is **only applicable to IBM Business Partners** that have the ability to request environments from TechZone **and IBMers**. 
-> - In addition, to use this environment, accessing the bastion host via **RDP** is required. Ensure you have an RDP tool of choice for your operating system.
 > - Showcasing **RPA** in action as part of the Client Onboarding scenario requires a few manual configuration steps as described below.
->
-> If you have your own Cloud Pak for Business Automation (CP4BA) 24.0.0 environment and can't use RDP, please refer to this [document](../../README.md) and this [document](README_2400_SelfDeploy.md) for other options.
+> 
+>If you have your own Cloud Pak for Business Automation (CP4BA) 24.0.0 environment, please refer to this [document](../../README.md) for other options.
 
 
 
 ## Quick Start
 
-1. Reserve and prepare the Jam-in-a-Box environment as described in the [section](#reserve-and-prepare-the-jam-in-a-box-single-user-environment) below
-1. Read the [Lab Considerations](#lab-considerations) section for specifics of using the labs in the context of this Jam-in-a-Box environment
+1. Reserve a CP4BA Demos environment as described in the [section](#reserve-the-cp4ba-demos-environment) below
+1. Read the [Lab Considerations](#lab-considerations) section for specifics of using the labs in the context of this CP4BA Demos environment
 1. Follow the link to the documentation of the lab you want to perform in the [Lab Instructions](#lab-instructions) section
 
 
 
 ## **Overview**
 
-This Jam-in-a-Box environment is provided to you by the IBM Business Automation and Digital Labor SWAT team.
+This Jam-in-a-Box environment is provided to you as a cooperation between the owners of the Apollo Business Automation approach and the IBM Business Automation and Digital Labor Tiger (aka SWAT) team.
 
 The major benefits of using this environment are:
 
-- Provisioning time is only 2-3 hours
+- Environment can be used for a single-user use case and for running mini-Tech Jams with approximately 10 participants (feedback welcome in case you used it with more users)
 - Client Onboarding scenario and lab artifacts are pre-deployed for you
-- All links and user credentials are stored for you in Firefox
+- 20 business users have been created that can be given to participants of a mini-Tech Jam
 
-Based on the technology used to achieve a short provisioning time, you need to perform a few simple steps before you can use the environment.
-
-**What's included:**
-
-- Red Hat OpenShift (OCP 4.12) on VMWare on IBM Cloud
-- IBM Cloud Pak for Business Automation 24.0.0
-
-
-
-## Reserve and Prepare the Jam-in-a-Box Single User Environment
-
-1. Reserve your environment on IBM TechZone from the <a href="https://techzone.ibm.com/collection/ibm-cloud-pak-for-business-automation-and-digital-labor-jam-in-a-box/environments" target="_blank">IBM Cloud Pak for Business Automation and Digital Labor - Jam-in-a-Box</a> collection by clicking on the **Jam in a Box - Single-User - CP4BA 24.0.0** tile (coming soon)
-
-      On the **Create a reservation** page make the following selections:
-
-      - **Purpose**: e.g. Education
-      - **Purpose description**: Enter any text<br/>
-      **Tip:** The selection you make here determines if you need to specify a 'Sales Opportunity number' and the 'reservation policy' (how long the environment is available and how often it can be extended).
-      - **Preferred Geography**: Select the geography that is closest to you. <br/>
-      **Remark:** Depending on available capacity the deployment have been seen to fail sometimes. Please request another environment, potentially selecting a different geography.
-      - **End date and time**: Should get populated automatically. No changes needed.
-      - **Accept the terms and conditions**: In the lower right corner, check the box 
-      - **Submit**
-
-2. Wait till the environment is **Ready**, this will normally take between 2-3 hours
-
-3. Once your environment is Ready, connect to the bastion host through **RDP** (open the reserved environment from **<a href="https://techzone.ibm.com/my/reservations" target="_blank">https://techzone.ibm.com/my/reservations</a>** and copy the RDP value at the top to your RDP tool)
-   **Important:** The credentials to login to the bastion host are mention in the description of the tile
-
-4. From within the bastion host
-
-      1. **Open** **Firefox** using the icon on the desktop
-      2. **Open** the **Red Hat OpenShift console** by clicking the **Red Hat OpenShift bookmark**
-      3. **Login** to the Red Hat OpenShift console using the credentials for the user **ocadmin** that are stored in Firefox
-      4. Copy the **login command** to the clipboard 
-         (Under "ocadmin" in the top right corner click **Copy login command**, a new tab opens, log in again using **ocadmin**, click **Display Token**, and then copy the entire line under **Log in with this token**)
-      5. Open a **Terminal** using the respective icon on the desktop, **paste the content from the clipboard** (right click on the Terminal window, then select "Paste"), and press **Enter** to login to your Red Hat OpenShift cluster from the command line
-      6. Type **./31-prepareJiaB4usage.sh** (including the dot) at the beginning) and press **Enter** to execute the script that prepares the environment for usage
-      7. When the script asks you if you want to continue, enter **y** (or Y or Yes or YES) and press **Enter**
-      8. Once the script completes, your environment is ready to be used for the supported labs. Follow the respective lab instructions for the next steps
-
-
-!!! IMPORTANT
+!!! CAUTION
 >
-> It might happen that:
->
-> - the login does not work, or shows "Error 502 - Bad Gateway". In this case please wait for some more time (about 15 minutes), then the log-in should work and the requested page is shown
-> - the login results in "404 Page not found" error.  In this case please wait for some more time, then the log-in should work and the requested page is shown
->
-> These issues are the result of restarting some pods, which may take a different amount of time depending on the resources available on TechZone.
+> It can take 5-7 hours until the environment is available.
 
-## Reserve RPA VM and Update the Jam-in-a-Box Single User Environment
 
-1. Reserve your RPA environment on IBM TechZone from the <a href="https://techzone.ibm.com/collection/ibm-business-automation-traditional-and-on-premise/environments" target="_blank">IBM Business Automation - Traditional and On-Premises</a> collection by clicking on one of the **IBM Business Automation - Traditional and On-premises. V4.3** tiles
+
+## Reserve the CP4BA Demos Environment
+
+Follow the journey <a href="https://techzone.ibm.com/collection/apollo-business-automation/journey-cp4ba-demos" target="_blank">Apollo Business Automation - CP4BA Demos</a> to reserve your environment on IBM TechZone. It consists of three steps:
+
+1. Requesting the environment **2. CP4BA Demos (24.0.0 / 1.15.0)** or **CP4BA Demos (24.0.0 / 1.15.0) bizauto** from the [Archive](https://techzone.ibm.com/collection/apollo-business-automation/journey-archive) in step 1 and waiting till the environment is **Ready** **and fully deployed**. This will normally take approximately 5-7 hours.
+   The difference between the two tiles is that for one tile the passwords for usr001-usr020 are randomly generated, whereas the password for the other tile is set to a pre-defined value as stated on the tile itself.
+2. Validating the successful deployment of the Cloud Pak for Business Automation as described in step 2.
+3. Validating the successful deployment of the Client Onboarding scenario assets as described in step 3.
+
+## (Optional) Reserve an RPA VM and Update the Jam-in-a-Box Single User Environment
+
+1. Reserve your RPA environment on IBM TechZone from the <a href="https://techzone.ibm.com/collection/ibm-business-automation-traditional-and-on-premise/environments" target="_blank">IBM Business Automation - Traditional and On-Premises</a> collection by clicking on one of the **IBM Business Automation - Traditional and On-premises. V4.3*x tiles
 2. Fill in the reservation details and wait till the environment is **Ready**. This will normally take between 2-3 hours
 3. Once your environment is **Ready**, click on the reservation in **<a href="https://techzone.ibm.com/my/reservations" target="_blank">TechZone</a>** and copy the URL shown for **RPA Asynch Server API** at the top under **Published services**
-4. In your **Jam-in-a-Box - Single-User environment**, open a browser and click on the **IBM BA Studio** bookmark
-5. From the top-left hamburger menu select **Business Automation**
-6. On the left click on **Workflow** and then on the tile **Client Onboarding** on the right (don't click the open link)
-7. Click on the **three dots** next to the blue open button and select **Open in Process Designer**
-8. Select **Environment variables** as part of the Workflow automation settings 
-9. Scroll down to the variables **rpaBotExecutionUser** and **rpaServer**
-10. For **rpaBotExecutionUser** set the value to **cp4badmin**
-11. For **rpaServer** set the value to the value you copied previously from **RPA Asynch Server API**
-12. Click on the **round checkmark icon** with a small 1 in the top right corner and click on **Business automations** in the bread crump
+4. In your **Apollo Business Automation - CP4BA Demos** environment you need to launch the Cloud Pak Accelerator homepage in your browser. There are two different ways to do so:
+      1. Construct the URL based on the following naming pattern, replacing the your-environment in the link https://cp4accelerator.apps.your-environment.ocp.techzone.ibm.com/demos with the value (e.g. console-openshift-console.apps.**66e433006794d822e0236c61**.ocp.techzone.ibm.com/) from the Desktop url from the reservation
+      2. Open the **OpenShift Console**, navigate to **Networking --> Routes** and use the link under location for the **cp4accelerator-route** route and switch to the **Deploy Demo** tab
 
-After you have manually applied this configuration change the RPA bot will be invoked when you perform the Client Onboarding scenario with use **cp4badmin**.
+5. Click the blue **Update** button for the **Client Onboarding** tile
+6. Put the value of the **RPA Asynch Server API** that you copied in step 3 into the **RPA Server** field
+7. Put **cpadmin** or any other user for which the RPA bot should be invoked into the **RPA User** field
+8. Finally click on the blue **Update Client Onboarding** button
+
+!!! TIP
+>
+> Even after you have made the change, the value shown on the update Client Onboarding deployment page will remain to reflect the original values. That is expected, as only the runtime, not the design time values are updated while the design time values are shown.
+
+After you have applied this configuration change the RPA bot will be invoked when you perform the Client Onboarding scenario with use **cpadmin** or the user you specified.
 
 ## Labs Instructions & Considerations
 
@@ -111,13 +70,12 @@ The lab instructions are written in context of a Tech Jam event. When performing
 
 | Lab instructions mention...                                  | As part of this Jam-in-a-Box environment...                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| using the **URLs** found on the Tech Jam event page          | please use the **bookmarks** created for you in **Firefox**  |
-| how to receive your **user credentials** using a link on the Tech Jam event page | please use the **credentials stored** within **Firefox** for either the admin user **cp4badmin** or the business user **usr001** |
-| to **prefix your artifacts** with "usrXYZ"                   | you may choose to still follow the instructions in this point, even when this is not strictly required as this is a single-user environment |
+| using the **URLs** found on the Tech Jam event page          | please login to the OpenShift console, go to **Workloads -> ConfigMaps**, and check the **000-client-onboarding-information** ConfigMap. It should appear at the top of the list.<br />The ConfigMap contains all relevant URLs for this environment. <br />For a mini-Tech Jam share them with the participants in a suitable form. |
+| how to receive your **user credentials** using a link on the Tech Jam event page | please login to the OpenShift console, go to **Workloads -> ConfigMaps**, and check the **000-client-onboarding-information** ConfigMap. It should appear at the top of the list.<br />The ConfigMap contains all relevant user names and password for this environment.<br />For a mini-Tech Jam share a dedicated user name and password with each participants in a suitable form. |
+| to **prefix your artifacts** with "usrXYZ"                   | depending on if you use the environment as a single-user environment or for running a mini-Tech Jam, you may choose to follow the instructions in this point. |
+| object store **CONTENT** (Content labs)                      | the object store to use is called **BAWDOCS**.               |
 
-!!! TIP
->
-> Initially the environment may appear a little slow. Once the components have warmed up, it should perform reasonably well.
+
 
 #### Lab Instructions
 
@@ -126,7 +84,7 @@ Below you find the links to the lab instructions for the labs supported in this 
 - [IBM Cloud Pak for Business Automation (End-to-End)](../../IBM Cloud Pak for Business Automation (End-to-End)\README.md)
 - [IBM Business Automation Application](../../Business Automation Application\README.md)
 - [IBM Automation Decision Services](../../Decisions\README.md)
-- [IBM Automation Document Processing](../../Document Processing\README.md)
+- [IBM Automation Document Processing](../../Document Processing\README.md) (only for single-user usage)
 - [IBM Business Automation Insights](../../Business Automation Insights\README.md)
 - [IBM Business Automation Workflow](../../Workflow\README.md)
 - [IBM FileNet Content Services (CPE, GraphQL & Navigator)](../../Content\README.md)
@@ -135,7 +93,9 @@ Below you find the links to the lab instructions for the labs supported in this 
 
 ## Support
 
-We aim to support successfully utilizing our Jam-in-a-Box.
+We aim to support successfully utilizing our assets as part of Jam-in-a-Box. For questions and issues around Apollo Business Automation, please reach out to its <a href='https://techzone.ibm.com/collection/apollo-business-automation' target = '_blank'>authors</a>. 
+
+For questions and issues around the Client Onboarding labs:
 
 **Business Partners (require an invitation) and IBMers**
 
