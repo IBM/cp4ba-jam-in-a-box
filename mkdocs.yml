@@ -41,6 +41,19 @@ nav:
       - 'Single User Environment CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README.md'
       - 'Self-deploy scenario to CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README_2302_SelfDeploy.md'
       - 'Accessing Bastion Host Via RDP': '23.0.2\Solutions\Client Onboarding\AccessingBastionHostViaRDP.md'
+  - '25.0.1':
+    - 'Start': '25.0.1\README.md'
+    - 'Tracks & Capabilities Overview': '25.0.1\TracksCapabilitiesOverview.md'
+    - 'Labs':
+      - 'IBM Cloud Pak for Business Automation Demo': '25.0.1\IBM Cloud Pak for Business Automation (End-to-End)/README.md' 
+      - 'IBM Business Automation Application': '25.0.1\Business Automation Application/README.md'
+      - 'IBM Business Automation Insights': '25.0.1\Business Automation Insights/README.md'
+      - 'IBM Automation Decision Services': '25.0.1\Decisions/README.md'
+      - 'IBM Business Automation Workflow': '25.0.1\Workflow/README.md'
+      - 'IBM FileNet Content Manager': '25.0.1\Content/README.md'
+    - 'CP4BA Environment Options':
+      - 'ApolloBA CP4BA 25.0.0': '25.0.1\Solutions\Client Onboarding\README.md'
+      - 'Self-deploy scenario to CP4BA 25.0.1': '25.0.1\Solutions\Client Onboarding\README_2501_SelfDeploy.md'
   - '25.0.0':
     - 'Start': '25.0.0\README.md'
     - 'Tracks & Capabilities Overview': '25.0.0\TracksCapabilitiesOverview.md'

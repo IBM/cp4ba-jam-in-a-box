@@ -59,10 +59,10 @@ Most labs are accessible using a single Jam-in-a-Box environment. For some labs,
         - **Benefits:** Provisioning time only 2-3 hours; Supports ADP lab
         - **Limitations:** Need to use Remote Desktop client (RDP) to connect to bastion host to perform demo/labs; No support for watsonx Orchestrate lab
     - Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos
-        - No longer available, refer to [CP4BA 25.0.0](25.0.0/README.md)
+        - No longer available, refer to [CP4BA 25.0.0](25.0.0/README.md) or [CP4BA 25.0.1](25.0.1/README.md) 
     
 - **Workshop/Mini-Tech Jam** with 10-20 participants on **CP4BA 23.0.2**
-    - No longer available, refer to [CP4BA 25.0.0](25.0.0/README.md)
+    - No longer available, refer to [CP4BA 25.0.0](25.0.0/README.md) or [CP4BA 25.0.1](25.0.1/README.md) 
 
 
 
