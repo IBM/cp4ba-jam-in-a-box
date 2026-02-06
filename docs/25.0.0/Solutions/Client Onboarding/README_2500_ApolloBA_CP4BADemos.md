@@ -5,7 +5,7 @@
 > - As this approach relies on reserving an environment from IBM TechZone, this document is **only applicable to IBM Business Partners** that have the ability to request environments from TechZone **and IBMers**. 
 > - Showcasing **RPA** in action as part of the Client Onboarding scenario requires a few manual configuration steps as described below.
 > 
->If you have your own Cloud Pak for Business Automation (CP4BA) 25.0.0 environment, please refer to this [document](../../README.md) for other options.
+>If you have your own Cloud Pak for Business Automation (CP4BA) 25.0.0 environment, please refer to this [document](README_2500_SelfDeploy.md) for other options.
 
 
 
@@ -37,9 +37,9 @@ The major benefits of using this environment are:
 
 Follow the journey <a href="https://techzone.ibm.com/collection/apollo-business-automation/journey-cp4ba-demos" target="_blank">Apollo Business Automation - CP4BA Demos</a> to reserve your environment on IBM TechZone. It consists of three steps:
 
-1. Requesting the environment in step 1 and waiting till the environment is **Ready** **and fully deployed**. This will normally take approximately 5-7 hours.
-   The difference between the two tiles is that for one tile the passwords for usr001-usr020 are randomly generated, whereas the password for the other tile is set to a pre-defined value as stated on the tile itself.
-2. Validating the successful deployment of the Cloud Pak for Business Automation as described in step 2.
+1. Requesting the environment in step 1 (you will find the CP4BA 25.0.0 version on the [Archive tab](https://techzone.ibm.com/collection/apollo-business-automation/journey-archive)) and waiting till the environment is **Ready** **and fully deployed**. This will normally take approximately 5-7 hours.
+    The passwords for usr001-usr020 are randomly generated.
+2. Validating the successful deployment of the Cloud Pak for Business Automation as described in step 2 (the steps may be different in CP4BA 25.0.0 than described for CP4BA 25.0.1. For example some ConfigMaps are found in the collateral namespace).
 3. Validating the successful deployment of the Client Onboarding scenario assets as described in step 3.
 
 ## (Optional) Reserve an RPA VM and Update the Jam-in-a-Box Single User Environment
