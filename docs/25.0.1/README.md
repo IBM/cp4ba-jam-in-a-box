@@ -52,19 +52,12 @@ Most labs are accessible using a single Jam-in-a-Box environment. For some labs,
 
 ## Environment Selection for Core Labs
 
-- **Single-user/self-paced** Client Onboarding demo and labs on **CP4BA 25.0.1**
-  
-    - [Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos](Solutions/Client%20Onboarding/README.md)
-    
-    
-    - - **Benefits:** Accessible from any web browser
-        - **Limitations:** Provisioning time 5-7 hours
-    
-- **Workshop/Mini-Tech Jam** with 10-20 participants on **CP4BA 25.0.1**
+Currently only one environment type is available, that can be used both for **single-user/self-paced** Client Onboarding demo and labs or **workshop/mini-Tech Jam** with 10-20 participants on **CP4BA 25.0.1**.
 
-    - [Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos](Solutions/Client%20Onboarding/README.md)
-        - **Benefits:** Comes with 20 users for mini-Tech Jams; Accessible from any web browser
-        - **Limitations:** Provisioning time 5-7 hours
+[Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos](Solutions/Client%20Onboarding/README.md)
+
+- **Benefits:** Comes with 20 users for mini-Tech Jams; Accessible from any web browser
+- **Limitations:** Provisioning time 5-7 hours
 
 
 
