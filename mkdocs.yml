@@ -52,7 +52,7 @@ nav:
       - 'IBM Business Automation Workflow': '25.0.1\Workflow/README.md'
       - 'IBM FileNet Content Manager': '25.0.1\Content/README.md'
     - 'CP4BA Environment Options':
-      - 'ApolloBA CP4BA 25.0.0': '25.0.1\Solutions\Client Onboarding\README.md'
+      - 'Apollo BA CP4BA 25.0.1': '25.0.1\Solutions\Client Onboarding\README.md'
       - 'Self-deploy scenario to CP4BA 25.0.1': '25.0.1\Solutions\Client Onboarding\README_2501_SelfDeploy.md'
   - 'BAMOE':
     - 'IBM Business Automation Manager Open Editions': 'BAMOE\README.md'
@@ -68,7 +68,7 @@ nav:
       - 'IBM FileNet Content Manager': '25.0.0\Content/README.md'
     - 'CP4BA Environment Options':
       - 'Single User Environment CP4BA 25.0.0': '25.0.0\Solutions\Client Onboarding\README.md'
-      - 'ApolloBA CP4BA 25.0.0': '25.0.0\Solutions\Client Onboarding\README_2500_ApolloBA_CP4BADemos.md'
+      - 'Apollo BA CP4BA 25.0.1': '25.0.0\Solutions\Client Onboarding\README_2500_ApolloBA_CP4BADemos.md'
       - 'Self-deploy scenario to CP4BA 25.0.0': '25.0.0\Solutions\Client Onboarding\README_2500_SelfDeploy.md'
   - '24.0.1 (Archived)':
     - 'Start': '24.0.1\README.md'
@@ -83,7 +83,7 @@ nav:
       - 'IBM watsonx Orchestrate': '24.0.1\watsonx Orchestrate/README.md'
       - 'IBM Robotic Process Automation': '24.0.1\Robotic Process Automation/README.md'
     - 'CP4BA Environment Options':
-      - 'ApolloBA CP4BA 24.0.1': '24.0.1\Solutions\Client Onboarding\README.md'
+      - 'Apollo BA CP4BA 24.0.1': '24.0.1\Solutions\Client Onboarding\README.md'
       - 'Self-deploy scenario to CP4BA 24.0.1': '24.0.1\Solutions\Client Onboarding\README_2401_SelfDeploy.md'
   - '24.0.0 (Archived)':
     - 'Start': '24.0.0\README.md'
@@ -113,7 +113,7 @@ nav:
           - 'Post Deployment Steps / Deployment Verification': '24.0.0\Bring-Up\Bring-Up-Lab-2/Exercise-8-PostDeployment.md'
           - 'Appendix A': '24.0.0\Bring-Up\Bring-Up-Lab-2\Appendix-A-Troubleshooting.md'
     - 'CP4BA Environment Options':
-      - 'ApolloBA CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README.md'
+      - 'Apollo BA CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README.md'
       - 'Self-deploy scenario to CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README_2400_SelfDeploy.md'    
       
 theme:
