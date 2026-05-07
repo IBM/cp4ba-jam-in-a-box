@@ -1,7 +1,7 @@
 # CP4BA Demos Environment based on Apollo Business Automation/Cloud Pak Deployer for CP4BA 24.0.1
 
 !!! WARNING
->Apollo Business Automation/Cloud Pak Deployer for CP4BA 24.0.1 environments are no longer available. Please consider using one for [CP4BA 25.0.0](../../../25.0.0/Solutions/Client Onboarding/README_2500_ApolloBA_CP4BADemos.md) or [CP4BA 25.0.1](../../../25.0.1/Solutions/Client Onboarding/README.md).
+>Apollo Business Automation/Cloud Pak Deployer for CP4BA 24.0.1 environments are no longer available. Please consider using one for [CP4BA 25.0.1](../../../25.0.1/Solutions/Client Onboarding/README.md).
 >
 >If you have your own Cloud Pak for Business Automation (CP4BA) 24.0.1 environment, please refer to this [document](../../README.md) for other options.
 

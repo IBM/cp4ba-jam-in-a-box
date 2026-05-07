@@ -14,35 +14,8 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - '23.0.2':
-    - 'Start': 'index.md'
-    - 'Tracks & Capabilities Overview': '23.0.2\Additional.md'
-    - 'Labs':
-      - 'IBM Cloud Pak for Business Automation Demo': '23.0.2\IBM Cloud Pak for Business Automation (End-to-End)\README.md'
-      - 'IBM Business Automation Application' : '23.0.2\Business Automation Application\README.md'
-      - 'IBM Automation Decision Services' : '23.0.2\Decisions\README.md'
-      - 'IBM Automation Document Processing': '23.0.2\Document Processing\README.md'
-      - 'IBM Business Automation Insights' : '23.0.2\Business Automation Insights\README.md'
-      - 'IBM Business Automation Workflow': '23.0.2\Workflow\README.md'
-      - 'IBM FileNet Content Manager' : '23.0.2\Content\README.md'
-      - 'IBM watsonx Orchestrate': '23.0.2\watsonx Orchestrate\README.md'
-      - 'IBM Process Mining': '23.0.2\Process Mining\README.md'
-      - 'IBM Robotic Process Automation': '23.0.2\Robotic Process Automation\README.md'
-      - 'Bring-up Lab':
-        - 'Home': '23.0.2\Bring-up\README.md'
-        - 'Bring-up Lab 1':
-          - 'Rapid Deployment Scripts': '23.0.2\Bring-up\Bring-Up-Lab-1\README.md'
-          - 'Prepare': '23.0.2\Bring-up\Bring-Up-Lab-1\Exercise-1-Prepare.md'
-          - 'Deploy DB2': '23.0.2\Bring-up\Bring-Up-Lab-1\Exercise-2-Deploy-DB2.md'
-          - 'Create DB2 Databases': '23.0.2\Bring-up\Bring-Up-Lab-1\Exercise-3-Create-DB2-Databases.md'
-          - 'Deploy CP4BA Operator': '23.0.2\Bring-up\\Bring-Up-Lab-1\\Exercise-4-Deploy-CP4BA-Operator.md'
-          - 'Deploy CP4BA': '23.0.2\Bring-up\\Bring-Up-Lab-1\\Exercise-5-Deploy-CP4BA.md'
-    - 'CP4BA Environment Options':
-      - 'Single User Environment CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README.md'
-      - 'Self-deploy scenario to CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README_2302_SelfDeploy.md'
-      - 'Accessing Bastion Host Via RDP': '23.0.2\Solutions\Client Onboarding\AccessingBastionHostViaRDP.md'
   - '25.0.1':
-    - 'Start': '25.0.1\README.md'
+    - 'Start': 'index.md'
     - 'Tracks & Capabilities Overview': '25.0.1\TracksCapabilitiesOverview.md'
     - 'Labs':
       - 'IBM Cloud Pak for Business Automation Demo': '25.0.1\IBM Cloud Pak for Business Automation (End-to-End)/README.md' 
@@ -115,6 +88,33 @@ nav:
     - 'CP4BA Environment Options':
       - 'Apollo BA CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README.md'
       - 'Self-deploy scenario to CP4BA 24.0.0': '24.0.0\Solutions\Client Onboarding\README_2400_SelfDeploy.md'    
+  - '23.0.2 (Archived)':
+    - 'Start': '23.0.2\README.md'
+    - 'Tracks & Capabilities Overview': '23.0.2\Additional.md'
+    - 'Labs':
+      - 'IBM Cloud Pak for Business Automation Demo': '23.0.2\IBM Cloud Pak for Business Automation (End-to-End)\README.md'
+      - 'IBM Business Automation Application' : '23.0.2\Business Automation Application\README.md'
+      - 'IBM Automation Decision Services' : '23.0.2\Decisions\README.md'
+      - 'IBM Automation Document Processing': '23.0.2\Document Processing\README.md'
+      - 'IBM Business Automation Insights' : '23.0.2\Business Automation Insights\README.md'
+      - 'IBM Business Automation Workflow': '23.0.2\Workflow\README.md'
+      - 'IBM FileNet Content Manager' : '23.0.2\Content\README.md'
+      - 'IBM watsonx Orchestrate': '23.0.2\watsonx Orchestrate\README.md'
+      - 'IBM Process Mining': '23.0.2\Process Mining\README.md'
+      - 'IBM Robotic Process Automation': '23.0.2\Robotic Process Automation\README.md'
+      - 'Bring-up Lab':
+        - 'Home': '23.0.2\Bring-up\README.md'
+        - 'Bring-up Lab 1':
+          - 'Rapid Deployment Scripts': '23.0.2\Bring-up\Bring-Up-Lab-1\README.md'
+          - 'Prepare': '23.0.2\Bring-up\Bring-Up-Lab-1\Exercise-1-Prepare.md'
+          - 'Deploy DB2': '23.0.2\Bring-up\Bring-Up-Lab-1\Exercise-2-Deploy-DB2.md'
+          - 'Create DB2 Databases': '23.0.2\Bring-up\Bring-Up-Lab-1\Exercise-3-Create-DB2-Databases.md'
+          - 'Deploy CP4BA Operator': '23.0.2\Bring-up\\Bring-Up-Lab-1\\Exercise-4-Deploy-CP4BA-Operator.md'
+          - 'Deploy CP4BA': '23.0.2\Bring-up\\Bring-Up-Lab-1\\Exercise-5-Deploy-CP4BA.md'
+    - 'CP4BA Environment Options':
+      - 'Single User Environment CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README.md'
+      - 'Self-deploy scenario to CP4BA 23.0.2': '23.0.2\Solutions\Client Onboarding\README_2302_SelfDeploy.md'
+      - 'Accessing Bastion Host Via RDP': '23.0.2\Solutions\Client Onboarding\AccessingBastionHostViaRDP.md'
       
 theme:
   custom_dir: custom/

@@ -42,7 +42,11 @@ Follow the journey <a href="https://techzone.ibm.com/collection/apollo-business-
 2. Validating the successful deployment of the Cloud Pak for Business Automation as described in step 2.
 3. Validating the successful deployment of the Client Onboarding scenario assets as described in step 3.
 
-## (Optional) Reserve an RPA VM and Update the Jam-in-a-Box Single User Environment
+## (Optional) Reserve an RPA VM and Update the Jam-in-a-Box Single User Environment - Requires a Sales Opportunity number!
+
+!!! CAUTION
+
+>Since May 2026, to reserve an environment on IBM TechZone that is based on VMWare templates, like the RPA VM, you need to provide a Sales Opportunity number.
 
 1. Reserve your RPA environment on IBM TechZone from the <a href="https://techzone.ibm.com/collection/ibm-business-automation-traditional-and-on-premise/environments" target="_blank">IBM Business Automation - Traditional and On-Premises</a> collection by clicking on one of the **IBM Business Automation - Traditional and On-premises. V4.x** tiles
 2. Fill in the reservation details and wait till the environment is **Ready**. This will normally take between 2-3 hours
@@ -60,7 +64,7 @@ Follow the journey <a href="https://techzone.ibm.com/collection/apollo-business-
 >
 > Even after you have made the change, the value shown on the update Client Onboarding deployment page will remain to reflect the original values. That is expected, as only the runtime, not the design time values are updated while the design time values are shown.
 
-After you have applied this configuration change the RPA bot will be invoked when you perform the Client Onboarding scenario with use **cpadmin** or the user you specified.
+After you have applied this configuration change the RPA bot will be invoked when you perform the Client Onboarding scenario with user **cpadmin** or the user you specified.
 
 ## Labs Instructions & Considerations
 

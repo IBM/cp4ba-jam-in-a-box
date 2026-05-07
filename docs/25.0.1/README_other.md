@@ -11,7 +11,7 @@
 
 The [Solutions and Assets](#solutions-and-assets) section below lists the available assets that can be imported into an **existing** Cloud Pak for Business Automation (CP4BA) environment.
 
-In case you don't have an existing CP4BA environment, please follow these [instruction](README.md) on how to request an environment that is pre-deployed and pre-configured with the Client Onboarding solution.
+In case you don't have an existing CP4BA environment, please follow these [instruction](../index.md) on how to request an environment that is pre-deployed and pre-configured with the Client Onboarding solution.
 
 
 

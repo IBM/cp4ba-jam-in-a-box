@@ -1,8 +1,8 @@
-# Jam-in-a-Box for Business Automation (CP4BA 23.0.2)
+# Jam-in-a-Box for Business Automation (CP4BA 25.0.1)
 
 ## Quick Start
 
-1. Select the lab you are interested in on the left column of the table of the [Labs to Environments Mapping](#labs-to-environments-mapping) section
+1. Select the lab(s) you are interested in on the left column of the table of the [Labs to Environments Mapping](#labs-to-environments-mapping) section
 2. Follow the instructions in the right column of the table to request the appropriate environment
 
 
@@ -37,32 +37,26 @@ Jam-in-a-Box removes hurdles to Business Automation adoption through easing avai
 
 ## Labs to Environments Mapping
 
-Most labs are accessible using a single Jam-in-a-Box environment. For some labs, you will need a separate environment. The table below provides the respective details:
+Below labs are accessible using a single Jam-in-a-Box environment.
 
 | Lab(s)                                                       | Environment (IBM TechZone - Business Partners and IBMers only) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [IBM Cloud Pak for Business Automation (End-to-End)](23.0.2/IBM Cloud Pak for Business Automation (End-to-End)\README.md) <br/>-<br/>[IBM Business Automation Application](23.0.2/Business Automation Application\README.md) <br/>-<br/>[IBM Automation Decision Services](23.0.2/Decisions\README.md) <br/>-<br/>[IBM Automation Document Processing](23.0.2/Document Processing\README.md)<br/>-<br/>[IBM Business Automation Insights](23.0.2/Business Automation Insights\README.md)<br/>-<br/>[IBM Business Automation Workflow](23.0.2/Workflow\README.md)<br/>-<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](23.0.2/Content\README.md) | See section [Environment Selection for Core Labs](#environment-selection-for-core-labs) below |
-| [IBM Process Mining](23.0.2/Process Mining\README.md)        | One environment required per user in case of mini-Tech Jams!<br/>Please reserve a TechZone Process Mining Environment <a href="https://techzone.ibm.com/collection/process-mining-with-task-mining-demo-and-etl/environments" target="_blank">here</a>. Make sure to select the **IBM Process Mining 1.15 with Task Mining and ETL - Multizone**. |
-| [IBM Robotic Process Automation](23.0.2/Robotic Process Automation\README.md) | One environment required per user in case of mini-Tech Jams!<br/>Follow the instructions provided on the respective [lab overview page](23.0.2/Robotic Process Automation\README.md) |
-| [IBM CP4BA - Bring-up (Deployment of CP4BA)](23.0.2/Bring-up\README.md) | One environment required per user in case of mini-Tech Jams!<br/>Follow the instructions provided on the respective [lab overview page](23.0.2/Bring-up\README.md) |
+| [IBM Cloud Pak for Business Automation (End-to-End)](25.0.1/IBM Cloud Pak for Business Automation (End-to-End)\README.md) <br/>-<br/>[IBM Business Automation Application](25.0.1/Business Automation Application\README.md) <br/>-<br/>[IBM Automation Decision Services](25.0.1/Decisions\README.md) <br/>-<br/>[IBM Business Automation Insights](25.0.1/Business Automation Insights\README.md)<br/>-<br/>[IBM Business Automation Workflow](25.0.1/Workflow\README.md)<br/>-<br/>[IBM FileNet Content Services (CPE, GraphQL & Navigator)](25.0.1/Content\README.md) | See section [Environment Selection for Core Labs](#environment-selection-for-core-labs) below |
 
 !!! Note
 >
-> The options mentioned for the first two rows are focused on TechZone environments with **pre-deployed** Client Onboarding assets. If you have your own CP4BA environment (from TechZone or not), into which you want to deploy the Client Onboarding assets yourself, please refer to this [document](23.0.2/Solutions/Client%20Onboarding/README_2302_SelfDeploy.md) for details.
+> The options mentioned are focused on TechZone environments with **pre-deployed** Client Onboarding assets. If you have your own CP4BA environment (from TechZone or not), into which you want to deploy the Client Onboarding assets yourself, please refer to this [document](25.0.1/Solutions/Client%20Onboarding/README_2501_SelfDeploy.md) for details.
 
 
 
 ## Environment Selection for Core Labs
 
-- **Single-user/self-paced** Client Onboarding demo and labs on **CP4BA 23.0.2**
-    - [Pre-deployed Client Onboarding from TechZone](23.0.2/Solutions/Client%20Onboarding/README.md)
-        - **Benefits:** Provisioning time only 2-3 hours; Supports ADP lab
-        - **Limitations:** Need to use Remote Desktop client (RDP) to connect to bastion host to perform demo/labs; No support for watsonx Orchestrate lab
-    - Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos
-        - No longer available, refer to [CP4BA 25.0.0](25.0.0/README.md) or [CP4BA 25.0.1](25.0.1/README.md) 
-    
-- **Workshop/Mini-Tech Jam** with 10-20 participants on **CP4BA 23.0.2**
-    - No longer available, refer to [CP4BA 25.0.0](25.0.0/README.md) or [CP4BA 25.0.1](25.0.1/README.md) 
+A pre-configured  environment is available, that can be used both for **single-user/self-paced** Client Onboarding demo and labs or **workshop/mini-Tech Jam** with 10-20 participants on **CP4BA 25.0.1**.
+
+[Pre-deployed Client Onboarding from TechZone based on Apollo Business Automation CP4BA Demos](25.0.1/Solutions/Client%20Onboarding/README.md)
+
+- **Benefits:** Comes with 20 users for mini-Tech Jams; Accessible from any web browser
+- **Limitations:** Provisioning time 5-7 hours
 
 
 
@@ -83,4 +77,3 @@ For anyone who doesn’t fall into the business partner or IBM employee category
 ## Disclaimer
 
 The information, tools, and artifacts describes and linked are provided AS-IS and without any warranty. Please also refer to the license that is part of this repository for details.
-

@@ -18,7 +18,7 @@ The different tracks cater for different target groups and previous levels of ex
 
 - **Approach**: Detailed lab instructions to build respective solution aspects
 
-**Track 3 – Administrator Role**
+**Track 3 – Administrator Role** (currently not available as IBM TechZone environment no longer available)
 
 - **Audience**: Base understanding of Cloud Pak for Business Automation (CP4BA)
 
