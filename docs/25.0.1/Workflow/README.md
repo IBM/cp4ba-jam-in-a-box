@@ -16,5 +16,13 @@ IBM Business Automation Workflow is software that combines business process mana
 
     **Approximate Duration**: 2 hours
 
+- **[Use Gen AI to Identify and Validate Documents](Lab%20Guide%20-%20Use%20Gen%20AI%20to%20Identify%20and%20Validate%20Documents.pdf)**: Attendees will learn how to configure and utilize the GenAI Task within IBM BAW to enrich human task activities. They will gain practical experience designing workflows that leverage GenAI to automate content creation, improve decision-making, and optimize task management. By the end of the lab, participants will understand how to apply GenAI capabilities to real-world business scenarios, enabling more innovative and more efficient process automation. 
+
+    **Approximate Duration**: 1-2 hours
+
+- **[Use AI Agent in BAW to Verify Banking Documents](Lab%20Guide%20-%20Use%20AI%20Agent%20to%20Validate%20Banking%20Information.pdf)**: Master agentic AI integration by connecting a pre-built banking validation AI Agent to IBM Business Automation Workflow. In this hands-on lab, you'll integrate an existing React Agent from watsonx Orchestrate that autonomously validates customer banking information extracted from statements, performing multi-step verification including routing number validation, account type checks, and compliance assessments. You'll connect this AI Agent to a human task workflow via API, enabling client onboarding specialists to receive instant validation results and recommendations. Learn to configure AI Agent services, design effective prompts for agent invocation, and map agent outputs to business processes. Experience how autonomous AI agents go beyond simple generation to perform complex reasoning and tool orchestration for real-world enterprise scenarios.
+  
+    **Approximate Duration**: 1 hour
+
 These labs require additional files that can be found in the <a href="https://github.com/IBM/cp4ba-labs/tree/main/25.0.1/Workflow/Lab%20Data" target="_blank">Lab Data</a> folder.
 
