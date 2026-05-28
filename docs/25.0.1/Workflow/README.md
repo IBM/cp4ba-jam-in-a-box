@@ -23,6 +23,10 @@ IBM Business Automation Workflow is software that combines business process mana
 - **[Use AI Agent in BAW to Verify Banking Documents](Lab%20Guide%20-%20Use%20AI%20Agent%20to%20Validate%20Banking%20Information.pdf)**: Master agentic AI integration by connecting a pre-built banking validation AI Agent to IBM Business Automation Workflow. In this hands-on lab, you'll integrate an existing React Agent from watsonx Orchestrate that autonomously validates customer banking information extracted from statements, performing multi-step verification including routing number validation, account type checks, and compliance assessments. You'll connect this AI Agent to a human task workflow via API, enabling client onboarding specialists to receive instant validation results and recommendations. Learn to configure AI Agent services, design effective prompts for agent invocation, and map agent outputs to business processes. Experience how autonomous AI agents go beyond simple generation to perform complex reasoning and tool orchestration for real-world enterprise scenarios.
   
     **Approximate Duration**: 1 hour
+    
+- **[Use the IBM Workplace Assistant to Work with Processes and Tasks in IBM Business Automation Workflow](Lab%20Guide%20-%20Use%20the%20IBM%20Workplace%20Assistant%20to%20Work%20with%20Processes%20and%20Tasks%20in%20IBM%20Business%20Automation%20Workflow.pdf)**: Gain hands-on experience with IBM Workplace Assistant and learn how it integrates with IBM Workplace to simplify team and task management through conversational AI.
+  
+    **Approximate Duration**: 1 hour
 
-These labs require additional files that can be found in the <a href="https://github.com/IBM/cp4ba-labs/tree/main/25.0.1/Workflow/Lab%20Data" target="_blank">Lab Data</a> folder.
+The first four labs require additional files that can be found in the <a href="https://github.com/IBM/cp4ba-labs/tree/main/25.0.1/Workflow/Lab%20Data" target="_blank">Lab Data</a> folder.
 
