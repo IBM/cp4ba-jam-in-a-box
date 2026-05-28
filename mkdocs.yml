@@ -29,6 +29,8 @@ nav:
       - 'Self-deploy scenario to CP4BA 25.0.1': '25.0.1\Solutions\Client Onboarding\README_2501_SelfDeploy.md'
   - 'BAMOE':
     - 'IBM Business Automation Manager Open Editions': 'BAMOE\README.md'
+  - 'What''s New':
+    - 'What''s New in Jam-in-a-Box': 'What''s New\README.md'
   - '25.0.0 (Archived)':
     - 'Start': '25.0.0\README.md'
     - 'Tracks & Capabilities Overview': '25.0.0\TracksCapabilitiesOverview.md'
