@@ -24,6 +24,7 @@ nav:
       - 'IBM Automation Decision Services': '25.0.1\Decisions/README.md'
       - 'IBM Business Automation Workflow': '25.0.1\Workflow/README.md'
       - 'IBM FileNet Content Manager': '25.0.1\Content/README.md'
+      - 'IBM watsonx Orchestrate': '25.0.1\watsonx Orchestrate/README.md'
     - 'CP4BA Environment Options':
       - 'Apollo BA CP4BA 25.0.1': '25.0.1\Solutions\Client Onboarding\README.md'
       - 'Self-deploy scenario to CP4BA 25.0.1': '25.0.1\Solutions\Client Onboarding\README_2501_SelfDeploy.md'

@@ -2,6 +2,9 @@
 
 ## History
 
+- **June 10, 2026**
+    - Availability of the IBM watsonx Orchestrate Upsell Services Campaign AI Agent lab
+
 - **May 28, 2026**
     - Availability of Workflow Workplace Assistant lab
 

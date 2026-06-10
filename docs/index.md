@@ -37,11 +37,12 @@ Jam-in-a-Box removes hurdles to Business Automation adoption through easing avai
 
 ## Labs to Environments Mapping
 
-Below labs are accessible using a single Jam-in-a-Box environment.
+All labs in the first row can be done using a single Jam-in-a-Box environment. For the IBM watsonx Orchestrate lab, an additional wxO ADK environment is required.
 
 | Lab(s)                                                       | Environment (IBM TechZone - Business Partners and IBMers only) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [IBM Cloud Pak for Business Automation (End-to-End)](25.0.1/IBM Cloud Pak for Business Automation (End-to-End)\README.md) <br/>-<br/>[IBM Business Automation Application](25.0.1/Business Automation Application\README.md) <br/>-<br/>[IBM Automation Decision Services](25.0.1/Decisions\README.md) <br/>-<br/>[IBM Business Automation Insights](25.0.1/Business Automation Insights\README.md)<br/>-<br/>[IBM Business Automation Workflow (Core, Automation Services, Gen AI, AI Agent)](25.0.1/Workflow\README.md) <br/>-<br/>[IBM FileNet Content Services (CPE, GraphQL, Navigator & Content Assistant)](25.0.1/Content\README.md) | See section [Environment Selection for Core Labs](#environment-selection-for-core-labs) below |
+| [IBM Cloud Pak for Business Automation (End-to-End)](25.0.1/IBM Cloud Pak for Business Automation (End-to-End)\README.md) <br/>-<br/>[IBM Business Automation Application](25.0.1/Business Automation Application\README.md) <br/>-<br/>[IBM Automation Decision Services](25.0.1/Decisions\README.md) <br/>-<br/>[IBM Business Automation Insights](25.0.1/Business Automation Insights\README.md)<br/>-<br/>[IBM Business Automation Workflow (Core, Automation Services, Gen AI, AI Agent, Workplace Assistant)](25.0.1/Workflow\README.md) <br/>-<br/>[IBM FileNet Content Services (CPE, GraphQL, Navigator & Content Assistant)](25.0.1/Content\README.md) | See section [Environment Selection for Core Labs](#environment-selection-for-core-labs) below |
+| [IBM watsonx Orchestrate with CP4BA](25.0.1/watsonx Orchestrate\README.md) | See section [Environment Selection for Core Labs](#environment-selection-for-core-labs) below<br/>-<br/>Requires an additional IBM watsonx Orchestrate ADK environment. Refer to the lab instructions on how to request. |
 
 !!! Note
 >
